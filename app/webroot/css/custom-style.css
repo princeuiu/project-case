@@ -1,0 +1,333 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 4, 2015, 12:15:10 PM
+    Author     : Inflack
+*/
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,400italic,500,700,100);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Abel);
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight:400px;
+  //background-image: url(../images/bg.png);
+}
+a, a:hover, a:visited{
+    color: #f47621;
+    text-decoration: none;
+}
+.background{
+    background-color: #fff;
+}
+.main-background{
+    background-color: #fff;
+}
+.login-header{
+    background-image: url(../images/header-bg.jpg);
+    border-bottom: 9px solid #f37021;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.login-panel{
+    background-image: url(../images/login-section-bg.png);
+    background-repeat: repeat;
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+}
+.login-header h2{
+    font-size: 23px;
+    color: #f26e1e;
+}
+.login-header a, .login-header a:hover{
+    color: #010101;
+}
+.login-header label{
+    color: #010101;
+}
+.header{
+    background-image: url(../images/header-bg.jpg);
+    border-bottom: 9px solid #f37021;
+    height: 394px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.header h2{
+    color: #fff;
+    text-align: left;
+    font-weight: 700;
+    margin-top: 250px;
+    font-size: 35px;
+}
+
+@media screen and (max-width: 767px){
+    .header h2{
+        color: #fff;
+        text-align: center;
+        font-weight: 700;
+        margin-top: 150px;
+        font-size: 35px;
+    }
+}
+
+.employee-name{
+    background: #ef5e29;
+    opacity: 0.9;
+    margin-top: -50px;
+}
+
+@media screen and (max-width: 517px){
+    .employee-name{
+        width:50%;
+    }
+}
+
+@media screen and (min-width: 518px){
+    .employee-name{
+        width:45%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .employee-name{
+        width:80%;
+    }
+}
+
+/*.employee-name p{
+    color: #fff;
+    padding: 10px 5px;
+    font-weight: bolder;
+    font-size: 14px;
+}*/
+
+@media screen and (max-width: 767px){
+    .sm-align-center{
+        text-align: center;
+    }
+}
+@media screen and (min-width: 768px){
+    .sm-align-center{
+        text-align: inherit;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .employee-name p{
+        color: #fff;
+        padding: 10px 5px;
+        font-weight: bolder;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .employee-name p{
+        color: #fff;
+        padding: 10px 5px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1002px){
+    .employee-name p{
+        color: #fff;
+        padding: 10px 5px;
+        font-weight: bolder;
+        font-size: 14px;
+    }
+}
+
+.smallerLink{
+    font-size: 9px;
+}
+.txt-align-center{
+    text-align: center;
+}
+
+.content-align-center{
+    margin-left: auto;
+    margin-right: auto
+}
+.btn-submit{
+    background-image: linear-gradient(to bottom,#ed5f2b 0,#bd2f00 100%);
+    border-color: #bd2f00;
+    color: #fff;
+}
+.btn-submit:active, .btn-submit:focused, .btn-submit:selected, .btn-submit:checked, .btn-submit:focus{
+    background-image: linear-gradient(to bottom,#ed5f2b 0,#bd2f00 100%);
+    border-color: #bd2f00;
+    color: #fff;
+}
+.btn-submit:hover, .btn-submit:visited {
+  background-color: #bd2f00;
+  border-color: #bd2f00;
+  background-position: 0 -15px;
+    color: #fff;
+}
+
+.btn-xlarge{
+    padding: 10px 36px;
+}
+.mg-btm-20{
+    margin-bottom: 20px;
+}
+.mg-top-20{
+    margin-top: 20px;
+}
+@media screen and (max-width: 767px){
+    .pd-left-10{
+        padding-left: 5px;
+    }
+}
+@media screen and (min-width: 768px){
+    .pd-left-10{
+        padding-left: 5px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 767px){
+    .img-custom-thmb{
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .img-custom-thmb{
+        width: 20%;
+    }
+}
+
+
+.rating-con-flt-lft{
+    float: left;
+}
+.rating-con-flt-rht{
+    float: right;
+}
+@media screen and (max-width: 767px){
+    .rating-con-flt-lft{
+        float: none;
+    }
+    .rating-con-flt-rht{
+        float: none;
+    }
+}
+
+.font-bold{
+    font-weight: 700;
+}
+
+.rating-label{
+    padding-left: 0px;
+    font-weight: 400;
+}
+
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border-color: rgba(189, 41, 0, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(189, 41, 0, 0.6);
+  outline: 0 none;
+}
+
+.input-style-custom{
+    
+}
+.input-style-custom:hover{
+border-color: rgba(189, 41, 0, 0.8);
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(189, 41, 0, 0.6);
+outline: 0 none;
+}
+.input-style-custom:focus{
+    border-color: rgba(189, 41, 0, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(189, 41, 0, 0.6);
+  outline: 0 none;
+}
+
+.table-hover-custom tbody tr:hover td, .table-hover-custom tbody tr:hover th {
+  background-color: rgba(237, 95, 43, 0.7);
+}
+
+.table-hover tr th, .table-hover-custom tr th{
+    color: #f47621;
+}
+
+.table-employee>tbody>tr>td{
+    vertical-align: baseline;
+}
+
+.table-ratingDetail>tbody>tr>th{
+    border-top: none;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+  background-color: #eee;
+  border-color: #f47621;
+  color: #f47621;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover{
+    background-color: #bd2f00;
+    background-repeat: repeat-x;
+      background-image: linear-gradient(to bottom,#f47621 0,#bd2f00 100%);
+}
+
+.btnBackPrevPage{
+    background-image: url(../images/back-to-prev.png);
+    width: 50px; height: 50px;
+    display: block;
+    position: fixed;
+    z-index: 100;
+    text-indent: -9999px;
+    top: 50px; left: 0;
+}
+
+.link-white, .link-white:hover, .link-white:visited{
+    color: #fff;
+}
+
+.border-right{
+    border-right: 1px solid #ddd;
+    padding-right: 5px;
+}
+
+.border-radious-10{
+    border-radius: 10px;
+}
+
+.pd-all-5px{
+    padding: 5px;
+}
+.mg-all-5px{
+    margin: 5px;
+}
+.noMargin{
+    margin: 0;
+}
+.noPadding{
+    padding: 0;
+}
