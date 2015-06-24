@@ -3569,3 +3569,23 @@ Stack Trace:
 #1 /home/demos/www/public_html/inventory/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ItemsController), Object(CakeRequest))
 #2 /home/demos/www/public_html/inventory/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2015-06-20 13:43:10 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/index.html
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-20 15:17:41 Error: [PrivateActionException] Private Action CategoriesController::admin_index() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'CategoriesController',
+  'action' => 'admin_index',
+)
+Request URL: /project-case/categories/admin_index
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
