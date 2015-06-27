@@ -124,7 +124,34 @@ class User extends AppModel {
     }
     
     
-    public $hasMany = array('LoginToken');
+    
+    public $hasMany = array(
+        'LoginToken',
+        'TaskOwner' => array(
+            'className' => 'Task',
+            'foreignKey' => 'owner',
+            'dependent' => true,
+            'conditions' => array('Task.status' => 'pending'),
+            'order' => 'Task.created DESC'
+        ),
+        'TaskAssigned' => array(
+            'className' => 'Task',
+            'foreignKey' => 'assigned_to',
+            'dependent' => false,
+            'conditions' => array('Task.status' => 'pending'),
+            'order' => 'Task.created DESC'
+        )
+    );
+    
+    public $hasAndBelongsToMany = array(
+        'TaskFollower' =>array(
+            'className' => 'Task',
+            'joinTable' => 'followers',
+            'foreignKey' => 'user_id',
+            'associationForeignKey' => 'task_id',
+            'unique' => true
+        )
+    );
 
     public function authsomePersist($user, $duration) {
             $token = md5(uniqid(mt_rand(), true));
