@@ -3589,3 +3589,1343 @@ Stack Trace:
 #1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(CategoriesController), Object(CakeRequest))
 #2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2015-06-27 16:00:28 Error: [MissingControllerException] Controller class Login.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Login.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/login.html
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-27 16:00:45 Error: [MissingTableException] Table followers for model Follower was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'followers',
+  'class' => 'Follower',
+  'ds' => 'default',
+)
+Request URL: /project-case/users/login
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('followers')
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(891): Model->schema()
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(919): Model->__isset('Follower')
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3720): Model->__get('Follower')
+#5 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1779): Model->joinModel('Follower', Array)
+#6 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1257): DboSource->generateAssociationQuery(Object(User), Object(Task), 'hasAndBelongsTo...', 'TaskFollower', Array, Array, true)
+#7 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(Task), 'hasAndBelongsTo...', 'TaskFollower', Array, Array, true, Array, 0, Array)
+#8 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3022): DboSource->read(Object(User), Array)
+#9 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#10 /home/demos/www/public_html/project-case/app/Model/User.php(123): Model->find('first', Array)
+#11 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('credentials', Array)
+#12 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(303): AuthsomeComponent->login(Array, NULL)
+#13 /home/demos/www/public_html/project-case/app/Controller/UsersController.php(19): Authsome::login(Array)
+#14 [internal function]: UsersController->login()
+#15 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#16 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#17 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#18 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2015-06-28 13:31:30 Error: [MissingTableException] Table followers for model Follower was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'followers',
+  'class' => 'Follower',
+  'ds' => 'default',
+)
+Request URL: /project-case/users/login
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('followers')
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(891): Model->schema()
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(919): Model->__isset('Follower')
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3720): Model->__get('Follower')
+#5 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1779): Model->joinModel('Follower', Array)
+#6 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1257): DboSource->generateAssociationQuery(Object(User), Object(Task), 'hasAndBelongsTo...', 'TaskFollower', Array, Array, true)
+#7 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(Task), 'hasAndBelongsTo...', 'TaskFollower', Array, Array, true, Array, 0, Array)
+#8 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3022): DboSource->read(Object(User), Array)
+#9 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#10 /home/demos/www/public_html/project-case/app/Model/User.php(123): Model->find('first', Array)
+#11 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('credentials', Array)
+#12 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(303): AuthsomeComponent->login(Array, NULL)
+#13 /home/demos/www/public_html/project-case/app/Controller/UsersController.php(19): Authsome::login(Array)
+#14 [internal function]: UsersController->login()
+#15 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#16 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#17 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#18 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2015-06-28 13:31:30 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /project-case/users/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 13:32:21 Error: [MissingTableException] Table followers for model Follower was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'followers',
+  'class' => 'Follower',
+  'ds' => 'default',
+)
+Request URL: /project-case/users/login
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('followers')
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(891): Model->schema()
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(919): Model->__isset('Follower')
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3720): Model->__get('Follower')
+#5 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1779): Model->joinModel('Follower', Array)
+#6 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1257): DboSource->generateAssociationQuery(Object(User), Object(Task), 'hasAndBelongsTo...', 'TaskFollower', Array, Array, true)
+#7 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(Task), 'hasAndBelongsTo...', 'TaskFollower', Array, Array, true, Array, 0, Array)
+#8 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3022): DboSource->read(Object(User), Array)
+#9 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#10 /home/demos/www/public_html/project-case/app/Model/User.php(123): Model->find('first', Array)
+#11 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('credentials', Array)
+#12 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(303): AuthsomeComponent->login(Array, NULL)
+#13 /home/demos/www/public_html/project-case/app/Controller/UsersController.php(19): Authsome::login(Array)
+#14 [internal function]: UsersController->login()
+#15 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#16 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#17 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#18 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2015-06-28 13:32:21 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /project-case/users/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 13:37:49 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /project-case/users/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 13:38:41 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /project-case/users/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 13:39:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Task.status' in 'where clause'
+Request URL: /project-case/users/login
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `TaskOwn...', Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `TaskOwn...', Array, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1444): DboSource->fetchAll('SELECT `TaskOwn...', false)
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1278): DboSource->_fetchHasMany(Object(User), 'SELECT `TaskOwn...', Array)
+#5 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(Task), 'hasMany', 'TaskOwner', Array, Array, true, Array, 0, Array)
+#6 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3022): DboSource->read(Object(User), Array)
+#7 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#8 /home/demos/www/public_html/project-case/app/Model/User.php(123): Model->find('first', Array)
+#9 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('credentials', Array)
+#10 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(303): AuthsomeComponent->login(Array, NULL)
+#11 /home/demos/www/public_html/project-case/app/Controller/UsersController.php(19): Authsome::login(Array)
+#12 [internal function]: UsersController->login()
+#13 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2015-06-28 13:39:03 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /project-case/users/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 13:39:31 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Task.status' in 'where clause'
+Request URL: /project-case/users/login
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `TaskOwn...', Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `TaskOwn...', Array, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1444): DboSource->fetchAll('SELECT `TaskOwn...', false)
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1278): DboSource->_fetchHasMany(Object(User), 'SELECT `TaskOwn...', Array)
+#5 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(Task), 'hasMany', 'TaskOwner', Array, Array, true, Array, 0, Array)
+#6 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3022): DboSource->read(Object(User), Array)
+#7 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#8 /home/demos/www/public_html/project-case/app/Model/User.php(123): Model->find('first', Array)
+#9 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('credentials', Array)
+#10 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(303): AuthsomeComponent->login(Array, NULL)
+#11 /home/demos/www/public_html/project-case/app/Controller/UsersController.php(19): Authsome::login(Array)
+#12 [internal function]: UsersController->login()
+#13 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2015-06-28 13:39:31 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /project-case/users/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 13:42:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Task.created' in 'order clause'
+Request URL: /project-case/users/login
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `TaskOwn...', Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `TaskOwn...', Array, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1444): DboSource->fetchAll('SELECT `TaskOwn...', false)
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1278): DboSource->_fetchHasMany(Object(User), 'SELECT `TaskOwn...', Array)
+#5 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(Task), 'hasMany', 'TaskOwner', Array, Array, true, Array, 0, Array)
+#6 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3022): DboSource->read(Object(User), Array)
+#7 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#8 /home/demos/www/public_html/project-case/app/Model/User.php(123): Model->find('first', Array)
+#9 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('credentials', Array)
+#10 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(303): AuthsomeComponent->login(Array, NULL)
+#11 /home/demos/www/public_html/project-case/app/Controller/UsersController.php(19): Authsome::login(Array)
+#12 [internal function]: UsersController->login()
+#13 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2015-06-28 13:42:14 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /project-case/users/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 13:45:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Task.status' in 'where clause'
+Request URL: /project-case/users/login
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `TaskOwn...', Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `TaskOwn...', Array, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1444): DboSource->fetchAll('SELECT `TaskOwn...', false)
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1278): DboSource->_fetchHasMany(Object(User), 'SELECT `TaskOwn...', Array)
+#5 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(Task), 'hasMany', 'TaskOwner', Array, Array, true, Array, 0, Array)
+#6 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3022): DboSource->read(Object(User), Array)
+#7 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#8 /home/demos/www/public_html/project-case/app/Model/User.php(123): Model->find('first', Array)
+#9 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('credentials', Array)
+#10 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(303): AuthsomeComponent->login(Array, NULL)
+#11 /home/demos/www/public_html/project-case/app/Controller/UsersController.php(19): Authsome::login(Array)
+#12 [internal function]: UsersController->login()
+#13 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2015-06-28 13:45:02 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /project-case/users/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 13:45:10 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Task.status' in 'where clause'
+Request URL: /project-case/users/login
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `TaskOwn...', Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `TaskOwn...', Array, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1444): DboSource->fetchAll('SELECT `TaskOwn...', false)
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1278): DboSource->_fetchHasMany(Object(User), 'SELECT `TaskOwn...', Array)
+#5 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(Task), 'hasMany', 'TaskOwner', Array, Array, true, Array, 0, Array)
+#6 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3022): DboSource->read(Object(User), Array)
+#7 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#8 /home/demos/www/public_html/project-case/app/Model/User.php(123): Model->find('first', Array)
+#9 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('credentials', Array)
+#10 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(303): AuthsomeComponent->login(Array, NULL)
+#11 /home/demos/www/public_html/project-case/app/Controller/UsersController.php(19): Authsome::login(Array)
+#12 [internal function]: UsersController->login()
+#13 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2015-06-28 13:45:10 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /project-case/users/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 13:48:00 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Task.created' in 'order clause'
+Request URL: /project-case/users/login
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `TaskOwn...', Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `TaskOwn...', Array, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1444): DboSource->fetchAll('SELECT `TaskOwn...', false)
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1278): DboSource->_fetchHasMany(Object(User), 'SELECT `TaskOwn...', Array)
+#5 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(Task), 'hasMany', 'TaskOwner', Array, Array, true, Array, 0, Array)
+#6 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3022): DboSource->read(Object(User), Array)
+#7 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#8 /home/demos/www/public_html/project-case/app/Model/User.php(123): Model->find('first', Array)
+#9 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('credentials', Array)
+#10 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(303): AuthsomeComponent->login(Array, NULL)
+#11 /home/demos/www/public_html/project-case/app/Controller/UsersController.php(19): Authsome::login(Array)
+#12 [internal function]: UsersController->login()
+#13 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2015-06-28 13:48:00 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /project-case/users/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 13:48:57 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /project-case/users/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 13:48:57 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /project-case/users/img/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 13:49:21 Error: [MissingActionException] Action DashboardController::admin_index() could not be found.
+Exception Attributes: array (
+  'controller' => 'DashboardController',
+  'action' => 'admin_index',
+)
+Request URL: /project-case/
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 13:50:05 Error: [MissingViewException] View file "Dashboard/admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Dashboard/admin_index.ctp',
+)
+Request URL: /project-case/
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-06-28 14:08:58 Error: [MissingViewException] View file "Dashboard/admin_index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Dashboard/admin_index.ctp',
+)
+Request URL: /project-case/
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-06-28 15:23:11 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/User/logout
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 15:23:11 Error: [MissingControllerException] Controller class UserController could not be found.
+Exception Attributes: array (
+  'class' => 'UserController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/User/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 15:23:44 Error: [MissingActionException] Action UsersController::admin_logout() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_logout',
+)
+Request URL: /project-case/admin/users/logout
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 15:23:45 Error: [MissingActionException] Action UsersController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/users/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 15:26:00 Error: [MissingControllerException] Controller class CategoriesController could not be found.
+Exception Attributes: array (
+  'class' => 'CategoriesController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/categories/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 15:26:00 Error: [MissingControllerException] Controller class CategoriesController could not be found.
+Exception Attributes: array (
+  'class' => 'CategoriesController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/categories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 15:51:03 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/index.html
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 15:54:45 Error: [MissingControllerException] Controller class ClientsController could not be found.
+Exception Attributes: array (
+  'class' => 'ClientsController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/clients/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 15:54:45 Error: [MissingControllerException] Controller class ClientsController could not be found.
+Exception Attributes: array (
+  'class' => 'ClientsController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/clients/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 16:01:20 Error: [MissingActionException] Action ClientsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/clients/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 16:01:20 Error: [MissingActionException] Action ClientsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/clients/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 16:04:30 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 16:05:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 16:05:38 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 16:07:47 Error: [MissingControllerException] Controller class SuppliersController could not be found.
+Exception Attributes: array (
+  'class' => 'SuppliersController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/suppliers/edit/1
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 16:07:47 Error: [MissingControllerException] Controller class SuppliersController could not be found.
+Exception Attributes: array (
+  'class' => 'SuppliersController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/suppliers/edit/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 16:08:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 16:14:23 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 16:15:42 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 16:15:50 Error: [MissingActionException] Action ClientsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/clients/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 16:15:55 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 16:24:33 Error: [MissingActionException] Action ClientsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/clients/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 17:21:41 Error: [MissingActionException] Action ClientsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/clients/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 17:22:50 Error: [MissingActionException] Action ClientsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/clients/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 17:24:48 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/demos/www/public_html/project-case/app/Controller/LawsuitsController.php, line 46]
+2015-06-28 17:24:48 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /project-case/admin/lawsuits/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/demos/www...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/demos/www...', 46, Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/demos/www...', 46, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-06-28 17:24:48 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 17:26:07 Error: Fatal Error (1): Call to a member function find() on a non-object in [/home/demos/www/public_html/project-case/app/Controller/LawsuitsController.php, line 46]
+2015-06-28 17:26:07 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /project-case/admin/lawsuits/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/demos/www...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/demos/www...', 46, Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/demos/www...', 46, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-06-28 17:26:07 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 17:26:33 Error: [MissingViewException] View file "Lawsuits/admin_add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Lawsuits/admin_add.ctp',
+)
+Request URL: /project-case/admin/lawsuits/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-06-28 17:26:33 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 17:39:15 Error: [MissingViewException] View file "Lawsuits/admin_add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Lawsuits/admin_add.ctp',
+)
+Request URL: /project-case/admin/lawsuits/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-06-28 17:39:15 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 17:39:35 Error: [MissingViewException] View file "Lawsuits/admin_add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Lawsuits/admin_add.ctp',
+)
+Request URL: /project-case/admin/lawsuits/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-06-28 17:39:36 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 17:40:18 Error: [MissingViewException] View file "Lawsuits/admin_add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Lawsuits/admin_add.ctp',
+)
+Request URL: /project-case/admin/lawsuits/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-06-28 17:40:18 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 17:40:19 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 17:40:25 Error: [MissingActionException] Action ClientsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/clients/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 17:40:28 Error: [MissingViewException] View file "Lawsuits/admin_add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Lawsuits/admin_add.ctp',
+)
+Request URL: /project-case/admin/lawsuits/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-06-28 17:40:28 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 17:41:41 Error: [MissingViewException] View file "Lawsuits/admin_add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Lawsuits/admin_add.ctp',
+)
+Request URL: /project-case/admin/lawsuits/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-06-28 17:41:42 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 17:42:34 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 17:55:21 Error: [MissingActionException] Action ClientsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/clients/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 17:55:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-28 17:55:41 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 18:23:33 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 18:35:36 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-28 18:35:46 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'setFlash' at line 1
+Request URL: /project-case/admin/lawsuits/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('setFlash', Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('setFlash', Array, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(611): DboSource->fetchAll('setFlash', Array, Array)
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(827): DboSource->query('setFlash', Array, Object(Lawsuit))
+#5 /home/demos/www/public_html/project-case/app/Controller/LawsuitsController.php(36): Model->__call('setFlash', Array)
+#6 /home/demos/www/public_html/project-case/app/Controller/LawsuitsController.php(36): Lawsuit->setFlash('<div class="ale...')
+#7 [internal function]: LawsuitsController->admin_add()
+#8 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LawsuitsController), Array)
+#9 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#11 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-06-28 18:35:46 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 11:39:39 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 11:41:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/img/items/thumb/no_photo_available.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 11:41:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 11:41:46 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 11:42:08 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'setFlash' at line 1
+Request URL: /project-case/admin/lawsuits/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('setFlash', Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('setFlash', Array, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(611): DboSource->fetchAll('setFlash', Array, Array)
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(827): DboSource->query('setFlash', Array, Object(Lawsuit))
+#5 /home/demos/www/public_html/project-case/app/Controller/LawsuitsController.php(36): Model->__call('setFlash', Array)
+#6 /home/demos/www/public_html/project-case/app/Controller/LawsuitsController.php(36): Lawsuit->setFlash('<div class="ale...')
+#7 [internal function]: LawsuitsController->admin_add()
+#8 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LawsuitsController), Array)
+#9 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#11 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-06-29 11:42:08 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 11:43:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 11:43:30 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 11:46:28 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 11:47:00 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'setFlash' at line 1
+Request URL: /project-case/admin/lawsuits/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('setFlash', Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('setFlash', Array, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(611): DboSource->fetchAll('setFlash', Array, Array)
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(827): DboSource->query('setFlash', Array, Object(Lawsuit))
+#5 /home/demos/www/public_html/project-case/app/Controller/LawsuitsController.php(36): Model->__call('setFlash', Array)
+#6 /home/demos/www/public_html/project-case/app/Controller/LawsuitsController.php(36): Lawsuit->setFlash('<div class="ale...')
+#7 [internal function]: LawsuitsController->admin_add()
+#8 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LawsuitsController), Array)
+#9 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#11 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-06-29 11:47:00 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 11:55:51 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 11:56:03 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 11:56:31 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'setFlash' at line 1
+Request URL: /project-case/admin/lawsuits/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('setFlash', Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('setFlash', Array, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(611): DboSource->fetchAll('setFlash', Array, Array)
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(827): DboSource->query('setFlash', Array, Object(Lawsuit))
+#5 /home/demos/www/public_html/project-case/app/Controller/LawsuitsController.php(36): Model->__call('setFlash', Array)
+#6 /home/demos/www/public_html/project-case/app/Controller/LawsuitsController.php(36): Lawsuit->setFlash('<div class="ale...')
+#7 [internal function]: LawsuitsController->admin_add()
+#8 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LawsuitsController), Array)
+#9 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#11 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-06-29 11:56:31 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 11:58:10 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 11:58:23 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 11:58:26 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'setFlash' at line 1
+Request URL: /project-case/admin/lawsuits/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('setFlash', Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('setFlash', Array, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(611): DboSource->fetchAll('setFlash', Array, Array)
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(827): DboSource->query('setFlash', Array, Object(Lawsuit))
+#5 /home/demos/www/public_html/project-case/app/Controller/LawsuitsController.php(36): Model->__call('setFlash', Array)
+#6 /home/demos/www/public_html/project-case/app/Controller/LawsuitsController.php(36): Lawsuit->setFlash('<div class="ale...')
+#7 [internal function]: LawsuitsController->admin_add()
+#8 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LawsuitsController), Array)
+#9 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#11 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-06-29 11:58:26 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 12:13:32 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 12:14:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:14:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/img/items/thumb/no_photo_available.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:19:57 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:29:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:29:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/img/items/thumb/no_photo_available.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:29:08 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:29:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:29:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/img/items/thumb/no_photo_available.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:29:29 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:30:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:30:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/img/items/thumb/no_photo_available.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:35:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:37:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:38:12 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 12:38:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:38:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:38:23 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 12:38:25 Error: [MissingActionException] Action ClientsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/clients/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 14:18:19 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-06-29 14:27:09 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /project-case/admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-06-29 15:00:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/admin/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

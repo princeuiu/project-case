@@ -3715,3 +3715,30 @@ Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
 [main] - APP/webroot/index.php, line 118
 
+2015-06-28 16:05:19 Notice: Notice (8): Indirect modification of overloaded element of CakeRequest has no effect in [/home/demos/www/public_html/project-case/app/Controller/ClientsController.php, line 48]
+Trace:
+ClientsController::admin_index() - APP/Controller/ClientsController.php, line 48
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-06-28 16:05:19 Notice: Notice (8): Indirect modification of overloaded property ClientsController::$paginate has no effect in [/home/demos/www/public_html/project-case/app/Controller/ClientsController.php, line 55]
+Trace:
+ClientsController::admin_index() - APP/Controller/ClientsController.php, line 55
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-06-28 16:05:19 Notice: Notice (8): Undefined variable: options in [/home/demos/www/public_html/project-case/app/Controller/ClientsController.php, line 57]
+Trace:
+ClientsController::admin_index() - APP/Controller/ClientsController.php, line 57
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+

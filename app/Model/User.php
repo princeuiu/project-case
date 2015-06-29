@@ -131,15 +131,15 @@ class User extends AppModel {
             'className' => 'Task',
             'foreignKey' => 'owner',
             'dependent' => true,
-            'conditions' => array('Task.status' => 'pending'),
-            'order' => 'Task.created DESC'
+            'conditions' => array('TaskOwner.status' => 'pending'),
+            'order' => 'TaskOwner.created DESC'
         ),
         'TaskAssigned' => array(
             'className' => 'Task',
             'foreignKey' => 'assigned_to',
             'dependent' => false,
-            'conditions' => array('Task.status' => 'pending'),
-            'order' => 'Task.created DESC'
+            'conditions' => array('TaskAssigned.status' => 'pending'),
+            'order' => 'TaskAssigned.created DESC'
         )
     );
     
