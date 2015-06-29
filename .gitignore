@@ -1,2 +1,11 @@
 /nbproject/
+/config/
+/contrib/
+/lib/
+/plugins/
+/src/
+/tests/
+/vendores/
+/app/Console/
+/app/tmp/
 /app/Plugin/

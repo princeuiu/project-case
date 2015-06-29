@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Application level Controller
  *
@@ -18,7 +19,6 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-
 App::uses('Controller', 'Controller');
 
 /**
@@ -31,13 +31,13 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-    
+
     public $components = array(
         'Session',
-        'Cookie', 
-        'RequestHandler', 
+        'Cookie',
+        'RequestHandler',
         'Email',
-        'Paginator', 
+        'Paginator',
 //        'Recaptcha.Recaptcha',
         'DebugKit.Toolbar',
         'Authsome.Authsome' => array(
@@ -49,40 +49,40 @@ class AppController extends Controller {
             'check' => 'User.group'
         )
     );
-    
-    
     public $helpers = array(
         'Html',
-        'Form', 
-        'Session', 
-        'Time', 
-        'Cache', 
-        'Text', 
+        'Form',
+        'Session',
+        'Time',
+        'Cache',
+        'Text',
         'Paginator',
         'Tinymce'
 //        'Recaptcha.Recaptcha',
 //        'Sidemenu'
     );
-    
-    
-    
+    public $theme = 'Lawfirm';
+
     public function beforeFilter() {
         //pr($this->params); die;
         $this->layout = 'admin';
         $current_url = Router::url(null);
         $current_url_array = explode('/', $current_url);
         //if(Router::url(null)!='/login' && Router::url(null)!='/logout')
-        if(!in_array('login', $current_url_array) && !in_array('logout', $current_url_array))
-            $this->Session->write('redirect_url',Router::url(null,true));
+        if (!in_array('login', $current_url_array) && !in_array('logout', $current_url_array)) {
+            $this->Session->write('redirect_url', Router::url(null, true));
+        }
 
-        if(isset($this->request->params['admin']) && ($this->request->params['prefix'] == 'admin')) {
-            if(Authsome::get("group") != 'admin' && Authsome::get("group") != 'manager'){
-                $this->Session->setFlash('<div class="alert alert-danger">' . __('You must be an administrator to access this resource.') . '</div>');    
+        if (isset($this->request->params['admin']) && ($this->request->params['prefix'] == 'admin')) {
+            if (Authsome::get("group") != 'admin' && Authsome::get("group") != 'manager') {
+                $this->Session->setFlash('<div class="alert alert-danger">' . __('You must be an administrator to access this resource.') . '</div>');
                 $this->redirect('/login');
             }
+            $loggedin = Authsome::get("name");
+            $this->set(compact('loggedin'));
             $this->layout = 'admin';
-        } elseif(isset($this->request->params['customer']) && ($this->request->params['prefix'] == 'customer')) {
-            if($this->Session->check('Auth.User')) {
+        } elseif (isset($this->request->params['customer']) && ($this->request->params['prefix'] == 'customer')) {
+            if ($this->Session->check('Auth.User')) {
                 $this->set('authUser', $this->Auth->user());
                 $loggedin = $this->Session->read('Auth.User');
                 $this->set(compact('loggedin'));
@@ -91,7 +91,6 @@ class AppController extends Controller {
         } else {
             // $this->Auth->allow();
         }
-
     }
-    
+
 }
