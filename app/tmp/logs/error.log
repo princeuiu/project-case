@@ -4929,3 +4929,1169 @@ Request URL: /project-case/admin/img/avatar.jpg
 Stack Trace:
 #0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-06-30 15:03:26 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('login_tokens')
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /home/shovan/PhpstormProjects/project-case/app/Model/User.php(106): Model->find('first', Array)
+#8 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('cookie', Array)
+#9 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(252): AuthsomeComponent->login('cookie', Array)
+#10 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(215): AuthsomeComponent->__useCookieToken()
+#11 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(69): AuthsomeComponent->__getActiveUser()
+#12 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(291): AuthsomeComponent->get('group')
+#13 /home/shovan/PhpstormProjects/project-case/app/Controller/AppController.php(77): Authsome::get('group')
+#14 /home/shovan/PhpstormProjects/project-case/app/Controller/DashboardController.php(13): AppController->beforeFilter()
+#15 [internal function]: DashboardController->beforeFilter(Object(CakeEvent))
+#16 /home/shovan/PhpstormProjects/project-case/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#19 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#20 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2015-06-30 15:03:31 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('login_tokens')
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /home/shovan/PhpstormProjects/project-case/app/Model/User.php(106): Model->find('first', Array)
+#8 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('cookie', Array)
+#9 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(252): AuthsomeComponent->login('cookie', Array)
+#10 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(215): AuthsomeComponent->__useCookieToken()
+#11 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(69): AuthsomeComponent->__getActiveUser()
+#12 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(291): AuthsomeComponent->get('group')
+#13 /home/shovan/PhpstormProjects/project-case/app/Controller/AppController.php(77): Authsome::get('group')
+#14 /home/shovan/PhpstormProjects/project-case/app/Controller/DashboardController.php(13): AppController->beforeFilter()
+#15 [internal function]: DashboardController->beforeFilter(Object(CakeEvent))
+#16 /home/shovan/PhpstormProjects/project-case/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#19 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#20 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2015-06-30 15:03:33 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('login_tokens')
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /home/shovan/PhpstormProjects/project-case/app/Model/User.php(106): Model->find('first', Array)
+#8 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('cookie', Array)
+#9 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(252): AuthsomeComponent->login('cookie', Array)
+#10 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(215): AuthsomeComponent->__useCookieToken()
+#11 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(69): AuthsomeComponent->__getActiveUser()
+#12 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(291): AuthsomeComponent->get('group')
+#13 /home/shovan/PhpstormProjects/project-case/app/Controller/AppController.php(77): Authsome::get('group')
+#14 /home/shovan/PhpstormProjects/project-case/app/Controller/DashboardController.php(13): AppController->beforeFilter()
+#15 [internal function]: DashboardController->beforeFilter(Object(CakeEvent))
+#16 /home/shovan/PhpstormProjects/project-case/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#19 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#20 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2015-06-30 15:07:14 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[42000] [1049] Unknown database \'db_lawfrm\'',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('login_tokens')
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /home/shovan/PhpstormProjects/project-case/app/Model/User.php(106): Model->find('first', Array)
+#8 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('cookie', Array)
+#9 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(252): AuthsomeComponent->login('cookie', Array)
+#10 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(215): AuthsomeComponent->__useCookieToken()
+#11 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(69): AuthsomeComponent->__getActiveUser()
+#12 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(291): AuthsomeComponent->get('group')
+#13 /home/shovan/PhpstormProjects/project-case/app/Controller/AppController.php(77): Authsome::get('group')
+#14 /home/shovan/PhpstormProjects/project-case/app/Controller/DashboardController.php(13): AppController->beforeFilter()
+#15 [internal function]: DashboardController->beforeFilter(Object(CakeEvent))
+#16 /home/shovan/PhpstormProjects/project-case/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#19 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#20 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2015-06-30 15:07:17 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[42000] [1049] Unknown database \'db_lawfrm\'',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('login_tokens')
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /home/shovan/PhpstormProjects/project-case/app/Model/User.php(106): Model->find('first', Array)
+#8 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('cookie', Array)
+#9 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(252): AuthsomeComponent->login('cookie', Array)
+#10 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(215): AuthsomeComponent->__useCookieToken()
+#11 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(69): AuthsomeComponent->__getActiveUser()
+#12 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(291): AuthsomeComponent->get('group')
+#13 /home/shovan/PhpstormProjects/project-case/app/Controller/AppController.php(77): Authsome::get('group')
+#14 /home/shovan/PhpstormProjects/project-case/app/Controller/DashboardController.php(13): AppController->beforeFilter()
+#15 [internal function]: DashboardController->beforeFilter(Object(CakeEvent))
+#16 /home/shovan/PhpstormProjects/project-case/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#19 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#20 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2015-07-01 11:20:01 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[42000] [1049] Unknown database \'db_lawfrm\'',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('login_tokens')
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /home/shovan/PhpstormProjects/project-case/app/Model/User.php(106): Model->find('first', Array)
+#8 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('cookie', Array)
+#9 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(252): AuthsomeComponent->login('cookie', Array)
+#10 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(215): AuthsomeComponent->__useCookieToken()
+#11 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(69): AuthsomeComponent->__getActiveUser()
+#12 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(291): AuthsomeComponent->get('group')
+#13 /home/shovan/PhpstormProjects/project-case/app/Controller/AppController.php(77): Authsome::get('group')
+#14 /home/shovan/PhpstormProjects/project-case/app/Controller/DashboardController.php(13): AppController->beforeFilter()
+#15 [internal function]: DashboardController->beforeFilter(Object(CakeEvent))
+#16 /home/shovan/PhpstormProjects/project-case/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#19 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#20 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2015-07-01 11:22:24 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[42000] [1049] Unknown database \'db_lawfrm\'',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('login_tokens')
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /home/shovan/PhpstormProjects/project-case/app/Model/User.php(106): Model->find('first', Array)
+#8 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('cookie', Array)
+#9 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(252): AuthsomeComponent->login('cookie', Array)
+#10 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(215): AuthsomeComponent->__useCookieToken()
+#11 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(69): AuthsomeComponent->__getActiveUser()
+#12 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(291): AuthsomeComponent->get('group')
+#13 /home/shovan/PhpstormProjects/project-case/app/Controller/AppController.php(77): Authsome::get('group')
+#14 /home/shovan/PhpstormProjects/project-case/app/Controller/DashboardController.php(13): AppController->beforeFilter()
+#15 [internal function]: DashboardController->beforeFilter(Object(CakeEvent))
+#16 /home/shovan/PhpstormProjects/project-case/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#19 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#20 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2015-07-01 11:23:45 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[42000] [1049] Unknown database \'db_lawfrm\'',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('login_tokens')
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /home/shovan/PhpstormProjects/project-case/app/Model/User.php(106): Model->find('first', Array)
+#8 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('cookie', Array)
+#9 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(252): AuthsomeComponent->login('cookie', Array)
+#10 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(215): AuthsomeComponent->__useCookieToken()
+#11 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(69): AuthsomeComponent->__getActiveUser()
+#12 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(291): AuthsomeComponent->get('group')
+#13 /home/shovan/PhpstormProjects/project-case/app/Controller/AppController.php(77): Authsome::get('group')
+#14 /home/shovan/PhpstormProjects/project-case/app/Controller/DashboardController.php(13): AppController->beforeFilter()
+#15 [internal function]: DashboardController->beforeFilter(Object(CakeEvent))
+#16 /home/shovan/PhpstormProjects/project-case/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#19 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#20 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2015-07-01 11:23:52 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[42000] [1049] Unknown database \'db_lawfrm\'',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('login_tokens')
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /home/shovan/PhpstormProjects/project-case/app/Model/User.php(106): Model->find('first', Array)
+#8 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('cookie', Array)
+#9 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(252): AuthsomeComponent->login('cookie', Array)
+#10 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(215): AuthsomeComponent->__useCookieToken()
+#11 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(69): AuthsomeComponent->__getActiveUser()
+#12 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(291): AuthsomeComponent->get('group')
+#13 /home/shovan/PhpstormProjects/project-case/app/Controller/AppController.php(77): Authsome::get('group')
+#14 /home/shovan/PhpstormProjects/project-case/app/Controller/DashboardController.php(13): AppController->beforeFilter()
+#15 [internal function]: DashboardController->beforeFilter(Object(CakeEvent))
+#16 /home/shovan/PhpstormProjects/project-case/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#19 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#20 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2015-07-01 11:30:00 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /users/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 11:33:14 Error: [MissingActionException] Action UsersController::login.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'login.html',
+)
+Request URL: /users/login.html
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 11:33:14 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /users/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 11:36:16 Error: [MissingModelException] Category
+Request URL: /admin/histories
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(1086): PaginatorComponent->paginate('Category', Array, Array)
+#1 /home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php(152): Controller->paginate('Category', Array)
+#2 [internal function]: HistoriesController->admin_index()
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HistoriesController), Array)
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#6 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2015-07-01 11:36:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-01 11:45:44 Error: [MissingModelException] Category
+Request URL: /admin/histories
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(1086): PaginatorComponent->paginate('Category', Array, Array)
+#1 /home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php(152): Controller->paginate('Category', Array)
+#2 [internal function]: HistoriesController->admin_index()
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HistoriesController), Array)
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#6 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2015-07-01 11:45:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-01 11:45:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-01 11:49:23 Error: [MissingModelException] Category
+Request URL: /admin/histories
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(1086): PaginatorComponent->paginate('Category', Array, Array)
+#1 /home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php(152): Controller->paginate('Category', Array)
+#2 [internal function]: HistoriesController->admin_index()
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HistoriesController), Array)
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#6 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2015-07-01 11:49:23 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-01 11:50:16 Error: [MissingModelException] Category
+Request URL: /admin/histories
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(1086): PaginatorComponent->paginate('Category', Array, Array)
+#1 /home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php(152): Controller->paginate('Category', Array)
+#2 [internal function]: HistoriesController->admin_index()
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HistoriesController), Array)
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#6 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2015-07-01 11:50:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-01 11:50:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /admin/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-01 11:50:57 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:01:27 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:01:28 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:34:45 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:35:32 Error: [MissingActionException] Action LawsuitsController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:41:13 Error: Fatal Error (1): Call to a member function find() on null in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 56]
+2015-07-01 12:41:13 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /admin/histories/add
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 56)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 56, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 56, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-07-01 12:41:13 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:44:17 Error: Fatal Error (1): Call to a member function find() on null in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 56]
+2015-07-01 12:44:17 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /admin/histories/add
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 56)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 56, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 56, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-07-01 12:44:18 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:44:18 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:44:20 Error: Fatal Error (1): Call to a member function find() on null in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 56]
+2015-07-01 12:44:20 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /admin/histories/add
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 56)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 56, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 56, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-07-01 12:44:20 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:44:22 Error: Fatal Error (1): Call to a member function find() on null in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 56]
+2015-07-01 12:44:22 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /admin/histories/add
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 56)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 56, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 56, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-07-01 12:44:23 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:44:23 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:46:07 Error: Fatal Error (1): Call to a member function find() on null in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 56]
+2015-07-01 12:46:07 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /admin/histories/add
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 56)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 56, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 56, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-07-01 12:46:07 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:47:21 Error: Fatal Error (1): Call to a member function find() on null in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 58]
+2015-07-01 12:47:21 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /admin/histories/add
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 58)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 58, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 58, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-07-01 12:47:22 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:47:22 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:47:51 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:47:51 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:48:55 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:51:17 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:52:26 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:52:27 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:52:39 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:52:39 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:55:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /admin/histories/add
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `User`.`...', Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `User`.`...', false)
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Lawsuit), Array)
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('list', Array)
+#6 /home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php(61): Model->find('list', Array)
+#7 [internal function]: HistoriesController->admin_add()
+#8 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HistoriesController), Array)
+#9 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#11 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-07-01 12:55:12 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:55:13 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:55:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Lawsuit.name' in 'field list'
+Request URL: /admin/histories/add
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Lawsuit...', Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Lawsuit...', Array, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Lawsuit...', false)
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Lawsuit), Array)
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('list', Array)
+#6 /home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php(61): Model->find('list', Array)
+#7 [internal function]: HistoriesController->admin_add()
+#8 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HistoriesController), Array)
+#9 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#11 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-07-01 12:55:27 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:55:27 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:55:52 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 12:55:52 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 13:54:31 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 13:54:32 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 13:58:11 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 13:58:11 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:01:04 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:01:05 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:01:12 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:01:12 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:01:20 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-01 14:01:34 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:01:36 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:01:36 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-01 14:04:41 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:04:42 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-01 14:04:43 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:04:43 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:06:10 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:11:02 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:11:03 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:11:14 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:11:28 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:12:41 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:13:32 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:13:36 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:17:42 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'setFlash' at line 1
+Request URL: /admin/histories/add
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('setFlash', Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('setFlash', Array, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(611): DboSource->fetchAll('setFlash', Array, Array)
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(827): DboSource->query('setFlash', Array, Object(History))
+#5 /home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php(21): Model->__call('setFlash', Array)
+#6 /home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php(21): History->setFlash('<div class="ale...')
+#7 [internal function]: HistoriesController->admin_add()
+#8 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HistoriesController), Array)
+#9 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#11 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-07-01 14:17:43 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:17:44 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:17:49 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:18:00 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'setFlash' at line 1
+Request URL: /admin/histories/add
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('setFlash', Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('setFlash', Array, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(611): DboSource->fetchAll('setFlash', Array, Array)
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(827): DboSource->query('setFlash', Array, Object(History))
+#5 /home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php(21): Model->__call('setFlash', Array)
+#6 /home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php(21): History->setFlash('<div class="ale...')
+#7 [internal function]: HistoriesController->admin_add()
+#8 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HistoriesController), Array)
+#9 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#11 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-07-01 14:18:00 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:20:08 Error: [MissingActionException] Action HistoriesController::admin_img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'admin_img',
+)
+Request URL: /admin/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-01 14:21:46 Error: Fatal Error (1): Call to a member function read() on null in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 121]
+2015-07-01 14:21:46 Error: [FatalErrorException] Call to a member function read() on null
+Request URL: /admin/histories/edit/6
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 121)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 121, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 121, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-07-01 14:21:47 Error: Fatal Error (1): Call to a member function read() on null in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 121]
+2015-07-01 14:21:47 Error: [FatalErrorException] Call to a member function read() on null
+Request URL: /admin/histories/edit/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 121)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 121, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 121, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
