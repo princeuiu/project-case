@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5cbfbab-07b4-4a8f-9fb6-437cfa4d4ede" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/View/Themed/Lawfirm/Histories/admin_add.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/View/Themed/Lawfirm/Histories/admin_index.ctp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/View/Themed/Lawfirm/Histories/index.ctp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tmp/cache/cake_toolbar_cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tmp/cache/cake_toolbar_cache6467eb0dccdd222be05667010b5969c1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tmp/cache/cake_toolbar_cache68f6ee88f9fc2511ee29533452d55dbc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tmp/cache/cake_toolbar_cachede1d920b9416daddda76de4efcdb9570" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_db_pos_brand_to_item" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_db_pos_brands" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_db_pos_categories" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_db_pos_currencies" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_db_pos_items" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_db_pos_list" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_db_pos_supplier_to_item" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_db_pos_suppliers" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/tmp/cache/models/myapp_cake_model_default_db_pos_units" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/HistoriesController.php" afterPath="$PROJECT_DIR$/app/Controller/HistoriesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Config/database.php" afterPath="$PROJECT_DIR$/app/Config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/logs/error.log" afterPath="$PROJECT_DIR$/app/tmp/logs/error.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_dev_en-us" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_dev_en-us" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_en-us" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_en-us" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_debug_kit_en-us" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_debug_kit_en-us" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_default_en-us" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_default_en-us" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_file_map" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_file_map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_method_cache" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_method_cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_object_map" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_object_map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project-case.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -101,7 +75,7 @@
       <file leaf-file-name="HistoriesController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Controller/HistoriesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5811138" vertical-offset="75" max-vertical-offset="2910">
+            <state vertical-scroll-proportion="0.96385545" vertical-offset="75" max-vertical-offset="2910">
               <caret line="21" column="108" selection-start-line="21" selection-start-column="108" selection-end-line="21" selection-end-column="108" />
               <folding />
             </state>
@@ -356,7 +330,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14708172" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23425692" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28677562" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5304606" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -730,7 +704,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/HistoriesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5811138" vertical-offset="75" max-vertical-offset="2910">
+        <state vertical-scroll-proportion="0.96385545" vertical-offset="75" max-vertical-offset="2910">
           <caret line="21" column="108" selection-start-line="21" selection-start-column="108" selection-end-line="21" selection-end-column="108" />
           <folding />
         </state>
