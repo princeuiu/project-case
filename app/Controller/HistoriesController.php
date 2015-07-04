@@ -25,24 +25,6 @@ class HistoriesController extends AppController {
                 $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t save History now, Please try again later.') . '</div>');
                 return;
             }
-//                if($this->Qimage->resize($resizeImgData)){
-//                    if($this->Qimage->resize($thumbImgData)){
-//                        if($this->Category->save($catData)){
-//                            $this->Session->setFlash('<div class="alert alert-success">' . __('Category added successfully.') . '</div>');
-//                            return $this->redirect(array('controller' => 'categories', 'action' => 'edit', $this->Category->id));
-//                        }
-//                        else{
-//                            $this->Session->setFlash('<div class="alert alert-danger">' . __('Can\'t save Category now, Please try again later.') . '</div>');
-//                            return;
-//                        }
-//                    }
-//                }
-//            }
-//            $imgUpErr = $this->Qimage->getErrors();
-//            if(!empty($imgUpErr)){
-//                $error = implode(',', $imgUpErr);
-//                $this->Session->setFlash('<div class="alert alert-danger">' . __('Can\'t save Category now, Please try again later.' . $error) . '</div>');
-//            }
         }
         $options = array(
             'NOT' => array(
@@ -58,80 +40,45 @@ class HistoriesController extends AppController {
         $this->set(compact('lawsuits'));
     }
 
+
+    public function admin_calender(){
+        $histories = $this->History->find('all', array(
+            'fields' => array('History.reporting_date', 'History.title', 'History.id'),
+            'conditions' => array('History.status'=>'pending')
+        ));
+//        print_r($histories); die;
+        $this->set(compact('histories'));
+    }
+
     public function admin_edit($id) {
         if($id == null){
             throw new BadRequestException();
         }
-        $this->Category->id = $id;
+        $this->History->id = $id;
         if(!empty($this->data)){
-            if($this->data['Category']['image']['error'] != 4 || $this->data['Category']['image']['name'] !=null){
-                $upImage = $this->data['Category']['image'];
-                $upDir = WWW_ROOT . 'img' . DS . 'categories' . DS . 'original' . DS;
-                $upImgData = array('file' => $upImage, 'path' => $upDir);
-                $upImgName = $this->Qimage->copy($upImgData);
-                if($upImgName){
-                    $catData = $this->data;
-                    unset($catData['Category']['image']);
-                    $catData['Category']['image'] = $upImgName;
-                    $resizeDir = WWW_ROOT . 'img' . DS . 'categories' . DS . 'resize' . DS;
-                    $thumbDir = WWW_ROOT . 'img' . DS . 'categories' . DS . 'thumb' . DS;
-                    $resizeImgData = array(
-                        'file' => $upDir . $upImgName,
-                        'width' => '400',
-                        'output' => $resizeDir
-                    );
-                    $thumbImgData = array(
-                        'file' => $upDir . $upImgName,
-                        'width' => '85',
-                        'output' => $thumbDir
-                    );
-                    if($this->Qimage->resize($resizeImgData)){
-                        if($this->Qimage->resize($thumbImgData)){
-                            if($this->Category->save($catData)){
-                                $this->Session->setFlash('<div class="alert alert-success">' . __('Category info updated successfully.') . '</div>');
-                                return $this->redirect(array('controller' => 'categories', 'action' => 'edit', $this->Category->id));
-                            }
-                            else{
-                                $this->Session->setFlash('<div class="alert alert-danger">' . __('Can\'t update Category info now, Please try again later.') . '</div>');
-                                return;
-                            }
-                        }
-                    }
-                }
-                $imgUpErr = $this->Qimage->getErrors();
-                if(!empty($imgUpErr)){
-                    $error = implode(',', $imgUpErr);
-                    $this->Session->setFlash('<div class="alert alert-danger">' . __('Can\'t save Category info now, Please try again later.' . $error) . '</div>');
-                }
+            if($this->History->save($this->data)){
+                $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('History updated successfully.') . '</div>');
+                return $this->redirect(array('controller' => 'histories', 'action' => 'edit', $this->History->id));
             }
             else{
-                $catData = $this->data;
-                unset($catData['Category']['image']);
-                if($this->Category->save($catData)){
-                    $this->Session->setFlash('<div class="alert alert-success">' . __('Category info updated successfully.') . '</div>');
-                    return $this->redirect(array('controller' => 'categories', 'action' => 'edit', $this->Category->id));
-                }
-                else{
-                    $this->Session->setFlash('<div class="alert alert-danger">' . __('Can\'t update Category info now, Please try again later.') . '</div>');
-                    return;
-                }
+                $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t save History now, Please try again later.') . '</div>');
+                return $this->redirect(array('controller' => 'histories', 'action' => 'edit', $this->History->id));
             }
         }
+//        pr($this->data);
 
-        $this->data = $this->Category->read();
+//        pr($lawsuits);
 
-        $options = array(
-            'NOT' => array(
-                'parent_id' => 0,
-            ),
-        );
-        $parents = $this->Category->generateTreeList(null,null,null," - ");
-        //pr($parents);
+        $this->set(compact('lawsuits'));
+        $this->data = $this->History->read();
+//        print_r($this->data['Lawsuit']['number']); die;
 
-        $this->set(compact('parents'));
-
-
-        $this->render('admin_add');
+        $lawsuits = $this->Lawsuit->find('list', array(
+            'fields' => array('Lawsuit.id', 'Lawsuit.number'),
+            'conditions' => array('Lawsuit.number'=>$this->data['Lawsuit']['number'])
+        ));
+        $this->set(compact('lawsuits'));
+        $this->render('admin_edit');
     }
 
     public function admin_index() {
