@@ -81,6 +81,23 @@ class HistoriesController extends AppController {
         $this->render('admin_edit');
     }
 
+    public function admin_view($id) {
+        if($id == null){
+            throw new BadRequestException();
+        }
+        $this->History->id = $id;
+        $this->data = $this->History->read();
+//        print_r($this->data['Lawsuit']['number']); die;
+        $lawsuits = $this->Lawsuit->find('list', array(
+            'fields' => array('Lawsuit.id', 'Lawsuit.number'),
+            'conditions' => array('Lawsuit.number'=>$this->data['Lawsuit']['number'])
+        ));
+        $history_info = $this->data;
+        print_r($history_info); die;
+        $this->set(compact('history_info'));
+        $this->render('admin_view');
+    }
+
     public function admin_index() {
         extract($this->params["named"]);
         $options = array(
