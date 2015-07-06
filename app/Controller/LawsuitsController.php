@@ -80,6 +80,12 @@ class LawsuitsController extends AppController {
     }
     
     
+    
+    public function test(){
+        throw new BadRequestException();
+    }
+            
+    
     function admin_remove_image($name) {
         $this->Lawsuit->updateAll(array("image"=>"''"),array("image"=>"$name"));
         @unlink(WWW_ROOT."img/items/original/".$name);

@@ -9,3 +9,4 @@
 /app/Console/
 /app/tmp/
 /app/Plugin/
+/app/Config/database.php
