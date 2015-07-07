@@ -7,7 +7,7 @@ class HistoriesController extends AppController {
 
     public $name = 'Histories';
 
-    public $uses = array('History', 'Lawsuit');
+    public $uses = array('History', 'Lawsuit', 'Client');
 
     public function admin_add(){
         if(!empty($this->data)){
@@ -46,8 +46,8 @@ class HistoriesController extends AppController {
             'fields' => array('History.reporting_date', 'History.title', 'History.id'),
             'conditions' => array('History.status'=>'pending')
         ));
-//        print_r($histories); die;
-        $this->set(compact('histories'));
+        print_r($histories); die;
+//        $this->set(compact('histories'));
     }
 
     public function admin_edit($id) {
@@ -65,14 +65,8 @@ class HistoriesController extends AppController {
                 return $this->redirect(array('controller' => 'histories', 'action' => 'edit', $this->History->id));
             }
         }
-//        pr($this->data);
-
-//        pr($lawsuits);
-
         $this->set(compact('lawsuits'));
         $this->data = $this->History->read();
-//        print_r($this->data['Lawsuit']['number']); die;
-
         $lawsuits = $this->Lawsuit->find('list', array(
             'fields' => array('Lawsuit.id', 'Lawsuit.number'),
             'conditions' => array('Lawsuit.number'=>$this->data['Lawsuit']['number'])
@@ -81,22 +75,38 @@ class HistoriesController extends AppController {
         $this->render('admin_edit');
     }
 
+
     public function admin_view($id) {
         if($id == null){
             throw new BadRequestException();
         }
-        $this->History->id = $id;
-        $this->data = $this->History->read();
-//        print_r($this->data['Lawsuit']['number']); die;
-        $lawsuits = $this->Lawsuit->find('list', array(
-            'fields' => array('Lawsuit.id', 'Lawsuit.number'),
-            'conditions' => array('Lawsuit.number'=>$this->data['Lawsuit']['number'])
+        $historyData = $this->History->find('first',array(
+            'conditions' => array('History.id' => $id)
         ));
-        $history_info = $this->data;
-        print_r($history_info); die;
-        $this->set(compact('history_info'));
+        $clientId = $historyData['Lawsuit']['client_id'];
+        $lawsuitNumber = $historyData['Lawsuit']['number'];
+        $clientInfo = $this->Client->find('first',array(
+            'conditions' => array('Client.id' => $clientId),
+            'recursive' => -1
+        ));
+        $this->set(compact('historyData','clientInfo', 'lawsuitNumber', 'id'));
         $this->render('admin_view');
     }
+
+
+    public function admin_timeline($id) {
+        if($id == null){
+            throw new BadRequestException();
+        }
+        $timelineData = $this->History->find('all',array(
+            'conditions' => array('History.lawsuit_id' => $id),
+            'order' => array('History.reporting_date DESC')
+        ));
+//        print_r($timelineData);die;
+        $this->set(compact('timelineData'));
+        $this->render('admin_timeline');
+    }
+
 
     public function admin_index() {
         extract($this->params["named"]);

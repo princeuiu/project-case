@@ -1,81 +1,157 @@
 <div class="row-fluid sortable">
     <div class="box span12">
-        <div class="box-header" data-original-title>
-            <h2><i class="halflings-icon white edit"></i><span class="break"></span><?php echo __('Edit Case History'); ?></h2>
-</div>
-<div class="box-content">
-    <?php
-    echo $this->Form->create('History', array(
-        'action' => $this->action,
-        'class' => 'form-horizontal',
-        'inputDefaults' => array(
-            'div' => false,
-            'label' => false
-        )
-    ));
-    ?>
-    <fieldset>
-        <div class="control-group">
-            <label class="control-label" for="HistoryCaseNumber">Case Number</label>
-            <div class="controls">
+        <div class="box-header">
+            <h2><i class="halflings-icon white align-justify"></i><span class="break"></span>
                 <?php
-                echo $this->Form->input('lawsuit_id', array('class' => 'span6 typeahead', 'placeholder' => 'Case Number', 'options' => $lawsuits, 'disabled', 'error' => array(
-                    'attributes' => array('escape' => false)
-                )));
+                echo $lawsuitNumber;
+                ?>
+            </h2>
+            <div class="box-icon">
+                <?php
+                echo '<a href="/admin/histories/edit/'.$id.'"><i class="halflings-icon white wrench"></i>Edit</a>';
                 ?>
             </div>
         </div>
-        <div class="control-group">
-            <label class="control-label" for="HistoryTitle">Title </label>
-            <div class="controls">
-                <?php
-                echo $this->Form->input('title', array('class' => 'span6 typeahead', 'placeholder' => 'Title', 'error' => array(
-                    'attributes' => array('escape' => false)
-                )));
-                ?>
-            </div>
+        <div class="box-content">
+            <table class="table table-striped">
+                <tbody>
+                <tr>
+                    <td>
+                        <b>
+                            History Title
+                        </b>
+                    </td>
+                    <td><?php
+                        echo ($historyData['History']['title']);
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>
+                            History Description
+                        </b>
+                    </td>
+                    <td><?php
+                        echo ($historyData['History']['description']);
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>
+                            Reporting Date
+                        </b>
+                    </td>
+                    <td><?php
+                        echo ($historyData['History']['reporting_date']);
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>
+                            Status
+                        </b>
+                    </td>
+                    <td><?php
+                        echo ($historyData['History']['status']);
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>
+                            Case Number
+                        </b>
+                    </td>
+                    <td><?php
+                        echo ($historyData['Lawsuit']['number']);
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>
+                            Client Name
+                        </b>
+                    </td>
+                    <td><?php
+                        echo ($clientInfo['Client']['name']);
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>
+                            Client Contact Person
+                        </b>
+                    </td>
+                    <td><?php
+                        echo ($clientInfo['Client']['contact_person']);
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>
+                            Client Contact Number
+                        </b>
+                    </td>
+                    <td><?php
+                        echo ($clientInfo['Client']['phone']);
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>
+                            Note
+                        </b>
+                    </td>
+                    <td><?php
+                        echo ($historyData['Lawsuit']['note']);
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>
+                            Case Status
+                        </b>
+                    </td>
+                    <td><?php
+                        echo ($historyData['Lawsuit']['status']);
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>
+                            Case Type
+                        </b>
+                    </td>
+                    <td><?php
+                        echo ($historyData['Lawsuit']['type']);
+                        ?>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+<!--            <div class="pagination pagination-centered">-->
+<!--                <ul>-->
+<!--                    <li><a href="#">Prev</a></li>-->
+<!--                    <li class="active">-->
+<!--                        <a href="#">1</a>-->
+<!--                    </li>-->
+<!--                    <li><a href="#">2</a></li>-->
+<!--                    <li><a href="#">3</a></li>-->
+<!--                    <li><a href="#">4</a></li>-->
+<!--                    <li><a href="#">Next</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
         </div>
-        <div class="control-group">
-            <label class="control-label" for="HistoryDescription">Description </label>
-            <div class="controls">
-                <?php
-                echo $this->Form->input('description', array('type'=>'textarea', 'class' => 'span6 typeahead', 'placeholder' => 'Description', 'error' => array(
-                    'attributes' => array('escape' => false)
-                )));
-                ?>
-            </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="HistoryReportingDate">Reporting Date </label>
-            <div class="controls">
-                <input type="text" name="data[History][reporting_date]" class="input-xlarge datepicker" id="HistoryReportingDate">
-                <?php
-//                echo $this->Form->input('reporting_date', array('type'=>'date', 'class' => 'input-xlarge datepicker hasDatepicker', 'placeholder' => 'Reporting Date', 'error' => array(
-//                    'attributes' => array('escape' => false)
-//                )));
-                ?>
-            </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="HistoryRemarks">Remarks </label>
-            <div class="controls">
-                <?php
-                echo $this->Form->input('remark', array('type'=>'textarea', 'class' => 'span6 typeahead', 'placeholder' => 'Remarks', 'error' => array(
-                    'attributes' => array('escape' => false)
-                )));
-                ?>
-            </div>
-        </div>
-
-        <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Save changes</button>
-            <button type="reset" class="btn">Cancel</button>
-        </div>
-    </fieldset>
-    </form>
-
-</div>
-</div><!--/span-->
+    </div>
 
 </div><!--/row-->
 
