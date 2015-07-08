@@ -47,7 +47,7 @@ class HistoriesController extends AppController {
             'conditions' => array('History.status'=>'pending')
         ));
 //        print_r($histories); die;
-//        $this->set(compact('histories'));
+        $this->set(compact('histories'));
     }
 
     public function admin_edit($id) {
