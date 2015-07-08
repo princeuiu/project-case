@@ -73,7 +73,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => '342516',
+		'password' => 's447531@@3',
 		'database' => 'db_lawfirm',
 		'prefix' => '',
 		//'encoding' => 'utf8',
