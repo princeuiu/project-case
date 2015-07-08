@@ -1,136 +1,43 @@
 <div class="row-fluid">
 
-    <div class="span7">
+    <div class="span9">
         <h1>Tasks</h1>
+        
+    <?php
+        foreach($tasks as $task):
+            if($task['Task']['datediff'] < 4):
+            ?>
+                <div class="priority high"><span>high priority</span></div>
+                    <div class="task high">
+            <?php
+            elseif($task['Task']['datediff'] > 3 &&  $task['Task']['datediff'] < 11):
+            ?>
+                <div class="priority medium"><span>medium priority</span></div>
+                    <div class="task medium">
+            <?php
+            elseif($task['Task']['datediff'] > 10):
+            ?>
+                <div class="priority low"><span>low priority</span></div>
+                    <div class="task low">
+            <?php
+            endif;
+        ?>
+            
+            
+                <div class="desc">
+                    <div class="title"><?php echo $task['Task']['name']; ?></div>
+                    <div><?php echo $task['Task']['description']; ?></div>
+                </div>
+                <div class="time">
+                    <div class="date"><?php echo $this->Time->format($task['Task']['dead_line'], '%B %e, %Y'); ?></div>
+                    <div><?php echo $task['Task']['datediff']; ?> day(s)</div>
+                </div>
+            </div>
+        <?php
+        endforeach;
+    ?>
 
-        <div class="priority high"><span>high priority</span></div>
-
-        <div class="task high">
-            <div class="desc">
-                <div class="title">Lorem Ipsum</div>
-                <div>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</div>
-            </div>
-            <div class="time">
-                <div class="date">Jun 1, 2012</div>
-                <div> 1 day</div>
-            </div>
-        </div>
-        <div class="task high">
-            <div class="desc">
-                <div class="title">Lorem Ipsum</div>
-                <div>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</div>
-            </div>
-            <div class="time">
-                <div class="date">Jun 1, 2012</div>
-                <div>1 day</div>
-            </div>
-        </div>
-        <div class="task high">
-            <div class="desc">
-                <div class="title">Lorem Ipsum</div>
-                <div>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</div>
-            </div>
-            <div class="time">
-                <div class="date">Jun 1, 2012</div>
-                <div> 1 day</div>
-            </div>
-        </div>
-        <div class="task high last">
-            <div class="desc">
-                <div class="title">Lorem Ipsum</div>
-                <div>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</div>
-            </div>
-            <div class="time">
-                <div class="date">Jun 1, 2012</div>
-                <div>1 day</div>
-            </div>
-        </div>
-
-        <div class="priority medium"><span>medium priority</span></div>
-
-        <div class="task medium">
-            <div class="desc">
-                <div class="title">Lorem Ipsum</div>
-                <div>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</div>
-            </div>
-            <div class="time">
-                <div class="date">Jun 1, 2012</div>
-                <div> 1 day</div>
-            </div>
-        </div>
-        <div class="task medium last">
-            <div class="desc">
-                <div class="title">Lorem Ipsum</div>
-                <div>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</div>
-            </div>
-            <div class="time">
-                <div class="date">Jun 1, 2012</div>
-                <div> 1 day</div>
-            </div>
-        </div>
-
-        <div class="priority low"><span>low priority</span></div>
-
-        <div class="task low">
-            <div class="desc">
-                <div class="title">Lorem Ipsum</div>
-                <div>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</div>
-            </div>
-            <div class="time">
-                <div class="date">Jun 1, 2012</div>
-                <div> 1 day</div>
-            </div>
-        </div>
-        <div class="task low">
-            <div class="desc">
-                <div class="title">Lorem Ipsum</div>
-                <div>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</div>
-            </div>
-            <div class="time">
-                <div class="date">Jun 1, 2012</div>
-                <div> 1 day</div>
-            </div>
-        </div>
-        <div class="task low">
-            <div class="desc">
-                <div class="title">Lorem Ipsum</div>
-                <div>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</div>
-            </div>
-            <div class="time">
-                <div class="date">Jun 1, 2012</div>
-                <div> 1 day</div>
-            </div>
-        </div>
-        <div class="task low">
-            <div class="desc">
-                <div class="title">Lorem Ipsum</div>
-                <div>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</div>
-            </div>
-            <div class="time">
-                <div class="date">Jun 1, 2012</div>
-                <div> 1 day</div>
-            </div>
-        </div>
-        <div class="task low">
-            <div class="desc">
-                <div class="title">Lorem Ipsum</div>
-                <div>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</div>
-            </div>
-            <div class="time">
-                <div class="date">Jun 1, 2012</div>
-                <div> 1 day</div>
-            </div>
-        </div>
-        <div class="task low">
-            <div class="desc">
-                <div class="title">Lorem Ipsum</div>
-                <div>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit</div>
-            </div>
-            <div class="time">
-                <div class="date">Jun 1, 2012</div>
-                <div> 1 day</div>
-            </div>
-        </div>
+        
         <div class="common-modal modal fade" id="common-Modal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
                 <ul class="list-inline item-details">
@@ -142,7 +49,7 @@
         <div class="clearfix"></div>		
 
     </div>
-
+<!--
     <div class="span5 noMarginLeft">
 
         <div class="dark">
@@ -393,5 +300,5 @@
         </div>
 
     </div>	
-
+-->
 </div>

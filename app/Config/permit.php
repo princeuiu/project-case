@@ -15,11 +15,11 @@ Permit::access(
  * access rule for both admin and employee
  */
 
-Permit::access(
-    array('controller' => array('Tasks', 'Lawsuits', 'Clients'), 'action' => array('admin_list','admin_index')),
-    array('auth' => array('User.role' => array('employee', 'admin'))),
-    array('redirect' => array('controller'=>'users','action'=>'login'), 'message' => '<div class="alert alert-danger">' . __('You must be logged in as admin or manager to view this resource' . '</div>', true))
-);
+//Permit::access(
+//    array('controller' => array('Tasks', 'Lawsuits', 'Clients'), 'action' => array('admin_list','admin_index')),
+//    array('auth' => array('User.role' => array('employee', 'admin'))),
+//    array('redirect' => array('controller'=>'users','action'=>'login'), 'message' => '<div class="alert alert-danger">' . __('You must be logged in as admin or manager to view this resource' . '</div>', true))
+//);
 
 
 
@@ -30,7 +30,7 @@ Permit::access(
 
 Permit::access(
     array('controller' => array('Tasks', 'Lawsuits', 'Clients')),
-    array('auth' => array('User.role' => array('admin'))),
+    array('auth' => array('User.role' => array('employee'))),
     array('redirect' => array('controller' => 'users', 'action' => 'login'),
         'message' => '<div class="alert alert-danger">' . __('You must be logged in to view this resource', true)  . '</div>',
         
