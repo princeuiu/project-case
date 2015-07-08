@@ -6,7 +6,6 @@ App::uses('AppController', 'Controller');
 class UsersController extends AppController {
 
 	public $name = 'Users';
-        public $theme = 'InflackPos';
 
     public function login() {
         $this->layout = 'login';
@@ -31,15 +30,53 @@ class UsersController extends AppController {
         $redirect_url = $this->Session->read('redirect_url');
 
         if(!empty($redirect_url)){
-            $this->redirect($redirect_url);
+            $this->redirect($this->Permit->referer($redirect_url));
         }
         else{
-            if(Authsome::get("group") != 'admin' && Authsome::get("group") != 'manager')
-                $this->redirect(array('controller'=>'Employees','action' => 'index','admin' => true));
-            else
-                $this->redirect(array('controller'=>'Employees','action' => 'index','admin' => true));
+            $this->redirect($this->Permit->referer('/admin'));
         }
     }
+    
+    
+    
+    
+    public function admin_login() {
+        $this->layout = 'login';
+        $this->render('login');
+        if (empty($this->data)) {
+            $this->sidebar = false;
+            $this->commonBanner = false;
+                return;
+        }
+            //print_r($this->data); die;
+        $user = Authsome::login($this->data['User']);
+
+
+        if (!$user) {
+                $this->Session->setFlash('<div class="alert alert-danger">' . __('Invalid login. Please, try again.') . '</div>');
+                return;
+        }
+
+        $remember = (!empty($this->data['User']['remember']));
+        if ($remember) {
+                Authsome::persist('2 weeks');
+        }
+        $redirect_url = $this->Session->read('redirect_url');
+
+        if(!empty($redirect_url)){
+            $this->redirect($this->Permit->referer($redirect_url));
+        }
+        else{
+            $this->redirect($this->Permit->referer('/admin'));
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
 
     public function ajax_login(){
         $data = $_POST['data'];

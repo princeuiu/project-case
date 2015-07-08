@@ -11,6 +11,13 @@
                 </ul>	
             </li>
             <li>
+                <a class="dropmenu" href="#"><i class="icon-tasks"></i><span class="hidden-tablet"> Tasks </span><i class="icon-caret-down"></i></a>
+                <ul>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'admin_add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Task</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'admin_list')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> List All Tasks</span></a></li>
+                </ul>	
+            </li>
+            <li>
                 <a class="dropmenu" href="#"><i class="icon-bookmark"></i><span class="hidden-tablet"> Brand </span><i class="icon-caret-down"></i></a>
                 <ul>
                     <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'brands', 'action' => 'admin_add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Brand</span></a></li>

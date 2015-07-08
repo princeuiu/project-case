@@ -25,13 +25,13 @@
     Router::connect('/logout', array('controller' => 'Users', 'action' => 'logout'));
     Router::connect('/register', array('controller' => 'Users', 'action' => 'register'));
     
-    Router::connect('/admin', array('controller' => 'Items', 'action' => 'index', 'admin' => true));
+    Router::connect('/admin', array('controller' => 'Items', 'action' => 'index'));
 /**
  * Here, we are connecting '/' (base path) to controller called 'Pages',
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
-	Router::connect('/', array('controller' => 'dashboard', 'action' => 'index', 'admin'=>true));
+	Router::connect('/', array('controller' => 'dashboard', 'action' => 'index'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */

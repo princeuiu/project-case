@@ -43,7 +43,7 @@
 ?>
 </div>-->
 <div class="form-group">
-    <?php echo $this->Form->input('group',array('div'=>array('class'=>'form-group'), 'class'=>'form-control', 'options'=>array("admin"=>"Admin","manager"=>"Manager"))); ?>
+    <?php echo $this->Form->input('role',array('div'=>array('class'=>'form-group'), 'class'=>'form-control', 'options'=>array("admin"=>"Admin","manager"=>"Manager"))); ?>
 </div>
 <div class="form-group">
 <?php

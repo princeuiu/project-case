@@ -39,15 +39,21 @@ class AppController extends Controller {
         'Email',
         'Paginator',
 //        'Recaptcha.Recaptcha',
-        'DebugKit.Toolbar',
+        'DebugKit.Toolbar' => array(
+            'panels' => array(
+                'Sanction.Permit'
+            )
+        ),
         'Authsome.Authsome' => array(
             'model' => 'User',
+            'configureKey' => 'UserAuth',
+            'sessionKey' => 'UserAuth',
+            'cookieKey' => 'UserAuth',
+        ),
+        'Sanction.Permit' => array(
+            'path' => 'UserAuth'
         ),
         'Qimage',
-        'Sanction.Permit' => array(
-            'path' => 'User',
-            'check' => 'User.group'
-        )
     );
     public $helpers = array(
         'Html',
@@ -62,9 +68,15 @@ class AppController extends Controller {
 //        'Sidemenu'
     );
     public $theme = 'Lawfirm';
+    //public $uses = array('Country','Bug','User');
 
-    public function beforeFilter() {
-        //pr($this->params); die;
+    //public $allowed_pages = array('checkpoint','ajax_usermenu','login_api','logout');
+    
+    public $admins=array('manager','admin');
+    
+    public $superadmins=array('admin');
+
+    function beforeFilter() {
         $this->layout = 'admin';
         $current_url = Router::url(null);
         $current_url_array = explode('/', $current_url);
@@ -72,25 +84,78 @@ class AppController extends Controller {
         if (!in_array('login', $current_url_array) && !in_array('logout', $current_url_array)) {
             $this->Session->write('redirect_url', Router::url(null, true));
         }
-
-        if (isset($this->request->params['admin']) && ($this->request->params['prefix'] == 'admin')) {
-            if (Authsome::get("group") != 'admin' && Authsome::get("group") != 'manager') {
-                $this->Session->setFlash('<div class="alert alert-danger">' . __('You must be an administrator to access this resource.') . '</div>');
-                $this->redirect('/login');
-            }
-            $loggedin = Authsome::get("name");
-            $this->set(compact('loggedin'));
-            $this->layout = 'admin';
-        } elseif (isset($this->request->params['customer']) && ($this->request->params['prefix'] == 'customer')) {
-            if ($this->Session->check('Auth.User')) {
-                $this->set('authUser', $this->Auth->user());
-                $loggedin = $this->Session->read('Auth.User');
-                $this->set(compact('loggedin'));
-                $this->layout = 'customer';
-            }
-        } else {
-            // $this->Auth->allow();
+        // reset session manually
+        if (isset($this->params['url'][Configure::read('Session.cookie')])) {
+            $this->Session->id($this->params['url'][Configure::read('Session.cookie')]);
+            //echo $this->params['url'][Configure::read('Session.cookie')];
         }
+
+        $this->set('admins', $this->admins);
+        $this->set('superadmins', $this->superadmins);
+
+
+        if (isset($this->params['ajax']) && $this->params['ajax'] == 1):
+            $this->layout = 'ajax';
+        endif;
+
+        // Get logged in user's information
+        $user = Authsome::get();
+        $loggedinId = Authsome::get("id");
+        $loggedin = Authsome::get("name");
+        $this->set(compact('user','loggedin', 'loggedinId'));
+
+        
+
+
+        /* SMTP Options */
+
+        /* Set delivery method */
+        //$this->Email->delivery = 'smtp';
+
+        // default sending email address
+        //$this->Email->from = 'G&R Ad Network <noreply@gandr.com.bd>';
+        // mailer info
+        //$this->Email->xMailer = "G&R Email Component";
+
+        // email component setup
+//        $this->Email->smtpOptions = array(
+//            'timeout' => '5',
+//            'host' => 'ssl://in-v3.mailjet.com',
+//            'port' => '465',
+//            'username' => '97870a474bce6dd43cd20d747f770d9f',
+//            'password' => '641bf96de4006a42df2ad7c40c558cba'
+//        );
     }
+
+//    public function beforeFilter() {
+//        //pr($this->params); die;
+//        $this->layout = 'admin';
+//        $current_url = Router::url(null);
+//        $current_url_array = explode('/', $current_url);
+//        //if(Router::url(null)!='/login' && Router::url(null)!='/logout')
+//        if (!in_array('login', $current_url_array) && !in_array('logout', $current_url_array)) {
+//            $this->Session->write('redirect_url', Router::url(null, true));
+//        }
+//
+//        if (isset($this->request->params['admin']) && ($this->request->params['prefix'] == 'admin')) {
+//            if (Authsome::get("group") != 'admin' && Authsome::get("group") != 'manager' && Authsome::get("group") != 'employee' && Authsome::get("group") != 'viewer') {
+//                $this->Session->setFlash('<div class="alert alert-danger">' . __('You must be an administrator to access this resource.') . '</div>');
+//                $this->redirect('/login');
+//            }
+//            $loggedinId = Authsome::get("id");
+//            $loggedin = Authsome::get("name");
+//            $this->set(compact('loggedin', 'loggedinId'));
+//            $this->layout = 'admin';
+//        } elseif (isset($this->request->params['customer']) && ($this->request->params['prefix'] == 'customer')) {
+//            if ($this->Session->check('Auth.User')) {
+//                $this->set('authUser', $this->Auth->user());
+//                $loggedin = $this->Session->read('Auth.User');
+//                $this->set(compact('loggedin'));
+//                $this->layout = 'customer';
+//            }
+//        } else {
+//            // $this->Auth->allow();
+//        }
+//    }
 
 }

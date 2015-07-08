@@ -7,5 +7,6 @@
 /tests/
 /vendores/
 /app/Console/
-/app/tmp/
+/app/tmp/*
 /app/Plugin/
+/app/Config/database.php

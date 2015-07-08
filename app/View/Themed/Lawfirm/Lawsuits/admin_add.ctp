@@ -22,7 +22,7 @@
             ?>
                 <fieldset>
                     <div class="control-group">
-                        <label class="control-label" for="LawsuitNumber">Number </label>
+                        <label class="control-label" for="LawsuitNumber">Number / Name </label>
                         <div class="controls">
                             <?php
                             echo $this->Form->input('number', array('class' => 'span6 typeahead', 'placeholder' => 'Case number', 'error' => array(
