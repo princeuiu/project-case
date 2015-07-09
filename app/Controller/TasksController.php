@@ -6,9 +6,15 @@ App::uses('AppController', 'Controller');
 class TasksController extends AppController {
 
     public $name = 'Tasks';
+<<<<<<< HEAD
+
+    public $uses = array('Task','Lawsuit', 'TaskComment', 'Client','User', 'Follower');
+
+=======
     
     public $uses = array('Task','Lawsuit','Client','User', 'Follower','Activity');
 
+>>>>>>> beta
     public function add(){
         if(!empty($this->data)){
             $data = $this->data;
@@ -34,7 +40,7 @@ class TasksController extends AppController {
                 return;
             }
         }
-        
+
         $lawsuits = $this->Lawsuit->find('list', array(
             'conditions' => array('Lawsuit.status' => 'active'),
             'fields' => array('Lawsuit.id', 'Lawsuit.number'),
@@ -46,8 +52,13 @@ class TasksController extends AppController {
         //pr($users);
         $this->set(compact('lawsuits', 'users'));
     }
+<<<<<<< HEAD
+
+
+=======
     
     
+>>>>>>> beta
     public function edit($id) {
         if($id == null){
             throw new BadRequestException();
@@ -96,7 +107,7 @@ class TasksController extends AppController {
         }
         //$this->data['Task']['follower'] = $followers;
         //print_r($this->data); die;
-        
+
         $lawsuits = $this->Lawsuit->find('list', array(
             'conditions' => array('Lawsuit.status' => 'active'),
             'fields' => array('Lawsuit.id', 'Lawsuit.number'),
@@ -107,42 +118,51 @@ class TasksController extends AppController {
         //print_r($users); die;
         $this->set(compact('lawsuits', 'users', 'followers'));
 
-        
+
         //$this->render('admin_add');
     }
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> beta
     public function index() {
         extract($this->params["named"]);
-        
+
         if(isset($search)){
             $options["Task.title like"]="%$search%";
         }
         else $search="";
-        
+
         $this->paginate["Task"]["order"]="Task.created DESC";
-        
+
         $brands = $this->paginate('Task', $options);
         //pr($categories);
         $this->set(compact('brands','search'));
-        
-        
+
+
         //$this->set("search",$search);
     }
+<<<<<<< HEAD
+
+
+=======
     
     
+>>>>>>> beta
     public function all(){
         $this->Task->unbindModel(
             array('belongsTo' => array('Owner', 'Assigned'), 'hasAndBelongsToMany' => array('FollowerUser'))
         );
         $options = array(
-            'conditions' => array('Task.assigned_to' => Authsome::get("id"), 'Task.status' => 'pending'), 
+            'conditions' => array('Task.assigned_to' => Authsome::get("id"), 'Task.status' => 'pending'),
             'order' => array('Task.dead_line ASC'),
             'fields' => array('Task.id', 'Task.name', 'Task.slug', 'Task.description', 'Task.wanting_doc', 'Task.dead_line', 'Lawsuit.number', 'Lawsuit.slug' )
         );
         $userTasks = $this->Task->find('all', $options);
-        
+
         $tasks = array();
-        
+
         $now = time();
         $count = 0;
         foreach($userTasks as $userTask){
@@ -152,46 +172,88 @@ class TasksController extends AppController {
             $tasks[$count]['Task']['datediff'] = floor($datediff/(60*60*24));
             $count++;
         }
-        
+
         //print_r($tasks); die;
-        
+
         $this->set(compact('tasks'));
     }
 
-    
+
+    public function details($id){
+        $this->Task->unbindModel(
+            array('belongsTo' => array('Owner', 'Assigned'), 'hasAndBelongsToMany' => array('FollowerUser'))
+        );
+        $options = array(
+            'conditions' => array('Task.assigned_to' => Authsome::get("id"), 'Task.id' => $id),
+            'order' => array('Task.dead_line ASC')
+        );
+        $userTasks = $this->Task->find('first', $options);
+        $options = array(
+            'conditions' => array('TaskComment.task_id' => $id),
+            'order' => array('TaskComment.created DESC')
+        );
+        $taskComments = $this->TaskComment->find('all', $options);
+        $now = time();
+        $dead_line = strtotime($userTasks['Task']['dead_line']);
+        $datediff =  floor(($dead_line - $now)/(60*60*24));
+//        print_r($taskComments); die;
+        $this->set(compact('userTasks', 'datediff', 'taskComments'));
+    }
 
 
 
 
+
+
+<<<<<<< HEAD
 
 //    public function index(){
 //        extract($this->params["named"]);
+//
+=======
+//    public function index(){
+//        extract($this->params["named"]);
 //        
+>>>>>>> beta
 //        if(isset($search)){
 //            $options["Category.title like"]="%$search%";
 //        }
 //        else $search="";
+<<<<<<< HEAD
+//
+//        $this->paginate["Category"]["order"]="Category.created DESC";
+//
+=======
 //        
 //        $this->paginate["Category"]["order"]="Category.created DESC";
 //        
+>>>>>>> beta
 //        $categories = $this->paginate('Category', $options);
 //        $count = count($categories);
 //        $itemEachRow = $count / 3;
 //        //pr($categories);
 //        $this->set(compact('categories','search', 'itemEachRow'));
 //    }
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> beta
     public function delete($id) {
         if($id == null){
             throw new BadRequestException();
         }
     }
-    
-    
+
+
     public function test(){
         throw new BadRequestException();
     }
+<<<<<<< HEAD
+
+=======
     
+>>>>>>> beta
     function remove_image($name) {
         $this->Category->updateAll(array("image"=>"''"),array("image"=>"$name"));
         @unlink(WWW_ROOT."img/categories/original/".$name);

@@ -9,13 +9,16 @@ class HistoriesController extends AppController {
 
     public $uses = array('History', 'Lawsuit', 'Client');
 
+    /**
+     *
+     */
     public function admin_add(){
         if(!empty($this->data)){
-            $lawsuit_id = $this->data['History']['lawsuit_id'];
-            $title = $this->data['History']['title'];
-            $description = $this->data['History']['description'];
-            $reporting_date = $this->data['History']['reporting_date'];
-            $remark = $this->data['History']['remark'];
+//            $lawsuit_id = $this->data['History']['lawsuit_id'];
+//            $title = $this->data['History']['title'];
+//            $description = $this->data['History']['description'];
+//            $reporting_date = $this->data['History']['reporting_date'];
+//            $remark = $this->data['History']['remark'];
 
             if($this->History->save($this->data)){
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('History added successfully.') . '</div>');

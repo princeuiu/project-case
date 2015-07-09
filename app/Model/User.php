@@ -136,6 +136,12 @@ class User extends AppModel {
             'dependent' => false,
             'conditions' => array('TaskAssigned.status' => 'pending'),
             'order' => 'TaskAssigned.created DESC'
+        ),
+        'TaskComment' =>array(
+            'className' => 'TaskComment',
+            'foreignKey' => 'task_id',
+            'dependent' => true,
+            'order' => 'TaskComment.created DESC'
         )
     );
     public $hasAndBelongsToMany = array(
