@@ -2,21 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5cbfbab-07b4-4a8f-9fb6-437cfa4d4ede" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Model/TaskComment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Controller/TaskCommentsController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/View/Themed/Lawfirm/Tasks/details.ctp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/View/Themed/Lawfirm/Tasks/admin_add.ctp" afterPath="$PROJECT_DIR$/app/View/Themed/Lawfirm/Tasks/add.ctp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/View/Themed/Lawfirm/Tasks/admin_edit.ctp" afterPath="$PROJECT_DIR$/app/View/Themed/Lawfirm/Tasks/edit.ctp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/View/Themed/Lawfirm/Tasks/admin_index.ctp" afterPath="$PROJECT_DIR$/app/View/Themed/Lawfirm/Tasks/index.ctp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/View/Themed/Lawfirm/Tasks/admin_list.ctp" afterPath="$PROJECT_DIR$/app/View/Themed/Lawfirm/Tasks/all.ctp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/cake_toolbar_cache" afterPath="$PROJECT_DIR$/app/tmp/cache/cake_toolbar_cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/HistoriesController.php" afterPath="$PROJECT_DIR$/app/Controller/HistoriesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/Task.php" afterPath="$PROJECT_DIR$/app/Model/Task.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/TasksController.php" afterPath="$PROJECT_DIR$/app/Controller/TasksController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/User.php" afterPath="$PROJECT_DIR$/app/Model/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/Cake/Test/Case/Console/Command/Task/ViewTaskTest.php" afterPath="$PROJECT_DIR$/lib/Cake/Test/Case/Console/Command/Task/ViewTaskTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Config/database.php" afterPath="$PROJECT_DIR$/app/Config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/logs/error.log" afterPath="$PROJECT_DIR$/app/tmp/logs/error.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_dev_en-us" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_dev_en-us" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_en-us" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_cake_en-us" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_debug_kit_en-us" afterPath="$PROJECT_DIR$/app/tmp/cache/persistent/myapp_cake_core_debug_kit_en-us" />
@@ -96,13 +81,13 @@
       <file leaf-file-name="details.ctp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/View/Themed/Lawfirm/Tasks/details.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61359864" vertical-offset="998" max-vertical-offset="1944">
-              <caret line="76" column="16" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
+            <state vertical-scroll-proportion="1.48" vertical-offset="998" max-vertical-offset="1944">
+              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <marker date="1436400826849" expanded="true" signature="2727:2741" placeholder="..." />
-                <marker date="1436400826849" expanded="true" signature="2871:2885" placeholder="..." />
+                <marker date="1436400910530" expanded="true" signature="2727:2741" placeholder="..." />
+                <marker date="1436400910530" expanded="true" signature="2871:2885" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -449,7 +434,13 @@
       <option name="project" value="LOCAL" />
       <updated>1436383508400</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="comment has been added">
+      <created>1436400915227</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1436400915227</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -474,22 +465,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1401" y="24" width="989" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32979852" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986626" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23425692" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.52451706" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32979852" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.63064516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32986626" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23425692" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11589896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -517,7 +508,8 @@
     </option>
     <MESSAGE value="test" />
     <MESSAGE value="calender controller corrected" />
-    <option name="LAST_COMMIT_MESSAGE" value="calender controller corrected" />
+    <MESSAGE value="comment has been added" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment has been added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -971,13 +963,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/View/Themed/Lawfirm/Tasks/details.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61359864" vertical-offset="998" max-vertical-offset="1944">
-          <caret line="76" column="16" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
+        <state vertical-scroll-proportion="1.48" vertical-offset="998" max-vertical-offset="1944">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1436400826849" expanded="true" signature="2727:2741" placeholder="..." />
-            <marker date="1436400826849" expanded="true" signature="2871:2885" placeholder="..." />
+            <marker date="1436400910530" expanded="true" signature="2727:2741" placeholder="..." />
+            <marker date="1436400910530" expanded="true" signature="2871:2885" placeholder="..." />
           </folding>
         </state>
       </provider>
