@@ -53,6 +53,15 @@ class Task extends AppModel {
             'unique' => true
         )
     );
+
+    public $hasMany = array(
+        'TaskComment' =>array(
+            'className' => 'TaskComment',
+            'foreignKey' => 'task_id',
+            'dependent' => true,
+            'order' => 'TaskComment.created DESC'
+        )
+    );
     
 //    public function saveFowllers($taskId, $followers){  
 //        $saveFollowersQuery = "INSERT INTO `followers` (`id`, `user_id`, `task_id`) VALUES ";

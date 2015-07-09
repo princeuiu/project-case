@@ -122,9 +122,7 @@ class User extends AppModel {
 
         return $this->find('first', compact('conditions'));
     }
-    
-    
-    
+
     public $hasMany = array(
         'LoginToken',
         'TaskOwner' => array(
@@ -140,6 +138,12 @@ class User extends AppModel {
             'dependent' => false,
             'conditions' => array('TaskAssigned.status' => 'pending'),
             'order' => 'TaskAssigned.created DESC'
+        ),
+        'TaskComment' =>array(
+            'className' => 'TaskComment',
+            'foreignKey' => 'task_id',
+            'dependent' => true,
+            'order' => 'TaskComment.created DESC'
         )
     );
     
