@@ -15059,3 +15059,256 @@ Stack Trace:
 #1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2015-07-09 09:33:03 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:33:25 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:34:02 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:34:06 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:39:54 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:40:12 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:42:21 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:42:41 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:45:36 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:46:35 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-09 09:47:08 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:47:11 Error: [NotFoundException] Not Found
+Request URL: /project-case/tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-09 09:47:18 Error: [NotFoundException] Not Found
+Request URL: /project-case/tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-09 09:47:31 Error: [NotFoundException] Not Found
+Request URL: /project-case/tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-09 09:48:37 Error: [NotFoundException] Not Found
+Request URL: /project-case/tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-09 09:48:42 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:48:48 Error: [NotFoundException] Not Found
+Request URL: /project-case/tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-09 09:49:20 Error: [NotFoundException] Not Found
+Request URL: /project-case/tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-09 09:49:23 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:51:02 Error: [NotFoundException] Not Found
+Request URL: /project-case/tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-09 09:51:08 Error: [NotFoundException] Not Found
+Request URL: /project-case/tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-09 09:51:12 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:51:16 Error: [NotFoundException] Not Found
+Request URL: /project-case/tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-09 09:51:22 Error: [NotFoundException] Not Found
+Request URL: /project-case/tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-09 09:51:25 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
