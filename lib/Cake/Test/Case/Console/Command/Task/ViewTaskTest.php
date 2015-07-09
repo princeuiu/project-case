@@ -549,7 +549,7 @@ class ViewTaskTest extends CakeTestCase {
 
 		$this->Task->expects($this->exactly(4))->method('createFile');
 
-		$views = array('admin_index.ctp', 'admin_add.ctp', 'admin_view.ctp', 'admin_edit.ctp');
+		$views = array('index.ctp', 'add.ctp', 'admin_view.ctp', 'edit.ctp');
 		foreach ($views as $i => $view) {
 			$this->Task->expects($this->at($i))->method('createFile')
 				->with(
@@ -644,7 +644,7 @@ class ViewTaskTest extends CakeTestCase {
 
 		$this->Task->expects($this->at(3))->method('createFile')
 			->with(
-				TMP . 'ViewTaskComments' . DS . 'admin_index.ctp',
+				TMP . 'ViewTaskComments' . DS . 'index.ctp',
 				$this->stringContains('ViewTaskComment')
 			);
 
@@ -656,13 +656,13 @@ class ViewTaskTest extends CakeTestCase {
 
 		$this->Task->expects($this->at(5))->method('createFile')
 			->with(
-				TMP . 'ViewTaskComments' . DS . 'admin_add.ctp',
+				TMP . 'ViewTaskComments' . DS . 'add.ctp',
 				$this->stringContains('Add View Task Comment')
 			);
 
 		$this->Task->expects($this->at(6))->method('createFile')
 			->with(
-				TMP . 'ViewTaskComments' . DS . 'admin_edit.ctp',
+				TMP . 'ViewTaskComments' . DS . 'edit.ctp',
 				$this->stringContains('Edit View Task Comment')
 			);
 
