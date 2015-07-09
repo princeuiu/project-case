@@ -12,7 +12,7 @@ class HistoriesController extends AppController {
     /**
      *
      */
-    public function admin_add(){
+    public function add(){
         if(!empty($this->data)){
 //            $lawsuit_id = $this->data['History']['lawsuit_id'];
 //            $title = $this->data['History']['title'];
@@ -44,16 +44,16 @@ class HistoriesController extends AppController {
     }
 
 
-    public function admin_calender(){
+    public function calender(){
         $histories = $this->History->find('all', array(
             'fields' => array('History.reporting_date', 'History.title', 'History.id'),
             'conditions' => array('History.status'=>'pending')
         ));
-//        print_r($histories); die;
+        //print_r($histories); die;
         $this->set(compact('histories'));
     }
 
-    public function admin_edit($id) {
+    public function edit($id) {
         if($id == null){
             throw new BadRequestException();
         }
@@ -75,11 +75,11 @@ class HistoriesController extends AppController {
             'conditions' => array('Lawsuit.number'=>$this->data['Lawsuit']['number'])
         ));
         $this->set(compact('lawsuits'));
-        $this->render('admin_edit');
+        $this->render('edit');
     }
 
 
-    public function admin_view($id) {
+    public function view($id) {
         if($id == null){
             throw new BadRequestException();
         }
@@ -93,11 +93,11 @@ class HistoriesController extends AppController {
             'recursive' => -1
         ));
         $this->set(compact('historyData','clientInfo', 'lawsuitNumber', 'id'));
-        $this->render('admin_view');
+        $this->render('view');
     }
 
 
-    public function admin_timeline($id) {
+    public function timeline($id) {
         if($id == null){
             throw new BadRequestException();
         }
@@ -107,11 +107,11 @@ class HistoriesController extends AppController {
         ));
 //        print_r($timelineData);die;
         $this->set(compact('timelineData'));
-        $this->render('admin_timeline');
+        $this->render('timeline');
     }
 
 
-    public function admin_index() {
+    public function index() {
         extract($this->params["named"]);
         $options = array(
             'NOT' => array(
@@ -133,26 +133,9 @@ class HistoriesController extends AppController {
         //$this->set("search",$search);
     }
 
-    public function index(){
-        extract($this->params["named"]);
-
-        if(isset($search)){
-            $options["Category.title like"]="%$search%";
-        }
-        else $search="";
-
-        $this->paginate["Category"]["order"]="Category.created DESC";
-
-        $categories = $this->paginate('Category', $options);
-        $count = count($categories);
-        $itemEachRow = $count / 3;
-        //pr($categories);
-        $this->set(compact('categories','search', 'itemEachRow'));
-    }
 
 
-
-    function admin_remove_image($name) {
+    function remove_image($name) {
         $this->Category->updateAll(array("image"=>"''"),array("image"=>"$name"));
         @unlink(WWW_ROOT."img/categories/original/".$name);
         @unlink(WWW_ROOT."img/categories/resize/".$name);

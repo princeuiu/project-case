@@ -14441,3 +14441,621 @@ Stack Trace:
 #2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 >>>>>>> beta
+2015-07-09 08:31:25 Error: Fatal Error (4): syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION) in [/home/demos/www/public_html/project-case/app/Controller/TasksController.php, line 9]
+2015-07-09 08:31:25 Error: [FatalErrorException] syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION)
+Request URL: /project-case/tasks/all
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/demos/www...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/demos/www...', 9, Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/demos/www...', 9, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-07-09 08:31:25 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /project-case/users/login
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('users')
+#5 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /home/demos/www/public_html/project-case/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /home/demos/www/public_html/project-case/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 /home/demos/www/public_html/project-case/app/View/Themed/Lawfirm/Users/login.ctp(16): FormHelper->create('User', Array)
+#9 /home/demos/www/public_html/project-case/lib/Cake/View/View.php(961): include('/home/demos/www...')
+#10 /home/demos/www/public_html/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/demos/www...', Array)
+#11 /home/demos/www/public_html/project-case/lib/Cake/View/View.php(473): View->_render('/home/demos/www...')
+#12 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#13 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-07-09 08:31:25 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /project-case/users/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:31:59 Error: [MissingTableException] Table task_comments for model TaskComment was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'task_comments',
+  'class' => 'TaskComment',
+  'ds' => 'default',
+)
+Request URL: /project-case/users/login
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('task_comments')
+#1 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#2 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(2516): Model->schema()
+#3 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1757): DboSource->fields(Object(TaskComment), 'TaskComment', '')
+#4 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1257): DboSource->generateAssociationQuery(Object(User), Object(TaskComment), 'hasMany', 'TaskComment', Array, Array, true)
+#5 /home/demos/www/public_html/project-case/lib/Cake/Model/Datasource/DboSource.php(1137): DboSource->queryAssociation(Object(User), Object(TaskComment), 'hasMany', 'TaskComment', Array, Array, true, Array, 0, Array)
+#6 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(3022): DboSource->read(Object(User), Array)
+#7 /home/demos/www/public_html/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#8 /home/demos/www/public_html/project-case/app/Model/User.php(121): Model->find('first', Array)
+#9 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('credentials', Array)
+#10 /home/demos/www/public_html/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(303): AuthsomeComponent->login(Array, NULL)
+#11 /home/demos/www/public_html/project-case/app/Controller/UsersController.php(18): Authsome::login(Array)
+#12 [internal function]: UsersController->login()
+#13 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#14 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#16 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2015-07-09 08:32:00 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /project-case/users/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:34:31 Error: Fatal Error (4): syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION) in [/home/demos/www/public_html/project-case/app/Controller/TasksController.php, line 9]
+2015-07-09 08:34:31 Error: [FatalErrorException] syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION)
+Request URL: /project-case/tasks/all
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/demos/www...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/demos/www...', 9, Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/demos/www...', 9, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-07-09 08:34:31 Error: Fatal Error (4): syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION) in [/home/demos/www/public_html/project-case/app/Controller/TasksController.php, line 9]
+2015-07-09 08:34:31 Error: [FatalErrorException] syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/demos/www...', 9)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/demos/www...', 9, Array)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/demos/www...', 9, Array)
+#3 /home/demos/www/public_html/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-07-09 08:37:45 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:38:12 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /project-case/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:38:13 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /project-case/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:38:18 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:38:20 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:38:23 Error: [MissingActionException] Action ClientsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'img',
+)
+Request URL: /project-case/clients/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:38:24 Error: [MissingActionException] Action ClientsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'img',
+)
+Request URL: /project-case/clients/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:38:31 Error: [MissingActionException] Action ClientsController::index.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'index.html',
+)
+Request URL: /project-case/clients/index.html
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:38:32 Error: [MissingActionException] Action ClientsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'img',
+)
+Request URL: /project-case/clients/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:39:23 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:49:28 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:54:57 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:54:57 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:58:57 Error: [MissingActionException] Action HistoriesController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'add',
+)
+Request URL: /project-case/histories/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 08:58:58 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:00:25 Error: [MissingViewException] View file "Histories/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Histories/add.ctp',
+)
+Request URL: /project-case/histories/add
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/demos/www/public_html/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-09 09:00:25 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:02:01 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:02:16 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:02:18 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:02:23 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:03:18 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:06:40 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:06:55 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-09 09:12:14 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:12:14 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-09 09:12:20 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-09 09:14:43 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:14:43 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:14:43 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-09 09:16:07 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:16:07 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-09 09:18:01 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:18:01 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-09 09:18:01 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:22:37 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:25:27 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /project-case/histories/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:25:30 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:26:05 Error: [MissingActionException] Action ClientsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'img',
+)
+Request URL: /project-case/clients/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:26:17 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:26:21 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /project-case/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:27:18 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /project-case/index.html
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-09 09:28:07 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:28:11 Error: [MissingActionException] Action TasksController::index.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'index.html',
+)
+Request URL: /project-case/tasks/index.html
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:28:11 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:28:17 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /project-case/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:28:21 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /project-case/lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-09 09:29:28 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /project-case/tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

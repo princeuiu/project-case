@@ -18,6 +18,13 @@
                 </ul>	
             </li>
             <li>
+                <a class="dropmenu" href="#"><i class="icon-hdd"></i><span class="hidden-tablet"> History </span><i class="icon-caret-down"></i></a>
+                <ul>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'histories', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new History</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'histories', 'action' => 'calender')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> View Calender</span></a></li>
+                </ul>
+            </li>
+            <li>
                 <a class="dropmenu" href="#"><i class="icon-group"></i><span class="hidden-tablet"> Clients </span><i class="icon-caret-down"></i></a>
                 <ul>
                     <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'clients', 'action' => 'admin_add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Clients</span></a></li>

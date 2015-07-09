@@ -25,7 +25,7 @@
             
             
                 <div class="desc">
-                    <div class="title"><?php echo $task['Task']['name']; ?></div>
+                    <div class="title"><?php echo '<a href="' . $this->Html->url(array('controller' => 'tasks', 'action' => 'details', $task['Task']['id'])) . '">' . $task['Task']['name'] . '</a>'; ?></div>
                     <div><?php echo $task['Task']['description']; ?></div>
                 </div>
                 <div class="time">

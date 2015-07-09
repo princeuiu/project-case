@@ -6,15 +6,9 @@ App::uses('AppController', 'Controller');
 class TasksController extends AppController {
 
     public $name = 'Tasks';
-<<<<<<< HEAD
 
-    public $uses = array('Task','Lawsuit', 'TaskComment', 'Client','User', 'Follower');
+    public $uses = array('Task','Lawsuit', 'TaskComment', 'Client','User', 'Follower', 'Activity');
 
-=======
-    
-    public $uses = array('Task','Lawsuit','Client','User', 'Follower','Activity');
-
->>>>>>> beta
     public function add(){
         if(!empty($this->data)){
             $data = $this->data;
@@ -52,13 +46,7 @@ class TasksController extends AppController {
         //pr($users);
         $this->set(compact('lawsuits', 'users'));
     }
-<<<<<<< HEAD
 
-
-=======
-    
-    
->>>>>>> beta
     public function edit($id) {
         if($id == null){
             throw new BadRequestException();
@@ -121,11 +109,7 @@ class TasksController extends AppController {
 
         //$this->render('admin_add');
     }
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> beta
     public function index() {
         extract($this->params["named"]);
 
@@ -143,13 +127,7 @@ class TasksController extends AppController {
 
         //$this->set("search",$search);
     }
-<<<<<<< HEAD
 
-
-=======
-    
-    
->>>>>>> beta
     public function all(){
         $this->Task->unbindModel(
             array('belongsTo' => array('Owner', 'Assigned'), 'hasAndBelongsToMany' => array('FollowerUser'))
@@ -201,67 +179,5 @@ class TasksController extends AppController {
     }
 
 
-
-
-
-
-<<<<<<< HEAD
-
-//    public function index(){
-//        extract($this->params["named"]);
-//
-=======
-//    public function index(){
-//        extract($this->params["named"]);
-//        
->>>>>>> beta
-//        if(isset($search)){
-//            $options["Category.title like"]="%$search%";
-//        }
-//        else $search="";
-<<<<<<< HEAD
-//
-//        $this->paginate["Category"]["order"]="Category.created DESC";
-//
-=======
-//        
-//        $this->paginate["Category"]["order"]="Category.created DESC";
-//        
->>>>>>> beta
-//        $categories = $this->paginate('Category', $options);
-//        $count = count($categories);
-//        $itemEachRow = $count / 3;
-//        //pr($categories);
-//        $this->set(compact('categories','search', 'itemEachRow'));
-//    }
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> beta
-    public function delete($id) {
-        if($id == null){
-            throw new BadRequestException();
-        }
-    }
-
-
-    public function test(){
-        throw new BadRequestException();
-    }
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> beta
-    function remove_image($name) {
-        $this->Category->updateAll(array("image"=>"''"),array("image"=>"$name"));
-        @unlink(WWW_ROOT."img/categories/original/".$name);
-        @unlink(WWW_ROOT."img/categories/resize/".$name);
-        @unlink(WWW_ROOT."img/categories/thumb/".$name);
-        $this->Session->setFlash('<div class="alert alert-success">' . __('Image deleted successfully.') . '</div>');
-        $this->redirect($this->referer());
-        exit;
-    }
 
 }
