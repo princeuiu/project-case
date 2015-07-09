@@ -7,15 +7,17 @@ class TasksController extends AppController {
 
     public $name = 'Tasks';
     
-    public $uses = array('Task','Lawsuit','Client','User', 'Follower');
+    public $uses = array('Task','Lawsuit','Client','User', 'Follower','Activity');
 
-    public function admin_add(){
+    public function add(){
         if(!empty($this->data)){
             $data = $this->data;
             //print_r($data); die;
             $splitTime  = explode('/', $data['Task']['dead_line']);
             $data['Task']['dead_line'] = $splitTime[2] . '-' . $splitTime[0] . '-' . $splitTime[1];
             $followers = $data['Task']['follower'];
+            $taskOwner = $data['Task']['owner'];
+            $taskAssigned = $data['Task']['assigned_to'];
             unset($data['Task']['follower']);
             if($this->Task->save($data)){
                 $taskId = $this->Task->id;
@@ -23,6 +25,8 @@ class TasksController extends AppController {
                     $this->Task->saveFowllers($taskId, $followers);
                 }
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Task added successfully.') . '</div>');
+                $Activity = ClassRegistry::init('Activity');
+                $Activity->logintry("task","new task assigned",$taskId,$taskOwner,$taskAssigned,'');
                 return $this->redirect(array('controller' => 'tasks', 'action' => 'edit', $this->Task->id));
             }
             else{
@@ -44,7 +48,7 @@ class TasksController extends AppController {
     }
     
     
-    public function admin_edit($id) {
+    public function edit($id) {
         if($id == null){
             throw new BadRequestException();
         }
@@ -61,6 +65,8 @@ class TasksController extends AppController {
             unset($data['Task']['follower']);
             if($this->Task->save($data)){
                 $taskId = $this->Task->id;
+                $taskOwner = $data['Task']['owner'];
+                $taskAssigned = $data['Task']['assigned_to'];
                 if(!empty($followers)){
                     $this->Task->saveFowllers($taskId, $followers);
                 }
@@ -68,6 +74,8 @@ class TasksController extends AppController {
                     $this->Task->removeFowllers($taskId);
                 }
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Task Updated successfully.') . '</div>');
+                $Activity = ClassRegistry::init('Activity');
+                $Activity->logintry("task","task updated",$taskId,$taskOwner,$taskAssigned,'');
                 return $this->redirect(array('controller' => 'tasks', 'action' => 'edit', $this->Task->id));
             }
             else{
@@ -103,7 +111,7 @@ class TasksController extends AppController {
         //$this->render('admin_add');
     }
     
-    public function admin_index() {
+    public function index() {
         extract($this->params["named"]);
         
         if(isset($search)){
@@ -122,7 +130,7 @@ class TasksController extends AppController {
     }
     
     
-    public function admin_list(){
+    public function all(){
         $this->Task->unbindModel(
             array('belongsTo' => array('Owner', 'Assigned'), 'hasAndBelongsToMany' => array('FollowerUser'))
         );
@@ -156,24 +164,24 @@ class TasksController extends AppController {
 
 
 
-    public function index(){
-        extract($this->params["named"]);
-        
-        if(isset($search)){
-            $options["Category.title like"]="%$search%";
-        }
-        else $search="";
-        
-        $this->paginate["Category"]["order"]="Category.created DESC";
-        
-        $categories = $this->paginate('Category', $options);
-        $count = count($categories);
-        $itemEachRow = $count / 3;
-        //pr($categories);
-        $this->set(compact('categories','search', 'itemEachRow'));
-    }
+//    public function index(){
+//        extract($this->params["named"]);
+//        
+//        if(isset($search)){
+//            $options["Category.title like"]="%$search%";
+//        }
+//        else $search="";
+//        
+//        $this->paginate["Category"]["order"]="Category.created DESC";
+//        
+//        $categories = $this->paginate('Category', $options);
+//        $count = count($categories);
+//        $itemEachRow = $count / 3;
+//        //pr($categories);
+//        $this->set(compact('categories','search', 'itemEachRow'));
+//    }
     
-    public function admin_delete($id) {
+    public function delete($id) {
         if($id == null){
             throw new BadRequestException();
         }
@@ -184,7 +192,7 @@ class TasksController extends AppController {
         throw new BadRequestException();
     }
     
-    function admin_remove_image($name) {
+    function remove_image($name) {
         $this->Category->updateAll(array("image"=>"''"),array("image"=>"$name"));
         @unlink(WWW_ROOT."img/categories/original/".$name);
         @unlink(WWW_ROOT."img/categories/resize/".$name);
