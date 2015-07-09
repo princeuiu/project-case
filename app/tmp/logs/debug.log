@@ -3742,3 +3742,53 @@ Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
 [main] - APP/webroot/index.php, line 118
 
+2015-07-09 06:59:07 Notice: Strict (2048): Declaration of Activity::log() should be compatible with Object::log($msg, $type = 3, $scope = NULL) in [/home/demos/www/public_html/project-case/app/Model/Activity.php, line 0]
+Trace:
+App::load() - CORE/Cake/Core/App.php, line 567
+App::load() - CORE/Cake/Core/App.php, line 567
+spl_autoload_call - [internal], line ??
+class_exists - [internal], line ??
+App::_loadClass() - CORE/Cake/Core/App.php, line 693
+App::import() - CORE/Cake/Core/App.php, line 643
+NotifyHelper::__count_all_notifications() - APP/View/Helper/NotifyHelper.php, line 123
+NotifyHelper::init() - APP/View/Helper/NotifyHelper.php, line 119
+include - APP/View/Themed/Lawfirm/Elements/admin/header.ctp, line 3
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::_renderElement() - CORE/Cake/View/View.php, line 1217
+View::element() - CORE/Cake/View/View.php, line 418
+include - APP/View/Themed/Lawfirm/Layouts/admin.ctp, line 106
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::renderLayout() - CORE/Cake/View/View.php, line 546
+View::render() - CORE/Cake/View/View.php, line 481
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-07-09 07:00:22 Notice: Strict (2048): Declaration of Activity::log() should be compatible with Object::log($msg, $type = 3, $scope = NULL) in [/home/demos/www/public_html/project-case/app/Model/Activity.php, line 0]
+Trace:
+App::load() - CORE/Cake/Core/App.php, line 567
+App::load() - CORE/Cake/Core/App.php, line 567
+spl_autoload_call - [internal], line ??
+class_exists - [internal], line ??
+App::_loadClass() - CORE/Cake/Core/App.php, line 693
+App::import() - CORE/Cake/Core/App.php, line 643
+NotifyHelper::__count_all_notifications() - APP/View/Helper/NotifyHelper.php, line 123
+NotifyHelper::init() - APP/View/Helper/NotifyHelper.php, line 119
+include - APP/View/Themed/Lawfirm/Elements/admin/header.ctp, line 3
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::_renderElement() - CORE/Cake/View/View.php, line 1217
+View::element() - CORE/Cake/View/View.php, line 418
+include - APP/View/Themed/Lawfirm/Layouts/admin.ctp, line 106
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::renderLayout() - CORE/Cake/View/View.php, line 546
+View::render() - CORE/Cake/View/View.php, line 481
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
