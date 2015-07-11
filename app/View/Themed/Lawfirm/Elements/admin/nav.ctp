@@ -15,6 +15,7 @@
                 <ul>
                     <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Task</span></a></li>
                     <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'all')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> List All Tasks</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'owned')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> List All Owned Tasks</span></a></li>
                 </ul>	
             </li>
             <li>

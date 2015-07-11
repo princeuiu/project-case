@@ -155,6 +155,36 @@ class TasksController extends AppController {
 
         $this->set(compact('tasks'));
     }
+    
+    public function owned(){
+        $this->Task->unbindModel(
+            array('belongsTo' => array('Owner', 'Assigned'), 'hasAndBelongsToMany' => array('FollowerUser'))
+        );
+        $options = array(
+            'conditions' => array('Task.owner' => Authsome::get("id"), 'Task.status' => 'pending'),
+            'order' => array('Task.dead_line ASC'),
+            'fields' => array('Task.id', 'Task.name', 'Task.slug', 'Task.description', 'Task.wanting_doc', 'Task.dead_line', 'Lawsuit.number', 'Lawsuit.slug' )
+        );
+        $userTasks = $this->Task->find('all', $options);
+
+        $tasks = array();
+
+        $now = time();
+        $count = 0;
+        foreach($userTasks as $userTask){
+            $dead_line = strtotime($userTask['Task']['dead_line']);
+            $datediff = $dead_line - $now;
+            $tasks[$count] = $userTask;
+            $tasks[$count]['Task']['datediff'] = floor($datediff/(60*60*24));
+            $count++;
+        }
+
+        //print_r($tasks); die;
+
+        $this->set(compact('tasks'));
+        
+        $this->render('all');
+    }
 
 
     public function details($id){
@@ -162,7 +192,7 @@ class TasksController extends AppController {
             array('belongsTo' => array('Owner', 'Assigned'), 'hasAndBelongsToMany' => array('FollowerUser'))
         );
         $options = array(
-            'conditions' => array('Task.assigned_to' => Authsome::get("id"), 'Task.id' => $id),
+            'conditions' => array('Task.id' => $id),
             'order' => array('Task.dead_line ASC')
         );
         $userTasks = $this->Task->find('first', $options);
