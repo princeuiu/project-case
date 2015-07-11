@@ -7,17 +7,17 @@
         foreach($tasks as $task):
             if($task['Task']['datediff'] < 4):
             ?>
-                <div class="priority high"><span>high priority</span></div>
+        <div class="priority high"><span>high priority</span><a style="float: right;" href="<?php echo $this->Html->url(array('controller'=>'tasks', 'action'=>'edit',$task['Task']['id'])) ?>"><i class="icon-wrench"></i></a></div>
                     <div class="task high">
             <?php
             elseif($task['Task']['datediff'] > 3 &&  $task['Task']['datediff'] < 11):
             ?>
-                <div class="priority medium"><span>medium priority</span></div>
+                <div class="priority medium"><span>medium priority</span><a style="float: right;" href="<?php echo $this->Html->url(array('controller'=>'tasks', 'action'=>'edit',$task['Task']['id'])) ?>"><i class="icon-wrench"></i></a></div>
                     <div class="task medium">
             <?php
             elseif($task['Task']['datediff'] > 10):
             ?>
-                <div class="priority low"><span>low priority</span></div>
+                <div class="priority low"><span>low priority</span><a style="float: right;" href="<?php echo $this->Html->url(array('controller'=>'tasks', 'action'=>'edit',$task['Task']['id'])) ?>"><i class="icon-wrench"></i></a></div>
                     <div class="task low">
             <?php
             endif;
@@ -25,7 +25,7 @@
             
             
                 <div class="desc">
-                    <div class="title"><?php echo $task['Task']['name']; ?></div>
+                    <div class="title"><?php echo '<a href="' . $this->Html->url(array('controller' => 'tasks', 'action' => 'details', $task['Task']['id'])) . '">' . $task['Task']['name'] . '</a>'; ?></div>
                     <div><?php echo $task['Task']['description']; ?></div>
                 </div>
                 <div class="time">

@@ -63,7 +63,7 @@ class AppController extends Controller {
         'Cache',
         'Text',
         'Paginator',
-        'Tinymce'
+        'Notify'
 //        'Recaptcha.Recaptcha',
 //        'Sidemenu'
     );

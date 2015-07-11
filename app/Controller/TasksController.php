@@ -7,7 +7,7 @@ class TasksController extends AppController {
 
     public $name = 'Tasks';
 
-    public $uses = array('Task','Lawsuit', 'TaskComment', 'Client','User', 'Follower');
+    public $uses = array('Task','Lawsuit', 'TaskComment', 'Client','User', 'Follower', 'Activity');
 
     public function add(){
         if(!empty($this->data)){
@@ -16,6 +16,8 @@ class TasksController extends AppController {
             $splitTime  = explode('/', $data['Task']['dead_line']);
             $data['Task']['dead_line'] = $splitTime[2] . '-' . $splitTime[0] . '-' . $splitTime[1];
             $followers = $data['Task']['follower'];
+            $taskOwner = $data['Task']['owner'];
+            $taskAssigned = $data['Task']['assigned_to'];
             unset($data['Task']['follower']);
             if($this->Task->save($data)){
                 $taskId = $this->Task->id;
@@ -23,6 +25,8 @@ class TasksController extends AppController {
                     $this->Task->saveFowllers($taskId, $followers);
                 }
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Task added successfully.') . '</div>');
+                $Activity = ClassRegistry::init('Activity');
+                $Activity->logintry("task","new task assigned",$taskId,$taskOwner,$taskAssigned,'');
                 return $this->redirect(array('controller' => 'tasks', 'action' => 'edit', $this->Task->id));
             }
             else{
@@ -43,7 +47,6 @@ class TasksController extends AppController {
         $this->set(compact('lawsuits', 'users'));
     }
 
-
     public function edit($id) {
         if($id == null){
             throw new BadRequestException();
@@ -61,6 +64,8 @@ class TasksController extends AppController {
             unset($data['Task']['follower']);
             if($this->Task->save($data)){
                 $taskId = $this->Task->id;
+                $taskOwner = $data['Task']['owner'];
+                $taskAssigned = $data['Task']['assigned_to'];
                 if(!empty($followers)){
                     $this->Task->saveFowllers($taskId, $followers);
                 }
@@ -68,6 +73,8 @@ class TasksController extends AppController {
                     $this->Task->removeFowllers($taskId);
                 }
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Task Updated successfully.') . '</div>');
+                $Activity = ClassRegistry::init('Activity');
+                $Activity->logintry("task","task updated",$taskId,$taskOwner,$taskAssigned,'');
                 return $this->redirect(array('controller' => 'tasks', 'action' => 'edit', $this->Task->id));
             }
             else{
@@ -121,7 +128,6 @@ class TasksController extends AppController {
         //$this->set("search",$search);
     }
 
-
     public function all(){
         $this->Task->unbindModel(
             array('belongsTo' => array('Owner', 'Assigned'), 'hasAndBelongsToMany' => array('FollowerUser'))
@@ -149,6 +155,36 @@ class TasksController extends AppController {
 
         $this->set(compact('tasks'));
     }
+    
+    public function owned(){
+        $this->Task->unbindModel(
+            array('belongsTo' => array('Owner', 'Assigned'), 'hasAndBelongsToMany' => array('FollowerUser'))
+        );
+        $options = array(
+            'conditions' => array('Task.owner' => Authsome::get("id"), 'Task.status' => 'pending'),
+            'order' => array('Task.dead_line ASC'),
+            'fields' => array('Task.id', 'Task.name', 'Task.slug', 'Task.description', 'Task.wanting_doc', 'Task.dead_line', 'Lawsuit.number', 'Lawsuit.slug' )
+        );
+        $userTasks = $this->Task->find('all', $options);
+
+        $tasks = array();
+
+        $now = time();
+        $count = 0;
+        foreach($userTasks as $userTask){
+            $dead_line = strtotime($userTask['Task']['dead_line']);
+            $datediff = $dead_line - $now;
+            $tasks[$count] = $userTask;
+            $tasks[$count]['Task']['datediff'] = floor($datediff/(60*60*24));
+            $count++;
+        }
+
+        //print_r($tasks); die;
+
+        $this->set(compact('tasks'));
+        
+        $this->render('all');
+    }
 
 
     public function details($id){
@@ -156,7 +192,7 @@ class TasksController extends AppController {
             array('belongsTo' => array('Owner', 'Assigned'), 'hasAndBelongsToMany' => array('FollowerUser'))
         );
         $options = array(
-            'conditions' => array('Task.assigned_to' => Authsome::get("id"), 'Task.id' => $id),
+            'conditions' => array('Task.id' => $id),
             'order' => array('Task.dead_line ASC')
         );
         $userTasks = $this->Task->find('first', $options);
@@ -173,47 +209,5 @@ class TasksController extends AppController {
     }
 
 
-
-
-
-
-
-//    public function index(){
-//        extract($this->params["named"]);
-//
-//        if(isset($search)){
-//            $options["Category.title like"]="%$search%";
-//        }
-//        else $search="";
-//
-//        $this->paginate["Category"]["order"]="Category.created DESC";
-//
-//        $categories = $this->paginate('Category', $options);
-//        $count = count($categories);
-//        $itemEachRow = $count / 3;
-//        //pr($categories);
-//        $this->set(compact('categories','search', 'itemEachRow'));
-//    }
-
-    public function delete($id) {
-        if($id == null){
-            throw new BadRequestException();
-        }
-    }
-
-
-    public function test(){
-        throw new BadRequestException();
-    }
-
-    function remove_image($name) {
-        $this->Category->updateAll(array("image"=>"''"),array("image"=>"$name"));
-        @unlink(WWW_ROOT."img/categories/original/".$name);
-        @unlink(WWW_ROOT."img/categories/resize/".$name);
-        @unlink(WWW_ROOT."img/categories/thumb/".$name);
-        $this->Session->setFlash('<div class="alert alert-success">' . __('Image deleted successfully.') . '</div>');
-        $this->redirect($this->referer());
-        exit;
-    }
 
 }

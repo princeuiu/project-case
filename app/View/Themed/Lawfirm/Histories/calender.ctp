@@ -24,13 +24,15 @@
                 <?php
 //                print_r($histories);
                 $arr = $histories;
-                foreach ($arr as &$value) {
+                
+                foreach ($arr as $value) {
+                    $url = $this->Html->url('/histories/edit/' . $value['History']['id'], true);
                     $title = $value['History']['title'];
                     $reporting_date = $value['History']['reporting_date'];
                     $id = $value['History']['id'];
                     echo "{ title : '".$title."',";
                     echo "start : '".$reporting_date."',";
-                    echo "url : '/admin/histories/edit/".$id."'},";
+                    echo "url : '".$url."'},";
 
                 }
                 ?>
