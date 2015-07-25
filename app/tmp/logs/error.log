@@ -15728,3 +15728,54 @@ Stack Trace:
 #1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2015-07-25 13:44:40 Error: [MissingControllerException] Controller class ItemsController could not be found.
+Exception Attributes: array (
+  'class' => 'ItemsController',
+  'plugin' => NULL,
+)
+Request URL: /admin
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-25 13:44:47 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /index.html
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-25 13:46:51 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-25 13:46:52 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-25 13:57:26 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
