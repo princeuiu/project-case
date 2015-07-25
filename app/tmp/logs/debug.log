@@ -3792,3 +3792,30 @@ Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
 [main] - APP/webroot/index.php, line 118
 
+2015-07-25 16:05:01 Notice: Notice (8): Indirect modification of overloaded element of CakeRequest has no effect in [/home/exor/PhpstormProjects/project-case/app/Controller/LawsuitsController.php, line 63]
+Trace:
+LawsuitsController::admin_index() - APP/Controller/LawsuitsController.php, line 63
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-07-25 16:05:01 Notice: Notice (8): Indirect modification of overloaded property LawsuitsController::$paginate has no effect in [/home/exor/PhpstormProjects/project-case/app/Controller/LawsuitsController.php, line 70]
+Trace:
+LawsuitsController::admin_index() - APP/Controller/LawsuitsController.php, line 70
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-07-25 16:05:01 Notice: Notice (8): Undefined variable: options in [/home/exor/PhpstormProjects/project-case/app/Controller/LawsuitsController.php, line 72]
+Trace:
+LawsuitsController::admin_index() - APP/Controller/LawsuitsController.php, line 72
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
