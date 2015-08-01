@@ -32,20 +32,22 @@
             <h2><i class="halflings-icon white edit"></i><span class="break"></span>Comment</h2>
         </div>
         <div class="box-content">
-            <?php echo $this->Form->create('TaskComments', array('action' => 'add', 'class' => 'form-horizontal')); ?>
+            <?php echo $this->Form->create('TaskComments', array('action' => 'add', 'type' => 'file', 'multiple')); ?>
 
-                <fieldset>
-                    <input name="data[TaskComment][user_id]" id="UserId" type="hidden" value="<?php echo Authsome::get("id") ?>" />
-<!--                    <input name="data[TaskComment][user_name]" id="UserName" type="hidden" value="--><?php //echo Authsome::get("name") ?><!--" />-->
-                    <input name="data[TaskComment][task_id]" id="TaskId" type="hidden" value="<?php echo $userTasks['Task']['id'] ?>" />
-                    <div class="form-group">
-                        <label for="comment">Comment:</label>
-                        <textarea class="form-control span12" rows="2" id="comment" name="data[TaskComment][body]"></textarea>
-                    </div>
-                    <div class="form-actions" style="text-align: right">
-                        <button type="submit" class="btn btn-primary">Post</button>
-                    </div>
-                </fieldset>
+            <fieldset>
+                <input name="data[TaskComment][user_id]" id="UserId" type="hidden" value="<?php echo Authsome::get("id") ?>" />
+                <input name="data[TaskComment][task_id]" id="TaskId" type="hidden" value="<?php echo $userTasks['Task']['id'] ?>" />
+                <div class="form-group">
+                    <label for="comment">Comment:</label>
+                    <textarea class="form-control span12" rows="2" id="comment" name="data[TaskComment][body]"></textarea>
+                </div>
+                <?php
+                echo $this->Form->input('files.', array('type' => 'file', 'multiple'));
+                ?>
+                <div class="form-actions" style="text-align: right">
+                    <button type="submit" class="btn btn-primary">Post</button>
+                </div>
+            </fieldset>
             <?php echo $this->Form->end(); ?>
 
         </div>
@@ -71,30 +73,33 @@
 
                 echo $comment['TaskComment']['body'];
 
-                echo '</span><span>';
+                echo '</span><span style="-o-text-overflow: ellipsis; text-overflow: ellipsis; overflow:hidden; white-space: nowrap; width: 150px;">';
 
-                echo $this->Time->format($comment['TaskComment']['created'], '%B %e, %Y %H:%M %p');
+
+
+
+
+                foreach ($comment['WantingDoc'] as $file){
+                    echo '<i class="icon-paper-clip"></i>&nbsp;&nbsp;<a href="/uploads/doc/' . $file['name'] . '" target="_blank" ><i class="fa fa-paperclip"></i>'. $file['name'] .'</a></br>';
+                };
 
                 echo '<span class="remaining">';
 
 //                echo $comment['TaskComment']['created'];
+                echo $this->Time->format($comment['TaskComment']['created'], '%B %e, %Y %H:%M %p');
 
+
+
+//                print_r($comment);
                 echo '</span></span></span><div class="arrow"></div></div><div class="icon"><i class="icon-calendar"></i></div><div class="time">';
 
                 echo $comment['User']['name'];
 
                 echo '</div></div><div class="clearfix"></div>';
 
-
-
-
                 $i++;
             }
             ?>
-
-
-
-
         </div>
     </div>
 
