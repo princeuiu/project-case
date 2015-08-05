@@ -15343,6 +15343,7 @@ Stack Trace:
 #3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+<<<<<<< HEAD
 2015-07-11 12:54:47 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
 Exception Attributes: array (
   'class' => 'Mysql',
@@ -15562,45 +15563,352 @@ Stack Trace:
 #2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2015-07-12 12:15:18 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+=======
+2015-07-16 15:01:10 Error: [MissingComponentException] Component class ToolbarComponent could not be found.
+Exception Attributes: array (
+  'class' => 'ToolbarComponent',
+  'plugin' => 'DebugKit',
+)
+Request URL: /
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(DashboardController))
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-16 15:01:20 Error: [MissingComponentException] Component class ToolbarComponent could not be found.
+Exception Attributes: array (
+  'class' => 'ToolbarComponent',
+  'plugin' => 'DebugKit',
+)
+Request URL: /
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(DashboardController))
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-25 12:03:47 Error: [MissingComponentException] Component class ToolbarComponent could not be found.
+Exception Attributes: array (
+  'class' => 'ToolbarComponent',
+  'plugin' => 'DebugKit',
+)
+Request URL: /
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(DashboardController))
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-25 12:05:24 Error: [MissingComponentException] Component class ToolbarComponent could not be found.
+Exception Attributes: array (
+  'class' => 'ToolbarComponent',
+  'plugin' => 'DebugKit',
+)
+Request URL: /login
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(UsersController))
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-25 12:06:09 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[42000] [1049] Unknown database \'db_lawfirm\'',
+  'enabled' => true,
+)
+Request URL: /login
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('users')
+#5 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /home/exor/PhpstormProjects/project-case/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /home/exor/PhpstormProjects/project-case/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 /home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Users/login.ctp(16): FormHelper->create('User', Array)
+#9 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(961): include('/home/exor/Phps...')
+#10 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/exor/Phps...', Array)
+#11 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(473): View->_render('/home/exor/Phps...')
+#12 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#13 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-07-25 12:10:44 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /login
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('users')
+#5 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /home/exor/PhpstormProjects/project-case/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /home/exor/PhpstormProjects/project-case/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 /home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Users/login.ctp(16): FormHelper->create('User', Array)
+#9 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(961): include('/home/exor/Phps...')
+#10 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/exor/Phps...', Array)
+#11 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(473): View->_render('/home/exor/Phps...')
+#12 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#13 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-07-25 12:12:32 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /login
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('users')
+#5 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /home/exor/PhpstormProjects/project-case/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /home/exor/PhpstormProjects/project-case/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 /home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Users/login.ctp(16): FormHelper->create('User', Array)
+#9 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(961): include('/home/exor/Phps...')
+#10 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/exor/Phps...', Array)
+#11 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(473): View->_render('/home/exor/Phps...')
+#12 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#13 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-07-25 12:13:10 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[42000] [1049] Unknown database \'db_lawfirm\'',
+  'enabled' => true,
+)
+Request URL: /login
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('users')
+#5 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /home/exor/PhpstormProjects/project-case/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /home/exor/PhpstormProjects/project-case/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 /home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Users/login.ctp(16): FormHelper->create('User', Array)
+#9 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(961): include('/home/exor/Phps...')
+#10 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/exor/Phps...', Array)
+#11 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(473): View->_render('/home/exor/Phps...')
+#12 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#13 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-07-25 12:18:56 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[42000] [1049] Unknown database \'db_lawfirm\'',
+  'enabled' => true,
+)
+Request URL: /login
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('users')
+#5 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /home/exor/PhpstormProjects/project-case/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /home/exor/PhpstormProjects/project-case/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 /home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Users/login.ctp(16): FormHelper->create('User', Array)
+#9 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(961): include('/home/exor/Phps...')
+#10 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/exor/Phps...', Array)
+#11 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(473): View->_render('/home/exor/Phps...')
+#12 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#13 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-07-25 12:39:57 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[42000] [1049] Unknown database \'db_lawfirm\'',
+  'enabled' => true,
+)
+Request URL: /login
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('users')
+#5 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /home/exor/PhpstormProjects/project-case/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /home/exor/PhpstormProjects/project-case/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 /home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Users/login.ctp(16): FormHelper->create('User', Array)
+#9 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(961): include('/home/exor/Phps...')
+#10 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/exor/Phps...', Array)
+#11 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(473): View->_render('/home/exor/Phps...')
+#12 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#13 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2015-07-25 16:00:31 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /users/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-25 16:01:27 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /users/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-25 16:02:06 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /users/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-25 16:02:07 Error: [MissingActionException] Action UsersController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'img',
+)
+Request URL: /users/img/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-25 16:03:31 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-25 16:05:37 Error: [MissingActionException] Action HistoriesController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'HistoriesController',
   'action' => 'img',
 )
 Request URL: /histories/img/avatar.jpg
 Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:05:44 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:05:55 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+<<<<<<< HEAD
 #0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
 #2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2015-07-12 12:15:26 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:06:09 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
 #0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2015-07-12 12:15:32 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:06:16 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
 #0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2015-07-12 12:15:37 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:06:18 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
 #0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
@@ -15621,56 +15929,138 @@ Stack Trace:
 #10 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
 2015-07-12 12:16:03 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:06:23 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'status' cannot be null
+Request URL: /tasks/add
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `db...', Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `db...')
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Task), Array, Array)
+#4 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /home/exor/PhpstormProjects/project-case/app/Controller/TasksController.php(22): Model->save(Array)
+#6 [internal function]: TasksController->add()
+#7 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#8 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#10 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-07-28 15:06:23 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
 #0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2015-07-12 12:16:56 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:06:39 Error: [NotFoundException] Not Found
+Request URL: /tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 15:06:43 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
 #0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2015-07-12 12:16:57 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:06:47 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
 #0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2015-07-12 12:17:00 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:06:52 Error: [NotFoundException] Not Found
+Request URL: /tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 15:07:02 Error: [NotFoundException] Not Found
+Request URL: /tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 15:07:07 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
 #0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2015-07-12 12:17:02 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:07:08 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
 #0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
@@ -15769,13 +16159,2119 @@ Stack Trace:
 #2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2015-07-25 13:57:26 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:50:25 Error: [BadRequestException] Bad Request
+Request URL: /task_comments/add
+Stack Trace:
+#0 [internal function]: TaskCommentsController->add()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TaskCommentsController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 15:50:26 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 16:00:49 Error: [BadRequestException] Bad Request
+Request URL: /task_comments/add
+Stack Trace:
+#0 [internal function]: TaskCommentsController->add()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TaskCommentsController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 16:00:50 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 16:01:43 Error: [BadRequestException] Bad Request
+Request URL: /task_comments/add
+Stack Trace:
+#0 [internal function]: TaskCommentsController->add()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TaskCommentsController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 16:01:44 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 16:02:26 Error: [BadRequestException] Bad Request
+Request URL: /task_comments/add
+Stack Trace:
+#0 [internal function]: TaskCommentsController->add()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TaskCommentsController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 16:02:27 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 16:02:50 Error: [BadRequestException] Bad Request
+Request URL: /task_comments/add
+Stack Trace:
+#0 [internal function]: TaskCommentsController->add()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TaskCommentsController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 16:02:50 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 16:05:19 Error: [BadRequestException] Bad Request
+Request URL: /task_comments/add
+Stack Trace:
+#0 [internal function]: TaskCommentsController->add()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TaskCommentsController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 16:05:19 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 16:06:33 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-28 16:07:12 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-29 13:30:21 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-29 13:30:27 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-29 13:30:38 Error: [MissingActionException] Action TasksController::img() could not be found.
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-29 13:33:43 Error: [BadRequestException] Bad Request
+Request URL: /task_comments/add
+Stack Trace:
+#0 [internal function]: TaskCommentsController->add()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TaskCommentsController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:33:44 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-29 14:39:12 Error: [BadRequestException] Bad Request
+Request URL: /task_comments/add
+Stack Trace:
+#0 [internal function]: TaskCommentsController->add()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TaskCommentsController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 14:39:12 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-29 14:39:39 Error: [BadRequestException] Bad Request
+Request URL: /task_comments/add
+Stack Trace:
+#0 [internal function]: TaskCommentsController->add()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TaskCommentsController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 14:39:39 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-29 14:39:40 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-29 14:56:23 Error: [BadRequestException] Bad Request
+Request URL: /task_comments/add
+Stack Trace:
+#0 [internal function]: TaskCommentsController->add()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TaskCommentsController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 14:56:24 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-29 14:56:26 Error: [BadRequestException] Bad Request
+Request URL: /task_comments/add
+Stack Trace:
+#0 [internal function]: TaskCommentsController->add()
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TaskCommentsController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 14:56:27 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-29 14:56:27 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-29 14:56:31 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-29 14:56:32 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-30 11:57:35 Error: [MissingViewException] View file "TaskComments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'TaskComments/add.ctp',
+)
+Request URL: /task_comments/add
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 11:57:36 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-30 11:57:44 Error: [MissingViewException] View file "TaskComments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'TaskComments/add.ctp',
+)
+Request URL: /task_comments/add
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 11:57:44 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-30 11:57:59 Error: [MissingViewException] View file "TaskComments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'TaskComments/add.ctp',
+)
+Request URL: /task_comments/add
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 11:57:59 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-30 17:30:19 Error: [MissingControllerException] Controller class HomeController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeController',
+  'plugin' => NULL,
+)
+Request URL: /home/exor/PhpstormProjects/project-case/app/webroot/uploads/doc/t7c224027781927_22072015.PDF
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 17:30:19 Error: [MissingControllerException] Controller class HomeController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeController',
+  'plugin' => NULL,
+)
+Request URL: /home/exor/PhpstormProjects/project-case/app/webroot/uploads/doc/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 17:34:54 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 17:35:47 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 17:36:31 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 17:55:13 Error: [MissingControllerException] Controller class HomeController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeController',
+  'plugin' => NULL,
+)
+Request URL: /home/exor/PhpstormProjects/project-case/app/webroot/uploads/doc/t7c224027781927_22072015.PDF
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 17:55:13 Error: [MissingControllerException] Controller class HomeController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeController',
+  'plugin' => NULL,
+)
+Request URL: /home/exor/PhpstormProjects/project-case/app/webroot/uploads/doc/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 17:56:17 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 17:56:55 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:06:09 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:06:11 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:06:31 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:08:08 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:08:10 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:08:18 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:17:52 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:19:06 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:19:09 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:19:59 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:23:53 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:23:57 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:24:13 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:26:24 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:30:14 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:30:20 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:31:11 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:31:18 Error: [MissingViewException] View file "TaskComments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'TaskComments/add.ctp',
+)
+Request URL: /task_comments/add
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 18:31:18 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-30 18:31:18 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:31:22 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:31:27 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:32:31 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:32:36 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:32:53 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:34:24 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:34:27 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:36:53 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:36:55 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:38:32 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:38:34 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:39:12 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:39:16 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:41:52 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:41:54 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:41:57 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-30 18:42:06 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 10:17:17 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /index.html
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 10:44:03 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 10:44:35 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 10:46:39 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 10:46:40 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 10:51:37 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 10:51:38 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 10:54:03 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 10:55:59 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 10:55:59 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 10:56:28 Error: Fatal Error (1): Call to a member function create() on a non-object in [/home/exor/PhpstormProjects/project-case/app/Controller/TasksController.php, line 42]
+2015-08-01 10:56:28 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /tasks/add
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/exor/Phps...', 42)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/exor/Phps...', 42, Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/exor/Phps...', 42, Array)
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-01 10:56:28 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 10:58:05 Error: [NotFoundException] Not Found
+Request URL: /tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-01 10:58:16 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 10:58:41 Error: [NotFoundException] Not Found
+Request URL: /tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-01 10:59:48 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 10:59:52 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 11:00:38 Error: [MissingControllerException] Controller class UploadsController could not be found.
+Exception Attributes: array (
+  'class' => 'UploadsController',
+  'plugin' => NULL,
+)
+Request URL: /uploads/doc/t11c42
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 11:00:38 Error: [MissingControllerException] Controller class UploadsController could not be found.
+Exception Attributes: array (
+  'class' => 'UploadsController',
+  'plugin' => NULL,
+)
+Request URL: /uploads/doc/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 11:06:36 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 11:07:12 Error: [NotFoundException] Not Found
+Request URL: /tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-01 11:07:18 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 12:09:32 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 12:09:39 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:10:23 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:10:24 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:10:36 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:11:08 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:15:34 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:16:22 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:17:39 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 12:17:39 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:17:42 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:17:48 Error: [MissingViewException] View file "TaskComments/add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'TaskComments/add.ctp',
+)
+Request URL: /task_comments/add
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-01 12:17:48 Error: [MissingActionException] Action TaskCommentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TaskCommentsController',
+  'action' => 'img',
+)
+Request URL: /task_comments/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TaskCommentsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 12:17:49 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:17:51 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:17:54 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:20:32 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:26:09 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:26:24 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:26:37 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:26:54 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:27:04 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:29:35 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:30:00 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:30:22 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:31:00 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:31:12 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:32:02 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:32:34 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:32:51 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:33:30 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:33:40 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:34:15 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 12:54:26 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 12:54:26 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 13:32:05 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 13:32:10 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 13:32:11 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 13:32:21 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 13:34:42 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 13:36:04 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 13:36:32 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 13:46:10 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 13:46:24 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 13:46:31 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 13:47:31 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 13:48:49 Error: [MissingActionException] Action LawsuitsController::details() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'details',
+)
+Request URL: /lawsuits/details/2
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 13:48:50 Error: [MissingActionException] Action LawsuitsController::details() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'details',
+)
+Request URL: /lawsuits/details/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 13:50:36 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 14:02:37 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 14:08:08 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 14:09:02 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 14:36:37 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:36:54 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:37:06 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:37:13 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 14:37:13 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:37:30 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:37:45 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:37:46 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:37:49 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:38:25 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:38:30 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-01 14:43:10 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:43:15 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:43:30 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:43:50 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:43:59 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:44:03 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:49:51 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:51:31 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:51:41 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:55:38 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:56:11 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 14:57:08 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 15:03:44 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 15:05:01 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 15:13:44 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 15:14:51 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 15:16:25 Error: Fatal Error (4): syntax error, unexpected ';' in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Lawsuits/detail.ctp, line 14]
+2015-08-01 15:16:25 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /lawsuits/details/2
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/exor/Phps...', 14)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/exor/Phps...', 14, Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/exor/Phps...', 14, Array)
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-01 15:16:26 Error: Fatal Error (4): syntax error, unexpected ';' in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Lawsuits/detail.ctp, line 14]
+2015-08-01 15:16:26 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /lawsuits/details/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/exor/Phps...', 14)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/exor/Phps...', 14, Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/exor/Phps...', 14, Array)
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-01 15:16:26 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 15:16:30 Error: Fatal Error (4): syntax error, unexpected ';' in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Lawsuits/detail.ctp, line 14]
+2015-08-01 15:16:30 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /lawsuits/details/2
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/exor/Phps...', 14)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/exor/Phps...', 14, Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/exor/Phps...', 14, Array)
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-01 15:16:30 Error: Fatal Error (4): syntax error, unexpected ';' in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Lawsuits/detail.ctp, line 14]
+2015-08-01 15:16:30 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /lawsuits/details/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/exor/Phps...', 14)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/exor/Phps...', 14, Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/exor/Phps...', 14, Array)
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-01 15:16:30 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 15:16:45 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 15:17:03 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-01 15:17:17 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-02 11:41:23 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-02 11:43:32 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-02 11:45:56 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-02 11:56:48 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-02 11:59:11 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-02 12:31:27 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-02 12:32:08 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-02 13:20:59 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-02 13:28:56 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-02 13:29:47 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-02 13:31:38 Error: Fatal Error (4): syntax error, unexpected ';' in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Lawsuits/detail.ctp, line 38]
+2015-08-02 13:31:38 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /lawsuits/details/3
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/exor/Phps...', 38)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/exor/Phps...', 38, Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/exor/Phps...', 38, Array)
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-02 13:31:39 Error: Fatal Error (4): syntax error, unexpected ';' in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Lawsuits/detail.ctp, line 38]
+2015-08-02 13:31:39 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /lawsuits/details/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/exor/Phps...', 38)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/exor/Phps...', 38, Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/exor/Phps...', 38, Array)
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-02 13:31:49 Error: Fatal Error (4): syntax error, unexpected ';' in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Lawsuits/detail.ctp, line 38]
+2015-08-02 13:31:49 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /lawsuits/details/3
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/exor/Phps...', 38)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/exor/Phps...', 38, Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/exor/Phps...', 38, Array)
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-02 13:31:49 Error: Fatal Error (4): syntax error, unexpected ';' in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Lawsuits/detail.ctp, line 38]
+2015-08-02 13:31:49 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /lawsuits/details/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/exor/Phps...', 38)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/exor/Phps...', 38, Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/exor/Phps...', 38, Array)
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-02 13:31:58 Error: Fatal Error (4): syntax error, unexpected ';' in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Lawsuits/detail.ctp, line 38]
+2015-08-02 13:31:58 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /lawsuits/details/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/exor/Phps...', 38)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/exor/Phps...', 38, Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/exor/Phps...', 38, Array)
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-02 13:37:23 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-02 13:44:49 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-02 13:45:38 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-02 13:46:42 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/histories/edit/3
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-02 13:46:43 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/histories/edit/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-02 13:46:43 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/histories/edit/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-02 13:46:50 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/histories/edit/3
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-02 13:46:50 Error: [MissingControllerException] Controller class AdminController could not be found.
+Exception Attributes: array (
+  'class' => 'AdminController',
+  'plugin' => NULL,
+)
+Request URL: /admin/histories/edit/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-02 13:50:43 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+<<<<<<< HEAD
 #0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+=======
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 #3 {main}

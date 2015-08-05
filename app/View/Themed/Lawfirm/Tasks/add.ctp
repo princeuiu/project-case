@@ -11,7 +11,7 @@
         <div class="box-content">
             <?php
             echo $this->Form->create('Task', array(
-                'action' => $this->action,
+                'action' => $this->action, 'type' => 'file', 'multiple',
                 'class' => 'form-horizontal',
                 'inputDefaults' => array(
                     'div' => false,
@@ -103,6 +103,9 @@
                             ?>
                         </div>
                     </div>
+                    <?php
+                    echo $this->Form->input('files.', array('type' => 'file', 'multiple'));
+                    ?>
                     <div class="form-actions">
                         <button type="submit" class="btn btn-primary">Save changes</button>
                         <button type="reset" class="btn">Cancel</button>
