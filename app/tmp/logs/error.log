@@ -15343,6 +15343,227 @@ Stack Trace:
 #3 /home/demos/www/public_html/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #4 /home/demos/www/public_html/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+<<<<<<< HEAD
+2015-07-11 12:54:47 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('login_tokens')
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /home/shovan/PhpstormProjects/project-case/app/Model/User.php(104): Model->find('first', Array)
+#8 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('cookie', Array)
+#9 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(252): AuthsomeComponent->login('cookie', Array)
+#10 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(215): AuthsomeComponent->__useCookieToken()
+#11 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(69): AuthsomeComponent->__getActiveUser()
+#12 /home/shovan/PhpstormProjects/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(291): AuthsomeComponent->get(NULL)
+#13 /home/shovan/PhpstormProjects/project-case/app/Controller/AppController.php(102): Authsome::get()
+#14 /home/shovan/PhpstormProjects/project-case/app/Controller/DashboardController.php(13): AppController->beforeFilter()
+#15 [internal function]: DashboardController->beforeFilter(Object(CakeEvent))
+#16 /home/shovan/PhpstormProjects/project-case/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#19 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#20 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2015-07-11 12:56:55 Error: [MissingTableException] Table activities for model Activity was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'activities',
+  'class' => 'Activity',
+  'ds' => 'default',
+)
+Request URL: /
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('activities')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#3 /home/shovan/PhpstormProjects/project-case/app/View/Helper/NotifyHelper.php(138): Model->find('all', Array)
+#4 /home/shovan/PhpstormProjects/project-case/app/View/Helper/NotifyHelper.php(98): NotifyHelper->__count_all_notifications()
+#5 /home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Elements/admin/header.ctp(16): NotifyHelper->initialize()
+#6 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(961): include('/home/shovan/Ph...')
+#7 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/shovan/Ph...', Array)
+#8 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(1217): View->_render('/home/shovan/Ph...', Array)
+#9 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(418): View->_renderElement('/home/shovan/Ph...', Array, Array)
+#10 /home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Layouts/admin.ctp(106): View->element('admin/header')
+#11 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(961): include('/home/shovan/Ph...')
+#12 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/shovan/Ph...', Array)
+#13 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(546): View->_render('/home/shovan/Ph...')
+#14 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(481): View->renderLayout('', 'admin')
+#15 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#16 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#17 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#18 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2015-07-11 12:57:05 Error: [MissingTableException] Table activities for model Activity was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'activities',
+  'class' => 'Activity',
+  'ds' => 'default',
+)
+Request URL: /?debug=2
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('activities')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#3 /home/shovan/PhpstormProjects/project-case/app/View/Helper/NotifyHelper.php(138): Model->find('all', Array)
+#4 /home/shovan/PhpstormProjects/project-case/app/View/Helper/NotifyHelper.php(98): NotifyHelper->__count_all_notifications()
+#5 /home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Elements/admin/header.ctp(16): NotifyHelper->initialize()
+#6 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(961): include('/home/shovan/Ph...')
+#7 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/shovan/Ph...', Array)
+#8 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(1217): View->_render('/home/shovan/Ph...', Array)
+#9 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(418): View->_renderElement('/home/shovan/Ph...', Array, Array)
+#10 /home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Layouts/admin.ctp(106): View->element('admin/header')
+#11 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(961): include('/home/shovan/Ph...')
+#12 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/shovan/Ph...', Array)
+#13 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(546): View->_render('/home/shovan/Ph...')
+#14 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(481): View->renderLayout('', 'admin')
+#15 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#16 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#17 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#18 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#19 {main}
+2015-07-11 13:02:18 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-11 13:02:23 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-11 13:02:26 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-11 13:02:29 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-11 13:02:33 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-11 13:02:36 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-11 13:02:44 Error: [MissingActionException] Action ClientsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'img',
+)
+Request URL: /clients/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-11 13:02:45 Error: [MissingActionException] Action ClientsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'img',
+)
+Request URL: /clients/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-11 13:02:48 Error: [MissingActionException] Action ClientsController::index.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'index.html',
+)
+Request URL: /clients/index.html
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-11 13:02:48 Error: [MissingActionException] Action ClientsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'img',
+)
+Request URL: /clients/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-11 13:02:52 Error: [MissingActionException] Action ClientsController::index.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'index.html',
+)
+Request URL: /clients/index.html
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-11 13:02:52 Error: [MissingActionException] Action ClientsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'img',
+)
+Request URL: /clients/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-12 12:15:18 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+=======
 2015-07-16 15:01:10 Error: [MissingComponentException] Component class ToolbarComponent could not be found.
 Exception Attributes: array (
   'class' => 'ToolbarComponent',
@@ -15623,45 +15844,92 @@ Stack Trace:
 #2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2015-07-28 15:05:55 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'HistoriesController',
   'action' => 'img',
 )
 Request URL: /histories/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-12 12:15:26 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
 #0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
 #2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2015-07-28 15:06:09 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-12 12:15:32 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
 #0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2015-07-28 15:06:16 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-12 12:15:37 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
 #0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2015-07-28 15:06:18 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-12 12:16:02 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'status' cannot be null
+Request URL: /tasks/add
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `db...', Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `db...')
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Task), Array, Array)
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /home/shovan/PhpstormProjects/project-case/app/Controller/TasksController.php(22): Model->save(Array)
+#6 [internal function]: TasksController->add()
+#7 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#8 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#10 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-07-12 12:16:03 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
 #0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
@@ -15682,12 +15950,20 @@ Stack Trace:
 #10 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
 2015-07-28 15:06:23 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-12 12:16:56 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
 #0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
@@ -15702,23 +15978,39 @@ Stack Trace:
 #4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
 2015-07-28 15:06:43 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-12 12:16:57 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
 #0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2015-07-28 15:06:47 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-12 12:17:00 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
 #0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
@@ -15742,23 +16034,132 @@ Stack Trace:
 #4 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
 2015-07-28 15:07:07 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-12 12:17:02 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
 #0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 2015-07-28 15:07:08 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-12 12:19:26 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-12 12:19:26 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-12 12:20:06 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-12 12:20:30 Error: [NotFoundException] Not Found
+Request URL: /tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-12 12:20:48 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-25 13:44:40 Error: [MissingControllerException] Controller class ItemsController could not be found.
+Exception Attributes: array (
+  'class' => 'ItemsController',
+  'plugin' => NULL,
+)
+Request URL: /admin
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-25 13:44:47 Error: [MissingControllerException] Controller class Index.htmlController could not be found.
+Exception Attributes: array (
+  'class' => 'Index.htmlController',
+  'plugin' => NULL,
+)
+Request URL: /index.html
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-25 13:46:51 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-25 13:46:52 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-25 13:57:26 Error: [MissingActionException] Action TasksController::img() could not be found.
+=======
 #0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
@@ -17857,13 +18258,2146 @@ Stack Trace:
 #0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2015-08-02 13:50:43 Error: [MissingActionException] Action TasksController::img() could not be found.
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
 Exception Attributes: array (
   'controller' => 'TasksController',
   'action' => 'img',
 )
 Request URL: /tasks/img/avatar.jpg
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+=======
 #0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
 #1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
 #2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+>>>>>>> 70591c4af963b421dbd21c1f47df79d301b4ffce
+#3 {main}
+2015-08-05 12:19:40 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-05 12:20:24 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-05 12:20:28 Error: [NotFoundException] Not Found
+Request URL: /tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-05 12:20:31 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-05 12:20:34 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-05 12:31:24 Error: [MissingControllerException] Controller class UploadsController could not be found.
+Exception Attributes: array (
+  'class' => 'UploadsController',
+  'plugin' => NULL,
+)
+Request URL: /uploads/doc/t4c936th-bcs-circular.pdf
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-05 12:31:24 Error: [MissingControllerException] Controller class UploadsController could not be found.
+Exception Attributes: array (
+  'class' => 'UploadsController',
+  'plugin' => NULL,
+)
+Request URL: /uploads/doc/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-05 12:31:35 Error: [MissingControllerException] Controller class UploadsController could not be found.
+Exception Attributes: array (
+  'class' => 'UploadsController',
+  'plugin' => NULL,
+)
+Request URL: /uploads/doc/t4c9CV-shovan.pdf
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-05 12:31:35 Error: [MissingControllerException] Controller class UploadsController could not be found.
+Exception Attributes: array (
+  'class' => 'UploadsController',
+  'plugin' => NULL,
+)
+Request URL: /uploads/doc/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-05 12:33:06 Error: [MissingControllerException] Controller class UploadsController could not be found.
+Exception Attributes: array (
+  'class' => 'UploadsController',
+  'plugin' => NULL,
+)
+Request URL: /uploads/doc/t4c10CV-shovan.pdf
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-05 12:33:06 Error: [MissingControllerException] Controller class UploadsController could not be found.
+Exception Attributes: array (
+  'class' => 'UploadsController',
+  'plugin' => NULL,
+)
+Request URL: /uploads/doc/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-05 12:33:16 Error: [MissingControllerException] Controller class WebrootController could not be found.
+Exception Attributes: array (
+  'class' => 'WebrootController',
+  'plugin' => NULL,
+)
+Request URL: /webroot/uploads/doc/t4c10CV-shovan.pdf
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-05 12:33:17 Error: [MissingControllerException] Controller class WebrootController could not be found.
+Exception Attributes: array (
+  'class' => 'WebrootController',
+  'plugin' => NULL,
+)
+Request URL: /webroot/uploads/doc/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-05 12:35:55 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-26 10:08:12 Error: [MissingControllerException] Controller class ItemsController could not be found.
+Exception Attributes: array (
+  'class' => 'ItemsController',
+  'plugin' => NULL,
+)
+Request URL: /admin
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-26 10:38:16 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-26 10:38:18 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-26 10:38:22 Error: [NotFoundException] Not Found
+Request URL: /tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-26 12:23:16 Error: [NotFoundException] Not Found
+Request URL: /tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-26 12:23:26 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-26 12:24:33 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-26 13:13:13 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-26 13:18:06 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/29
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('29')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-26 13:18:06 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-26 21:18:51 Error: [MissingViewException] View file "Invoices/generate.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/generate.ctp',
+)
+Request URL: /invoices/generate/1
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-26 21:18:51 Error: [MissingViewException] View file "Invoices/generate.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/generate.ctp',
+)
+Request URL: /invoices/generate/1
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-27 11:08:42 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-27 11:47:12 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-27 11:54:33 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-27 11:54:39 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-27 11:55:20 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-27 12:20:01 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 12:41:35 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 12:48:11 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 13:00:51 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 13:01:04 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 13:01:40 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 13:01:41 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 13:04:21 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 13:04:24 Error: [NotFoundException] Not Found
+Request URL: /tasks/edit/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: TasksController->edit('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 13:05:12 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 13:12:52 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 13:13:13 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-28 13:41:24 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 13:41:26 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 13:41:29 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 13:41:39 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:51:27 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 15:52:17 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 15:53:12 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:53:27 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:54:53 Error: [MissingActionException] Action LawsuitsController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'edit',
+)
+Request URL: /lawsuits/edit/3
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:54:53 Error: [MissingActionException] Action LawsuitsController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'edit',
+)
+Request URL: /lawsuits/edit/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:55:48 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 15:56:15 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 16:55:35 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 16:56:11 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 16:57:12 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 16:57:12 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 16:57:33 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 17:16:09 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-28 17:20:53 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 17:20:53 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-28 17:20:54 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 17:21:13 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-28 17:23:20 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 17:23:20 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-28 17:23:21 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 17:23:24 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 17:23:24 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-28 17:23:25 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 17:23:26 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 17:23:27 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-28 17:23:27 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 17:25:30 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 17:25:39 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 17:25:39 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 17:25:41 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 17:25:41 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-28 17:25:51 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-28 17:27:48 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 17:27:49 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-28 17:28:02 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 17:28:08 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 17:28:15 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 17:28:18 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-28 17:28:30 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 10:56:23 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 12:53:23 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 12:53:23 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 12:53:34 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 12:53:35 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 12:53:44 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 12:54:18 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 12:56:39 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 12:57:27 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:20:46 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:21:29 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:21:30 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:22:47 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:23:07 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-29 13:27:41 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:27:42 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-29 13:27:53 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:27:53 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:27:54 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:27:55 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:27:55 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:27:56 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:28:20 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-29 13:32:59 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:33:36 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:33:36 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:36:17 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:36:17 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:36:18 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:36:28 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-29 13:37:33 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-29 13:45:57 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:46:00 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:46:00 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:46:01 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 13:48:29 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 14:14:41 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 14:16:08 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 14:16:09 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 14:16:09 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 14:43:11 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 14:55:05 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 14:55:05 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 14:58:01 Error: [BadRequestException] Bad Request
+Request URL: /invoices/generate
+Stack Trace:
+#0 [internal function]: InvoicesController->generate()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 14:58:01 Error: [MissingActionException] Action InvoicesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'InvoicesController',
+  'action' => 'img',
+)
+Request URL: /invoices/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-29 14:58:30 Error: [MissingActionException] Action InvoicesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'InvoicesController',
+  'action' => 'img',
+)
+Request URL: /invoices/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-29 14:58:30 Error: [MissingActionException] Action InvoicesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'InvoicesController',
+  'action' => 'img',
+)
+Request URL: /invoices/img/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-29 14:58:36 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 14:59:48 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-07-29 15:21:27 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 15:23:15 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 15:45:20 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 15:46:34 Error: [BadRequestException] Bad Request
+Request URL: /invoices/generate
+Stack Trace:
+#0 [internal function]: InvoicesController->generate()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 15:46:34 Error: [MissingActionException] Action InvoicesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'InvoicesController',
+  'action' => 'img',
+)
+Request URL: /invoices/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-29 17:41:53 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-29 17:41:54 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 12:00:50 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 12:43:41 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 12:43:42 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 12:55:13 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 12:55:13 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 14:04:15 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 14:04:15 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 14:07:52 Error: [MissingActionException] Action LawsuitsController::detail() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'detail',
+)
+Request URL: /lawsuits/detail/1
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-30 14:07:52 Error: [MissingActionException] Action LawsuitsController::detail() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'detail',
+)
+Request URL: /lawsuits/detail/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-07-30 16:19:54 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 16:20:01 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 16:20:01 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 16:20:09 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 16:20:30 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 16:20:33 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 16:21:10 Error: [MissingViewException] View file "Invoices/detail.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/detail.ctp',
+)
+Request URL: /invoices/detail/1
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 16:21:10 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 16:21:27 Error: [MissingViewException] View file "Invoices/detail.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/detail.ctp',
+)
+Request URL: /invoices/detail/1.pdf
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 16:21:27 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 16:27:59 Error: [MissingViewException] View file "Invoices/detail.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/detail.ctp',
+)
+Request URL: /invoices/detail/1
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 16:27:59 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 16:28:05 Error: [MissingViewException] View file "Invoices/detail.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/detail.ctp',
+)
+Request URL: /invoices/detail/1.pdf
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 16:28:05 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-30 17:29:43 Error: [MissingLayoutException] Layout file "Layouts/pdf/admin.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Layouts/pdf/admin.ctp',
+)
+Request URL: /invoices/detail/1.pdf
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(514): View->_getLayoutFileName('admin')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(481): View->renderLayout('', 'admin')
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#5 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2015-07-31 15:34:27 Error: [MissingViewException] View file "Invoices/detail.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/detail.ctp',
+)
+Request URL: /invoices/detail/1
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-07-31 15:34:27 Error: [MissingViewException] View file "Invoices/detail.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/detail.ctp',
+)
+Request URL: /invoices/detail/1
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 12:02:23 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 12:02:34 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 12:28:56 Error: [MissingViewException] View file "Invoices/detail.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Invoices/detail.ctp',
+)
+Request URL: /invoices/detail/1
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 12:28:56 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 13:41:02 Error: [MissingControllerException] Controller class ItemsController could not be found.
+Exception Attributes: array (
+  'class' => 'ItemsController',
+  'plugin' => NULL,
+)
+Request URL: /admin
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-08-02 13:49:44 Error: Fatal Error (64): require_once() [<a href='http://php.net/function.require'>function.require</a>]: Failed opening required '/home/shovan/PhpstormProjects/project-case/app/Vendor/dompdf/dompdf_config.inc.php' (include_path='/home/shovan/PhpstormProjects/project-case/lib:.:/usr/share/php:/usr/share/pear') in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Layouts/pdf/admin.ctp, line 2]
+2015-08-02 13:49:44 Error: [FatalErrorException] require_once() [<a href='http://php.net/function.require'>function.require</a>]: Failed opening required '/home/shovan/PhpstormProjects/project-case/app/Vendor/dompdf/dompdf_config.inc.php' (include_path='/home/shovan/PhpstormProjects/project-case/lib:.:/usr/share/php:/usr/share/pear')
+Request URL: /invoices/detail/1.pdf
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(64, 'require_once() ...', '/home/shovan/Ph...', 2)
+#1 [internal function]: ErrorHandler::handleError(64, 'require_once() ...', '/home/shovan/Ph...', 2, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 64, 'require_once() ...', '/home/shovan/Ph...', 2, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-08-02 13:55:32 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 13:55:50 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 13:57:11 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 14:17:22 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 14:17:29 Error: [MissingActionException] Action ClientsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'img',
+)
+Request URL: /clients/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-02 14:18:23 Error: [MissingActionException] Action ClientsController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'edit',
+)
+Request URL: /clients/edit/2
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-02 14:18:23 Error: [MissingActionException] Action ClientsController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'edit',
+)
+Request URL: /clients/edit/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-02 14:23:20 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 14:25:20 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 15:12:20 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 15:12:29 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 15:12:29 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 16:45:19 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 16:46:55 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 16:48:47 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 16:52:49 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-02 16:53:16 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-02 16:58:11 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 09:51:28 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 11:33:05 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 11:51:16 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 11:52:29 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 11:54:43 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 11:54:43 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 11:54:49 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 13:34:09 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 13:34:13 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 13:34:13 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 13:34:19 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 14:21:52 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 14:22:03 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 14:26:29 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 14:26:30 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 14:26:36 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/detail/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->detail('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 14:27:36 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 14:27:37 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-04 14:27:37 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-05 11:42:55 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-05 11:42:57 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-05 11:42:57 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-05 11:42:59 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-05 11:53:10 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-05 11:53:11 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-05 11:53:15 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-05 12:40:38 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-05 12:40:49 Error: [NotFoundException] Invalid Case
+Request URL: /invoices/generate/img/avatar.jpg
+Stack Trace:
+#0 [internal function]: InvoicesController->generate('img', 'avatar.jpg')
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2015-08-05 12:40:57 Error: [MissingActionException] Action TasksController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'TasksController',
+  'action' => 'img',
+)
+Request URL: /tasks/img/avatar.jpg
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}

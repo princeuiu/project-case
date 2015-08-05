@@ -51,6 +51,16 @@
                         </div>
                     </div>
                     <div class="control-group">
+                        <label class="control-label" for="ClientPersonDesignation">Contact Person Designation </label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('person_designation', array('class' => 'span6 typeahead', 'placeholder' => 'Contact Person Designation', 'error' => array(
+                                    'attributes' => array('escape' => false)
+                            )));
+                            ?>
+                        </div>
+                    </div>
+                    <div class="control-group">
                         <label class="control-label" for="ClientPhone">Phone </label>
                         <div class="controls">
                             <?php
