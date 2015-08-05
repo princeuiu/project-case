@@ -50,4 +50,11 @@ class TaskComment extends AppModel {
             'foreignKey' => 'user_id'
         )
     );
+
+    public $hasMany = array(
+        'WantingDoc' => array(
+            'className' => 'WantingDoc',
+            'foreignKey' => 'comment_id'
+        )
+    );
 }

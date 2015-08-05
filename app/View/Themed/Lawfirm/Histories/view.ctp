@@ -8,7 +8,7 @@
             </h2>
             <div class="box-icon">
                 <?php
-                echo '<a href="/admin/histories/edit/'.$id.'"><i class="halflings-icon white wrench"></i>Edit</a>';
+                echo '<a href="/histories/edit/'.$id.'"><i class="halflings-icon white wrench"></i></a>';
                 ?>
             </div>
         </div>
