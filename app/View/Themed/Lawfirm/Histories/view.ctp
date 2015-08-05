@@ -29,6 +29,17 @@
                 <tr>
                     <td>
                         <b>
+                            Name of the Court
+                        </b>
+                    </td>
+                    <td><?php
+                        echo ($historyData['History']['court_name']);
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>
                             History Description
                         </b>
                     </td>
