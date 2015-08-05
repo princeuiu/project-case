@@ -37,6 +37,7 @@
                 <ul>
 <!--                    <li><a class="submenu" href="--><?php //echo $this->Html->url(array('controller' => 'clients', 'action' => 'admin_add')); ?><!--"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Clients</span></a></li>-->
                     <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'register')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> Add New User</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'all')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> List User</span></a></li>
                 </ul>
             </li>
         </ul>
