@@ -238,8 +238,10 @@ class TasksController extends AppController {
         $now = time();
         $dead_line = strtotime($userTasks['Task']['dead_line']);
         $datediff =  floor(($dead_line - $now)/(60*60*24));
-//        print_r($taskComments); die;
-        $this->set(compact('userTasks', 'datediff', 'taskComments'));
+        $task_files = $this->WantingDoc->find('all', array('conditions'=>array('WantingDoc.task_id'=>$id,'WantingDoc.comment_id'=>0)));
+
+//        print_r($task_files); die;
+        $this->set(compact('userTasks', 'datediff', 'taskComments','task_files'));
     }
 
 
