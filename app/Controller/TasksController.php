@@ -7,10 +7,13 @@ class TasksController extends AppController {
 
     public $name = 'Tasks';
 
-    public $uses = array('Task','Lawsuit', 'TaskComment', 'Client','User', 'Follower', 'Activity');
+    public $uses = array('Task','Lawsuit', 'TaskComment', 'Client','User', 'Follower', 'Activity', 'WantingDoc');
 
     public function add(){
+
+
         if(!empty($this->data)){
+//            print_r($this->data);die;
             $data = $this->data;
             //print_r($data); die;
             $splitTime  = explode('/', $data['Task']['dead_line']);
@@ -21,6 +24,37 @@ class TasksController extends AppController {
             unset($data['Task']['follower']);
             if($this->Task->save($data)){
                 $taskId = $this->Task->id;
+
+                $path = WWW_ROOT . 'uploads' . DS . 'doc' . DS;
+                $commentId =0;
+                $files = $this->data['Task']['files'];
+                $i = 0;
+                while($i < count($files)){
+                    if ($files[$i]['error'] == 0){
+                        $fileData = array(
+                            'WantingDoc' => array(
+                                'task_id' => $taskId,
+                                'comment_id' => $commentId,
+                                'name' => 't' . $taskId . 'c' . $commentId . $files[$i]['name'],
+                                'path' => $path
+                            )
+                        );
+                        //print_r($fileData);
+                        $this->WantingDoc->create();
+                        if($this->WantingDoc->save($fileData)) {
+                            if (move_uploaded_file($files[$i]['tmp_name'], ($path.'t' . $taskId . 'c' . $commentId . $files[$i]['name']))) {
+                            } else {
+                                echo "Sorry, there was an error uploading your file.";
+                            }
+                        }
+                        unset($fileData);
+                    }
+
+
+
+                    $i = $i + 1;
+                }
+
                 if(!empty($followers)){
                     $this->Task->saveFowllers($taskId, $followers);
                 }
@@ -155,7 +189,7 @@ class TasksController extends AppController {
 
         $this->set(compact('tasks'));
     }
-    
+
     public function owned(){
         $this->Task->unbindModel(
             array('belongsTo' => array('Owner', 'Assigned'), 'hasAndBelongsToMany' => array('FollowerUser'))
@@ -182,7 +216,7 @@ class TasksController extends AppController {
         //print_r($tasks); die;
 
         $this->set(compact('tasks'));
-        
+
         $this->render('all');
     }
 

@@ -26,7 +26,7 @@
                 $arr = $histories;
                 
                 foreach ($arr as $value) {
-                    $url = $this->Html->url('/histories/edit/' . $value['History']['id'], true);
+                    $url = $this->Html->url('/histories/view/' . $value['History']['id'], true);
                     $title = $value['History']['title'];
                     $reporting_date = $value['History']['reporting_date'];
                     $id = $value['History']['id'];
