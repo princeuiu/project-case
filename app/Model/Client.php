@@ -80,6 +80,12 @@ class Client extends AppModel {
             'dependent' => true,
             'conditions' => array('Lawsuit.status' => 'active'),
             'order' => 'Lawsuit.created DESC'
+        ),
+        'Invoice' => array(
+            'className' => 'Invoice',
+            'foreignKey' => 'client_id',
+            'dependent' => true,
+            'order' => 'Invoice.created DESC'
         )
     );
     
