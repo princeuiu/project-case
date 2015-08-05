@@ -2281,3 +2281,47 @@ function widthFunctions(e) {
 	}
 
 }
+
+
+
+$(document).ready(function() {
+    var max_fields      = 25; //maximum input boxes allowed
+    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+    var add_button      = $(".add_field_button"); //Add button ID
+    
+    var x = 1; //initlal text box count
+    $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+            x++; //text box increment
+            //$(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            $(wrapper).append('<div class="control-group"><label class="control-label">Description | Amount</label><div class="controls"><textarea name="data[Invoice][description][]"></textarea><div class="input-prepend input-append"><span class="add-on">TK</span><input name="data[Invoice][amount][]" step="any" type="number"><span class="add-on">.00</span></div><button class="btn btn-primary remove_field" title="Remove this row"><i class="halflings-icon white white minus-sign"></i></button></div></div>'); //add input box
+        }
+    });
+    
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+        e.preventDefault(); $(this).closest('.control-group').remove(); x--;
+    });
+});
+
+
+
+$(document).ready(function() {
+    var less_max_fields      = 25; //maximum input boxes allowed
+    var less_wrapper         = $(".less_input_fields_wrap"); //Fields wrapper
+    var less_add_button      = $(".less_add_field_button"); //Add button ID
+    
+    var x = 1; //initlal text box count
+    $(less_add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < less_max_fields){ //max input box allowed
+            x++; //text box increment
+            //$(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            $(less_wrapper).append('<div class="control-group"><label class="control-label">Description | Amount</label><div class="controls"><textarea name="data[Invoice][description][]"></textarea><div class="input-prepend input-append"><span class="add-on">TK</span><input name="data[Invoice][amount][]" step="any" type="number"><span class="add-on">.00</span></div><button class="btn btn-primary less_remove_field" title="Remove this row"><i class="halflings-icon white white minus-sign"></i></button></div></div>'); //add input box
+        }
+    });
+    
+    $(less_wrapper).on("click",".less_remove_field", function(e){ //user click on remove text
+        e.preventDefault(); $(this).closest('.control-group').remove(); x--;
+    });
+});

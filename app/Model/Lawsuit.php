@@ -48,8 +48,18 @@ class Lawsuit extends AppModel {
             'foreignKey' => 'lawsuit_id',
             'dependent' => true,
             'order' => 'History.created DESC'
+        ),
+        'Invoice' => array(
+            'className' => 'Invoice',
+            'foreignKey' => 'lawsuit_id',
+            'dependent' => true,
+            'order' => 'Invoice.created DESC'
         )
     );
+    
+    public function updateInvoicePeriod(){
+        
+    }
 
     
 	

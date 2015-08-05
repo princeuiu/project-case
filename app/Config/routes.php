@@ -20,7 +20,8 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-
+    Router::parseExtensions('pdf');
+    
     Router::connect('/login', array('controller' => 'Users', 'action' => 'login'));
     Router::connect('/logout', array('controller' => 'Users', 'action' => 'logout'));
     Router::connect('/register', array('controller' => 'Users', 'action' => 'register'));
