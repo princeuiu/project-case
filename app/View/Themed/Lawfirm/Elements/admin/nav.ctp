@@ -6,8 +6,8 @@
             <li>
                 <a class="dropmenu" href="#"><i class="icon-book"></i><span class="hidden-tablet"> Case </span><i class="icon-caret-down"></i></a>
                 <ul>
-                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'admin_add')); ?>"><i class="icon-folder-open"></i><span class="hidden-tablet"> Open new Case</span></a></li>
-                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'admin_index')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> List All Cases</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'add')); ?>"><i class="icon-folder-open"></i><span class="hidden-tablet"> Open new Case</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'index')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> List All Cases</span></a></li>
                 </ul>	
             </li>
             <li>
@@ -28,9 +28,16 @@
             <li>
                 <a class="dropmenu" href="#"><i class="icon-group"></i><span class="hidden-tablet"> Clients </span><i class="icon-caret-down"></i></a>
                 <ul>
-                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'clients', 'action' => 'admin_add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Clients</span></a></li>
-                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'clients', 'action' => 'admin_index')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> List All Client</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'clients', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Clients</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'clients', 'action' => 'index')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> List All Client</span></a></li>
                 </ul>	
+            </li>
+            <li>
+                <a class="dropmenu" href="#"><i class="icon-group"></i><span class="hidden-tablet"> User </span><i class="icon-caret-down"></i></a>
+                <ul>
+<!--                    <li><a class="submenu" href="--><?php //echo $this->Html->url(array('controller' => 'clients', 'action' => 'admin_add')); ?><!--"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Clients</span></a></li>-->
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'register')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> Add New User</span></a></li>
+                </ul>
             </li>
         </ul>
     </div>
