@@ -11,18 +11,21 @@ class InvoicesController extends AppController {
         if (!empty($this->data)) {
             $vat = 15;
             $invoiceData = $this->data;
+            $lawsuitId = $invoiceData['Invoice']['lawsuit_id'];
+            $invoicePeriod = $invoiceData['Invoice']['lawsuit_invoice_period'];
+            //print_r($invoiceData); die;
             $allDesc = $this->data['Invoice']['description'];
             $allAmount = $this->data['Invoice']['amount'];
             $allDeduc = $this->data['Invoice']['deduction'];
             $allDeducAmount = $this->data['Invoice']['less_amount'];
 
             $descCount = count($allDesc);
-            $amountCount = count($allAmount);
+            $ddCount = count($allDeduc);
 
-            if ($descCount != $amountCount) {
-                $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t generate invoice now, Please try again later.') . '</div>');
-                return;
-            }
+//            if ($descCount != $amountCount) {
+//                $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t generate invoice now, Please try again later.') . '</div>');
+//                return;
+//            }
             $descData = array();
             for ($count = 0; $count < $descCount; $count++) {
                 $descData[$count] = array(
@@ -32,7 +35,7 @@ class InvoicesController extends AppController {
             }
             
             $dedDescData = array();
-            for ($count = 0; $count < $dedDescData; $count++) {
+            for ($count = 0; $count < $ddCount; $count++) {
                 $dedDescData[$count] = array(
                     'deduction' => $allDeduc[$count],
                     'amount' => $allDeducAmount[$count]
@@ -43,18 +46,34 @@ class InvoicesController extends AppController {
             foreach ($allAmount as $eachAmount) {
                 $totalAmount += $eachAmount;
             }
-            $vatAmout = $totalAmount * $vat / 100;
-            $finalAmout = $totalAmount + $vatAmout;
+            
+            $totalDeduction = 0;
+            foreach ($allDeducAmount as $eachDedAmount) {
+                $totalDeduction += $eachDedAmount;
+            }
+            //$vatAmout = $totalAmount * $vat / 100;
+            $finalAmout = $totalAmount - $totalDeduction;
 
             $invoiceData['Invoice']['description'] = serialize($descData);
             $invoiceData['Invoice']['amount'] = $totalAmount;
+            $invoiceData['Invoice']['deduction'] = serialize($dedDescData);
+            $invoiceData['Invoice']['less_amount'] = $totalDeduction;
             $invoiceData['Invoice']['final_amount'] = $finalAmout;
-            $invoiceData['Invoice']['vat'] = $vatAmout;
+            $invoiceData['Invoice']['vat'] = 0;
             //print_r($invoiceData); die;
 
             if ($this->Invoice->save($invoiceData)) {
+                $this->Lawsuit->id = $lawsuitId;
+                switch ($invoicePeriod){
+                    case '1':
+                        $this->Lawsuit->saveField('invoice_period', '2');
+                        break;
+                    case '2':
+                        $this->Lawsuit->saveField('invoice_period', '3');
+                        break;
+                }
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Invoice saved successfully.') . '</div>');
-                return $this->redirect(array('controller' => 'invoices', 'action' => 'detail', $this->Invoice->id));
+                return $this->redirect(array('controller' => 'invoices', 'action' => 'index'));
             } else {
                 $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t save invoice now, Please try again later.') . '</div>');
                 return;
@@ -90,9 +109,11 @@ class InvoicesController extends AppController {
 //        
         //print_r($invoiceData); die;
         $descriptions = unserialize($invoiceData['Invoice']['description']);
-        $amountInWord = $this->convert_number_to_words($invoiceData['Invoice']['amount']);
+        //$amountInWord = $this->convert_number_to_words($invoiceData['Invoice']['amount']);
+        $dedDescriptions = unserialize($invoiceData['Invoice']['deduction']);
+        //$amountInWord = $this->convert_number_to_words($invoiceData['Invoice']['less_amount']);
         $finalAmountInWord = $this->convert_number_to_words($invoiceData['Invoice']['final_amount']);
-        $this->set(compact('invoiceData', 'descriptions','amountInWord', 'finalAmountInWord'));
+        $this->set(compact('invoiceData', 'descriptions', 'dedDescriptions','amountInWord', 'finalAmountInWord'));
     }
 
     public function admin_add() {
@@ -113,7 +134,7 @@ class InvoicesController extends AppController {
         $this->set(compact('clients'));
     }
 
-    public function admin_edit($id) {
+    public function edit($id) {
         if ($id == null) {
             throw new BadRequestException();
         }
@@ -141,7 +162,7 @@ class InvoicesController extends AppController {
         $this->render('admin_add');
     }
 
-    public function admin_index() {
+    public function index() {
         extract($this->params["named"]);
 
         if (isset($search)) {
@@ -153,7 +174,7 @@ class InvoicesController extends AppController {
 
         $items = $this->paginate('Invoice', $options);
 
-
+        //print_r($items); die;
         //pr($items);
         $this->set(compact('items', 'search'));
 

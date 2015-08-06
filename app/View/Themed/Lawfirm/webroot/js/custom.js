@@ -2317,7 +2317,7 @@ $(document).ready(function() {
         if(x < less_max_fields){ //max input box allowed
             x++; //text box increment
             //$(wrapper).append('<div><input type="text" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
-            $(less_wrapper).append('<div class="control-group"><label class="control-label">Description | Amount</label><div class="controls"><textarea name="data[Invoice][description][]"></textarea><div class="input-prepend input-append"><span class="add-on">TK</span><input name="data[Invoice][amount][]" step="any" type="number"><span class="add-on">.00</span></div><button class="btn btn-primary less_remove_field" title="Remove this row"><i class="halflings-icon white white minus-sign"></i></button></div></div>'); //add input box
+            $(less_wrapper).append('<div class="control-group"><label class="control-label">Description | Amount</label><div class="controls"><textarea name="data[Invoice][deduction][]"></textarea><div class="input-prepend input-append"><span class="add-on">TK</span><input name="data[Invoice][less_amount][]" step="any" type="number"><span class="add-on">.00</span></div><button class="btn btn-primary less_remove_field" title="Remove this row"><i class="halflings-icon white white minus-sign"></i></button></div></div>'); //add input box
         }
     });
     
