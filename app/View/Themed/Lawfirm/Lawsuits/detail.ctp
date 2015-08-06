@@ -37,6 +37,7 @@
 //                echo '<a href="/histories/view/' .$history['History']['id']. '">' . $history['History']['title'] . '</a>';
                 echo '</h2><div class="box-icon"><a href="/histories/view/' .$history['History']['id']. '"><i class="halflings-icon white eye-open"></i></a><a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>';
                 echo'</div></div><div class="box-content">';
+                echo '<b>Name of the Court : ' .$history['History']['court_name'] . '</b></br>';
                 echo 'Description : ' .$history['History']['description'] . '</br>';
                 echo 'Reporting Date : ' .$history['History']['reporting_date'] . '</br>';
                 echo 'Created : ' .$history['History']['created'] . '</br>';

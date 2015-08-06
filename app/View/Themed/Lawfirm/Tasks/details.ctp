@@ -19,8 +19,15 @@
 
 
         <div class="desc">
-            <div class="title"><?php echo $userTasks['Task']['name']; ?></div>
-            <div><?php echo $userTasks['Task']['description']; ?></div>
+            <div class="title"><?php echo 'Task Name : '.$userTasks['Task']['name']; ?></div>
+            <div><?php echo 'Description : '.$userTasks['Task']['description']; ?></div>
+            <div>Attachments: </br>
+            <?php
+            foreach($task_files as $task_file){
+                echo '<i class="icon-paper-clip"></i>&nbsp;&nbsp;<a href="/uploads/doc/' . $task_file['WantingDoc']['name'] . '" target="_blank" ><i class="fa fa-paperclip"></i>'. $task_file['WantingDoc']['name'] .'</a></br>';
+            }
+            ?>
+            </div>
         </div>
         <div class="time">
             <div class="date"><?php echo $this->Time->format($userTasks['Task']['dead_line'], '%B %e, %Y'); ?></div>

@@ -10,7 +10,7 @@ class LawsuitsController extends AppController {
     public $uses = array('Lawsuit','Client', 'History', 'Task');
 
 
-    public function admin_add(){
+    public function add(){
         if(!empty($this->data)){
             if($this->Lawsuit->save($this->data)){
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Case opened successfully.') . '</div>');
@@ -30,7 +30,7 @@ class LawsuitsController extends AppController {
     }
 
 
-    public function admin_edit($id) {
+    public function edit($id) {
         if($id == null){
             throw new BadRequestException();
         }
@@ -56,7 +56,7 @@ class LawsuitsController extends AppController {
         $this->set(compact('clients'));
 
 
-        $this->render('admin_add');
+        $this->render('add');
     }
 
     public function details($id) {
@@ -98,7 +98,7 @@ class LawsuitsController extends AppController {
         $this->render('detail');
     }
 
-    public function admin_index() {
+    public function index() {
         extract($this->params["named"]);
 
         if(isset($search)){
@@ -125,7 +125,7 @@ class LawsuitsController extends AppController {
     }
 
 
-    function admin_remove_image($name) {
+    function remove_image($name) {
         $this->Lawsuit->updateAll(array("image"=>"''"),array("image"=>"$name"));
         @unlink(WWW_ROOT."img/items/original/".$name);
         @unlink(WWW_ROOT."img/items/resize/".$name);
