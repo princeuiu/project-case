@@ -36,6 +36,16 @@
             </div>
         </div>
         <div class="control-group">
+            <label class="control-label" for="CourtName">Name of the Court </label>
+            <div class="controls">
+                <?php
+                echo $this->Form->input('court_name', array('class' => 'span6 typeahead', 'placeholder' => 'CourtName', 'error' => array(
+                    'attributes' => array('escape' => false)
+                )));
+                ?>
+            </div>
+        </div>
+        <div class="control-group">
             <label class="control-label" for="HistoryDescription">Description </label>
             <div class="controls">
                 <?php
