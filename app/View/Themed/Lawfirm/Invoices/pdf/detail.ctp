@@ -124,18 +124,38 @@ $even_row_color = '#ddd';
                     <td style="text-align: center;"></td>-->
                 </tr>
                 <tr>
-                    <td style="text-align: right;"  colspan="2">
-                        <strong>Deduction</strong><br />
-                        <span>VAT @15% on professional fees</span>
+                    <td style="text-align: center;"  colspan="3">
+                        <strong>Deduction</strong>
                     </td>
-                    <td style="text-align: center;"><?php echo $invoiceData['Invoice']['vat']; ?></td>
+<!--                    <td style="text-align: center;"><?php //echo $invoiceData['Invoice']['vat']; ?></td>-->
+<!--                    <td style="text-align: center;"></td>
+                    <td style="text-align: center;"></td>-->
+                </tr>
+                <?php
+                    $count = 1;
+                    foreach($dedDescriptions as $eachDedDesc):
+                ?>
+                <tr>
+                    <td style="text-align: center;"><?php echo $count; ?></td>
+                    <td style="text-align: left;"><?php echo $eachDedDesc['deduction']; ?></td>
+                    <td style="text-align: center;"><?php echo $eachDedDesc['amount']; ?></td>
+<!--                    <td style="text-align: center;"></td>
+                    <td style="text-align: center;"></td>-->
+                </tr>
+                <?php
+                    $count++;
+                    endforeach;
+                ?>
+                <tr>
+                    <td style="text-align: right;"  colspan="2"><strong>Total Deduction</strong></td>
+                    <td style="text-align: center;"><?php echo $invoiceData['Invoice']['less_amount']; ?></td>
 <!--                    <td style="text-align: center;"></td>
                     <td style="text-align: center;"></td>-->
                 </tr>
                 <tr>
                     <td style="text-align: right;"  colspan="2">
                         <strong>Net Bill Payable</strong><br />
-                        <span>(Total bill - Total Deduction</span>
+                        <span>(Total bill - Total Deduction)</span>
                     </td>
                     <td style="text-align: center;"><?php echo $invoiceData['Invoice']['final_amount']; ?></td>
 <!--                    <td style="text-align: center;"></td>

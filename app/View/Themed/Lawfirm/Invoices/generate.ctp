@@ -43,6 +43,7 @@
                         echo $this->Form->hidden('lawsuit_id', array('value' => $lawsuitInfo['Lawsuit']['id']));
                         echo $this->Form->hidden('client_id', array('value' => $lawsuitInfo['Client']['id']));
                         echo $this->Form->hidden('status', array('value' => 'unpaid'));
+                        echo $this->Form->hidden('lawsuit_invoice_period', array('value' => $lawsuitInfo['Lawsuit']['invoice_period']));
                     ?>
                     <div class="input_fields_wrap">
                         <button class="btn btn-primary add_field_button" title="Add new row"><i class="halflings-icon white white plus-sign"></i></button>
