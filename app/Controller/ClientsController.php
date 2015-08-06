@@ -7,7 +7,7 @@ class ClientsController extends AppController {
 
     public $name = 'Clients';
 
-    public function admin_add(){
+    public function add(){
         if(!empty($this->data)){
             if($this->Client->save($this->data)){
                 $this->Client->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Client added successfully.') . '</div>');
@@ -21,7 +21,7 @@ class ClientsController extends AppController {
     }
     
     
-    public function admin_edit($id) {
+    public function edit($id) {
         if($id == null){
             throw new BadRequestException();
         }
@@ -41,10 +41,10 @@ class ClientsController extends AppController {
         //print_r($this->data); die;
 
         
-        $this->render('admin_add');
+        $this->render('add');
     }
     
-    public function admin_index() {
+    public function index() {
         extract($this->params["named"]);
         
         if(isset($search)){
@@ -63,13 +63,13 @@ class ClientsController extends AppController {
     }
     
     
-    public function admin_delete($id) {
+    public function delete($id) {
         if($id == null){
             throw new BadRequestException();
         }
     }
     
-    function admin_remove_image($name) {
+    function remove_image($name) {
         $this->Category->updateAll(array("image"=>"''"),array("image"=>"$name"));
         @unlink(WWW_ROOT."img/categories/original/".$name);
         @unlink(WWW_ROOT."img/categories/resize/".$name);

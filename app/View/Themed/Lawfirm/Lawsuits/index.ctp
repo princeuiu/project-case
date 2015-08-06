@@ -34,10 +34,10 @@
                         <td><?php echo $item['Client']['phone']; ?></td>
                         <td><span class="label <?php if($item['Lawsuit']['status']== 'active'){ echo 'label-success'; } else{ echo 'label-warning';} ?>"><?php echo h($item['Lawsuit']['status']); ?></span></td>
                         <td class="center">
-                            <a class="btn btn-info" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'admin_edit', $item['Lawsuit']['id'])); ?>">
+                            <a class="btn btn-info" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'edit', $item['Lawsuit']['id'])); ?>">
                                 <i class="halflings-icon white edit"></i>
                             </a>
-                            <a class="btn btn-danger" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'admin_edit', $item['Lawsuit']['id'] , __('Are you sure you want to delete  %s?', $item['Lawsuit']['id']))); ?>">
+                            <a class="btn btn-danger" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'edit', $item['Lawsuit']['id'] , __('Are you sure you want to delete  %s?', $item['Lawsuit']['id']))); ?>">
                                 <i class="halflings-icon white trash"></i>
                             </a>
                             <a class="btn btn-success" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'details', $item['Lawsuit']['id'] )); ?>">

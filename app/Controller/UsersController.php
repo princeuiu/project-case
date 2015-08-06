@@ -119,6 +119,44 @@ class UsersController extends AppController {
         return;
     }
 
+    public function all(){
+        extract($this->params["named"]);
+
+//        if(isset($search)){
+//            $options["User.name like"]="%$search%";
+//        }
+//        else $search="";
+
+        $this->paginate["User"]["order"]="User.name DESC";
+
+        $items = $this->User->find('all');
+
+
+//        print_r($items);die;
+        $this->set(compact('items','search'));
+
+    }
+
+    public function details($id){
+        extract($this->params["named"]);
+
+//        if(isset($search)){
+//            $options["User.name like"]="%$search%";
+//        }
+//        else $search="";
+
+        $this->paginate["User"]["order"]="User.name DESC";
+
+        $items = $this->User->find('first', array(
+            'conditions' => array('User.id' => $id)
+        ));
+
+
+//        print_r($items);die;
+        $this->set(compact('items','search'));
+
+    }
+
     public function ajax_register(){
         $data = $_POST['data'];
         if (!empty($data)) {
