@@ -150,6 +150,25 @@ class InvoicesController extends AppController {
         $this->render('admin_add');
     }
 
+    public function index() {
+        extract($this->params["named"]);
+
+        if (isset($search)) {
+            $options["Invoice.title like"] = "%$search%";
+        } else
+            $search = "";
+
+        $this->paginate["Invoice"]["order"] = "Invoice.created DESC";
+
+        $items = $this->paginate('Invoice', $options);
+
+        //print_r($items); die;
+        //pr($items);
+        $this->set(compact('items', 'search'));
+
+
+        //$this->set("search",$search);
+    }
 
     public function convert_number_to_words($number) {
 

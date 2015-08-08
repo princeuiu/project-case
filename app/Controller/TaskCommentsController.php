@@ -7,7 +7,7 @@ class TaskCommentsController extends AppController {
 
     public $name = 'TaskComments';
 
-    public $uses = array('TaskComment', 'Task', 'WantingDoc');
+    public $uses = array('TaskComment', 'Task', 'WantingDoc','Activity');
 
     public function add(){
         $this->check_access(array('employee', 'manager','admin'));
@@ -17,7 +17,10 @@ class TaskCommentsController extends AppController {
         }
 //        print_r($this->data);die;
         $taskId = $this->data['TaskComment']['task_id'];
+        $userId = $this->data['TaskComment']['user_id'];
         if($this->TaskComment->save($this->data)){
+            $Activity = ClassRegistry::init('Activity');
+            $Activity->logintry("taskcomment","new",$this->TaskComment->id,$userId,$taskId,'');
             $path = WWW_ROOT . 'uploads' . DS . 'doc' . DS;
             $commentId =$this->TaskComment->id;
             $files = $this->data['TaskComments']['files'];

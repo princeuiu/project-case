@@ -7,7 +7,7 @@ class LawsuitsController extends AppController {
 
     public $name = 'Lawsuits';
 
-    public $uses = array('Lawsuit','Client', 'History', 'Task');
+    public $uses = array('Lawsuit','Client', 'History', 'Task','Activity');
 
 
     public function add(){
@@ -16,6 +16,8 @@ class LawsuitsController extends AppController {
         if(!empty($this->data)){
             if($this->Lawsuit->save($this->data)){
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Case opened successfully.') . '</div>');
+                $Activity = ClassRegistry::init('Activity');
+                $Activity->logintry("lawsuit","new",$this->Lawsuit->id,Authsome::get("id"),0,'');
                 return $this->redirect(array('controller' => 'lawsuits', 'action' => 'edit', $this->Lawsuit->id));
             }
             else{
@@ -42,6 +44,8 @@ class LawsuitsController extends AppController {
         if(!empty($this->data)){
             if($this->Lawsuit->save($this->data)){
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Case updated successfully.') . '</div>');
+                $Activity = ClassRegistry::init('Activity');
+                $Activity->logintry("lawsuit","update",$this->Lawsuit->id,Authsome::get("id"),0,'');
                 return $this->redirect(array('controller' => 'lawsuits', 'action' => 'edit', $this->Lawsuit->id));
             }
             else{

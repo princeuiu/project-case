@@ -61,7 +61,7 @@ class TasksController extends AppController {
                 }
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Task added successfully.') . '</div>');
                 $Activity = ClassRegistry::init('Activity');
-                $Activity->logintry("task","new task assigned",$taskId,$taskOwner,$taskAssigned,'');
+                $Activity->logintry("task","new",$taskId,$taskOwner,$taskAssigned,'');
                 return $this->redirect(array('controller' => 'tasks', 'action' => 'edit', $this->Task->id));
             }
             else{
@@ -111,7 +111,7 @@ class TasksController extends AppController {
                 }
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Task Updated successfully.') . '</div>');
                 $Activity = ClassRegistry::init('Activity');
-                $Activity->logintry("task","task updated",$taskId,$taskOwner,$taskAssigned,'');
+                $Activity->logintry("task","update",$taskId,$taskOwner,$taskAssigned,'');
                 return $this->redirect(array('controller' => 'tasks', 'action' => 'edit', $this->Task->id));
             }
             else{
