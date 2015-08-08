@@ -231,8 +231,6 @@ class TasksController extends AppController {
 
 
     public function details($id){
-        $this->check_access(array('employee', 'manager','admin'));
-
         $this->Task->unbindModel(
             array('belongsTo' => array('Owner', 'Assigned'), 'hasAndBelongsToMany' => array('FollowerUser'))
         );

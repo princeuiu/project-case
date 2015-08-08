@@ -7,7 +7,7 @@ class HistoriesController extends AppController {
 
     public $name = 'Histories';
 
-    public $uses = array('History', 'Lawsuit', 'Client');
+    public $uses = array('History', 'Lawsuit', 'Client', 'Activity');
 
     /**
      *
@@ -24,6 +24,13 @@ class HistoriesController extends AppController {
 
             if($this->History->save($this->data)){
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('History added successfully.') . '</div>');
+                $historyId =  $this->History->id;
+
+//                $Activity = ClassRegistry::init('Activity');
+//                $Activity->logintry("task","new task assigned",$taskId,$taskOwner,$taskAssigned,'');
+                $taskOwner = Authsome::get("id");
+                $Activity = ClassRegistry::init('Activity');
+                $Activity->logintry("history","new",$historyId,$taskOwner, 0,'');
                 return $this->redirect(array('controller' => 'histories', 'action' => 'edit', $this->History->id));
             }
             else{
