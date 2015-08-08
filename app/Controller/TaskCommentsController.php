@@ -18,7 +18,7 @@ class TaskCommentsController extends AppController {
         $userId = $this->data['TaskComment']['user_id'];
         if($this->TaskComment->save($this->data)){
             $Activity = ClassRegistry::init('Activity');
-            $Activity->logintry("taskcomment","new",$this->TaskComment->id,$userId,0,'');
+            $Activity->logintry("taskcomment","new",$this->TaskComment->id,$userId,$taskId,'');
             $path = WWW_ROOT . 'uploads' . DS . 'doc' . DS;
             $commentId =$this->TaskComment->id;
             $files = $this->data['TaskComments']['files'];

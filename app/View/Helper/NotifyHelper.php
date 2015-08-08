@@ -7,6 +7,7 @@ class NotifyHelper extends AppHelper {
     private $countTasks = 0;
     private $allTasks = array();
     private $userTaskList = array();
+    private $userTaskCommentList = array();
     private $countNotifications = 0;
     private $allNotifications = array();
     private $userID;
@@ -39,15 +40,33 @@ class NotifyHelper extends AppHelper {
                                 case 'task':
                                     echo $this->Html->url(array('controller' => 'tasks', 'action' => 'details', $notification['Activity']['item_id']));
                                     break;
+                                case 'taskcomment':
+                                    echo $this->Html->url(array('controller' => 'tasks', 'action' => 'details', $notification['Activity']['reference_id']));
+                                    break;
                             }
                             
                         ?>">
-                            <span class="icon <?php if($notification['Activity']['event'] == 'new'){ echo 'blue';} elseif($notification['Activity']['event'] == 'update'){ echo 'yellow';} ?>"><i class="icon-tasks"></i></span>
+                            <span class="icon <?php if($notification['Activity']['event'] == 'new'){ echo 'blue';} elseif($notification['Activity']['event'] == 'update'){ echo 'yellow';} ?>">
+                                <i class="<?php
+                                            switch($notification['Activity']['item_type']){
+                                                case 'task':
+                                                    echo 'icon-tasks';
+                                                    break;
+                                                case 'taskcomment':
+                                                    echo 'icon-comment-alt';
+                                                    break;
+                                            }
+                                            ?>">
+                                </i>
+                            </span>
                             <span class="message">
                                 <?php
                                     switch($notification['Activity']['item_type']){
                                         case 'task':
                                             echo substr($this->userTaskList[$notification['Activity']['item_id']], 0, 20);
+                                            break;
+                                        case 'taskcomment':
+                                            echo substr($this->userTaskCommentList[$notification['Activity']['item_id']], 0, 20);
                                             break;
                                     }
                                 ?>
@@ -163,7 +182,7 @@ class NotifyHelper extends AppHelper {
             
             $tasks = $task->find('list',array('conditions' => array('Task.assigned_to' => $this->userID),'fields'=>array('id','name')));
             $this->userTaskList = $tasks;
-            $taskComments = $taskComment->find('list',array('conditions' => array('TaskComment.user_id' => $this->userID),'fields'=>array('id','task_id')));
+            //$taskComments = $taskComment->find('list',array('conditions' => array('TaskComment.task_id' => $this->userID),'fields'=>array('id','task_id')));
             
             if(!empty($tasks)){
                 $taskList = array();
@@ -171,6 +190,14 @@ class NotifyHelper extends AppHelper {
                     $taskList[] = $taskId;
                 }
                 $cond[] = 'Activity.item_type  = "task" AND Activity.item_id in ('.implode(',',$taskList).')';
+                
+                $taskComments = $taskComment->find('list',array('conditions' => array('TaskComment.task_id' => $taskList),'fields'=>array('id','body')));
+                $this->userTaskCommentList = $taskComments;
+                $taskCommentsList = array();
+                foreach($taskComments AS $taskCommentId => $taskCommentBody){
+                    $taskCommentsList[] = $taskCommentId;
+                }
+                $cond[] = 'Activity.item_type  = "taskcomment" AND Activity.item_id in ('.implode(',',$taskCommentsList).')';
             }
             
             
@@ -188,14 +215,11 @@ class NotifyHelper extends AppHelper {
             //print_r($userActivities); die;
             $this->allNotifications = $userActivities;
 
-//            $activityOptions = array(
-//                'conditions' => array('Activity.reference_id' => $this->userID, 'Activity.viewed' => 0),
-//                'order' => array('Activity.created DESC')
-//            );
-//            $userActivities = $activity->find('all', $activityOptions);
-
             $this->allNotifications = $userActivities;
             $this->countNotifications = count($userActivities);
+        }
+        elseif($this->role == 'admin' || $this->role == 'manager'){
+            
         }
     }
 
