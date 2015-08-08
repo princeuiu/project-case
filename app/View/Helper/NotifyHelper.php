@@ -6,6 +6,7 @@ class NotifyHelper extends AppHelper {
     public $helpers = array('Html', 'Text', 'Time');
     private $countTasks = 0;
     private $allTasks = array();
+    private $userTaskList = array();
     private $countNotifications = 0;
     private $allNotifications = array();
     private $userID;
@@ -33,9 +34,24 @@ class NotifyHelper extends AppHelper {
                 </li>	
                 <?php foreach ($this->allNotifications as $notification): ?>
                     <li>
-                        <a href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'details', $notification['Task']['id'])); ?>">
-                            <span class="icon blue"><i class="icon-tasks"></i></span>
-                            <span class="message"><?php echo $notification['Activity']['event'] ?></span>
+                        <a href="<?php
+                            switch($notification['Activity']['item_type']){
+                                case 'task':
+                                    echo $this->Html->url(array('controller' => 'tasks', 'action' => 'details', $notification['Activity']['item_id']));
+                                    break;
+                            }
+                            
+                        ?>">
+                            <span class="icon <?php if($notification['Activity']['event'] == 'new'){ echo 'blue';} elseif($notification['Activity']['event'] == 'update'){ echo 'yellow';} ?>"><i class="icon-tasks"></i></span>
+                            <span class="message">
+                                <?php
+                                    switch($notification['Activity']['item_type']){
+                                        case 'task':
+                                            echo substr($this->userTaskList[$notification['Activity']['item_id']], 0, 20);
+                                            break;
+                                    }
+                                ?>
+                            </span>
                             <span class="time"><?php echo $this->Time->format($notification['Activity']['created'], '%B %e, %Y'); ?></span> 
                         </a>
                     </li>
@@ -130,12 +146,53 @@ class NotifyHelper extends AppHelper {
 
             $this->allTasks = $tasks;
             $this->countTasks = count($tasks);
+            
+            App::import("Model", "Client");
+            App::import("Model", "History");
+            App::import("Model", "Invoice");
+            App::import("Model", "Lawsuit");
+            App::import("Model", "TaskComment");
+            App::import("Model", "User");
+            
+            $history = new History();
+            $invoice = new Invoice();
+            $lawsuit = new Lawsuit();
+            $taskComment = new TaskComment();
+            $user = new User();
+            
+            
+            $tasks = $task->find('list',array('conditions' => array('Task.assigned_to' => $this->userID),'fields'=>array('id','name')));
+            $this->userTaskList = $tasks;
+            $taskComments = $taskComment->find('list',array('conditions' => array('TaskComment.user_id' => $this->userID),'fields'=>array('id','task_id')));
+            
+            if(!empty($tasks)){
+                $taskList = array();
+                foreach($tasks AS $taskId => $taskName){
+                    $taskList[] = $taskId;
+                }
+                $cond[] = 'Activity.item_type  = "task" AND Activity.item_id in ('.implode(',',$taskList).')';
+            }
+            
+            
+            if(empty($cond)){
+                $cond[] = '0';
+            }
+            $options = array(
+                        'conditions' => array(
+                            'OR' => $cond,
+                            'Activity.viewed' => false
+                                        )
+                );
+            
+            $userActivities = $activity->find('all', $options);
+            //print_r($userActivities); die;
+            $this->allNotifications = $userActivities;
 
-            $activityOptions = array(
-                'conditions' => array('Activity.reference_id' => $this->userID, 'Activity.viewed' => 0),
-                'order' => array('Activity.created DESC')
-            );
-            $userActivities = $activity->find('all', $activityOptions);
+//            $activityOptions = array(
+//                'conditions' => array('Activity.reference_id' => $this->userID, 'Activity.viewed' => 0),
+//                'order' => array('Activity.created DESC')
+//            );
+//            $userActivities = $activity->find('all', $activityOptions);
 
             $this->allNotifications = $userActivities;
             $this->countNotifications = count($userActivities);
