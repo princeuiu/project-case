@@ -126,6 +126,17 @@ class AppController extends Controller {
 //            'password' => '641bf96de4006a42df2ad7c40c558cba'
 //        );
     }
+    
+    public function check_access($groups = array()){
+        $user = Authsome::get();
+        if(!empty($user) && in_array(Authsome::get('role'), $groups)){
+            return true;
+        }
+        else{
+            $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t open Case now, Please try again later.') . '</div>');
+            return $this->redirect('/login');
+        }
+    }
 
 //    public function beforeFilter() {
 //        //pr($this->params); die;
