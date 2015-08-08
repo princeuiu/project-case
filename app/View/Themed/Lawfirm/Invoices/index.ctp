@@ -33,12 +33,12 @@
                             <td><?php echo $item['Invoice']['final_amount']; ?></td>
                             <td><span class="label <?php if($item['Invoice']['status']== 'paid'){ echo 'label-success'; } else{ echo 'label-warning';} ?>"><?php echo h($item['Invoice']['status']); ?></span></td>
                             <td class="center">
-                                <a class="btn btn-info" title="Export Pdf" href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'detail', $item['Invoice']['id'].'.pdf')); ?>">
+                                <a class="btn btn-info" target="_blank" title="Export Pdf" href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'detail', $item['Invoice']['id'].'.pdf')); ?>">
                                     <i class="halflings-icon white print"></i>  
                                 </a>
-                                <a class="btn btn-info" title="Edit Invoice" href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'edit', $item['Invoice']['id'])); ?>">
+<!--                                <a class="btn btn-info" title="Edit Invoice" href="<?php //echo $this->Html->url(array('controller' => 'invoices', 'action' => 'edit', $item['Invoice']['id'])); ?>">
                                     <i class="halflings-icon white edit"></i> 
-                                </a>
+                                </a>-->
                             </td>
 
                         </tr>
