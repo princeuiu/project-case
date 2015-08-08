@@ -22767,3 +22767,51 @@ Stack Trace:
 #1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
 #2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2015-08-08 18:04:35 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /invoices
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('invoices')
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#7 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#8 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(1086): PaginatorComponent->paginate('Invoice', NULL, Array)
+#9 /home/shovan/PhpstormProjects/project-case/app/Controller/InvoicesController.php(163): Controller->paginate('Invoice', NULL)
+#10 [internal function]: InvoicesController->index()
+#11 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#12 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#14 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2015-08-08 18:04:57 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /invoices
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('invoices')
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#7 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Component/PaginatorComponent.php(196): Model->find('all', Array)
+#8 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(1086): PaginatorComponent->paginate('Invoice', NULL, Array)
+#9 /home/shovan/PhpstormProjects/project-case/app/Controller/InvoicesController.php(163): Controller->paginate('Invoice', NULL)
+#10 [internal function]: InvoicesController->index()
+#11 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(InvoicesController), Array)
+#12 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(InvoicesController), Object(CakeRequest))
+#14 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
