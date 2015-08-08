@@ -8,6 +8,8 @@ class InvoicesController extends AppController {
     public $uses = array('Invoice', 'Lawsuit', 'Client');
 
     public function generate($id = null) {
+        $this->check_access(array('employee', 'manager','admin'));
+
         if (!empty($this->data)) {
             $vat = 15;
             $invoiceData = $this->data;
@@ -92,6 +94,8 @@ class InvoicesController extends AppController {
     }
 
     public function detail($id = null) {
+        $this->check_access(array('employee', 'manager','admin'));
+
         if ($id == null) {
             throw new BadRequestException();
         }
@@ -116,25 +120,9 @@ class InvoicesController extends AppController {
         $this->set(compact('invoiceData', 'descriptions', 'dedDescriptions','amountInWord', 'finalAmountInWord'));
     }
 
-    public function admin_add() {
-        if (!empty($this->data)) {
-            if ($this->Invoice->save($this->data)) {
-                $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Case opened successfully.') . '</div>');
-                return $this->redirect(array('controller' => 'lawsuits', 'action' => 'edit', $this->Invoice->id));
-            } else {
-                $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t open Case now, Please try again later.') . '</div>');
-                return;
-            }
-        }
-
-        $clients = $this->Client->find('list', array(
-            'conditions' => array('Client.status' => 'active')
-        ));
-
-        $this->set(compact('clients'));
-    }
-
     public function edit($id) {
+        $this->check_access(array('employee', 'manager','admin'));
+
         if ($id == null) {
             throw new BadRequestException();
         }
@@ -162,29 +150,6 @@ class InvoicesController extends AppController {
         $this->render('admin_add');
     }
 
-    public function index() {
-        extract($this->params["named"]);
-
-        if (isset($search)) {
-            $options["Invoice.title like"] = "%$search%";
-        } else
-            $search = "";
-
-        $this->paginate["Invoice"]["order"] = "Invoice.created DESC";
-
-        $items = $this->paginate('Invoice', $options);
-
-        //print_r($items); die;
-        //pr($items);
-        $this->set(compact('items', 'search'));
-
-
-        //$this->set("search",$search);
-    }
-
-    public function test() {
-        throw new BadRequestException();
-    }
 
     public function convert_number_to_words($number) {
 
