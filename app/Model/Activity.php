@@ -19,10 +19,6 @@ class Activity extends AppModel {
             'User' => array(
                 'className' => 'User',
                 'foreignKey' => 'user_id'
-            ),
-            'Task' => array(
-                'className' => 'Task',
-                'foreignKey' => 'item_id'
             )
         );
     
