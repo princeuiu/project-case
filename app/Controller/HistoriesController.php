@@ -125,21 +125,17 @@ class HistoriesController extends AppController {
         $this->check_access(array('employee', 'manager','admin'));
 
         extract($this->params["named"]);
-        $options = array(
-            'NOT' => array(
-                'parent_id' => 0,
-            ),
-        );
+
         if(isset($search)){
-            $options["Category.title like"]="%$search%";
+            $options["Client.name like"]="%$search%";
         }
         else $search="";
 
-        $this->paginate["Category"]["order"]="Category.created DESC";
+        $this->paginate["Client"]["order"]="Client.created DESC";
 
-        $categories = $this->paginate('Category', $options);
-        //pr($categories);
-        $this->set(compact('categories','search'));
+        $cases = $this->paginate('Lawsuit', $options);
+//        pr($cases);die;
+        $this->set(compact('cases','search'));
 
 
         //$this->set("search",$search);
