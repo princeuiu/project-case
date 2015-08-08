@@ -58,7 +58,7 @@
         <div class="control-group">
             <label class="control-label" for="HistoryReportingDate">Reporting Date </label>
             <div class="controls">
-                <input type="text" name="data[History][reporting_date]" class="input-xlarge datepicker" id="HistoryReportingDate">
+                <input type="text" name="data[History][reporting_date]" class="input-xlarge datepicker" id="HistoryReportingDate" <?php if(isset($this->data['History']['reporting_date'])){ echo 'value="' . $this->data['History']['reporting_date'] . '"';} ?>>
                 <?php
 //                echo $this->Form->input('reporting_date', array('type'=>'date', 'class' => 'input-xlarge datepicker hasDatepicker', 'placeholder' => 'Reporting Date', 'error' => array(
 //                    'attributes' => array('escape' => false)

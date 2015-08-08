@@ -58,10 +58,11 @@
                 <div class="control-group">
                     <label class="control-label" for="ReportingDate">Reporting Date </label>
                     <div class="controls">
+                        <input type="text" name="data[History][reporting_date]" class="input-xlarge datepicker" id="HistoryReportingDate">
                         <?php
-                        echo $this->Form->input('reporting_date', array('type'=>'date', 'class' => 'input-xlarge datepicker hasDatepicker', 'placeholder' => 'Reporting Date', 'error' => array(
-                            'attributes' => array('escape' => false)
-                        )));
+//                        echo $this->Form->input('reporting_date', array('type'=>'date', 'class' => 'input-xlarge datepicker hasDatepicker', 'placeholder' => 'Reporting Date', 'error' => array(
+//                            'attributes' => array('escape' => false)
+//                        )));
                         ?>
                     </div>
                 </div>
