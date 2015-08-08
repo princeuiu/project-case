@@ -10,6 +10,7 @@ class TasksController extends AppController {
     public $uses = array('Task','Lawsuit', 'TaskComment', 'Client','User', 'Follower', 'Activity', 'WantingDoc');
 
     public function add(){
+        $this->check_access(array('manager','admin'));
 
 
         if(!empty($this->data)){
@@ -82,6 +83,8 @@ class TasksController extends AppController {
     }
 
     public function edit($id) {
+        $this->check_access(array('employee', 'manager','admin'));
+
         if($id == null){
             throw new BadRequestException();
         }
@@ -145,6 +148,8 @@ class TasksController extends AppController {
     }
 
     public function index() {
+        $this->check_access(array('employee', 'manager','admin'));
+
         extract($this->params["named"]);
 
         if(isset($search)){
@@ -163,6 +168,8 @@ class TasksController extends AppController {
     }
 
     public function all(){
+        $this->check_access(array('employee', 'manager','admin'));
+
         $this->Task->unbindModel(
             array('belongsTo' => array('Owner', 'Assigned'), 'hasAndBelongsToMany' => array('FollowerUser'))
         );
@@ -191,6 +198,8 @@ class TasksController extends AppController {
     }
 
     public function owned(){
+        $this->check_access(array('employee', 'manager','admin'));
+
         $this->Task->unbindModel(
             array('belongsTo' => array('Owner', 'Assigned'), 'hasAndBelongsToMany' => array('FollowerUser'))
         );
@@ -222,6 +231,8 @@ class TasksController extends AppController {
 
 
     public function details($id){
+        $this->check_access(array('employee', 'manager','admin'));
+
         $this->Task->unbindModel(
             array('belongsTo' => array('Owner', 'Assigned'), 'hasAndBelongsToMany' => array('FollowerUser'))
         );

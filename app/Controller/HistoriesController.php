@@ -13,6 +13,8 @@ class HistoriesController extends AppController {
      *
      */
     public function add(){
+        $this->check_access(array('employee', 'manager','admin'));
+
         if(!empty($this->data)){
 //            $lawsuit_id = $this->data['History']['lawsuit_id'];
 //            $title = $this->data['History']['title'];
@@ -45,6 +47,8 @@ class HistoriesController extends AppController {
 
 
     public function calender(){
+        $this->check_access(array('employee', 'manager','admin'));
+
         $histories = $this->History->find('all', array(
             'fields' => array('History.reporting_date', 'History.title', 'History.id'),
             'conditions' => array('History.status'=>'pending')
@@ -54,6 +58,8 @@ class HistoriesController extends AppController {
     }
 
     public function edit($id) {
+        $this->check_access(array('employee', 'manager','admin'));
+
         if($id == null){
             throw new BadRequestException();
         }
@@ -80,6 +86,8 @@ class HistoriesController extends AppController {
 
 
     public function view($id) {
+        $this->check_access(array('employee', 'manager','admin'));
+
         if($id == null){
             throw new BadRequestException();
         }
@@ -98,6 +106,8 @@ class HistoriesController extends AppController {
 
 
     public function timeline($id) {
+        $this->check_access(array('employee', 'manager','admin'));
+
         if($id == null){
             throw new BadRequestException();
         }
@@ -112,6 +122,8 @@ class HistoriesController extends AppController {
 
 
     public function index() {
+        $this->check_access(array('employee', 'manager','admin'));
+
         extract($this->params["named"]);
         $options = array(
             'NOT' => array(

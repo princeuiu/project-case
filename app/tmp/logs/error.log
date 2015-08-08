@@ -21395,3 +21395,80 @@ Stack Trace:
 #2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
 >>>>>>> f903deab6c16a9076c1ed7caf48bb31b57a7e83e
+2015-08-08 12:28:12 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-08 12:28:34 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-08 12:28:35 Error: [MissingActionException] Action LawsuitsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'LawsuitsController',
+  'action' => 'img',
+)
+Request URL: /lawsuits/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-08 12:30:28 Error: [MissingActionException] Action ClientsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'img',
+)
+Request URL: /clients/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-08 12:30:39 Error: [MissingActionException] Action ClientsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'img',
+)
+Request URL: /clients/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-08 12:30:57 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-08 12:31:43 Error: [MissingActionException] Action HistoriesController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'HistoriesController',
+  'action' => 'img',
+)
+Request URL: /histories/img/avatar.jpg
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

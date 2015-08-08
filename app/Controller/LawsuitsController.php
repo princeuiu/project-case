@@ -33,6 +33,7 @@ class LawsuitsController extends AppController {
 
 
     public function edit($id) {
+        $this->check_access(array('employee', 'manager','admin'));
         if($id == null){
             throw new BadRequestException();
         }
@@ -62,21 +63,22 @@ class LawsuitsController extends AppController {
     }
 
     public function details($id) {
+        $this->check_access(array('employee', 'manager','admin'));
         if($id == null){
             throw new BadRequestException();
         }
         $this->Lawsuit->id = $id;
 
-        if(!empty($this->data)){
-            if($this->Lawsuit->save($this->data)){
-                $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Case updated successfully.') . '</div>');
-                return $this->redirect(array('controller' => 'lawsuits', 'action' => 'edit', $this->Lawsuit->id));
-            }
-            else{
-                $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t update Case now, Please try again later.') . '</div>');
-                return $this->redirect(array('controller' => 'lawsuits', 'action' => 'edit', $this->Lawsuit->id));
-            }
-        }
+//        if(!empty($this->data)){
+//            if($this->Lawsuit->save($this->data)){
+//                $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Case updated successfully.') . '</div>');
+//                return $this->redirect(array('controller' => 'lawsuits', 'action' => 'edit', $this->Lawsuit->id));
+//            }
+//            else{
+//                $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t update Case now, Please try again later.') . '</div>');
+//                return $this->redirect(array('controller' => 'lawsuits', 'action' => 'edit', $this->Lawsuit->id));
+//            }
+//        }
 
         $this->data = $this->Lawsuit->read();
 
@@ -101,6 +103,8 @@ class LawsuitsController extends AppController {
     }
 
     public function index() {
+        $this->check_access(array('employee', 'manager','admin'));
+
         extract($this->params["named"]);
 
         if(isset($search)){
