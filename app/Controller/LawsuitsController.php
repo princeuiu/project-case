@@ -11,6 +11,8 @@ class LawsuitsController extends AppController {
 
 
     public function add(){
+        $this->check_access(array('manager','admin'));
+        
         if(!empty($this->data)){
             if($this->Lawsuit->save($this->data)){
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Case opened successfully.') . '</div>');
