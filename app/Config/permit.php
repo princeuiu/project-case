@@ -23,19 +23,40 @@ Permit::access(
 
 
 
+/*
+ * rule for every one
+ */
+
+//Permit::access(
+//    array('controller' => array('Tasks','Dashboard','Histories','TaskComments')),
+//    array('auth' => array('User.role' => array('employee'))),
+//    array('redirect' => array('controller' => 'users', 'action' => 'login'),
+//        'message' => '<div class="alert alert-danger">' . __('You must be logged in to view this resource', true)  . '</div>',
+//        
+//    )
+//);
 
 /*
  * access rule for admin only
  */
 
-Permit::access(
-    array('controller' => array('Tasks', 'Lawsuits', 'Clients')),
-    array('auth' => array('User.role' => array('employee'))),
-    array('redirect' => array('controller' => 'users', 'action' => 'login'),
-        'message' => '<div class="alert alert-danger">' . __('You must be logged in to view this resource', true)  . '</div>',
-        
-    )
-);
+//Permit::access(
+//    array('controller' => array('Tasks', 'Lawsuits', 'Clients','Dashboard','Histories','Invoices','TaskComments')),
+//    array('auth' => array('User.role' => array('admin'))),
+//    array('redirect' => array('controller' => 'users', 'action' => 'login'),
+//        'message' => '<div class="alert alert-danger">' . __('You must be logged in to view this resource', true)  . '</div>',
+//        
+//    )
+//);
+
+//Permit::access(
+//    array('controller' => array('Tasks', 'Lawsuits', 'Clients','Dashboard','Histories','Invoices','TaskComments')),
+//    array('auth' => array('User.role' => array('employee'))),
+//    array('redirect' => array('controller' => 'users', 'action' => 'login'),
+//        'message' => '<div class="alert alert-danger">' . __('You must be logged in to view this resource', true)  . '</div>',
+//        
+//    )
+//);
 
 
 
