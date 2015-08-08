@@ -204,10 +204,12 @@ class NotifyHelper extends AppHelper {
             if(empty($cond)){
                 $cond[] = '0';
             }
+            $dateFrom = date('Y-m-d H:i:s', mktime(0,0,0, date('m'), date('d')-3, date('Y')));
             $options = array(
                         'conditions' => array(
                             'OR' => $cond,
-                            'Activity.viewed' => false
+                            'Activity.viewed' => false,
+                            'Activity.created >=' => $dateFrom
                                         )
                 );
             

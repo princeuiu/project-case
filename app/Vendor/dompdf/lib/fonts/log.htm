@@ -1,6 +1,6 @@
-<span style='color: #000' title='Frames'>   183</span><span style='color: #009' title='Memory'>   8960.00 KB</span><span style='color: #900' title='Time'>    163.05 ms</span><span  title='Quirksmode'>  <span style='color: #0d0'>OFF</span></span><br /><pre class="cake-error"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr55c308951af83-trace').style.display = (document.getElementById('cakeErr55c308951af83-trace').style.display == 'none' ? '' : 'none');"><b>Warning</b> (2)</a>: DOMNode::cloneNode(): ID pdf already defined [<b>APP/Vendor/dompdf/include/frame_decorator.cls.php</b>, line <b>573</b>]<div id="cakeErr55c308951af83-trace" class="cake-stack-trace" style="display: none;"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr55c308951af83-code').style.display = (document.getElementById('cakeErr55c308951af83-code').style.display == 'none' ? '' : 'none')">Code</a> <a href="javascript:void(0);" onclick="document.getElementById('cakeErr55c308951af83-context').style.display = (document.getElementById('cakeErr55c308951af83-context').style.display == 'none' ? '' : 'none')">Context</a><pre id="cakeErr55c308951af83-code" class="cake-code-dump" style="display: none;"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;$node&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_frame</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">get_node</span><span style="color: #007700">();</span></span></code>
+<span style='color: #000' title='Frames'>   224</span><span style='color: #009' title='Memory'>  10496.00 KB</span><span style='color: #900' title='Time'>    210.41 ms</span><span  title='Quirksmode'>  <span style='color: #0d0'>OFF</span></span><br /><pre class="cake-error"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr55c5e6116863f-trace').style.display = (document.getElementById('cakeErr55c5e6116863f-trace').style.display == 'none' ? '' : 'none');"><b>Warning</b> (2)</a>: DOMNode::cloneNode(): ID pdf already defined [<b>APP/Vendor/dompdf/include/frame_decorator.cls.php</b>, line <b>573</b>]<div id="cakeErr55c5e6116863f-trace" class="cake-stack-trace" style="display: none;"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr55c5e6116863f-code').style.display = (document.getElementById('cakeErr55c5e6116863f-code').style.display == 'none' ? '' : 'none')">Code</a> <a href="javascript:void(0);" onclick="document.getElementById('cakeErr55c5e6116863f-context').style.display = (document.getElementById('cakeErr55c5e6116863f-context').style.display == 'none' ? '' : 'none')">Context</a><pre id="cakeErr55c5e6116863f-code" class="cake-code-dump" style="display: none;"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;$node&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_frame</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">get_node</span><span style="color: #007700">();</span></span></code>
 <code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;</span></span></code>
-<span class="code-highlight"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;$split&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">copy</span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$node</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">cloneNode</span><span style="color: #007700">()&nbsp;);</span></span></code></span></pre><pre id="cakeErr55c308951af83-context" class="cake-context" style="display: none;">$child = object(Block_Frame_Decorator) {
+<span class="code-highlight"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;$split&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">copy</span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$node</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">cloneNode</span><span style="color: #007700">()&nbsp;);</span></span></code></span></pre><pre id="cakeErr55c5e6116863f-context" class="cake-context" style="display: none;">$child = object(Block_Frame_Decorator) {
 	_counters =&gt; array()
 	_already_pushed =&gt; false
 	_float_next_line =&gt; false
@@ -314,6 +314,10 @@ $style = object(Style) {
 		&#039;get_border_right_color&#039; =&gt; true,
 		&#039;set_border_right&#039; =&gt; true,
 		&#039;get_height&#039; =&gt; false,
+		&#039;get_word_wrap&#039; =&gt; false,
+		&#039;set_border_right_width&#039; =&gt; false,
+		&#039;set_border_left_width&#039; =&gt; false,
+		&#039;get_background_image&#039; =&gt; false,
 		&#039;get_border_collapse&#039; =&gt; false,
 		&#039;get_border_top_color&#039; =&gt; true,
 		&#039;get_border_bottom_color&#039; =&gt; true,
@@ -322,10 +326,6 @@ $style = object(Style) {
 		&#039;set_padding_bottom&#039; =&gt; true,
 		&#039;get_text_align&#039; =&gt; false,
 		&#039;get_overflow&#039; =&gt; false,
-		&#039;get_word_wrap&#039; =&gt; false,
-		&#039;set_border_right_width&#039; =&gt; false,
-		&#039;set_border_left_width&#039; =&gt; false,
-		&#039;get_background_image&#039; =&gt; false,
 		&#039;get_orphans&#039; =&gt; false,
 		&#039;get_page_break_inside&#039; =&gt; false,
 		&#039;set_border_bottom&#039; =&gt; true,
