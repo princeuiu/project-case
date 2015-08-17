@@ -62,7 +62,7 @@ class TasksController extends AppController {
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Task added successfully.') . '</div>');
                 $Activity = ClassRegistry::init('Activity');
                 $Activity->logintry("task","new",$taskId,$taskOwner,$taskAssigned,'');
-                return $this->redirect(array('controller' => 'tasks', 'action' => 'edit', $this->Task->id));
+                return $this->redirect(array('controller' => 'tasks', 'action' => 'owned', $this->Task->id));
             }
             else{
                 $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t save Task now, Please try again later.') . '</div>');

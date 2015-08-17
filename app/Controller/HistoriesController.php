@@ -32,7 +32,7 @@ class HistoriesController extends AppController {
 
                 $Activity = ClassRegistry::init('Activity');
                 $Activity->logintry("history","new",$historyId,$userId,$lawsuitId,'');
-                return $this->redirect(array('controller' => 'histories', 'action' => 'edit', $this->History->id));
+                return $this->redirect(array('controller' => 'histories', 'action' => 'calender', $this->History->id));
             }
             else{
                 $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t save History now, Please try again later.') . '</div>');
