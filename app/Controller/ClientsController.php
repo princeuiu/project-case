@@ -8,6 +8,8 @@ class ClientsController extends AppController {
     public $name = 'Clients';
 
     public function add(){
+        $this->check_access(array('manager','admin'));
+
         if(!empty($this->data)){
             if($this->Client->save($this->data)){
                 $this->Client->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Client added successfully.') . '</div>');
@@ -22,6 +24,8 @@ class ClientsController extends AppController {
     
     
     public function edit($id) {
+        $this->check_access(array('employee', 'manager','admin'));
+
         if($id == null){
             throw new BadRequestException();
         }
@@ -45,6 +49,8 @@ class ClientsController extends AppController {
     }
     
     public function index() {
+        $this->check_access(array('employee', 'manager','admin'));
+
         extract($this->params["named"]);
         
         if(isset($search)){

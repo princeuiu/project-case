@@ -193,11 +193,15 @@ class NotifyHelper extends AppHelper {
                 
                 $taskComments = $taskComment->find('list',array('conditions' => array('TaskComment.task_id' => $taskList),'fields'=>array('id','body')));
                 $this->userTaskCommentList = $taskComments;
-                $taskCommentsList = array();
-                foreach($taskComments AS $taskCommentId => $taskCommentBody){
-                    $taskCommentsList[] = $taskCommentId;
+                if(!empty($taskComments)){
+                    $taskCommentsList = array();
+                    foreach($taskComments AS $taskCommentId => $taskCommentBody){
+                        $taskCommentsList[] = $taskCommentId;
+                    }
+                    if(!empty($taskCommentsList)){
+                        $cond[] = 'Activity.item_type  = "taskcomment" AND Activity.item_id in ('.implode(',',$taskCommentsList).')';
+                    }
                 }
-                $cond[] = 'Activity.item_type  = "taskcomment" AND Activity.item_id in ('.implode(',',$taskCommentsList).')';
             }
             
             

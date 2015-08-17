@@ -13,6 +13,8 @@ class HistoriesController extends AppController {
      *
      */
     public function add(){
+        $this->check_access(array('employee', 'manager','admin'));
+
         if(!empty($this->data)){
             $historyData = $this->data;
             $splitTime  = explode('/', $historyData['History']['reporting_date']);
@@ -27,6 +29,7 @@ class HistoriesController extends AppController {
                 $historyId = $this->History->id;
                 $userId = Authsome::get("id");
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('History added successfully.') . '</div>');
+
                 $Activity = ClassRegistry::init('Activity');
                 $Activity->logintry("history","new",$historyId,$userId,$lawsuitId,'');
                 return $this->redirect(array('controller' => 'histories', 'action' => 'edit', $this->History->id));
@@ -52,6 +55,8 @@ class HistoriesController extends AppController {
 
 
     public function calender(){
+        $this->check_access(array('employee', 'manager','admin'));
+
         $histories = $this->History->find('all', array(
             'fields' => array('History.reporting_date', 'History.title', 'History.id'),
             'conditions' => array('History.status'=>'pending')
@@ -61,6 +66,8 @@ class HistoriesController extends AppController {
     }
 
     public function edit($id) {
+        $this->check_access(array('employee', 'manager','admin'));
+
         if($id == null){
             throw new BadRequestException();
         }
@@ -100,6 +107,8 @@ class HistoriesController extends AppController {
 
 
     public function view($id) {
+        $this->check_access(array('employee', 'manager','admin'));
+
         if($id == null){
             throw new BadRequestException();
         }
@@ -118,6 +127,8 @@ class HistoriesController extends AppController {
 
 
     public function timeline($id) {
+        $this->check_access(array('employee', 'manager','admin'));
+
         if($id == null){
             throw new BadRequestException();
         }
@@ -132,22 +143,20 @@ class HistoriesController extends AppController {
 
 
     public function index() {
+        $this->check_access(array('employee', 'manager','admin'));
+
         extract($this->params["named"]);
-        $options = array(
-            'NOT' => array(
-                'parent_id' => 0,
-            ),
-        );
+
         if(isset($search)){
-            $options["Category.title like"]="%$search%";
+            $options["Client.name like"]="%$search%";
         }
         else $search="";
 
-        $this->paginate["Category"]["order"]="Category.created DESC";
+        $this->paginate["Client"]["order"]="Client.created DESC";
 
-        $categories = $this->paginate('Category', $options);
-        //pr($categories);
-        $this->set(compact('categories','search'));
+        $cases = $this->paginate('Lawsuit', $options);
+//        pr($cases);die;
+        $this->set(compact('cases','search'));
 
 
         //$this->set("search",$search);

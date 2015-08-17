@@ -15,7 +15,8 @@
                     }else{
                         echo '<div class="timeslot alt" style="height: 124px;"><div class="task"><span><span class="type">';
                     }
-                    echo $timelineData[$i]['History']['title'];
+                    echo '</b>'.$timelineData[$i]['History']['title'].'</b></br>';
+                    echo $timelineData[$i]['History']['court_name'];
 
                     echo '</span><span class="details">';
 
