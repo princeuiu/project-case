@@ -133,7 +133,7 @@ class AppController extends Controller {
             return true;
         }
         else{
-            $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t open Case now, Please try again later.') . '</div>');
+            $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('You don\'t have access to view this resource, Please Login.') . '</div>');
             return $this->redirect('/login');
         }
     }

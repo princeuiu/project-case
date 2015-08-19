@@ -13,6 +13,7 @@ class DashboardController extends AppController {
     }
 
     public function index(){
+        $this->check_access(array('employee', 'manager','admin'));
         $logged_in_user_id = Authsome::get("id");
         $activity_data = $this->Activity->find('all',array(
             'conditions' => array('Activity.user_id' => $logged_in_user_id),

@@ -8,7 +8,7 @@ class InvoicesController extends AppController {
     public $uses = array('Invoice', 'Lawsuit', 'Client');
 
     public function generate($id = null) {
-        $this->check_access(array('employee', 'manager','admin'));
+        $this->check_access(array('manager','admin'));
 
         if (!empty($this->data)) {
             $vat = 15;
@@ -94,7 +94,7 @@ class InvoicesController extends AppController {
     }
 
     public function detail($id = null) {
-        $this->check_access(array('employee', 'manager','admin'));
+        $this->check_access(array('manager','admin'));
 
         if ($id == null) {
             throw new BadRequestException();
@@ -121,7 +121,7 @@ class InvoicesController extends AppController {
     }
 
     public function edit($id) {
-        $this->check_access(array('employee', 'manager','admin'));
+        $this->check_access(array('manager','admin'));
 
         if ($id == null) {
             throw new BadRequestException();
@@ -151,6 +151,7 @@ class InvoicesController extends AppController {
     }
 
     public function index() {
+        $this->check_access(array('manager','admin'));
         extract($this->params["named"]);
 
         if (isset($search)) {
