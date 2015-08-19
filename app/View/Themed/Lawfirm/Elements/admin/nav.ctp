@@ -2,7 +2,7 @@
 <div id="sidebar-left" class="span2">
     <div class="nav-collapse sidebar-nav">
         <ul class="nav nav-tabs nav-stacked main-menu">
-            <li><a href="index.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+            <li><a href="<?php echo $this->Html->url(array('controller' => 'dashboard', 'action' => 'index')); ?>"><i class="icon-dashboard"></i><span class="hidden-tablet"> Dashboard</span></a></li>
             <li>
                 <a class="dropmenu" href="#"><i class="icon-book"></i><span class="hidden-tablet"> Case </span><i class="icon-caret-down"></i></a>
                 <ul>

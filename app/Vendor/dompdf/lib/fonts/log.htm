@@ -1,6 +1,6 @@
-<span style='color: #000' title='Frames'>   224</span><span style='color: #009' title='Memory'>  10496.00 KB</span><span style='color: #900' title='Time'>    210.41 ms</span><span  title='Quirksmode'>  <span style='color: #0d0'>OFF</span></span><br /><pre class="cake-error"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr55c5e6116863f-trace').style.display = (document.getElementById('cakeErr55c5e6116863f-trace').style.display == 'none' ? '' : 'none');"><b>Warning</b> (2)</a>: DOMNode::cloneNode(): ID pdf already defined [<b>APP/Vendor/dompdf/include/frame_decorator.cls.php</b>, line <b>573</b>]<div id="cakeErr55c5e6116863f-trace" class="cake-stack-trace" style="display: none;"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr55c5e6116863f-code').style.display = (document.getElementById('cakeErr55c5e6116863f-code').style.display == 'none' ? '' : 'none')">Code</a> <a href="javascript:void(0);" onclick="document.getElementById('cakeErr55c5e6116863f-context').style.display = (document.getElementById('cakeErr55c5e6116863f-context').style.display == 'none' ? '' : 'none')">Context</a><pre id="cakeErr55c5e6116863f-code" class="cake-code-dump" style="display: none;"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;$node&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_frame</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">get_node</span><span style="color: #007700">();</span></span></code>
+<span style='color: #000' title='Frames'>   231</span><span style='color: #009' title='Memory'>  10752.00 KB</span><span style='color: #900' title='Time'>    202.73 ms</span><span  title='Quirksmode'>  <span style='color: #0d0'>OFF</span></span><br /><pre class="cake-error"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr55d445bcafdbe-trace').style.display = (document.getElementById('cakeErr55d445bcafdbe-trace').style.display == 'none' ? '' : 'none');"><b>Warning</b> (2)</a>: DOMNode::cloneNode(): ID pdf already defined [<b>APP/Vendor/dompdf/include/frame_decorator.cls.php</b>, line <b>573</b>]<div id="cakeErr55d445bcafdbe-trace" class="cake-stack-trace" style="display: none;"><a href="javascript:void(0);" onclick="document.getElementById('cakeErr55d445bcafdbe-code').style.display = (document.getElementById('cakeErr55d445bcafdbe-code').style.display == 'none' ? '' : 'none')">Code</a> <a href="javascript:void(0);" onclick="document.getElementById('cakeErr55d445bcafdbe-context').style.display = (document.getElementById('cakeErr55d445bcafdbe-context').style.display == 'none' ? '' : 'none')">Context</a><pre id="cakeErr55d445bcafdbe-code" class="cake-code-dump" style="display: none;"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;$node&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">_frame</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">get_node</span><span style="color: #007700">();</span></span></code>
 <code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;</span></span></code>
-<span class="code-highlight"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;$split&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">copy</span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$node</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">cloneNode</span><span style="color: #007700">()&nbsp;);</span></span></code></span></pre><pre id="cakeErr55c5e6116863f-context" class="cake-context" style="display: none;">$child = object(Block_Frame_Decorator) {
+<span class="code-highlight"><code><span style="color: #000000"><span style="color: #0000BB">&nbsp;&nbsp;&nbsp;&nbsp;$split&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">$this</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">copy</span><span style="color: #007700">(&nbsp;</span><span style="color: #0000BB">$node</span><span style="color: #007700">-&gt;</span><span style="color: #0000BB">cloneNode</span><span style="color: #007700">()&nbsp;);</span></span></code></span></pre><pre id="cakeErr55d445bcafdbe-context" class="cake-context" style="display: none;">$child = object(Block_Frame_Decorator) {
 	_counters =&gt; array()
 	_already_pushed =&gt; false
 	_float_next_line =&gt; false
@@ -259,6 +259,7 @@ $style = object(Style) {
 		&#039;set_top&#039; =&gt; false,
 		&#039;set_left&#039; =&gt; false,
 		&#039;set__dompdf_keep&#039; =&gt; false,
+		&#039;set_margin_right&#039; =&gt; true,
 		&#039;set_font&#039; =&gt; true,
 		&#039;set_background_color&#039; =&gt; true,
 		&#039;get_background_color&#039; =&gt; true,
@@ -287,7 +288,6 @@ $style = object(Style) {
 		&#039;get_padding_right&#039; =&gt; false,
 		&#039;get_min_width&#039; =&gt; false,
 		&#039;get_max_width&#039; =&gt; false,
-		&#039;set_margin_right&#039; =&gt; true,
 		&#039;get_text_indent&#039; =&gt; false,
 		&#039;get_padding_top&#039; =&gt; false,
 		&#039;get_border_top_width&#039; =&gt; true,
@@ -318,15 +318,17 @@ $style = object(Style) {
 		&#039;set_border_right_width&#039; =&gt; false,
 		&#039;set_border_left_width&#039; =&gt; false,
 		&#039;get_background_image&#039; =&gt; false,
+		&#039;get_top&#039; =&gt; false,
+		&#039;get_bottom&#039; =&gt; false,
+		&#039;get_overflow&#039; =&gt; false,
+		&#039;set_bottom&#039; =&gt; false,
+		&#039;get_text_align&#039; =&gt; false,
 		&#039;get_border_collapse&#039; =&gt; false,
 		&#039;get_border_top_color&#039; =&gt; true,
 		&#039;get_border_bottom_color&#039; =&gt; true,
 		&#039;get_border_spacing&#039; =&gt; true,
 		&#039;set_padding_top&#039; =&gt; true,
 		&#039;set_padding_bottom&#039; =&gt; true,
-		&#039;get_text_align&#039; =&gt; false,
-		&#039;get_overflow&#039; =&gt; false,
-		&#039;get_orphans&#039; =&gt; false,
 		&#039;get_page_break_inside&#039; =&gt; false,
 		&#039;set_border_bottom&#039; =&gt; true,
 		&#039;set_border_top&#039; =&gt; true
@@ -368,8 +370,7 @@ $style = object(Style) {
 		&#039;padding_bottom&#039; =&gt; &#039;0&#039;,
 		&#039;font_weight&#039; =&gt; &#039;normal&#039;,
 		&#039;font_style&#039; =&gt; &#039;normal&#039;,
-		&#039;line_height&#039; =&gt; &#039;normal&#039;,
-		&#039;page_break_inside&#039; =&gt; &#039;auto&#039;
+		&#039;line_height&#039; =&gt; &#039;normal&#039;
 	)
 	[protected] _important_props =&gt; array()
 	[protected] _prop_cache =&gt; array(
@@ -408,8 +409,7 @@ $style = object(Style) {
 		&#039;padding_bottom&#039; =&gt; &#039;0&#039;,
 		&#039;font_weight&#039; =&gt; &#039;normal&#039;,
 		&#039;font_style&#039; =&gt; &#039;normal&#039;,
-		&#039;line_height&#039; =&gt; (float) 14.4,
-		&#039;page_break_inside&#039; =&gt; &#039;auto&#039;
+		&#039;line_height&#039; =&gt; (float) 14.4
 	)
 	[protected] _parent_font_size =&gt; (int) 12
 	[protected] _font_family =&gt; &#039;/home/shovan/PhpstormProjects/project-case/app/Vendor/dompdf/lib/fonts/Helvetica&#039;
@@ -459,7 +459,7 @@ $node = object(DOMElement) {
 }</pre><pre class="stack-trace">DOMNode::cloneNode() - [internal], line ??
 Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 573
 Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
-Inline_Frame_Decorator::split() - APP/Vendor/dompdf/include/inline_frame_decorator.cls.php, line 23
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
 Page_Frame_Decorator::check_page_break() - APP/Vendor/dompdf/include/page_frame_decorator.cls.php, line 478
 Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 753
 Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
