@@ -10,6 +10,8 @@ class TaskCommentsController extends AppController {
     public $uses = array('TaskComment', 'Task', 'WantingDoc','Activity');
 
     public function add(){
+        $this->check_access(array('employee', 'manager','admin'));
+
         if(empty($this->data)){
             throw new BadRequestException();
         }

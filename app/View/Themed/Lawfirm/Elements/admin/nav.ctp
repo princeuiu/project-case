@@ -2,7 +2,7 @@
 <div id="sidebar-left" class="span2">
     <div class="nav-collapse sidebar-nav">
         <ul class="nav nav-tabs nav-stacked main-menu">
-            <li><a href="index.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+            <li><a href="<?php echo $this->Html->url(array('controller' => 'dashboard', 'action' => 'index')); ?>"><i class="icon-dashboard"></i><span class="hidden-tablet"> Dashboard</span></a></li>
             <li>
                 <a class="dropmenu" href="#"><i class="icon-book"></i><span class="hidden-tablet"> Case </span><i class="icon-caret-down"></i></a>
                 <ul>
@@ -22,7 +22,8 @@
                 <a class="dropmenu" href="#"><i class="icon-hdd"></i><span class="hidden-tablet"> History </span><i class="icon-caret-down"></i></a>
                 <ul>
                     <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'histories', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new History</span></a></li>
-                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'histories', 'action' => 'calender')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> View Calender</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'histories', 'action' => 'calender')); ?>"><i class="icon-calendar"></i><span class="hidden-tablet"> View Calender</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'histories', 'action' => 'index')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> View all Cases</span></a></li>
                 </ul>
             </li>
             <li><a href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'index')); ?>"><i class="icon-money"></i><span class="hidden-tablet"> Invoice List</span></a></li>
