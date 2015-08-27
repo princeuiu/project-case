@@ -4,15 +4,5 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="PHP">
-        <CLASSES>
-          <root url="file:///etc/apache2/sites-available" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file:///etc/apache2/sites-available" />
-        </SOURCES>
-      </library>
-    </orderEntry>
   </component>
 </module>

@@ -23598,3 +23598,108 @@ Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
 #0 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-08-17 13:21:21 Error: [MissingActionException] Action UsersController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'edit',
+)
+Request URL: /users/edit
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-17 13:21:26 Error: [MissingActionException] Action UsersController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'edit',
+)
+Request URL: /users/edit/1
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-17 13:21:29 Error: [MissingActionException] Action UsersController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'edit',
+)
+Request URL: /users/edit/3
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-17 13:21:34 Error: [MissingActionException] Action UsersController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'index',
+)
+Request URL: /users/
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-08-17 13:25:21 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'setFlash' at line 1
+Request URL: /clients/add
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('setFlash', Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('setFlash', Array, Array)
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(611): DboSource->fetchAll('setFlash', Array, Array)
+#4 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(827): DboSource->query('setFlash', Array, Object(Client))
+#5 /home/exor/PhpstormProjects/project-case/app/Controller/ClientsController.php(15): Model->__call('setFlash', Array)
+#6 /home/exor/PhpstormProjects/project-case/app/Controller/ClientsController.php(15): Client->setFlash('<div class="ale...')
+#7 [internal function]: ClientsController->add()
+#8 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(ClientsController), Array)
+#9 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#11 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2015-08-17 14:39:03 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'status' cannot be null
+Request URL: /tasks/add
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `db...', Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `db...')
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Task), Array, Array)
+#4 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /home/exor/PhpstormProjects/project-case/app/Controller/TasksController.php(26): Model->save(Array)
+#6 [internal function]: TasksController->add()
+#7 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#8 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#10 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-08-17 14:39:41 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'status' cannot be null
+Request URL: /tasks/add
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `db...', Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `db...')
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Task), Array, Array)
+#4 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /home/exor/PhpstormProjects/project-case/app/Controller/TasksController.php(26): Model->save(Array)
+#6 [internal function]: TasksController->add()
+#7 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#8 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#10 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2015-08-17 14:39:44 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'status' cannot be null
+Request URL: /tasks/add
+Stack Trace:
+#0 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `db...', Array)
+#2 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `db...')
+#3 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Task), Array, Array)
+#4 /home/exor/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /home/exor/PhpstormProjects/project-case/app/Controller/TasksController.php(26): Model->save(Array)
+#6 [internal function]: TasksController->add()
+#7 /home/exor/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#8 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /home/exor/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#10 /home/exor/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
