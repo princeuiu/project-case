@@ -6057,3 +6057,146 @@ Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
 [main] - APP/webroot/index.php, line 118
 
+2015-08-29 01:53:15 Notice: Notice (8): Undefined index: remark in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/calender.ctp, line 37]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/calender.ctp, line 37
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-08-29 01:53:34 Notice: Notice (8): Undefined index: remark in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/calender.ctp, line 37]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/calender.ctp, line 37
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-08-29 01:54:09 Notice: Notice (8): Undefined index: remark in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/calender.ctp, line 37]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/calender.ctp, line 37
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-08-29 01:56:10 Notice: Notice (8): Undefined index: remark in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/calender.ctp, line 37]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/calender.ctp, line 37
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-08-29 02:07:14 Notice: Notice (8): Undefined index: remark in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/calender.ctp, line 37]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/calender.ctp, line 37
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-08-29 02:19:14 Notice: Notice (8): Undefined index: remark in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/calender.ctp, line 37]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/calender.ctp, line 37
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-08-29 02:20:49 Notice: Notice (8): Undefined index: remark in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/calender.ctp, line 38]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/calender.ctp, line 38
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-08-29 02:21:09 Notice: Notice (8): Undefined index: remark in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/calender.ctp, line 38]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/calender.ctp, line 38
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-08-29 02:22:01 Notice: Notice (8): Undefined index: remark in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/calender.ctp, line 38]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/calender.ctp, line 38
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-08-29 02:22:18 Notice: Notice (8): Undefined index: remark in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/calender.ctp, line 38]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/calender.ctp, line 38
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-08-29 02:26:31 Notice: Notice (8): Undefined index: remark in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/calender.ctp, line 38]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/calender.ctp, line 38
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-08-29 02:34:14 Notice: Notice (8): Undefined index: remark in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/calender.ctp, line 38]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/calender.ctp, line 38
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-08-29 02:34:14 Notice: Notice (8): Undefined index: remark in [/home/exor/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/calender.ctp, line 38]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/calender.ctp, line 38
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
