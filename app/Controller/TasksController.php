@@ -82,6 +82,79 @@ class TasksController extends AppController {
         $this->set(compact('lawsuits', 'users'));
     }
 
+    public function newtask($id){
+        $this->check_access(array('manager','admin'));
+
+
+        if(!empty($this->data)){
+//            print_r($this->data);die;
+            $data = $this->data;
+            //print_r($data); die;
+            $splitTime  = explode('/', $data['Task']['dead_line']);
+            $data['Task']['dead_line'] = $splitTime[2] . '-' . $splitTime[0] . '-' . $splitTime[1];
+            $followers = $data['Task']['follower'];
+            $taskOwner = $data['Task']['owner'];
+            $taskAssigned = $data['Task']['assigned_to'];
+            unset($data['Task']['follower']);
+            if($this->Task->save($data)){
+                $taskId = $this->Task->id;
+
+                $path = WWW_ROOT . 'uploads' . DS . 'doc' . DS;
+                $commentId =0;
+                $files = $this->data['Task']['files'];
+                $i = 0;
+                while($i < count($files)){
+                    if ($files[$i]['error'] == 0){
+                        $fileData = array(
+                            'WantingDoc' => array(
+                                'task_id' => $taskId,
+                                'comment_id' => $commentId,
+                                'name' => 't' . $taskId . 'c' . $commentId . $files[$i]['name'],
+                                'path' => $path
+                            )
+                        );
+                        //print_r($fileData);
+                        $this->WantingDoc->create();
+                        if($this->WantingDoc->save($fileData)) {
+                            if (move_uploaded_file($files[$i]['tmp_name'], ($path.'t' . $taskId . 'c' . $commentId . $files[$i]['name']))) {
+                            } else {
+                                echo "Sorry, there was an error uploading your file.";
+                            }
+                        }
+                        unset($fileData);
+                    }
+
+
+
+                    $i = $i + 1;
+                }
+
+                if(!empty($followers)){
+                    $this->Task->saveFowllers($taskId, $followers);
+                }
+                $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Task added successfully.') . '</div>');
+                $Activity = ClassRegistry::init('Activity');
+                $Activity->logintry("task","new",$taskId,$taskOwner,$taskAssigned,'');
+                return $this->redirect(array('controller' => 'tasks', 'action' => 'owned', $this->Task->id));
+            }
+            else{
+                $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t save Task now, Please try again later.') . '</div>');
+                return;
+            }
+        }
+
+        $lawsuits = $this->Lawsuit->find('list', array(
+            'conditions' => array('Lawsuit.id' => $id),
+            'fields' => array('Lawsuit.id', 'Lawsuit.number'),
+        ));
+        //print_r($lawsuits); die;
+        $users = $this->User->find('list', array(
+            'conditions' => array('User.status' => 'active', 'User.role' => 'employee')
+        ));
+        //pr($users);
+        $this->set(compact('lawsuits', 'users'));
+    }
+
     public function edit($id) {
         $this->check_access(array('employee', 'manager','admin'));
 

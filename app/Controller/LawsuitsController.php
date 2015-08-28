@@ -18,7 +18,7 @@ class LawsuitsController extends AppController {
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Case opened successfully.') . '</div>');
                 $Activity = ClassRegistry::init('Activity');
                 $Activity->logintry("lawsuit","new",$this->Lawsuit->id,Authsome::get("id"),0,'');
-                return $this->redirect(array('controller' => 'lawsuits', 'action' => 'index'));
+                return $this->redirect(array('controller' => 'lawsuits', 'action' => 'edit', $this->Lawsuit->id));
             }
             else{
                 $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t open Case now, Please try again later.') . '</div>');
@@ -46,7 +46,7 @@ class LawsuitsController extends AppController {
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Case updated successfully.') . '</div>');
                 $Activity = ClassRegistry::init('Activity');
                 $Activity->logintry("lawsuit","update",$this->Lawsuit->id,Authsome::get("id"),0,'');
-                return $this->redirect(array('controller' => 'lawsuits', 'action' => 'index', $this->Lawsuit->id));
+                return $this->redirect(array('controller' => 'lawsuits', 'action' => 'edit', $this->Lawsuit->id));
             }
             else{
                 $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t update Case now, Please try again later.') . '</div>');
@@ -59,11 +59,11 @@ class LawsuitsController extends AppController {
         $clients = $this->Client->find('list', array(
             'conditions' => array('Client.status' => 'active')
         ));
+        $case_id = $id;
+        $this->set(compact('clients','case_id'));
 
-        $this->set(compact('clients'));
 
-
-        $this->render('add');
+        $this->render('edit');
     }
 
     public function details($id) {
