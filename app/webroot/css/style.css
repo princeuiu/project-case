@@ -2908,7 +2908,7 @@ ul.messagesList li span.date {
 	right: 0px;
 	height: 20px;
 	width: 20px;
-	background: url(../img/timeline-left-arrow.png) no-repeat;
+	background: url(../img/timeline-left-arrow-red.png) no-repeat;
 }
 
 .timeslot.alt .task .arrow {
@@ -2917,8 +2917,9 @@ ul.messagesList li span.date {
 	left: 0px;
 	height: 20px;
 	width: 20px;
-	background: url(../img/timeline-right-arrow.png) no-repeat;
+	background: url(../img/timeline-right-arrow-red.png) no-repeat;
 }
+
 
 .timeslot .icon {
 	position: absolute;
@@ -3004,4 +3005,9 @@ ul.messagesList li span.date {
 }
 .navbar .brand{
 	font-size: 35px;
+}
+
+.turn_it_red{
+	border: 2px solid rgb(255, 3, 0) !important;
+	background: rgba(239, 26, 33, 0.32) !important;
 }
