@@ -110,21 +110,71 @@ class LawsuitsController extends AppController {
         $this->check_access(array('employee', 'manager','admin'));
 
         extract($this->params["named"]);
-
+//        $options["Lawsuit.type"]="landvetting";
         if(isset($search)){
             $options["Lawsuit.title like"]="%$search%";
         }
         else $search="";
 
         $this->paginate["Lawsuit"]["order"]="Lawsuit.created DESC";
-
+//        $this->paginate["Lawsuit"]["condition"]=array("Lawsuit.type" => "landvetting");
+//        print_r($Lawsuit);die;
         $items = $this->paginate('Lawsuit', $options);
 
 
         //pr($items);
-        $this->set(compact('items','search'));
+        $caseType = "all";
+        $this->set(compact('items','search', 'caseType'));
 
 
+        //$this->set("search",$search);
+    }
+
+    public function landvetting() {
+        $this->check_access(array('employee', 'manager','admin'));
+
+        extract($this->params["named"]);
+        $options["Lawsuit.type"]="landvetting";
+        if(isset($search)){
+            $options["Lawsuit.title like"]="%$search%";
+        }
+        else $search="";
+
+        $this->paginate["Lawsuit"]["order"]="Lawsuit.created DESC";
+//        $this->paginate["Lawsuit"]["condition"]=array("Lawsuit.type" => "landvetting");
+//        print_r($Lawsuit);die;
+        $items = $this->paginate('Lawsuit', $options);
+
+
+        //pr($items);
+        $caseType = "landvetting";
+        $this->set(compact('items','search', 'caseType'));
+
+        $this->render('index');
+        //$this->set("search",$search);
+    }
+
+public function litigation() {
+        $this->check_access(array('employee', 'manager','admin'));
+
+        extract($this->params["named"]);
+        $options["Lawsuit.type"]="litigation";
+        if(isset($search)){
+            $options["Lawsuit.title like"]="%$search%";
+        }
+        else $search="";
+
+        $this->paginate["Lawsuit"]["order"]="Lawsuit.created DESC";
+//        $this->paginate["Lawsuit"]["condition"]=array("Lawsuit.type" => "landvetting");
+//        print_r($Lawsuit);die;
+        $items = $this->paginate('Lawsuit', $options);
+
+
+        //pr($items);
+    $caseType = "litigation";
+    $this->set(compact('items','search', 'caseType'));
+
+        $this->render('index');
         //$this->set("search",$search);
     }
 
