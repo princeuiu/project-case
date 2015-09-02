@@ -15,8 +15,14 @@ class LawsuitsController extends AppController {
 
         if(!empty($this->data)){
             $tempo = $this->data;
+            if (!$tempo['Lawsuit']['created'] == ''){
+
+                $splitTime  = explode('/', $tempo['Lawsuit']['created']);
+                $tempo['Lawsuit']['created'] = $splitTime[2] . '-' . $splitTime[0] . '-' . $splitTime[1];
+            }else{
+                $tempo['Lawsuit']['created'] = date ("Y-m-d H:i:s", time());
+            }
             $tempo['Lawsuit']['created_by'] = Authsome::get("name");
-//            print_r($tempo);die;
             if($this->Lawsuit->save($tempo)){
 ////                $this->Lawsuit->saveField('created_by', Authsome::get("name"));
 //                $this->Lawsuit->saveField('created_by', 'asdddds');

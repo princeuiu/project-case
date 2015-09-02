@@ -7830,3 +7830,48 @@ Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
 Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
 [main] - APP/webroot/index.php, line 118
 
+2015-09-03 04:12:04 Notice: Notice (8): Undefined offset: 2 in [/home/exor/PhpstormProjects/project-case/app/Controller/LawsuitsController.php, line 19]
+Trace:
+LawsuitsController::add() - APP/Controller/LawsuitsController.php, line 19
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-09-03 04:12:04 Notice: Notice (8): Undefined offset: 1 in [/home/exor/PhpstormProjects/project-case/app/Controller/LawsuitsController.php, line 19]
+Trace:
+LawsuitsController::add() - APP/Controller/LawsuitsController.php, line 19
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-09-03 04:19:21 Notice: Notice (8): Indirect modification of overloaded element of CakeRequest has no effect in [/home/exor/PhpstormProjects/project-case/app/Controller/LawsuitsController.php, line 121]
+Trace:
+LawsuitsController::index() - APP/Controller/LawsuitsController.php, line 121
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-09-03 04:19:21 Notice: Notice (8): Indirect modification of overloaded property LawsuitsController::$paginate has no effect in [/home/exor/PhpstormProjects/project-case/app/Controller/LawsuitsController.php, line 128]
+Trace:
+LawsuitsController::index() - APP/Controller/LawsuitsController.php, line 128
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2015-09-03 04:19:21 Notice: Notice (8): Undefined variable: options in [/home/exor/PhpstormProjects/project-case/app/Controller/LawsuitsController.php, line 131]
+Trace:
+LawsuitsController::index() - APP/Controller/LawsuitsController.php, line 131
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
