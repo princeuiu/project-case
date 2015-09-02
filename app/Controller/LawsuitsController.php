@@ -12,9 +12,14 @@ class LawsuitsController extends AppController {
 
     public function add(){
         $this->check_access(array('manager','admin'));
-        
+
         if(!empty($this->data)){
-            if($this->Lawsuit->save($this->data)){
+            $tempo = $this->data;
+            $tempo['Lawsuit']['created_by'] = Authsome::get("name");
+//            print_r($tempo);die;
+            if($this->Lawsuit->save($tempo)){
+////                $this->Lawsuit->saveField('created_by', Authsome::get("name"));
+//                $this->Lawsuit->saveField('created_by', 'asdddds');
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Case opened successfully.') . '</div>');
                 $Activity = ClassRegistry::init('Activity');
                 $Activity->logintry("lawsuit","new",$this->Lawsuit->id,Authsome::get("id"),0,'');
@@ -122,7 +127,7 @@ class LawsuitsController extends AppController {
         $items = $this->paginate('Lawsuit', $options);
 
 
-        //pr($items);
+//        print_r($items); die;
         $caseType = "all";
         $this->set(compact('items','search', 'caseType'));
 
