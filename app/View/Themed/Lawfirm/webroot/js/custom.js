@@ -2325,3 +2325,23 @@ $(document).ready(function() {
         e.preventDefault(); $(this).closest('.control-group').remove(); x--;
     });
 });
+
+
+$(document).ready(function(){
+    
+    
+    
+    /****** btn case closed *****/
+    
+    $('.btnCaseClose').click(function(){
+        var r = confirm("Are you sure you want to close this case");
+        return r;
+//        var jqObj = $(this);
+//        var lawsuitId = jqObj.attr('data-case-id');
+//        if (r == true) {
+//            x = "You pressed OK!";
+//        } else {
+//            x = "You pressed Cancel!";
+//        }
+    });
+});

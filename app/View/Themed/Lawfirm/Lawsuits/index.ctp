@@ -43,9 +43,15 @@
                             <a class="btn btn-success" title="Generate Invoice" href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'generate', $item['Lawsuit']['id'] )); ?>">
                                 <i class="halflings-icon white share"></i>
                             </a>
-                            <a class="btn btn-danger" title="Close Case" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'edit', $item['Lawsuit']['id'] , __('Are you sure you want to close  %s?', $item['Lawsuit']['id']))); ?>">
+                            <?php
+                                if($item['Lawsuit']['status']!= 'closed'):
+                            ?>
+                            <a class="btn btn-danger btnCaseClose" title="Close Case" data-case-id="<?php echo $item['Lawsuit']['id']; ?>" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'close', $item['Lawsuit']['id'])); ?>">
                                 <i class="halflings-icon white trash"></i>
                             </a>
+                            <?php
+                                endif;
+                            ?>
                         </td>
 
                     </tr>
