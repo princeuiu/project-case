@@ -59,12 +59,26 @@
                             ?>
                         </div>
                     </div>
+                    <div id="litigationExtraField">
+                        
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="LawsuitBreakPoint">Invoicing Break Period</label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('break_point', array(
+                                'options' => array('0' => 'At a time','1' => 'Break in 2 periods','2' => 'Break in 3 periods'),
+                                'data-rel' => 'chosen'
+                            ));
+                            ?>
+                        </div>
+                    </div>
                     <div class="control-group">
                         <label class="control-label" for="LawsuitStatus">Status</label>
                         <div class="controls">
                             <?php
                             echo $this->Form->input('status', array(
-                                'options' => array('active' => 'Active','inactive' => 'Inactive','closed' => 'Closed'),
+                                'options' => array('active' => 'Active','inactive' => 'Inactive'),
                                 'data-rel' => 'chosen'
                             ));
                             ?>
