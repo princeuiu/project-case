@@ -84,6 +84,19 @@
                             ?>
                         </div>
                     </div>
+
+                    <div class="control-group">
+                        <label class="control-label" for="LawsuitCreated">Created</label>
+                        <div class="controls">
+                            <input type="text" name="data[Lawsuit][created]" class="input-xlarge datepicker" id="LawsuitCreated" <?php if(isset($this->data['Lawsuit']['created'])){ echo 'value="' . $this->data['Lawsuit']['created'] . '"';} ?>>
+                            <?php
+                            //                            echo $this->Form->input('dead_line', array(
+                            //                                'class' => 'input-xlarge datepicker',
+                            //                                'value' => '01/07/15'
+                            //                            ));
+                            ?>
+                        </div>
+                    </div>
                     <div class="form-actions">
                         <button type="submit" class="btn btn-primary">Save changes</button>
                         <button type="reset" class="btn">Cancel</button>

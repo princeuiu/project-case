@@ -24,16 +24,28 @@
                 <?php
 //                print_r($histories);
                 $arr = $histories;
-                
+
                 foreach ($arr as $value) {
                     $url = $this->Html->url('/histories/view/' . $value['History']['id'], true);
                     $title = $value['History']['title'];
                     $reporting_date = $value['History']['reporting_date'];
+                    $reporting_date_str = strtotime($value['History']['reporting_date']);
                     $id = $value['History']['id'];
-                    echo "{ title : '".$title."',";
-                    echo "start : '".$reporting_date."',";
-                    echo "url : '".$url."'},";
+                    $now = time();
+                    $datediff = $reporting_date_str - $now;
+                    $datediff = floor($datediff/(60*60*24));
 
+                    if ($value['History']['remark']=='' and $datediff < 0){
+                        echo "{ title : '".$title."',";
+                        echo "start : '".$reporting_date."',";
+                        echo "color : 'red',";
+                        echo "url : '".$url."'},";
+                    }else{
+                    echo "{ title : '".$title."',";
+                        echo "start : '".$reporting_date."',";
+                        echo "url : '".$url."'},";
+
+                    }
                 }
                 ?>
             ]

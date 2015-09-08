@@ -112,8 +112,8 @@ class UsersController extends AppController {
         //$this->layout = 'admin';
         if (!empty($this->data)) {
             if($this->User->save($this->data)){
-                $this->Session->setFlash('<div class="alert alert-success">' . __('Your account hasbeen created.') . '</div>');
-                return;
+                $this->Session->setFlash('<div class="alert alert-success">' . __('Your account has been created.') . '</div>');
+                return $this->redirect(array('controller' => 'users', 'action' => 'all'));
             }
         }
         return;
