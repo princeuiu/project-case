@@ -2330,7 +2330,7 @@ $(document).ready(function() {
 $(document).ready(function(){
     
     
-    
+    $('#litigationExtraField').hide();
     /****** btn case closed *****/
     
     $('.btnCaseClose').click(function(){
@@ -2343,5 +2343,45 @@ $(document).ready(function(){
 //        } else {
 //            x = "You pressed Cancel!";
 //        }
+    });
+    
+    
+    
+    
+    $('#save-client-on-fly').click(function(){
+        //var jqObj = $(this);
+        var ClientName = $('#ClientName').val();
+        var ClientContactPerson = $('#ClientContactPerson').val();
+        var ClientPhone = $('#ClientPhone').val();
+        $.post(BASE+'ajax/clients/add',
+                {"data[name]":ClientName,"data[contact_person]":ClientContactPerson,"data[phone]":ClientPhone},
+                function(e){
+                    if(e != false){
+                        //console.log(e);
+                        var obj = $.parseJSON(e); 
+                        $('#LawsuitClientId').append($('<option>', {
+                            value: obj.id,
+                            text: obj.name
+                        }));
+                        //response(obj.client);
+                        $('#myModal').modal('hide');
+                        location.reload();
+                    }
+                    else{
+                        $('#myModal').modal('hide');
+                    }
+                }
+        );
+    });
+    
+    
+    $('#LawsuitType').change(function(){
+        var itemValue = $('#LawsuitType').val();
+        if(itemValue == 'litigation'){
+            $( "#litigationExtraField" ).show( "slow" );
+        }
+        else{
+            $( "#litigationExtraField" ).hide( "slow" );
+        }
     });
 });
