@@ -7,13 +7,14 @@ class LawsuitsController extends AppController {
 
     public $name = 'Lawsuits';
 
-    public $uses = array('Lawsuit','Client', 'History', 'Task','Activity');
+    public $uses = array('Lawsuit','Client', 'History', 'Task','Activity', 'Invoice');
 
 
     public function add(){
         $this->check_access(array('manager','admin'));
         
         if(!empty($this->data)){
+            //print_r($this->data); die;
             if($this->Lawsuit->save($this->data)){
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Case opened successfully.') . '</div>');
                 $Activity = ClassRegistry::init('Activity');
@@ -128,7 +129,29 @@ class LawsuitsController extends AppController {
         //$this->set("search",$search);
     }
 
-
+    
+    
+    public function close($id = null){
+        $this->check_access(array('employee', 'manager','admin'));
+        if($id == null){
+            throw new BadRequestException();
+        }
+        
+        $options = array(
+            'conditions' => array('Invoice.lawsuit_id' => $id,'Invoice.status' => 'paid')
+        );
+        $hasPaidBill = $this->Invoice->find('count', $options);
+        if($hasPaidBill > 0){
+            $this->Lawsuit->id =  $id;
+            $this->Lawsuit->saveField('status', 'closed');
+            $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Case updated successfully.') . '</div>');
+            return $this->redirect(array('controller' => 'lawsuits', 'action' => 'index'));
+        }
+        else{
+            $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t close this case, This case don\'t have any paid bill.') . '</div>');
+            return $this->redirect(array('controller' => 'lawsuits', 'action' => 'index'));
+        }
+    }
 
     public function test(){
         throw new BadRequestException();

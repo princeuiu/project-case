@@ -11,6 +11,10 @@ class InvoicesController extends AppController {
         $this->check_access(array('manager','admin'));
 
         if (!empty($this->data)) {
+            $printPDF = false;
+            if(isset($_POST['btnPrintPDF'])){
+                $printPDF = true;
+            }
             $vat = 15;
             $invoiceData = $this->data;
             $lawsuitId = $invoiceData['Invoice']['lawsuit_id'];
@@ -74,8 +78,13 @@ class InvoicesController extends AppController {
                         $this->Lawsuit->saveField('invoice_period', '3');
                         break;
                 }
-                $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Invoice saved successfully.') . '</div>');
-                return $this->redirect(array('controller' => 'invoices', 'action' => 'index'));
+                if($printPDF){
+                    return $this->redirect(array('controller' => 'invoices', 'action' => 'detail', $this->Invoice->id.'.pdf'));
+                }
+                else{
+                    $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Invoice saved successfully.') . '</div>');
+                    return $this->redirect(array('controller' => 'invoices', 'action' => 'index'));
+                }
             } else {
                 $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t save invoice now, Please try again later.') . '</div>');
                 return;
