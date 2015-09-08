@@ -94,7 +94,8 @@
                         </div>
                     </div>
                     <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary" name="btnPrintPDF">Save and Print PDF</button>
+                        <button type="submit" class="btn btn-primary" name="btnSaveInv">Save changes</button>
                         <button type="reset" class="btn">Cancel</button>
                     </div>
                 </fieldset>

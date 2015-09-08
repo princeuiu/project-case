@@ -35,6 +35,14 @@ $even_row_color = '#ddd';
                 margin: 0.5em;
                 padding: 10px;
             }
+            .subjectText{
+                text-align: justify;
+                font-size: 1em;
+                margin: 0;
+                margin-right: 300px;
+                padding: 0;
+                line-height: 2em;
+            }
             .log td,.log th,.dataTable td,.dataTable th{
                 border:1px solid;
                 padding:5px;
@@ -55,22 +63,22 @@ $even_row_color = '#ddd';
                 display: none;
             }
             #pdf .summary{
-                font:bold 18px/22px arial;
+                font:bold 18px arial;
                 margin:10px 0;
 
             }
 
             #pdf strong{
-                font:bold 18px/22px arial;
+                font:bold 18px arial;
                 color:#000;
             }
             #pdf b{
-                font:bold 18px/22px arial;
+                font:bold 18px arial;
                 text-decoration: underline;
                 color:#000;
             }
             #pdf span{
-                font:normal 18px/22px arial;
+                font:normal 18px arial;
                 color:#000;
             }
         </style>
@@ -92,7 +100,7 @@ $even_row_color = '#ddd';
             <span><?php echo $invoiceData['Client']['name']; ?></span><br />
             <span><?php echo $invoiceData['Client']['address']; ?></span><br /><br />
             
-            <strong>Sub: <b><?php echo $invoiceData['Invoice']['subject']; ?></b></strong><br /><br /><br />
+            <p class="subjectText"><strong>Sub: <b><?php echo $invoiceData['Invoice']['subject']; ?></b></strong><br /><br /><br /></p>
             
             <table class="dataTable">
                 <tr>
@@ -168,7 +176,7 @@ $even_row_color = '#ddd';
             
             <?php 
                 if(!empty($invoiceData['Invoice']['note'])){
-                    echo '<strong>N.B.: <b style="width:70%;">'.strip_tags($invoiceData['Invoice']['note']).'</b></strong><br /><br /><br /><br />';
+                    echo '<p class="subjectText"><strong>N.B.: <b style="width:70%;">'.strip_tags($invoiceData['Invoice']['note']).'</b></strong></p><br /><br /><br /><br />';
                 }
             ?>
             
