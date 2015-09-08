@@ -25,6 +25,25 @@ class ClientsController extends AppController {
     }
     
     
+    public function ajax_add(){
+        //if(!empty($this->data))
+        $temp = $_POST['data'];
+        $data = array('Client'=> $temp);
+        if($this->Client->save($data)){
+//            $savedClient = array(
+//                'id' => $this->Client->id,
+//                'name' => $temp['name']
+//            );
+            Echo '{"id":'.$this->Client->id.',"name":"'.$temp['name'].'"}';
+        }
+        else{
+            Echo false;
+        }
+        exit;
+    }
+
+
+    
     public function edit($id) {
         $this->check_access(array('employee', 'manager','admin'));
 
