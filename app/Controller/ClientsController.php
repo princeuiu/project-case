@@ -13,7 +13,9 @@ class ClientsController extends AppController {
         if(!empty($this->data)){
             if($this->Client->save($this->data)){
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Client added successfully.') . '</div>');
-                return $this->redirect(array('controller' => 'clients', 'action' => 'edit', $this->Client->id));
+
+                return $this->redirect(array('controller' => 'clients', 'action' => 'index'));
+
             }
             else{
                 $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t save Client now, Please try again later.') . '</div>');

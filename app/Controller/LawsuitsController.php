@@ -12,10 +12,20 @@ class LawsuitsController extends AppController {
 
     public function add(){
         $this->check_access(array('manager','admin'));
-        
+
         if(!empty($this->data)){
-            //print_r($this->data); die;
-            if($this->Lawsuit->save($this->data)){
+            $tempo = $this->data;
+            if (!$tempo['Lawsuit']['created'] == ''){
+
+                $splitTime  = explode('/', $tempo['Lawsuit']['created']);
+                $tempo['Lawsuit']['created'] = $splitTime[2] . '-' . $splitTime[0] . '-' . $splitTime[1];
+            }else{
+                $tempo['Lawsuit']['created'] = date ("Y-m-d H:i:s", time());
+            }
+            $tempo['Lawsuit']['created_by'] = Authsome::get("name");
+            if($this->Lawsuit->save($tempo)){
+////                $this->Lawsuit->saveField('created_by', Authsome::get("name"));
+//                $this->Lawsuit->saveField('created_by', 'asdddds');
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Case opened successfully.') . '</div>');
                 $Activity = ClassRegistry::init('Activity');
                 $Activity->logintry("lawsuit","new",$this->Lawsuit->id,Authsome::get("id"),0,'');
@@ -60,11 +70,11 @@ class LawsuitsController extends AppController {
         $clients = $this->Client->find('list', array(
             'conditions' => array('Client.status' => 'active')
         ));
+        $case_id = $id;
+        $this->set(compact('clients','case_id'));
 
-        $this->set(compact('clients'));
 
-
-        $this->render('add');
+        $this->render('edit');
     }
 
     public function details($id) {
@@ -110,22 +120,73 @@ class LawsuitsController extends AppController {
     public function index() {
         $this->check_access(array('employee', 'manager','admin'));
 
-        extract($this->params["named"]);
 
+        extract($this->params["named"]);
+//        $options["Lawsuit.type"]="landvetting";
         if(isset($search)){
             $options["Lawsuit.title like"]="%$search%";
         }
         else $search="";
 
         $this->paginate["Lawsuit"]["order"]="Lawsuit.created DESC";
+//        $this->paginate["Lawsuit"]["condition"]=array("Lawsuit.type" => "landvetting");
+//        print_r($Lawsuit);die;
+        $items = $this->paginate('Lawsuit', $options);
 
+
+//        print_r($items); die;
+        $caseType = "all";
+        $this->set(compact('items','search', 'caseType'));
+
+
+        //$this->set("search",$search);
+    }
+
+    public function landvetting() {
+        $this->check_access(array('employee', 'manager','admin'));
+
+        extract($this->params["named"]);
+        $options["Lawsuit.type"]="landvetting";
+        if(isset($search)){
+            $options["Lawsuit.title like"]="%$search%";
+        }
+        else $search="";
+
+        $this->paginate["Lawsuit"]["order"]="Lawsuit.created DESC";
+//        $this->paginate["Lawsuit"]["condition"]=array("Lawsuit.type" => "landvetting");
+//        print_r($Lawsuit);die;
         $items = $this->paginate('Lawsuit', $options);
 
 
         //pr($items);
-        $this->set(compact('items','search'));
+        $caseType = "landvetting";
+        $this->set(compact('items','search', 'caseType'));
+
+        $this->render('index');
+        //$this->set("search",$search);
+    }
+
+public function litigation() {
+        $this->check_access(array('employee', 'manager','admin'));
+
+        extract($this->params["named"]);
+        $options["Lawsuit.type"]="litigation";
+        if(isset($search)){
+            $options["Lawsuit.title like"]="%$search%";
+        }
+        else $search="";
+
+        $this->paginate["Lawsuit"]["order"]="Lawsuit.created DESC";
+//        $this->paginate["Lawsuit"]["condition"]=array("Lawsuit.type" => "landvetting");
+//        print_r($Lawsuit);die;
+        $items = $this->paginate('Lawsuit', $options);
 
 
+        //pr($items);
+    $caseType = "litigation";
+    $this->set(compact('items','search', 'caseType'));
+
+        $this->render('index');
         //$this->set("search",$search);
     }
 
