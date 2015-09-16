@@ -128,6 +128,18 @@ class InvoicesController extends AppController {
         $finalAmountInWord = $this->convert_number_to_words($invoiceData['Invoice']['final_amount']);
         $this->set(compact('invoiceData', 'descriptions', 'dedDescriptions','amountInWord', 'finalAmountInWord'));
     }
+    
+    public function paid($id = null){
+        $this->check_access(array('manager','admin'));
+
+        if ($id == null) {
+            throw new BadRequestException();
+        }
+        $this->Invoice->id = $id;
+        $this->Invoice->saveField('status', 'paid');
+        $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Invoice updated successfully.') . '</div>');
+        return $this->redirect(array('controller' => 'invoices', 'action' => 'index'));
+    }
 
     public function edit($id) {
         $this->check_access(array('manager','admin'));
