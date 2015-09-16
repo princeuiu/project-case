@@ -70,7 +70,7 @@
                     <div class="controls">
                         <?php
                         echo $this->Form->input('status', array(
-                            'options' => array('active' => 'Active','inactive' => 'Inactive','closed' => 'Closed'),
+                            'options' => array('active' => 'Active','inactive' => 'Inactive'),
                             'data-rel' => 'chosen'
                         ));
                         ?>
