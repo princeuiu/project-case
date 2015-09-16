@@ -102,10 +102,10 @@ class HistoriesController extends AppController {
         $this->check_access(array('employee', 'manager','admin'));
 
         $histories = $this->History->find('all', array(
-            'fields' => array('History.reporting_date', 'History.title', 'History.id'),
+//            'fields' => array('History.reporting_date', 'History.title', 'History.id'),
             'conditions' => array('History.status'=>'pending')
         ));
-        //print_r($histories); die;
+//        print_r($histories); die;
         $this->set(compact('histories'));
     }
 
