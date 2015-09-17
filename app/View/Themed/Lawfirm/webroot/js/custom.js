@@ -2387,6 +2387,23 @@ $(document).ready(function(){
         );
     });
     
+    $('#HistoryLawsuitId').change(function(){
+        var lawsuitId = $('#HistoryLawsuitId').val();
+        $.post(BASE+'ajax/histories/get_court_name',
+                {"data[id]":lawsuitId},
+                function(e){
+                    if(e != false){
+                        //console.log(e);
+                        $('#HistoryCourtName').val(e);
+                    }
+                    else{
+                        var emptyStr = '';
+                       $('#HistoryCourtName').val(emptyStr);
+                    }
+                }
+        );
+    });
+    
     
     $('#LawsuitType').change(function(){
         var itemValue = $('#LawsuitType').val();
