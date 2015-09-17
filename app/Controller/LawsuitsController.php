@@ -120,11 +120,19 @@ class LawsuitsController extends AppController {
     public function index() {
         $this->check_access(array('employee', 'manager','admin'));
 
-
-        extract($this->params["named"]);
+        //print_r($this->request->params); die;
+        $controller = $this->request->params['controller'];
+        $action = $this->request->params['action'];
+        extract($this->request->params["named"]);
 //        $options["Lawsuit.type"]="landvetting";
-        if(isset($search)){
-            $options["Lawsuit.title like"]="%$search%";
+        if(isset($key) && isset($val)){
+            //$options["Lawsuit.title like"]="%$search%";
+            if($key == 'name' || $key == 'contact_person'){
+                $options["Client.".$key." like"]="%$val%";
+            }
+            else{
+                $options["Lawsuit.".$key." like"]="%$val%";
+            }
         }
         else $search="";
 
@@ -136,7 +144,7 @@ class LawsuitsController extends AppController {
 
 //        print_r($items); die;
         $caseType = "all";
-        $this->set(compact('items','search', 'caseType'));
+        $this->set(compact('items','search', 'caseType', 'controller', 'action'));
 
 
         //$this->set("search",$search);
@@ -202,14 +210,19 @@ public function litigation() {
             'conditions' => array('Invoice.lawsuit_id' => $id,'Invoice.status' => 'paid')
         );
         $hasPaidBill = $this->Invoice->find('count', $options);
-        if($hasPaidBill > 0){
+        unset($options);
+        $options = array(
+            'conditions' => array('Invoice.lawsuit_id' => $id,'Invoice.status' => 'unpaid')
+        );
+        $hasUnpaidBill = $this->Invoice->find('count', $options);
+        if($hasPaidBill > 0 && $hasUnpaidBill == 0){
             $this->Lawsuit->id =  $id;
             $this->Lawsuit->saveField('status', 'closed');
             $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Case updated successfully.') . '</div>');
             return $this->redirect(array('controller' => 'lawsuits', 'action' => 'index'));
         }
         else{
-            $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t close this case, This case don\'t have any paid bill.') . '</div>');
+            $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t close this case, This case don\'t have any paid bill or still have unpaid bill.') . '</div>');
             return $this->redirect(array('controller' => 'lawsuits', 'action' => 'index'));
         }
     }

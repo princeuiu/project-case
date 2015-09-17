@@ -2346,6 +2346,19 @@ $(document).ready(function(){
     });
     
     
+    $('.btnBillPaid').click(function(){
+        var r = confirm("Are you sure you want to change the Invoice status");
+        return r;
+//        var jqObj = $(this);
+//        var lawsuitId = jqObj.attr('data-case-id');
+//        if (r == true) {
+//            x = "You pressed OK!";
+//        } else {
+//            x = "You pressed Cancel!";
+//        }
+    });
+    
+    
     
     
     $('#save-client-on-fly').click(function(){
@@ -2374,6 +2387,23 @@ $(document).ready(function(){
         );
     });
     
+    $('#HistoryLawsuitId').change(function(){
+        var lawsuitId = $('#HistoryLawsuitId').val();
+        $.post(BASE+'ajax/histories/get_court_name',
+                {"data[id]":lawsuitId},
+                function(e){
+                    if(e != false){
+                        //console.log(e);
+                        $('#HistoryCourtName').val(e);
+                    }
+                    else{
+                        var emptyStr = '';
+                       $('#HistoryCourtName').val(emptyStr);
+                    }
+                }
+        );
+    });
+    
     
     $('#LawsuitType').change(function(){
         var itemValue = $('#LawsuitType').val();
@@ -2383,5 +2413,15 @@ $(document).ready(function(){
         else{
             $( "#litigationExtraField" ).hide( "slow" );
         }
+    });
+    
+    
+    $('#btnSearchGo').click(function(){
+        var controller = $('#searchValue').data("controllername");
+        var action = $('#searchValue').data("actionname");
+        var searchColum = $('#searchColum').val();
+        var searchValue = $('#searchValue').val();
+        //alert(searchColum+searchValue);
+        window.location.href =  BASE+controller+"/"+action+"/key:"+searchColum+"/val:"+searchValue;
     });
 });

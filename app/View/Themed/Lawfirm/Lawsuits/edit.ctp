@@ -11,6 +11,9 @@
                 <?php
                 echo '<a href="/tasks/newtask/'.$case_id.'">';
                 ?><i class="icon-tasks">Assign Task</i></a>
+                <?php
+                echo '<a href="/histories/newhistory/'.$case_id.'">';
+                ?><i class="icon-tasks">Add History</i></a>
             </div>
         </div>
 
@@ -70,7 +73,7 @@
                     <div class="controls">
                         <?php
                         echo $this->Form->input('status', array(
-                            'options' => array('active' => 'Active','inactive' => 'Inactive','closed' => 'Closed'),
+                            'options' => array('active' => 'Active','inactive' => 'Inactive'),
                             'data-rel' => 'chosen'
                         ));
                         ?>

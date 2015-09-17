@@ -39,11 +39,6 @@ class HistoriesController extends AppController {
                 return;
             }
         }
-        $options = array(
-            'NOT' => array(
-                'parent_id' => null,
-            ),
-        );
         $lawsuits = $this->Lawsuit->find('list', array(
             'fields' => array('Lawsuit.id', 'Lawsuit.number'),
             'conditions' => array('Lawsuit.status'=>'active')
@@ -52,16 +47,77 @@ class HistoriesController extends AppController {
 
         $this->set(compact('lawsuits'));
     }
+    public function newhistory($id){
+        $this->check_access(array('employee', 'manager','admin'));
 
+        if(!empty($this->data)){
+            $historyData = $this->data;
+            $splitTime  = explode('/', $historyData['History']['reporting_date']);
+            $historyData['History']['reporting_date'] = $splitTime[2] . '-' . $splitTime[0] . '-' . $splitTime[1];
+            $lawsuitId = $historyData['History']['lawsuit_id'];
+//            $title = $this->data['History']['title'];
+//            $description = $this->data['History']['description'];
+//            $reporting_date = $this->data['History']['reporting_date'];
+//            $remark = $this->data['History']['remark'];
+
+            if($this->History->save($historyData)){
+                $historyId = $this->History->id;
+                $userId = Authsome::get("id");
+                $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('History added successfully.') . '</div>');
+
+                $Activity = ClassRegistry::init('Activity');
+                $Activity->logintry("history","new",$historyId,$userId,$lawsuitId,'');
+                return $this->redirect(array('controller' => 'histories', 'action' => 'calender', $this->History->id));
+            }
+            else{
+                $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t save History now, Please try again later.') . '</div>');
+                return;
+            }
+        }
+        $options = array(
+            'NOT' => array(
+                'parent_id' => null,
+            ),
+        );
+        $lawsuits = $this->Lawsuit->find('list', array(
+            'fields' => array('Lawsuit.id', 'Lawsuit.number'),
+            'conditions' => array('Lawsuit.id' => $id)
+        ));
+
+//        $lawsuits = $this->Lawsuit->find('list', array(
+//            'conditions' => array('Lawsuit.id' => $id),
+//            'fields' => array('Lawsuit.id', 'Lawsuit.number'),
+//        ));
+//        pr($lawsuits);
+
+        $this->set(compact('lawsuits'));
+    }
+    
+    public function ajax_get_court_name(){
+        $data = $_POST['data'];
+        $options = array(
+            'conditions' => array('History.lawsuit_id' => $data['id']), //array of conditions
+            'recursive' => -1, //int
+            'fields' => array('History.court_name')
+        );
+        $result = $this->History->find('first', $options);
+        if(!empty($result)){
+            Echo $result['History']['court_name'];
+        }
+        else{
+            Echo false;
+        }
+        exit;
+    }
 
     public function calender(){
         $this->check_access(array('employee', 'manager','admin'));
 
         $histories = $this->History->find('all', array(
-            'fields' => array('History.reporting_date', 'History.title', 'History.id'),
+//            'fields' => array('History.reporting_date', 'History.title', 'History.id'),
             'conditions' => array('History.status'=>'pending')
         ));
-        //print_r($histories); die;
+//        print_r($histories); die;
         $this->set(compact('histories'));
     }
 

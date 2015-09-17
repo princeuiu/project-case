@@ -36,12 +36,15 @@
                                 <a class="btn btn-info" target="_blank" title="Export Pdf" href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'detail', $item['Invoice']['id'].'.pdf')); ?>">
                                     <i class="halflings-icon white print"></i>  
                                 </a>
-<!--                                <a class="btn btn-info" target="_blank" title="Export Pdf" href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'detail', $item['Invoice']['id'].'.pdf')); ?>">
-                                    <i class="halflings-icon white print"></i>  
-                                </a>-->
-<!--                                <a class="btn btn-info" title="Edit Invoice" href="<?php //echo $this->Html->url(array('controller' => 'invoices', 'action' => 'edit', $item['Invoice']['id'])); ?>">
-                                    <i class="halflings-icon white edit"></i> 
-                                </a>-->
+                                <?php if($item['Invoice']['status']== 'paid'): ?>
+                                <a class="btn btn-danger" title="Bill is paid">
+                                    <i class="icon-lock white"></i>
+                                </a>
+                                <?php else: ?>
+                                <a class="btn btn-danger btnBillPaid" title="Paid" data-case-id="<?php echo $item['Invoice']['id']; ?>" href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'paid', $item['Invoice']['id'])); ?>">
+                                    <i class="icon-unlock white"></i>
+                                </a>
+                                <?php endif; ?>
                             </td>
 
                         </tr>
