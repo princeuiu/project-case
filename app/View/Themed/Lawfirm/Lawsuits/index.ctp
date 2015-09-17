@@ -27,7 +27,7 @@
             echo $this->Form->input('searchValue', array('class' => 'span3', 'placeholder' => 'Search key', 'label' => false, 'div' => false, 'data-controllername' => $controller, 'data-actionname' => $action));
             ?>
             <button type="submit" class="btn btn-primary" style="margin-top:-10px;" id="btnSearchGo">Go</button>
-                <table id="thisTable" class="table table-striped table-bordered">
+            <table id="thisTable" class="table table-striped table-bordered">
                 <thead>
                 <?php echo $this->Html->tableHeaders(array('Number', 'Client Name', 'Contact Person', 'Contact Number', 'Status' , 'Created' , 'Created By' , 'Actions')); ?>
                 </thead>
@@ -80,6 +80,20 @@
 
                 </tbody>
             </table>
+            <div class="pagination">
+                <ul>
+                    <?php
+                        echo $this->Paginator->prev(__('← Previous'), array('tag' => 'li'));
+                        $options = array(
+                            'separator' => '',
+                            'tag' => 'li',
+                            'currentClass' => 'active'
+                        );
+                        echo $this->Paginator->numbers($options); 
+                        echo $this->Paginator->next(__('Next → '), array('tag' => 'li'));
+                    ?>
+                </ul>
+            </div>
         </div>
     </div><!--/span-->
 
@@ -89,8 +103,8 @@
 
     $(document).ready(function() {
         $('#thisTable').dataTable({
-            "aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
-            "order": [[ 5, "desc" ]]
+            "order": false,
+            "bPaginate": false
         });
 //        alert(?"GG");
     } );
