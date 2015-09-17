@@ -128,23 +128,36 @@ class LawsuitsController extends AppController {
         if(isset($key) && isset($val)){
             //$options["Lawsuit.title like"]="%$search%";
             if($key == 'name' || $key == 'contact_person'){
-                $options["Client.".$key." like"]="%$val%";
+                $this->Paginator->settings = array(
+                    'conditions' => array('Client.'.$key.' LIKE' => "%$val%"),
+                    'limit' => 10,
+                    'order' => 'Lawsuit.created DESC'
+                );
             }
             else{
-                $options["Lawsuit.".$key." like"]="%$val%";
+                $this->Paginator->settings = array(
+                    'conditions' => array('Lawsuit.'.$key.' LIKE' => "%$val%"),
+                    'limit' => 10,
+                    'order' => 'Lawsuit.created DESC'
+                );
             }
         }
-        else $search="";
-
-        $this->paginate["Lawsuit"]["order"]="Lawsuit.created DESC";
+        else{
+            $this->Paginator->settings = array(
+                'limit' => 10,
+                'order' => 'Lawsuit.created DESC'
+            );
+        }
+        
+        $items = $this->Paginator->paginate('Lawsuit');
 //        $this->paginate["Lawsuit"]["condition"]=array("Lawsuit.type" => "landvetting");
 //        print_r($Lawsuit);die;
-        $items = $this->paginate('Lawsuit', $options);
+        
 
 
 //        print_r($items); die;
         $caseType = "all";
-        $this->set(compact('items','search', 'caseType', 'controller', 'action'));
+        $this->set(compact('items', 'caseType', 'controller', 'action'));
 
 
         //$this->set("search",$search);
