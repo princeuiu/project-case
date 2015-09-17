@@ -124,7 +124,7 @@ class LawsuitsController extends AppController {
         $controller = $this->request->params['controller'];
         $action = $this->request->params['action'];
         extract($this->request->params["named"]);
-//        $options["Lawsuit.type"]="landvetting";
+        
         if(isset($key) && isset($val)){
             //$options["Lawsuit.title like"]="%$search%";
             if($key == 'name' || $key == 'contact_person'){
@@ -150,11 +150,7 @@ class LawsuitsController extends AppController {
         }
         
         $items = $this->Paginator->paginate('Lawsuit');
-//        $this->paginate["Lawsuit"]["condition"]=array("Lawsuit.type" => "landvetting");
-//        print_r($Lawsuit);die;
         
-
-
 //        print_r($items); die;
         $caseType = "all";
         $this->set(compact('items', 'caseType', 'controller', 'action'));
@@ -166,22 +162,20 @@ class LawsuitsController extends AppController {
     public function landvetting() {
         $this->check_access(array('employee', 'manager','admin'));
 
-        extract($this->params["named"]);
-        $options["Lawsuit.type"]="landvetting";
-        if(isset($search)){
-            $options["Lawsuit.title like"]="%$search%";
-        }
-        else $search="";
-
-        $this->paginate["Lawsuit"]["order"]="Lawsuit.created DESC";
-//        $this->paginate["Lawsuit"]["condition"]=array("Lawsuit.type" => "landvetting");
-//        print_r($Lawsuit);die;
-        $items = $this->paginate('Lawsuit', $options);
+        
+        
+        $this->Paginator->settings = array(
+            'conditions' => array('Lawsuit.type' => "landvetting"),
+            'limit' => 10,
+            'order' => 'Lawsuit.created DESC'
+        );
+        
+        $items = $this->Paginator->paginate('Lawsuit');
 
 
         //pr($items);
         $caseType = "landvetting";
-        $this->set(compact('items','search', 'caseType'));
+        $this->set(compact('items', 'caseType'));
 
         $this->render('index');
         //$this->set("search",$search);
@@ -190,17 +184,13 @@ class LawsuitsController extends AppController {
 public function litigation() {
         $this->check_access(array('employee', 'manager','admin'));
 
-        extract($this->params["named"]);
-        $options["Lawsuit.type"]="litigation";
-        if(isset($search)){
-            $options["Lawsuit.title like"]="%$search%";
-        }
-        else $search="";
-
-        $this->paginate["Lawsuit"]["order"]="Lawsuit.created DESC";
-//        $this->paginate["Lawsuit"]["condition"]=array("Lawsuit.type" => "landvetting");
-//        print_r($Lawsuit);die;
-        $items = $this->paginate('Lawsuit', $options);
+        $this->Paginator->settings = array(
+            'conditions' => array('Lawsuit.type' => "litigation"),
+            'limit' => 10,
+            'order' => 'Lawsuit.created DESC'
+        );
+        
+        $items = $this->Paginator->paginate('Lawsuit');
 
 
         //pr($items);
