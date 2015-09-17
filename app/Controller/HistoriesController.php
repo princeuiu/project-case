@@ -39,11 +39,6 @@ class HistoriesController extends AppController {
                 return;
             }
         }
-        $options = array(
-            'NOT' => array(
-                'parent_id' => null,
-            ),
-        );
         $lawsuits = $this->Lawsuit->find('list', array(
             'fields' => array('Lawsuit.id', 'Lawsuit.number'),
             'conditions' => array('Lawsuit.status'=>'active')
@@ -96,6 +91,23 @@ class HistoriesController extends AppController {
 //        pr($lawsuits);
 
         $this->set(compact('lawsuits'));
+    }
+    
+    public function ajax_get_court_name(){
+        $data = $_POST['data'];
+        $options = array(
+            'conditions' => array('History.lawsuit_id' => $data['id']), //array of conditions
+            'recursive' => -1, //int
+            'fields' => array('History.court_name')
+        );
+        $result = $this->History->find('first', $options);
+        if(!empty($result)){
+            Echo $result['History']['court_name'];
+        }
+        else{
+            Echo false;
+        }
+        exit;
     }
 
     public function calender(){

@@ -2329,13 +2329,14 @@ $(document).ready(function() {
 
 $(document).ready(function(){
 
-
-
-	/****** btn case closed *****/
-
-	$('.btnCaseClose').click(function(){
-		var r = confirm("Are you sure you want to close this case");
-		return r;
+    
+    
+    $('#litigationExtraField').hide();
+    /****** btn case closed *****/
+    
+    $('.btnCaseClose').click(function(){
+        var r = confirm("Are you sure you want to close this case");
+        return r;
 //        var jqObj = $(this);
 //        var lawsuitId = jqObj.attr('data-case-id');
 //        if (r == true) {
@@ -2343,11 +2344,85 @@ $(document).ready(function(){
 //        } else {
 //            x = "You pressed Cancel!";
 //        }
-	});
-
-	//$('#example').DataTable( {
-	//	"order": [[ 5, "desc" ]],
-	//	//"paging":   true
-    //
-	//} );
+    });
+    
+    
+    $('.btnBillPaid').click(function(){
+        var r = confirm("Are you sure you want to change the Invoice status");
+        return r;
+//        var jqObj = $(this);
+//        var lawsuitId = jqObj.attr('data-case-id');
+//        if (r == true) {
+//            x = "You pressed OK!";
+//        } else {
+//            x = "You pressed Cancel!";
+//        }
+    });
+    
+    
+    
+    
+    $('#save-client-on-fly').click(function(){
+        //var jqObj = $(this);
+        var ClientName = $('#ClientName').val();
+        var ClientContactPerson = $('#ClientContactPerson').val();
+        var ClientPhone = $('#ClientPhone').val();
+        $.post(BASE+'ajax/clients/add',
+                {"data[name]":ClientName,"data[contact_person]":ClientContactPerson,"data[phone]":ClientPhone},
+                function(e){
+                    if(e != false){
+                        //console.log(e);
+                        var obj = $.parseJSON(e); 
+                        $('#LawsuitClientId').append($('<option>', {
+                            value: obj.id,
+                            text: obj.name
+                        }));
+                        //response(obj.client);
+                        $('#myModal').modal('hide');
+                        location.reload();
+                    }
+                    else{
+                        $('#myModal').modal('hide');
+                    }
+                }
+        );
+    });
+    
+    $('#HistoryLawsuitId').change(function(){
+        var lawsuitId = $('#HistoryLawsuitId').val();
+        $.post(BASE+'ajax/histories/get_court_name',
+                {"data[id]":lawsuitId},
+                function(e){
+                    if(e != false){
+                        //console.log(e);
+                        $('#HistoryCourtName').val(e);
+                    }
+                    else{
+                        var emptyStr = '';
+                       $('#HistoryCourtName').val(emptyStr);
+                    }
+                }
+        );
+    });
+    
+    
+    $('#LawsuitType').change(function(){
+        var itemValue = $('#LawsuitType').val();
+        if(itemValue == 'litigation'){
+            $( "#litigationExtraField" ).show( "slow" );
+        }
+        else{
+            $( "#litigationExtraField" ).hide( "slow" );
+        }
+    });
+    
+    
+    $('#btnSearchGo').click(function(){
+        var controller = $('#searchValue').data("controllername");
+        var action = $('#searchValue').data("actionname");
+        var searchColum = $('#searchColum').val();
+        var searchValue = $('#searchValue').val();
+        //alert(searchColum+searchValue);
+        window.location.href =  BASE+controller+"/"+action+"/key:"+searchColum+"/val:"+searchValue;
+    });
 });

@@ -14,7 +14,20 @@
             </div>
         </div>
         <div class="box-content">
-            <table id="thisTable" class="table table-striped table-bordered">
+            <?php
+            echo $this->Form->input('searchColum', array(
+                'options' => array('number' => 'Number', 'name' => 'Client Name', 'contact_person' => 'Contact Person', 'status' => 'Status', 'created' => 'Created', 'created_by' => 'Created By'),
+                'label' => false,
+                'div' => false,
+                'class' => 'span3',
+                'id' => 'searchColum'
+            ));
+            ?>
+            <?php
+            echo $this->Form->input('searchValue', array('class' => 'span3', 'placeholder' => 'Search key', 'label' => false, 'div' => false, 'data-controllername' => $controller, 'data-actionname' => $action));
+            ?>
+            <button type="submit" class="btn btn-primary" style="margin-top:-10px;" id="btnSearchGo">Go</button>
+                <table id="thisTable" class="table table-striped table-bordered">
                 <thead>
                 <?php echo $this->Html->tableHeaders(array('Number', 'Client Name', 'Contact Person', 'Contact Number', 'Status' , 'Created' , 'Created By' , 'Actions')); ?>
                 </thead>
@@ -46,9 +59,11 @@
                             <a class="btn btn-success" title="View Case" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'details', $item['Lawsuit']['id'] )); ?>">
                                 <i class="halflings-icon th-list white"></i>
                             </a>
+                            <?php if($item['Lawsuit']['status']!= 'closed'): ?>
                             <a class="btn btn-success" title="Generate Invoice" href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'generate', $item['Lawsuit']['id'] )); ?>">
                                 <i class="halflings-icon white share"></i>
                             </a>
+                            <?php endif; ?>
                             <?php
                             if($item['Lawsuit']['status']!= 'closed'):
                                 ?>
