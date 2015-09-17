@@ -27,7 +27,7 @@
             echo $this->Form->input('searchValue', array('class' => 'span3', 'placeholder' => 'Search key', 'label' => false, 'div' => false, 'data-controllername' => $controller, 'data-actionname' => $action));
             ?>
             <button type="submit" class="btn btn-primary" style="margin-top:-10px;" id="btnSearchGo">Go</button>
-            <table class="table table-striped table-bordered bootstrap-datatable datatable">
+                <table id="thisTable" class="table table-striped table-bordered">
                 <thead>
                 <?php echo $this->Html->tableHeaders(array('Number', 'Client Name', 'Contact Person', 'Contact Number', 'Status' , 'Created' , 'Created By' , 'Actions')); ?>
                 </thead>
@@ -65,13 +65,13 @@
                             </a>
                             <?php endif; ?>
                             <?php
-                                if($item['Lawsuit']['status']!= 'closed'):
-                            ?>
-                            <a class="btn btn-danger btnCaseClose" title="Close Case" data-case-id="<?php echo $item['Lawsuit']['id']; ?>" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'close', $item['Lawsuit']['id'])); ?>">
-                                <i class="halflings-icon white trash"></i>
-                            </a>
-                            <?php
-                                endif;
+                            if($item['Lawsuit']['status']!= 'closed'):
+                                ?>
+                                <a class="btn btn-danger btnCaseClose" title="Close Case" data-case-id="<?php echo $item['Lawsuit']['id']; ?>" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'close', $item['Lawsuit']['id'])); ?>">
+                                    <i class="halflings-icon white trash"></i>
+                                </a>
+                                <?php
+                            endif;
                             ?>
                         </td>
 
@@ -85,3 +85,14 @@
 
 </div><!--/row-->
 
+<script type="application/javascript">
+
+    $(document).ready(function() {
+        $('#thisTable').dataTable({
+            "aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            "order": [[ 5, "desc" ]]
+        });
+//        alert(?"GG");
+    } );
+
+</script>
