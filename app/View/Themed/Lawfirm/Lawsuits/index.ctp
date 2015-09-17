@@ -37,7 +37,7 @@
                         <td><?php echo $item['Client']['contact_person']; ?></td>
                         <td><?php echo $item['Client']['phone']; ?></td>
                         <td><span class="label <?php if($item['Lawsuit']['status']== 'active'){ echo 'label-success'; } else{ echo 'label-warning';} ?>"><?php echo h($item['Lawsuit']['status']); ?></span></td>
-                        <td><?php echo date("d-m-Y", strtotime($item['Lawsuit']['created'])); ?></td>
+                        <td><?php echo date("Y-m-d", strtotime($item['Lawsuit']['created'])); ?></td>
                         <td><?php echo $item['Lawsuit']['created_by']; ?></td>
                         <td class="center">
                             <a class="btn btn-info" title="Edit Case" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'edit', $item['Lawsuit']['id'])); ?>">
@@ -74,7 +74,8 @@
 
     $(document).ready(function() {
         $('#thisTable').dataTable({
-            "aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+            "aoColumns": [null, null, null, null, null, { "sType": "date-euro" }, null, null],
+//            "aLengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
             "order": [[ 5, "desc" ]]
         });
 //        alert(?"GG");

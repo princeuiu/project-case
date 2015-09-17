@@ -128,7 +128,7 @@ class LawsuitsController extends AppController {
         }
         else $search="";
 
-        $this->paginate["Lawsuit"]["order"]="Lawsuit.created DESC";
+        $this->paginate["Lawsuit"]["order"]="Lawsuit.modified DESC";
 //        $this->paginate["Lawsuit"]["condition"]=array("Lawsuit.type" => "landvetting");
 //        print_r($Lawsuit);die;
         $items = $this->paginate('Lawsuit', $options);
@@ -152,7 +152,7 @@ class LawsuitsController extends AppController {
         }
         else $search="";
 
-        $this->paginate["Lawsuit"]["order"]="Lawsuit.created DESC";
+        $this->paginate["Lawsuit"]["order"]="Lawsuit.modified DESC";
 //        $this->paginate["Lawsuit"]["condition"]=array("Lawsuit.type" => "landvetting");
 //        print_r($Lawsuit);die;
         $items = $this->paginate('Lawsuit', $options);
@@ -176,7 +176,7 @@ public function litigation() {
         }
         else $search="";
 
-        $this->paginate["Lawsuit"]["order"]="Lawsuit.created DESC";
+        $this->paginate["Lawsuit"]["order"]="Lawsuit.modified DESC";
 //        $this->paginate["Lawsuit"]["condition"]=array("Lawsuit.type" => "landvetting");
 //        print_r($Lawsuit);die;
         $items = $this->paginate('Lawsuit', $options);
