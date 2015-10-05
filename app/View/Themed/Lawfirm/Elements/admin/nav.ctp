@@ -28,6 +28,13 @@
             </li>
             <li><a href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'index')); ?>"><i class="icon-money"></i><span class="hidden-tablet"> Invoice List</span></a></li>
             <li>
+                <a class="dropmenu" href="#"><i class="icon-wrench"></i><span class="hidden-tablet"> Setup Court </span><i class="icon-caret-down"></i></a>
+                <ul>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'courts', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Item</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'courts', 'action' => 'index')); ?>"><i class="icon-sitemap"></i><span class="hidden-tablet"> List All Items</span></a></li>
+                </ul>
+            </li>
+            <li>
                 <a class="dropmenu" href="#"><i class="icon-group"></i><span class="hidden-tablet"> Clients </span><i class="icon-caret-down"></i></a>
                 <ul>
                     <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'clients', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Clients</span></a></li>
