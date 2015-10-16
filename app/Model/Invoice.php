@@ -39,6 +39,25 @@ class Invoice extends AppModel {
             'foreignKey' => 'client_id'
         )
     );
+    
+    
+    public $hasAndBelongsToMany = array(
+        'Cost' =>
+            array(
+                'className' => 'Cost',
+                'joinTable' => 'invoices_costs',
+                'foreignKey' => 'invoice_id',
+                'associationForeignKey' => 'cost_id',
+                'unique' => true,
+                'conditions' => '',
+                'fields' => '',
+                'order' => '',
+                'limit' => '',
+                'offset' => '',
+                'finderQuery' => '',
+                'with' => ''
+            )
+    );
 
     
 	

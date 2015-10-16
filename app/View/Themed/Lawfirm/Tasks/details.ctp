@@ -1,25 +1,29 @@
 <div class="row-fluid ">
     <div class="span7">
         <h1><?php
-            echo $userTasks['Task']['name'];
+            echo $userTasks['Tasklist']['name'];
             ?></h1>
 
         <?php
-        if($datediff < 4){
+        if($datediff < 4 && $userTasks['Task']['status'] == 'pending'){
             echo '<div class="priority high"><span>high priority</span></div>
         <div class="task high">';
-        }elseif($datediff > 3 &&  $datediff < 11){
+        }elseif($datediff > 3 &&  $datediff < 11 && $userTasks['Task']['status'] == 'pending'){
             echo '<div class="priority medium"><span>medium priority</span></div>
             <div class="task medium">';
-        }elseif($datediff > 10){
+        }elseif($datediff > 10 && $userTasks['Task']['status'] == 'pending'){
             echo '<div class="priority low"><span>low priority</span></div>
+                <div class="task low">';
+        }
+        elseif($userTasks['Task']['status'] == 'done'){
+            echo '<div class="priority low"><span>Task completed</span></div>
                 <div class="task low">';
         }
         ?>
 
 
         <div class="desc">
-            <div class="title"><?php echo 'Task Name : '.$userTasks['Task']['name']; ?></div>
+            <div class="title"><?php echo 'Task Name : '.$userTasks['Tasklist']['name']; ?></div>
             <div><?php echo 'Description : '.$userTasks['Task']['description']; ?></div>
             <div>Attachments: </br>
             <?php
@@ -30,10 +34,23 @@
             </div>
         </div>
         <div class="time">
-            <div class="date"><?php echo $this->Time->format($userTasks['Task']['dead_line'], '%B %e, %Y'); ?></div>
-            <div><?php echo $datediff; ?> day(s)</div>
+            <div class="date" style="font-size: 14px;"><?php echo $this->Time->format($userTasks['Task']['dead_line'], '%B %e, %Y'); ?></div>
+            <?php
+                if($userTasks['Task']['status'] == 'done'):
+            ?>
+                <div class="date" style="font-size: 14px;"><?php echo $this->Time->format($userTasks['Task']['modified'], '%B %e, %Y'); ?></div>
+            <?php
+                else:
+            ?>
+                <div><?php echo $datediff; ?> day(s)</div>
+            <?php
+                endif;
+            ?>
         </div>
     </div>
+    <?php
+    if($userTasks['Task']['status'] == 'pending'):
+    ?>
     <div class="box span12" style="margin-left: auto">
         <div class="box-header" data-original-title="">
             <h2><i class="halflings-icon white edit"></i><span class="break"></span>Comment</h2>
@@ -48,9 +65,22 @@
                     <label for="comment">Comment:</label>
                     <textarea class="form-control span12" rows="2" id="comment" name="data[TaskComment][body]"></textarea>
                 </div>
+                <div class="form-group">
                 <?php
                 echo $this->Form->input('files.', array('type' => 'file', 'multiple'));
                 ?>
+                </div>
+                <div class="form-group">
+                    <label for="done">
+                <?php
+                echo $this->Form->checkbox('done', array(
+                    'value' => true,
+                    'hiddenField' => false,
+                    'id' => 'done'
+                ));
+                ?>
+                    Task is done</label>
+                </div>
                 <div class="form-actions" style="text-align: right">
                     <button type="submit" class="btn btn-primary">Post</button>
                 </div>
@@ -59,6 +89,9 @@
 
         </div>
     </div>
+    <?php
+    endif;
+    ?>
 </div>
 <div class="span5 noMarginLeft">
     <div class="dark">

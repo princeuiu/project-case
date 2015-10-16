@@ -37,7 +37,7 @@
             Configure::write('debug', $_GET["debug"]);
         }
         else{
-            Configure::write('debug', 0);
+            Configure::write('debug', 2);
         }
 
 /**

@@ -41,6 +41,10 @@ class Task extends AppModel {
         'Assigned' => array(
             'className' => 'User',
             'foreignKey' => 'assigned_to'
+        ),
+        'Tasklist' => array(
+            'className' => 'Tasklist',
+            'foreignKey' => 'tasklist_id'
         )
     );
 
