@@ -25,8 +25,7 @@
                     <div class="controls">
                         <?php
                         echo $this->Form->input('lawsuit_id', array(
-                            'options' => $lawsuits,
-                            'data-rel' => 'chosen'
+                            'options' => $lawsuits
                         ));
                         ?>
                     </div>

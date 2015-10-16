@@ -14,7 +14,7 @@ class CourtsController extends AppController {
             //print_r($this->data); die;
             $data = $this->data;
             if($data['Court']['parent_id'] == null){
-                $data['Court']['parent_id'] = 0;
+                $data['Court']['parent_id'] = 1;
             }
             if($this->Court->save($data)){
                 $this->Session->setFlash('<div class="alert alert-success">' . __('Court added successfully.') . '</div>');
@@ -29,11 +29,12 @@ class CourtsController extends AppController {
         
         $options = array(
             'NOT' => array(
-                'parent_id' => null, 
+                'parent_id' => 0, 
             ),
         );
         $parents = $this->Court->generateTreeList($options,null,null," - ");
-        //print_r($parents); die;
+//        $directChildren = $this->Court->children(1, true);
+//        print_r($directChildren); die;
         
         $this->set(compact('parents'));
         
@@ -239,7 +240,7 @@ class CourtsController extends AppController {
         
         $options = array(
             'NOT' => array(
-                'parent_id' => null, 
+                'parent_id' => 0, 
             ),
         );
         $items = $this->Court->generateTreeList($options,null,null," - ");

@@ -14,7 +14,7 @@ class TasklistsController extends AppController {
             if($this->Tasklist->save($this->data)){
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Tasklist added successfully.') . '</div>');
 
-                return $this->redirect(array('controller' => 'clients', 'action' => 'index'));
+                return $this->redirect(array('controller' => 'tasklists', 'action' => 'index'));
 
             }
             else{
@@ -54,11 +54,11 @@ class TasklistsController extends AppController {
         if(!empty($this->data)){
             if($this->Tasklist->save($this->data)){
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Tasklist updated successfully.') . '</div>');
-                return $this->redirect(array('controller' => 'clients', 'action' => 'edit', $this->Tasklist->id));
+                return $this->redirect(array('controller' => 'tasklists', 'action' => 'index'));
             }
             else{
                 $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t save Tasklist now, Please try again later.') . '</div>');
-                return $this->redirect(array('controller' => 'clients', 'action' => 'edit', $this->Tasklist->id));
+                return $this->redirect(array('controller' => 'tasklists', 'action' => 'edit', $this->Tasklist->id));
             }
         }
 
@@ -70,20 +70,17 @@ class TasklistsController extends AppController {
     }
     
     public function index() {
+        
         $this->check_access(array('employee', 'manager','admin'));
 
-        extract($this->params["named"]);
+        $this->Paginator->settings = array(
+            'limit' => 10,
+            'order' => 'Tasklist.created DESC'
+        );
         
-        if(isset($search)){
-            $options["Tasklist.name like"]="%$search%";
-        }
-        else $search="";
-        
-        $this->paginate["Tasklist"]["order"]="Tasklist.created DESC";
-        
-        $clients = $this->paginate('Tasklist', $options);
-        //pr($categories);
-        $this->set(compact('clients','search'));
+        $items = $this->Paginator->paginate('Tasklist');
+        //print_r($items); die;
+        $this->set(compact('items'));
         
         
         //$this->set("search",$search);

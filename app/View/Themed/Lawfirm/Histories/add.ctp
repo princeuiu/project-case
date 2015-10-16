@@ -16,17 +16,37 @@
             ?>
             <fieldset>`
                 <div class="control-group">
-                    <label class="control-label" for="CaseNumber">Case Number</label>
+                    <label class="control-label" for="HistoryCourtId">Case type</label>
                     <div class="controls">
                         <?php
-                        echo $this->Form->input('lawsuit_id', array('class' => 'span6 typeahead', 'placeholder' => 'Case Number', 'options' => $lawsuits, 'error' => array(
-                            'attributes' => array('escape' => false)
-                        )));
+                        echo $this->Form->input('court_id', array(
+                            'options' => $courts,
+                            'class' => 'historyCourtId'
+                        ));
                         ?>
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label" for="Title">Title </label>
+                    <label class="control-label" for="HistoryYear">Year</label>
+                    <div class="controls">
+                        <?php
+                        echo $this->Form->input('year', array(
+                            'options' => $years,
+                            'class' => 'historyYear'
+                        ));
+                        ?>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="CaseNumber">Case Number</label>
+                    <div class="controls">
+                        <?php
+                        echo $this->Form->input('lawsuit_id', array('options' => $lawsuits, 'class' => 'historyCaseNumber'));
+                        ?>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="Title">Step </label>
                     <div class="controls">
                         <?php
                         echo $this->Form->input('title', array('class' => 'span6 typeahead', 'placeholder' => 'Title', 'error' => array(
@@ -46,7 +66,7 @@
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label" for="Description">Description </label>
+                    <label class="control-label" for="Description">Steps Taken </label>
                     <div class="controls">
                         <?php
                         echo $this->Form->input('description', array('type'=>'textarea', 'class' => 'span6 typeahead', 'placeholder' => 'Description', 'error' => array(
@@ -56,7 +76,7 @@
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label" for="ReportingDate">Reporting Date </label>
+                    <label class="control-label" for="ReportingDate">Next Date </label>
                     <div class="controls">
                         <input type="text" name="data[History][reporting_date]" class="input-xlarge datepicker" id="HistoryReportingDate">
                         <?php
@@ -67,7 +87,7 @@
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label" for="Remarks">Remarks </label>
+                    <label class="control-label" for="Remarks">Purpose of Next Date </label>
                     <div class="controls">
                         <?php
                         echo $this->Form->input('remark', array('type'=>'textarea', 'class' => 'span6 typeahead', 'placeholder' => 'Remarks', 'error' => array(

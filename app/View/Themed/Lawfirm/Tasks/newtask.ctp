@@ -32,12 +32,13 @@
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label" for="TaskName">Name </label>
+                    <label class="control-label" for="TaskTasklistId">Task </label>
                     <div class="controls">
                         <?php
-                        echo $this->Form->input('name', array('class' => 'span6 typeahead', 'placeholder' => 'Task name', 'error' => array(
-                            'attributes' => array('escape' => false)
-                        )));
+                        echo $this->Form->input('tasklist_id', array(
+                            'options' => $taskLists,
+                            'data-rel' => 'chosen'
+                        ));
                         ?>
                     </div>
                 </div>

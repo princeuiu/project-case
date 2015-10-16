@@ -21,6 +21,19 @@
             ));
             ?>
             <fieldset>
+                <div id="litigationCaseTypeField">
+                    <div class="control-group">
+                        <label class="control-label" for="LawsuitCourtId">Case type</label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('court_id', array(
+                                'options' => $courts,
+                                'data-rel' => 'chosen'
+                            ));
+                            ?>
+                        </div>
+                    </div>
+                </div>
                 <div class="control-group">
                     <label class="control-label" for="LawsuitNumber">Number / Name </label>
                     <div class="controls">
@@ -29,6 +42,19 @@
                                 'attributes' => array('escape' => true)
                         )));
                         ?>
+                    </div>
+                </div>
+                <div id="litigationYearField">
+                    <div class="control-group">
+                        <label class="control-label" for="LawsuitYear">Year</label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('year', array(
+                                'options' => $years,
+                                'data-rel' => 'chosen'
+                            ));
+                            ?>
+                        </div>
                     </div>
                 </div>
                 <div class="control-group hidden-phone">
@@ -62,17 +88,6 @@
                     </div>
                 </div>
                 <div id="litigationExtraField">
-                    <div class="control-group">
-                        <label class="control-label" for="LawsuitLitigationType">Litigation Case type</label>
-                        <div class="controls">
-                            <?php
-                            echo $this->Form->input('litigation_type', array(
-                                'options' => array('criminal' => 'Criminal'),
-                                'data-rel' => 'chosen'
-                            ));
-                            ?>
-                        </div>
-                    </div>
                     <div class="control-group">
                         <label class="control-label" for="LawsuitParty01">Name of 1st Party</label>
                         <div class="controls">

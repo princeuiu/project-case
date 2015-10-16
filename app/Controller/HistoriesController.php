@@ -7,7 +7,7 @@ class HistoriesController extends AppController {
 
     public $name = 'Histories';
 
-    public $uses = array('History', 'Lawsuit', 'Client', 'Activity');
+    public $uses = array('History', 'Lawsuit', 'Client', 'Activity','Court');
 
     /**
      *
@@ -39,13 +39,24 @@ class HistoriesController extends AppController {
                 return;
             }
         }
+        $years = array();
+        $currentYear = intval(date('o'));
+        for($i=1972;$i <= $currentYear; $i++){
+            $years[$i] = $i;
+        }
+        $options = array(
+            'NOT' => array(
+                'parent_id' => 0, 
+            ),
+        );
+        $courts = $this->Court->generateTreeList($options,null,null," - ");
         $lawsuits = $this->Lawsuit->find('list', array(
             'fields' => array('Lawsuit.id', 'Lawsuit.number'),
             'conditions' => array('Lawsuit.status'=>'active')
         ));
 //        pr($lawsuits);
 
-        $this->set(compact('lawsuits'));
+        $this->set(compact('lawsuits','courts','years'));
     }
     public function newhistory($id){
         $this->check_access(array('employee', 'manager','admin'));

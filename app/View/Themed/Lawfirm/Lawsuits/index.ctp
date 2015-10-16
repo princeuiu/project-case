@@ -59,6 +59,9 @@
                             <a class="btn btn-success" title="View Case" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'details', $item['Lawsuit']['id'] )); ?>">
                                 <i class="halflings-icon th-list white"></i>
                             </a>
+                            <a class="btn btn-success" title="Add Task" href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'newtask', $item['Lawsuit']['id'] )); ?>">
+                                <i class="halflings-icon plus-sign white"></i>
+                            </a>
                             <?php if($item['Lawsuit']['status']!= 'closed'): ?>
                             <a class="btn btn-success" title="Generate Invoice" href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'generate', $item['Lawsuit']['id'] )); ?>">
                                 <i class="halflings-icon white share"></i>

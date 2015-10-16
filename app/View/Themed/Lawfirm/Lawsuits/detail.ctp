@@ -62,15 +62,21 @@
             foreach($this_case_task as $this_task){
 
                 echo '<div class="box span12" style="margin-left: 0px;"><div class="box-header"><h2><i class="halflings-icon white white tasks"></i><span class="break"></span>';
-                echo $this_task['Task']['name'];
+                echo $this_task['Tasklist']['name'];
 //                echo '<a href="/tasks/details/' .$this_task['Task']['id']. '">' . $this_task['Task']['name'] . '</a>';
                 echo '</h2><div class="box-icon"><a href="/tasks/details/' .$this_task['Task']['id']. '"><i class="halflings-icon white eye-open"></i></a><a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>';
                 echo'</div></div><div class="box-content">';
                 echo 'Description : ' .$this_task['Task']['description'] . '</br>';
                 echo 'Dead Line : ' .$this_task['Task']['dead_line'] . '</br>';
+                echo 'Status : ' .$this_task['Task']['status'] . '</br>';
                 echo 'Created : ' .$this_task['Task']['created'] . '</br>';
                 echo 'Created By : ' .$this_task['Owner']['name'] . '</br>';
                 echo 'Assigned To : ' .$this_task['Assigned']['name'] . '</br>';
+                foreach($task_files as $task_file){
+                    if($this_task['Task']['id'] == $task_file['Task']['id']){
+                        echo '<i class="icon-paper-clip"></i>&nbsp;&nbsp;<a href="/uploads/doc/' . $task_file['WantingDoc']['name'] . '" target="_blank" ><i class="fa fa-paperclip"></i>'. $task_file['WantingDoc']['name'] .'</a></br>';
+                    }
+                }
                 echo'</div></div>';
             }
 
