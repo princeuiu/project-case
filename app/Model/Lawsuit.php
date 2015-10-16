@@ -33,6 +33,10 @@ class Lawsuit extends AppModel {
         'Client' => array(
             'className' => 'Client',
             'foreignKey' => 'client_id'
+        ),
+        'Court' => array(
+            'className' => 'Court',
+            'foreignKey' => 'court_id'
         )
     );
     

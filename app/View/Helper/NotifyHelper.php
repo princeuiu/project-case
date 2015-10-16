@@ -108,8 +108,8 @@ class NotifyHelper extends AppHelper {
                 <li>
                     <a href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'details', $task['Task']['id'])); ?>">
                         <span class="header">
-                            <span class="title"><?php echo $task['Task']['name']; ?></span>
-                            <span class="title"><?php echo $task['Task']['datediff']; ?> day(s)</span>
+                            <span class="title"><?php echo $task['Tasklist']['name']; ?></span><br/>
+                            <span class="title"><?php echo $task['Task']['datedifftxt']; ?></span>
                         </span>
                     </a>
                 </li>
@@ -147,7 +147,8 @@ class NotifyHelper extends AppHelper {
             $options = array(
                 'conditions' => array('Task.assigned_to' => $this->userID, 'Task.status' => 'pending'),
                 'order' => array('Task.dead_line ASC'),
-                'fields' => array('Task.id', 'Task.name', 'Task.slug', 'Task.dead_line', 'Lawsuit.number')
+                //'fields' => array('Task.id', 'Tasklist.name', 'Tasklist.slug', 'Task.dead_line', 'Lawsuit.number')
+                'fields' => array('Task.id', 'Tasklist.name', 'Tasklist.slug', 'Task.dead_line', 'Lawsuit.number')
             );
             $userTasks = $task->find('all', $options);
 
@@ -160,6 +161,13 @@ class NotifyHelper extends AppHelper {
                 $datediff = $dead_line - $now;
                 $tasks[$count] = $userTask;
                 $tasks[$count]['Task']['datediff'] = floor($datediff / (60 * 60 * 24));
+                if($tasks[$count]['Task']['datediff'] < 0){
+                    $tasks[$count]['Task']['datedifftxt'] = $tasks[$count]['Task']['datediff'] * (-1);
+                    $tasks[$count]['Task']['datedifftxt'] = '<span style="color:red;">'.$tasks[$count]['Task']['datedifftxt'].' day(s) over<span>';
+                }
+                else{
+                    $tasks[$count]['Task']['datedifftxt'] = '<span>'.$tasks[$count]['Task']['datediff'].' day(s) left<span>';
+                }
                 $count++;
             }
 
@@ -180,7 +188,7 @@ class NotifyHelper extends AppHelper {
             $user = new User();
             
             
-            $tasks = $task->find('list',array('conditions' => array('Task.assigned_to' => $this->userID),'fields'=>array('id','name')));
+            $tasks = $task->find('list',array('conditions' => array('Task.assigned_to' => $this->userID),'fields'=>array('Task.id')));
             $this->userTaskList = $tasks;
             //$taskComments = $taskComment->find('list',array('conditions' => array('TaskComment.task_id' => $this->userID),'fields'=>array('id','task_id')));
             

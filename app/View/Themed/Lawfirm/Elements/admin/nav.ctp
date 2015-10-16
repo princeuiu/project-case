@@ -13,7 +13,7 @@
             <li>
                 <a class="dropmenu" href="#"><i class="icon-tasks"></i><span class="hidden-tablet"> Tasks </span><i class="icon-caret-down"></i></a>
                 <ul>
-                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Task</span></a></li>
+<!--                    <li><a class="submenu" href="<?php //echo $this->Html->url(array('controller' => 'tasks', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Task</span></a></li>-->
                     <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'all')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> List All Tasks</span></a></li>
                     <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'owned')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> List All Owned Tasks</span></a></li>
                 </ul>	
@@ -27,6 +27,27 @@
                 </ul>
             </li>
             <li><a href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'index')); ?>"><i class="icon-money"></i><span class="hidden-tablet"> Invoice List</span></a></li>
+            <li>
+                <a class="dropmenu" href="#"><i class="icon-wrench"></i><span class="hidden-tablet"> Setup Court </span><i class="icon-caret-down"></i></a>
+                <ul>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'courts', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Item</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'courts', 'action' => 'index')); ?>"><i class="icon-sitemap"></i><span class="hidden-tablet"> List All Items</span></a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="dropmenu" href="#"><i class="icon-list-alt"></i><span class="hidden-tablet"> Setup Tasks List </span><i class="icon-caret-down"></i></a>
+                <ul>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'tasklists', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Item</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'tasklists', 'action' => 'index')); ?>"><i class="icon-sitemap"></i><span class="hidden-tablet"> List All Items</span></a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="dropmenu" href="#"><i class="icon-cogs"></i><span class="hidden-tablet"> Setup Fixed Cost </span><i class="icon-caret-down"></i></a>
+                <ul>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'costs', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Item</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'costs', 'action' => 'index')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> List All Items</span></a></li>
+                </ul>
+            </li>
             <li>
                 <a class="dropmenu" href="#"><i class="icon-group"></i><span class="hidden-tablet"> Clients </span><i class="icon-caret-down"></i></a>
                 <ul>

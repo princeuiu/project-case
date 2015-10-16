@@ -7,11 +7,6 @@
                             <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
                             <a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
                         </div>-->
-            <div class="box-icon">
-                <a href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'index')); ?>"><button type="button" class="btn btn-mini <?php if($caseType!='all'){echo ' btn-success';}?>">All</button></a>
-                <a href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'landvetting')); ?>"><button type="button" class="btn btn-mini <?php if($caseType!='landvetting'){echo ' btn-success';}?>">Landvetting</button></a>
-                <a href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'litigation')); ?>"><button type="button" class="btn btn-mini <?php if($caseType!='litigation'){echo ' btn-success';}?>">Litigation</button></a>
-            </div>
         </div>
         <div class="box-content">
             <?php
@@ -58,9 +53,6 @@
                             </a>
                             <a class="btn btn-success" title="View Case" href="<?php echo $this->Html->url(array('controller' => 'lawsuits', 'action' => 'details', $item['Lawsuit']['id'] )); ?>">
                                 <i class="halflings-icon th-list white"></i>
-                            </a>
-                            <a class="btn btn-success" title="Add Task" href="<?php echo $this->Html->url(array('controller' => 'tasks', 'action' => 'newtask', $item['Lawsuit']['id'] )); ?>">
-                                <i class="halflings-icon plus-sign white"></i>
                             </a>
                             <?php if($item['Lawsuit']['status']!= 'closed'): ?>
                             <a class="btn btn-success" title="Generate Invoice" href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'generate', $item['Lawsuit']['id'] )); ?>">

@@ -7,7 +7,7 @@ class LawsuitsController extends AppController {
 
     public $name = 'Lawsuits';
 
-    public $uses = array('Lawsuit','Client', 'History', 'Task','Activity', 'Invoice');
+    public $uses = array('Lawsuit','Client', 'History', 'Task','Activity', 'Invoice','WantingDoc','Court');
 
 
     public function add(){
@@ -15,6 +15,10 @@ class LawsuitsController extends AppController {
 
         if(!empty($this->data)){
             $tempo = $this->data;
+            if($tempo['Lawsuit']['type'] == 'landvetting'){
+                $tempo['Lawsuit']['court_id'] = 0;
+                $tempo['Lawsuit']['year'] = null;
+            }
             if (!$tempo['Lawsuit']['created'] == ''){
 
                 $splitTime  = explode('/', $tempo['Lawsuit']['created']);
@@ -36,12 +40,24 @@ class LawsuitsController extends AppController {
                 return;
             }
         }
-
+        
+        
+        $years = array();
+        $currentYear = intval(date('o'));
+        for($i=1972;$i <= $currentYear; $i++){
+            $years[$i] = $i;
+        }
+        $options = array(
+            'NOT' => array(
+                'parent_id' => 0, 
+            ),
+        );
+        $courts = $this->Court->generateTreeList($options,null,null," - ");
         $clients = $this->Client->find('list', array(
             'conditions' => array('Client.status' => 'active')
         ));
 
-        $this->set(compact('clients'));
+        $this->set(compact('clients','courts','years'));
     }
 
 
@@ -82,7 +98,7 @@ class LawsuitsController extends AppController {
         if($id == null){
             throw new BadRequestException();
         }
-        $this->Lawsuit->id = $id;
+        //$this->Lawsuit->id = $id;
 
 //        if(!empty($this->data)){
 //            if($this->Lawsuit->save($this->data)){
@@ -95,7 +111,7 @@ class LawsuitsController extends AppController {
 //            }
 //        }
 
-        $this->data = $this->Lawsuit->read();
+        //$this->data = $this->Lawsuit->read();
 
 //        $clients = $this->Client->find('all', array(
 //            'conditions' => array('Client.status' => 'active')
@@ -109,9 +125,13 @@ class LawsuitsController extends AppController {
         $this_case_task = $this->Task->find('all', array(
             'conditions' => array('Task.lawsuit_id' => $id)
         ));
-//        print_r($this_case_task); die;
+        $caseAllTask = $this->Task->find('list', array(
+            'conditions' => array('Task.lawsuit_id' => $id)
+        ));
+        $task_files = $this->WantingDoc->find('all', array('conditions'=>array('WantingDoc.task_id'=>$caseAllTask,'WantingDoc.done'=>1)));
+//        print_r($this_case); die;
 //
-        $this->set(compact('histories', 'this_case', 'this_case_task'));
+        $this->set(compact('histories', 'this_case', 'this_case_task','task_files'));
 
 
         $this->render('detail');
@@ -228,6 +248,52 @@ public function litigation() {
             $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t close this case, This case don\'t have any paid bill or still have unpaid bill.') . '</div>');
             return $this->redirect(array('controller' => 'lawsuits', 'action' => 'index'));
         }
+    }
+    
+    
+    
+    public function ajax_getyear(){
+        
+        $data = $_POST['data'];
+        $id = $data['court_id'];
+        $listYear = $this->Lawsuit->find('all', array(
+            'conditions' => array('Lawsuit.court_id' => $id),
+            'recursive' => -1,
+            'fields' => array('DISTINCT Lawsuit.year')
+        ));
+//        $years = '';
+//        foreach ($listYear as $value){
+//            $years .= '{"year":"'.$value['Lawsuit']['year'].'"}';
+//        }
+        $years = array();
+        foreach($listYear as $value){
+            $years[] = $value['Lawsuit']['year'];
+        }
+        Echo json_encode($years);
+        //print_r($listYear);
+        exit;
+    }
+    
+    public function ajax_getlawsuits(){
+        
+        $data = $_POST['data'];
+        $courtId = $data['court_id'];
+        $year = $data['year'];
+        $lawsuitsData = $this->Lawsuit->find('all', array(
+            'conditions' => array('Lawsuit.court_id' => $courtId,'Lawsuit.year' => $year),
+            'recursive' => -1,
+            'fields' => array('Lawsuit.id','Lawsuit.number')
+        ));
+        $lawsuitsList = array();
+        foreach($lawsuitsData as $value){
+            $lawsuitsList[] = array(
+                'id' => $value['Lawsuit']['id'],
+                'number' => $value['Lawsuit']['number']
+            );
+        }
+        Echo json_encode($lawsuitsList);
+        //print_r($lawsuitsList);
+        exit;
     }
 
     public function test(){

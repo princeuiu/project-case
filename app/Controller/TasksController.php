@@ -7,7 +7,7 @@ class TasksController extends AppController {
 
     public $name = 'Tasks';
 
-    public $uses = array('Task','Lawsuit', 'TaskComment', 'Client','User', 'Follower', 'Activity', 'WantingDoc');
+    public $uses = array('Task','Lawsuit', 'TaskComment', 'Client','User', 'Follower', 'Activity', 'WantingDoc','Tasklist');
 
     public function add(){
         $this->check_access(array('manager','admin'));
@@ -50,9 +50,6 @@ class TasksController extends AppController {
                         }
                         unset($fileData);
                     }
-
-
-
                     $i = $i + 1;
                 }
 
@@ -123,9 +120,6 @@ class TasksController extends AppController {
                         }
                         unset($fileData);
                     }
-
-
-
                     $i = $i + 1;
                 }
 
@@ -142,17 +136,25 @@ class TasksController extends AppController {
                 return;
             }
         }
-
         $lawsuits = $this->Lawsuit->find('list', array(
             'conditions' => array('Lawsuit.id' => $id),
-            'fields' => array('Lawsuit.id', 'Lawsuit.number'),
+            'fields' => array('Lawsuit.id', 'Lawsuit.number')
         ));
-        //print_r($lawsuits); die;
+        $lawsuitType = $this->Lawsuit->find('first', array(
+            'conditions' => array('Lawsuit.id' => $id),
+            'fields' => array('Lawsuit.type'),
+            'recursive' => -1
+        ));
+        //print_r($lawsuitType); die;
         $users = $this->User->find('list', array(
             'conditions' => array('User.status' => 'active', 'User.role' => 'employee')
         ));
+        
+        $taskLists = $this->Tasklist->find('list', array(
+            'conditions' => array('Tasklist.status' => 'active', 'Tasklist.type' => $lawsuitType['Lawsuit']['type'])
+        ));
         //pr($users);
-        $this->set(compact('lawsuits', 'users'));
+        $this->set(compact('lawsuits', 'users','taskLists'));
     }
 
     public function edit($id) {
@@ -249,7 +251,7 @@ class TasksController extends AppController {
         $options = array(
             'conditions' => array('Task.assigned_to' => Authsome::get("id"), 'Task.status' => 'pending'),
             'order' => array('Task.dead_line ASC'),
-            'fields' => array('Task.id', 'Task.name', 'Task.slug', 'Task.description', 'Task.wanting_doc', 'Task.dead_line', 'Lawsuit.number', 'Lawsuit.slug' )
+            'fields' => array('Task.id', 'Task.description', 'Task.wanting_doc', 'Task.dead_line', 'Lawsuit.number', 'Lawsuit.slug','Tasklist.name', 'Tasklist.slug' )
         );
         $userTasks = $this->Task->find('all', $options);
 
@@ -262,6 +264,13 @@ class TasksController extends AppController {
             $datediff = $dead_line - $now;
             $tasks[$count] = $userTask;
             $tasks[$count]['Task']['datediff'] = floor($datediff/(60*60*24));
+            if($tasks[$count]['Task']['datediff'] < 0){
+                $tasks[$count]['Task']['datedifftxt'] = $tasks[$count]['Task']['datediff'] * (-1);
+                $tasks[$count]['Task']['datedifftxt'] = '<span style="color:red;">'.$tasks[$count]['Task']['datedifftxt'].' day(s) over<span>';
+            }
+            else{
+                $tasks[$count]['Task']['datedifftxt'] = '<span>'.$tasks[$count]['Task']['datediff'].' day(s) left<span>';
+            }
             $count++;
         }
 
@@ -279,10 +288,10 @@ class TasksController extends AppController {
         $options = array(
             'conditions' => array('Task.owner' => Authsome::get("id"), 'Task.status' => 'pending'),
             'order' => array('Task.dead_line ASC'),
-            'fields' => array('Task.id', 'Task.name', 'Task.slug', 'Task.description', 'Task.wanting_doc', 'Task.dead_line', 'Lawsuit.number', 'Lawsuit.slug' )
+            'fields' => array('Task.id', 'Task.description', 'Task.wanting_doc', 'Task.dead_line', 'Lawsuit.number', 'Lawsuit.slug','Tasklist.name', 'Tasklist.slug' )
         );
         $userTasks = $this->Task->find('all', $options);
-
+        //print_r($userTasks); die;
         $tasks = array();
 
         $now = time();
@@ -292,6 +301,13 @@ class TasksController extends AppController {
             $datediff = $dead_line - $now;
             $tasks[$count] = $userTask;
             $tasks[$count]['Task']['datediff'] = floor($datediff/(60*60*24));
+            if($tasks[$count]['Task']['datediff'] < 0){
+                $tasks[$count]['Task']['datedifftxt'] = $tasks[$count]['Task']['datediff'] * (-1);
+                $tasks[$count]['Task']['datedifftxt'] = '<span style="color:red;">'.$tasks[$count]['Task']['datedifftxt'].' day(s) over<span>';
+            }
+            else{
+                $tasks[$count]['Task']['datedifftxt'] = '<span>'.$tasks[$count]['Task']['datediff'].' day(s) left<span>';
+            }
             $count++;
         }
 
@@ -312,17 +328,19 @@ class TasksController extends AppController {
             'order' => array('Task.dead_line ASC')
         );
         $userTasks = $this->Task->find('first', $options);
+        //print_r($userTasks); die;
         $options = array(
             'conditions' => array('TaskComment.task_id' => $id),
             'order' => array('TaskComment.created DESC')
         );
         $taskComments = $this->TaskComment->find('all', $options);
+        //print_r($taskComments); die;
         $now = time();
         $dead_line = strtotime($userTasks['Task']['dead_line']);
         $datediff =  floor(($dead_line - $now)/(60*60*24));
-        $task_files = $this->WantingDoc->find('all', array('conditions'=>array('WantingDoc.task_id'=>$id,'WantingDoc.comment_id'=>0)));
+        $task_files = $this->WantingDoc->find('all', array('conditions'=>array('WantingDoc.task_id'=>$id,'WantingDoc.done'=>1)));
 
-//        print_r($task_files); die;
+        //print_r($task_files); die;
         $this->set(compact('userTasks', 'datediff', 'taskComments','task_files'));
     }
 

@@ -2332,6 +2332,9 @@ $(document).ready(function(){
     
     
     $('#litigationExtraField').hide();
+    $('#litigationCaseTypeField').hide();
+    $('#litigationYearField').hide();
+    $('#myModal').css('display','none');
     /****** btn case closed *****/
     
     $('.btnCaseClose').click(function(){
@@ -2388,6 +2391,51 @@ $(document).ready(function(){
         );
     });
     
+    $('.historyCourtId').change(function(){
+        //var jqObj = $(this);
+        var courtId = $('.historyCourtId').val();
+        $.post(BASE+'ajax/lawsuits/getyear',
+                {"data[court_id]":courtId},
+                function(e){
+                    if(e != false){
+                        console.log(e);
+                        $(".historyYear").html("");
+                        var obj = $.parseJSON(e); 
+                        $(obj).each(function (i) { //populate child options 
+                            $(".historyYear").append("<option value=\""+obj[i]+"\">"+obj[i]+"</option>");
+                        });
+                    }
+                    else{
+                        //$('#myModal').modal('hide');
+                    }
+                }
+        );
+    });
+    
+    
+    $('.historyYear').change(function(){
+        //var jqObj = $(this);
+        var courtId = $('.historyCourtId').val();
+        var year = $('.historyYear').val();
+        $.post(BASE+'ajax/lawsuits/getlawsuits',
+                {"data[court_id]":courtId,"data[year]":year},
+                function(e){
+                    if(e != false){
+                        console.log(e);
+                        $(".historyCaseNumber").html("");
+                        var obj = $.parseJSON(e); 
+                        $(obj).each(function (i) { //populate child options 
+                            $(".historyCaseNumber").append("<option value=\""+obj[i].id+"\">"+obj[i].number+"</option>");
+                        });
+                    }
+                    else{
+                        //$('#myModal').modal('hide');
+                    }
+                }
+        );
+    });
+    
+    
     $('#HistoryLawsuitId').change(function(){
         var lawsuitId = $('#HistoryLawsuitId').val();
         $.post(BASE+'ajax/histories/get_court_name',
@@ -2409,9 +2457,13 @@ $(document).ready(function(){
     $('#LawsuitType').change(function(){
         var itemValue = $('#LawsuitType').val();
         if(itemValue == 'litigation'){
+            $( "#litigationCaseTypeField" ).show( "slow" );
+            $( "#litigationYearField" ).show( "slow" );
             $( "#litigationExtraField" ).show( "slow" );
         }
         else{
+            $( "#litigationCaseTypeField" ).hide( "slow" );
+            $( "#litigationYearField" ).hide( "slow" );
             $( "#litigationExtraField" ).hide( "slow" );
         }
     });
