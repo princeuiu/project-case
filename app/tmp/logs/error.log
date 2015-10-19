@@ -26048,3 +26048,130 @@ Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2015-10-19 02:08:06 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-19 04:41:58 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-19 04:52:22 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-19 05:00:51 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-10-19 05:08:28 Error: [MissingActionException] Action ClientsController::admin_edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'ClientsController',
+  'action' => 'admin_edit',
+)
+Request URL: /clients/admin_edit/3
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(ClientsController), Object(CakeRequest))
+#2 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2015-10-19 16:13:00 Error: Fatal Error (1): Call to a member function schema() on null in [/home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php, line 3720]
+2015-10-19 16:13:00 Error: [FatalErrorException] Call to a member function schema() on null
+Request URL: /lawsuits/close/7
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-19 16:13:21 Error: Fatal Error (1): Call to a member function schema() on null in [/home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php, line 3720]
+2015-10-19 16:13:21 Error: [FatalErrorException] Call to a member function schema() on null
+Request URL: /lawsuits/close/2
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-19 16:14:11 Error: Fatal Error (1): Call to a member function schema() on null in [/home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php, line 3720]
+2015-10-19 16:14:11 Error: [FatalErrorException] Call to a member function schema() on null
+Request URL: /lawsuits/close/7
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-19 16:21:31 Error: Fatal Error (1): Call to a member function schema() on null in [/home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php, line 3720]
+2015-10-19 16:21:31 Error: [FatalErrorException] Call to a member function schema() on null
+Request URL: /lawsuits/close/7
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-19 16:29:06 Error: Fatal Error (1): Call to a member function schema() on null in [/home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php, line 3720]
+2015-10-19 16:29:06 Error: [FatalErrorException] Call to a member function schema() on null
+Request URL: /invoices
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-19 16:32:05 Error: Fatal Error (1): Call to a member function schema() on null in [/home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php, line 3720]
+2015-10-19 16:32:05 Error: [FatalErrorException] Call to a member function schema() on null
+Request URL: /invoices
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-19 16:34:51 Error: Fatal Error (1): Call to a member function schema() on null in [/home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php, line 3720]
+2015-10-19 16:34:51 Error: [FatalErrorException] Call to a member function schema() on null
+Request URL: /invoices
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2015-10-19 16:40:06 Error: Fatal Error (1): Call to a member function schema() on null in [/home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php, line 3720]
+2015-10-19 16:40:06 Error: [FatalErrorException] Call to a member function schema() on null
+Request URL: /invoices
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 3720, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

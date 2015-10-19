@@ -173,20 +173,25 @@ class InvoicesController extends AppController {
 
     public function index() {
         $this->check_access(array('manager','admin'));
-        extract($this->params["named"]);
-
-        if (isset($search)) {
-            $options["Invoice.title like"] = "%$search%";
-        } else
-            $search = "";
-
-        $this->paginate["Invoice"]["order"] = "Invoice.created DESC";
-
-        $items = $this->paginate('Invoice', $options);
+//        extract($this->params["named"]);
+//
+//        if (isset($search)) {
+//            $options["Invoice.title like"] = "%$search%";
+//        } else
+//            $search = "";
+//
+//        $this->paginate["Invoice"]["order"] = "Invoice.created DESC";
+        
+        $this->Paginator->settings = array(
+                'limit' => 10,
+                'order' => 'Invoice.created DESC'
+            );
+        
+        $items = $this->Paginator->paginate('Invoice');
 
         //print_r($items); die;
         //pr($items);
-        $this->set(compact('items', 'search'));
+        $this->set(compact('items'));
 
 
         //$this->set("search",$search);

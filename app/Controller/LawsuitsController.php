@@ -82,15 +82,27 @@ class LawsuitsController extends AppController {
         }
 
         $this->data = $this->Lawsuit->read();
+        
+        $years = array();
+        $currentYear = intval(date('o'));
+        for($i=1972;$i <= $currentYear; $i++){
+            $years[$i] = $i;
+        }
+        $options = array(
+            'NOT' => array(
+                'parent_id' => 0, 
+            ),
+        );
+        $courts = $this->Court->generateTreeList($options,null,null," - ");
 
         $clients = $this->Client->find('list', array(
             'conditions' => array('Client.status' => 'active')
         ));
         $case_id = $id;
-        $this->set(compact('clients','case_id'));
+        $this->set(compact('clients','case_id','courts','years'));
 
 
-        $this->render('edit');
+        $this->render('add');
     }
 
     public function details($id) {
@@ -230,12 +242,14 @@ public function litigation() {
         }
         
         $options = array(
-            'conditions' => array('Invoice.lawsuit_id' => $id,'Invoice.status' => 'paid')
+            'conditions' => array('Invoice.lawsuit_id' => $id,'Invoice.status' => 'paid'),
+            'recursive' => -1
         );
         $hasPaidBill = $this->Invoice->find('count', $options);
         unset($options);
         $options = array(
-            'conditions' => array('Invoice.lawsuit_id' => $id,'Invoice.status' => 'unpaid')
+            'conditions' => array('Invoice.lawsuit_id' => $id,'Invoice.status' => 'unpaid'),
+            'recursive' => -1
         );
         $hasUnpaidBill = $this->Invoice->find('count', $options);
         if($hasPaidBill > 0 && $hasUnpaidBill == 0){

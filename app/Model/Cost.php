@@ -45,7 +45,16 @@ class Cost extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
         
     
-
+    public $hasAndBelongsToMany = array(
+        'Invoice' =>
+            array(
+                'className' => 'Invoice',
+                'joinTable' => 'invoices_costs',
+                'foreignKey' => 'cost_id',
+                'associationForeignKey' => 'invoice_id',
+                'unique' => true,
+            )
+    );
     
 	
 }
