@@ -49,13 +49,6 @@ class Invoice extends AppModel {
                 'foreignKey' => 'invoice_id',
                 'associationForeignKey' => 'cost_id',
                 'unique' => true,
-                'conditions' => '',
-                'fields' => '',
-                'order' => '',
-                'limit' => '',
-                'offset' => '',
-                'finderQuery' => '',
-                'with' => ''
             )
     );
 

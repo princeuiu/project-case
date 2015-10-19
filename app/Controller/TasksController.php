@@ -7,7 +7,7 @@ class TasksController extends AppController {
 
     public $name = 'Tasks';
 
-    public $uses = array('Task','Lawsuit', 'TaskComment', 'Client','User', 'Follower', 'Activity', 'WantingDoc','Tasklist');
+    public $uses = array('Task','Lawsuit', 'TaskComment', 'Client','User', 'Follower', 'Activity', 'WantingDoc','Tasklist','Court');
 
     public function add(){
         $this->check_access(array('manager','admin'));
@@ -320,6 +320,8 @@ class TasksController extends AppController {
 
 
     public function details($id){
+        $this->check_access(array('employee', 'manager','admin'));
+        
         $this->Task->unbindModel(
             array('belongsTo' => array('Owner', 'Assigned'), 'hasAndBelongsToMany' => array('FollowerUser'))
         );
@@ -339,9 +341,20 @@ class TasksController extends AppController {
         $dead_line = strtotime($userTasks['Task']['dead_line']);
         $datediff =  floor(($dead_line - $now)/(60*60*24));
         $task_files = $this->WantingDoc->find('all', array('conditions'=>array('WantingDoc.task_id'=>$id,'WantingDoc.done'=>1)));
+        $caseNmeTxt = '';
+        if($userTasks['Lawsuit']['type'] == 'litigation'){
+            $courtTypeId = $userTasks['Lawsuit']['court_id'];
+            $courtTypeInfo = $this->Court->find('first', array(
+                'conditions' => array('Court.id' => $courtTypeId),
+                'recursive' => -1
+            ));
+            $l2Parent = $this->Court->getParentNode($courtTypeId);
+            $l1Parent = $this->Court->getParentNode($l2Parent['Court']['id']);
+            $caseNmeTxt = $l1Parent['Court']['name'].' - '.$l2Parent['Court']['name'].' - '.$courtTypeInfo['Court']['name'].' - ';
+        }
 
-        //print_r($task_files); die;
-        $this->set(compact('userTasks', 'datediff', 'taskComments','task_files'));
+        //print_r($userTasks); die;
+        $this->set(compact('userTasks', 'datediff', 'taskComments','task_files','caseNmeTxt'));
     }
 
 

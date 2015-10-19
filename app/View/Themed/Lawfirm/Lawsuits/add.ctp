@@ -108,6 +108,17 @@
                             ?>
                         </div>
                     </div>
+                    <div class="control-group">
+                        <label class="control-label" for="LawsuitBreakPoint">Appearing for</label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('appearing_for', array(
+                                'options' => array('party_01' => '1st Party', 'party_02' => '2nd Party'),
+                                'data-rel' => 'chosen'
+                            ));
+                            ?>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="control-group">
@@ -115,7 +126,7 @@
                     <div class="controls">
                         <?php
                         echo $this->Form->input('break_point', array(
-                            'options' => array('0' => 'At a time', '1' => 'Break in 2 periods', '2' => 'Break in 3 periods'),
+                            'options' => array('0' => 'At a time', '1' => 'Break in 2 periods', '2' => 'Break in 3 periods', 'no' => 'Cash Client'),
                             'data-rel' => 'chosen'
                         ));
                         ?>

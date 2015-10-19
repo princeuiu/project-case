@@ -41,6 +41,16 @@
                         </div>
                     </div>
                     <div class="control-group">
+                        <label class="control-label" for="ClientInvAddressing">Invoice Addressing </label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('inv_addressing', array('class' => 'span6 typeahead', 'placeholder' => 'Invoice Addressing', 'error' => array(
+                                    'attributes' => array('escape' => false)
+                            )));
+                            ?>
+                        </div>
+                    </div>
+                    <div class="control-group">
                         <label class="control-label" for="ClientContactPerson">Contact Person </label>
                         <div class="controls">
                             <?php
