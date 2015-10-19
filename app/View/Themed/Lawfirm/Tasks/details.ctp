@@ -2,7 +2,7 @@
     <div class="span7">
         <h1><?php
             echo $userTasks['Tasklist']['name'];
-            ?></h1>
+            ?></h1><br />
 
         <?php
         if($datediff < 4 && $userTasks['Task']['status'] == 'pending'){
@@ -23,6 +23,8 @@
 
 
         <div class="desc">
+            <h2>Task for Case :<br /></h2>
+            <h2><?php echo ($userTasks['Lawsuit']['type'] != 'landvetting')?$caseNmeTxt.$userTasks['Lawsuit']['number'].'<br />of '.$userTasks['Lawsuit']['year']:'Doc - '.$userTasks['Lawsuit']['number']; ?></h2>
             <div class="title"><?php echo 'Task Name : '.$userTasks['Tasklist']['name']; ?></div>
             <div><?php echo 'Description : '.$userTasks['Task']['description']; ?></div>
             <div>Attachments: </br>

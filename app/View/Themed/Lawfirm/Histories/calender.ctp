@@ -27,7 +27,8 @@
 
                 foreach ($arr as $value) {
                     $url = $this->Html->url('/histories/view/' . $value['History']['id'], true);
-                    $title = $value['History']['title'];
+//                    $title = $value['History']['title'];
+                    $title = $value['Lawsuit']['number'];
                     $reporting_date = $value['History']['reporting_date'];
                     $reporting_date_str = strtotime($value['History']['reporting_date']);
                     $id = $value['History']['id'];

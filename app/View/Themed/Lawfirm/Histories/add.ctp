@@ -49,7 +49,7 @@
                     <label class="control-label" for="Title">Step </label>
                     <div class="controls">
                         <?php
-                        echo $this->Form->input('title', array('class' => 'span6 typeahead', 'placeholder' => 'Title', 'error' => array(
+                        echo $this->Form->input('title', array('class' => 'span6 typeahead', 'placeholder' => 'Step', 'error' => array(
                             'attributes' => array('escape' => false)
                         )));
                         ?>
@@ -59,7 +59,7 @@
                     <label class="control-label" for="CourtName">Name of the Court </label>
                     <div class="controls">
                         <?php
-                        echo $this->Form->input('court_name', array('class' => 'span6 typeahead', 'placeholder' => 'CourtName', 'error' => array(
+                        echo $this->Form->input('court_name', array('class' => 'span6 typeahead', 'placeholder' => 'Name of the Court', 'error' => array(
                             'attributes' => array('escape' => false)
                         )));
                         ?>
@@ -69,7 +69,7 @@
                     <label class="control-label" for="Description">Steps Taken </label>
                     <div class="controls">
                         <?php
-                        echo $this->Form->input('description', array('type'=>'textarea', 'class' => 'span6 typeahead', 'placeholder' => 'Description', 'error' => array(
+                        echo $this->Form->input('description', array('type'=>'textarea', 'class' => 'span6 typeahead', 'placeholder' => 'Steps Taken', 'error' => array(
                             'attributes' => array('escape' => false)
                         )));
                         ?>
@@ -87,10 +87,22 @@
                     </div>
                 </div>
                 <div class="control-group">
+                    <label class="control-label" for="tillNext">Till next hearing</label>
+                    <div class="controls">
+                        <?php
+                        echo $this->Form->checkbox('till_next_hearing', array(
+                            'value' => true,
+                            'hiddenField' => false,
+                            'id' => 'tillNext'
+                        ));
+                        ?>
+                    </div>
+                </div>
+                <div class="control-group">
                     <label class="control-label" for="Remarks">Purpose of Next Date </label>
                     <div class="controls">
                         <?php
-                        echo $this->Form->input('remark', array('type'=>'textarea', 'class' => 'span6 typeahead', 'placeholder' => 'Remarks', 'error' => array(
+                        echo $this->Form->input('remark', array('type'=>'textarea', 'class' => 'span6 typeahead', 'placeholder' => 'Purpose of Next Date', 'error' => array(
                             'attributes' => array('escape' => false)
                         )));
                         ?>
