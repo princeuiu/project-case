@@ -2334,6 +2334,7 @@ $(document).ready(function(){
     $('#litigationExtraField').hide();
     $('#litigationCaseTypeField').hide();
     $('#litigationYearField').hide();
+    $('#notCorpClient').hide();
     $('#myModal').css('display','none');
     /****** btn case closed *****/
     
@@ -2477,4 +2478,17 @@ $(document).ready(function(){
         //alert(searchColum+searchValue);
         window.location.href =  BASE+controller+"/"+action+"/key:"+searchColum+"/val:"+searchValue;
     });
+    
+    $('#notCorp').click(function(){
+        if ($('#notCorp').is(":checked")){
+            $( "#corpClient" ).hide( "slow" );
+            $( "#notCorpClient" ).show( "slow" );
+        }
+        else{
+            $( "#notCorpClient" ).hide( "slow" );
+            $( "#corpClient" ).show( "slow" );
+        }
+        
+    });
+    
 });

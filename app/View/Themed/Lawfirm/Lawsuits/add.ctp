@@ -21,6 +21,17 @@
             ));
             ?>
             <fieldset>
+                <div class="control-group">
+                    <label class="control-label" for="LawsuitType">Type</label>
+                    <div class="controls">
+                        <?php
+                        echo $this->Form->input('type', array(
+                            'options' => array('landvetting' => 'Landvetting', 'litigation' => 'Litigation'),
+                            'data-rel' => 'chosen'
+                        ));
+                        ?>
+                    </div>
+                </div>
                 <div id="litigationCaseTypeField">
                     <div class="control-group">
                         <label class="control-label" for="LawsuitCourtId">Case type</label>
@@ -63,26 +74,40 @@
                         <?php echo $this->Form->textarea('note', array('class' => 'cleditor')); ?>
                     </div>
                 </div>
-                <div class="control-group">
-                    <label class="control-label" for="LawsuitClientId">Select Client</label>
-                    <div class="controls">
-                        <?php
-                        echo $this->Form->input('client_id', array(
-                            'options' => $clients,
-                            'data-rel' => 'chosen'
-                        ));
-                        ?>
-                        <button class="btn btn-primary add_client_button" title="Add new client" style="padding: 1px 6px; margin-top: -16px;" data-toggle="modal" data-target="#myModal"><i class="halflings-icon white white plus-sign"></i></button>
+                <div id="corpClient">
+                    <div class="control-group">
+                        <label class="control-label" for="LawsuitClientId">Select Client</label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('client_id', array(
+                                'options' => $clients,
+                                'data-rel' => 'chosen'
+                            ));
+                            ?>
+                            <button class="btn btn-primary add_client_button" title="Add new client" style="padding: 1px 6px; margin-top: -16px;" data-toggle="modal" data-target="#myModal"><i class="halflings-icon white white plus-sign"></i></button>
+                        </div>
                     </div>
-
+                </div>
+                <div id="notCorpClient">
+                    <div class="control-group">
+                        <label class="control-label" for="LawsuitClientInfo">Client Information </label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('client_info', array('type'=>'textarea', 'class' => 'span6 typeahead', 'placeholder' => 'Client Information', 'error' => array(
+                                'attributes' => array('escape' => false)
+                            )));
+                            ?>
+                        </div>
+                    </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label" for="LawsuitType">Type</label>
+                    <label class="control-label" for="notCorp">Not a Corporate Client</label>
                     <div class="controls">
                         <?php
-                        echo $this->Form->input('type', array(
-                            'options' => array('landvetting' => 'Landvetting', 'litigation' => 'Litigation'),
-                            'data-rel' => 'chosen'
+                        echo $this->Form->checkbox('not_corp', array(
+                            'value' => true,
+                            'hiddenField' => false,
+                            'id' => 'notCorp'
                         ));
                         ?>
                     </div>

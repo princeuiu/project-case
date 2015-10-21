@@ -30,8 +30,8 @@ class TaskComment extends AppModel {
                 'on' => 'create', // Limit validation to 'create' or 'update' operations
             ),
             'between' => array(
-                'rule' => array('between', 2, 300),
-                'message' => 'between 2 to 300 letters'
+                'rule' => array('between', 1, 300),
+                'message' => 'between 1 to 300 letters'
             )
         )
     );
