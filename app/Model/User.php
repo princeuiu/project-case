@@ -32,8 +32,8 @@ class User extends AppModel {
                 'on' => 'create', // Limit validation to 'create' or 'update' operations
             ),
             'between' => array(
-                'rule' => array('between', 3, 50),
-                'message' => 'between 3 to 50 letters'
+                'rule' => array('between', 1, 100),
+                'message' => 'between 1 to 100 letters'
             )
         ),
         'email' => array(

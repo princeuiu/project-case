@@ -35,8 +35,8 @@ class Tasklist extends AppModel {
             'on' => 'create', // Limit validation to 'create' or 'update' operations
             ),
             'between' => array(
-                'rule' => array('between', 10, 200),
-                'message' => 'between 10 to 200 letters'            
+                'rule' => array('between', 1, 200),
+                'message' => 'between 1 to 200 letters'            
             )
         )
     );
