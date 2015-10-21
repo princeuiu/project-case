@@ -35,8 +35,8 @@ class Client extends AppModel {
             'on' => 'create', // Limit validation to 'create' or 'update' operations
             ),
             'between' => array(
-                'rule' => array('between', 2, 50),
-                'message' => 'between 2 to 50 letters'            
+                'rule' => array('between', 1, 100),
+                'message' => 'between 1 to 100 letters'            
             )
         ),
         'address' => array(
@@ -49,8 +49,8 @@ class Client extends AppModel {
             'on' => 'create', // Limit validation to 'create' or 'update' operations
             ),
             'between' => array(
-                'rule' => array('between', 7, 100),
-                'message' => 'between 2 to 15 letters'            
+                'rule' => array('between', 1, 100),
+                'message' => 'between 1 to 100 letters'            
             )
         ),
         'phone' => array(
@@ -63,8 +63,8 @@ class Client extends AppModel {
             'on' => 'create', // Limit validation to 'create' or 'update' operations
             ),
             'between' => array(
-                'rule' => array('between', 2, 15),
-                'message' => 'between 2 to 15 letters'            
+                'rule' => array('between', 1, 50),
+                'message' => 'between 1 to 50 letters'            
             )
         )
     );

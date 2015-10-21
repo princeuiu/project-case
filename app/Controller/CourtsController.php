@@ -65,7 +65,7 @@ class CourtsController extends AppController {
         
         $options = array(
             'NOT' => array(
-                'parent_id' => null, 
+                'parent_id' => 0, 
             ),
         );
         $parents = $this->Court->generateTreeList($options,null,null," - ");
@@ -208,48 +208,45 @@ class CourtsController extends AppController {
         $this->check_access(array('employee', 'manager','admin'));
 
         //print_r($this->request->params); die;
-        $controller = $this->request->params['controller'];
-        $action = $this->request->params['action'];
-        extract($this->request->params["named"]);
         
-        if(isset($key) && isset($val)){
-            //$options["Lawsuit.title like"]="%$search%";
-            if($key == 'name' || $key == 'contact_person'){
-                $this->Paginator->settings = array(
-                    'conditions' => array('Client.'.$key.' LIKE' => "%$val%"),
-                    'limit' => 10,
-                    'order' => 'Lawsuit.created DESC'
-                );
-            }
-            else{
-                $this->Paginator->settings = array(
-                    'conditions' => array('Lawsuit.'.$key.' LIKE' => "%$val%"),
-                    'limit' => 10,
-                    'order' => 'Court.created DESC'
-                );
-            }
-        }
-        else{
-            $this->Paginator->settings = array(
-                'limit' => 10,
-                'order' => 'Court.created DESC'
-            );
-        }
         
-        //$items = $this->Paginator->paginate('Court');
+        
         
         $options = array(
             'NOT' => array(
                 'parent_id' => 0, 
             ),
         );
+        
+        $this->Paginator->settings = array(
+            'conditions' => $options,
+            'recursive' => -1,
+            'limit' => 10,
+            'order' => 'Court.created DESC'
+        );
+//        $items = $this->Paginator->paginate('Court');
         $items = $this->Court->generateTreeList($options,null,null," - ");
-        print_r($items); die;
+        //print_r($items); die;
         
         $this->set(compact('items'));
         
     }
     
+    function delete($id){
+        if($id == null){
+            throw new BadRequestException();
+        }
+        if($this->Court->removeFromTree($id, true)){
+            $this->Session->setFlash('<div class="alert alert-success">' . __('Item deleted successfully.') . '</div>');
+            $this->redirect(array('controller' => 'courts', 'action' => 'index'));
+            return true;
+        }
+        else{
+            $this->Session->setFlash('<div class="alert alert-danger">' . __('Can\'t delete item now, Please try again later.') . '</div>');
+            return;
+        }
+    }
+            
     
     
     function admin_remove_image($name) {
