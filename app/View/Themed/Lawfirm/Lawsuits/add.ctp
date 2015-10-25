@@ -68,6 +68,16 @@
                         </div>
                     </div>
                 </div>
+                <div class="control-group">
+                    <label class="control-label" for="LawsuitCourtName">Name of the Court </label>
+                    <div class="controls">
+                        <?php
+                        echo $this->Form->input('court_name', array('class' => 'span6 typeahead', 'placeholder' => 'Name of the Court', 'error' => array(
+                            'attributes' => array('escape' => false)
+                        )));
+                        ?>
+                    </div>
+                </div>
                 <div class="control-group hidden-phone">
                     <label class="control-label" for="LawsuitNote">Note</label>
                     <div class="controls">

@@ -36,11 +36,11 @@
             </div>
         </div>
         <div class="time">
-            <div class="date" style="font-size: 14px;"><?php echo $this->Time->format($userTasks['Task']['dead_line'], '%B %e, %Y'); ?></div>
+            <div class="date" style="font-size: 14px;"><?php echo $this->Time->format('jS F, Y',$userTasks['Task']['dead_line']); ?></div>
             <?php
                 if($userTasks['Task']['status'] == 'done'):
             ?>
-                <div class="date" style="font-size: 14px;"><?php echo $this->Time->format($userTasks['Task']['modified'], '%B %e, %Y'); ?></div>
+                <div class="date" style="font-size: 14px;"><?php echo $this->Time->format('jS F, Y',$userTasks['Task']['modified']); ?></div>
             <?php
                 else:
             ?>
@@ -63,6 +63,8 @@
             <fieldset>
                 <input name="data[TaskComment][user_id]" id="UserId" type="hidden" value="<?php echo Authsome::get("id") ?>" />
                 <input name="data[TaskComment][task_id]" id="TaskId" type="hidden" value="<?php echo $userTasks['Task']['id'] ?>" />
+                <input name="data[Lawsuit][type]" id="LawsuitType" type="hidden" value="<?php echo $userTasks['Lawsuit']['type'] ?>" />
+                <input name="data[Lawsuit][id]" id="LawsuitType" type="hidden" value="<?php echo $userTasks['Lawsuit']['id'] ?>" />
                 <div class="form-group">
                     <label for="comment">Comment:</label>
                     <textarea class="form-control span12" rows="2" id="comment" name="data[TaskComment][body]"></textarea>

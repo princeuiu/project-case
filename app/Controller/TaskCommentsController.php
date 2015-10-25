@@ -18,6 +18,8 @@ class TaskCommentsController extends AppController {
         //print_r($this->data);die;
         $taskId = $this->data['TaskComment']['task_id'];
         $userId = $this->data['TaskComment']['user_id'];
+        $lawsuitType = $this->data['Lawsuit']['type'];
+        $lawsuitId = $this->data['Lawsuit']['id'];
         if(isset($this->data['TaskComments']['done']) && $this->data['TaskComments']['done'] == true){
             $isTaskDone = $this->data['TaskComments']['done'];
         }
@@ -67,6 +69,10 @@ class TaskCommentsController extends AppController {
                 if($isTaskDone){
                     $this->Task->id =  $taskId;
                     $this->Task->saveField('status', 'done');
+                    if($lawsuitType == 'landvetting'){
+                        $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Task done. Please generate Invoice.') . '</div>');
+                        return $this->redirect(array('controller' => 'invoices', 'action' => 'generate', $lawsuitId));
+                    }
                 }
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Updated successfully.') . '</div>');
                 return $this->redirect(array('controller' => 'tasks', 'action' => 'details', $taskId));

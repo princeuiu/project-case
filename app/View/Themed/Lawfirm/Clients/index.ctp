@@ -17,16 +17,16 @@
                     
                     <?php foreach ($clients as $item): ?>
                         <tr>
-                            <td><?php echo $item['Client']['name']; ?></td>
+                            <td><?php echo $item['Client']['name'] . ' - ' . $item['Client']['branch']; ?></td>
                             <td><?php echo $item['Client']['address']; ?></td>
                             <td><?php echo $item['Client']['contact_person']; ?></td>
                             <td><?php echo $item['Client']['phone']; ?></td>
                             <td><span class="label <?php if($item['Client']['status']== 'active'){ echo 'label-success'; } else{ echo 'label-warning';} ?>"><?php echo h($item['Client']['status']); ?></span></td>
                             <td class="center">
-                                <a class="btn btn-info" href="<?php echo $this->Html->url(array('controller' => 'clients', 'action' => 'admin_edit', $item['Client']['id'])); ?>">
+                                <a class="btn btn-info" href="<?php echo $this->Html->url(array('controller' => 'clients', 'action' => 'edit', $item['Client']['id'])); ?>">
                                     <i class="halflings-icon white edit"></i>  
                                 </a>
-                                <a class="btn btn-danger" href="<?php echo $this->Html->url(array('controller' => 'clients', 'action' => 'admin_edit', $item['Client']['id'] , __('Are you sure you want to delete  %s?', $item['Client']['id']))); ?>">
+                                <a class="btn btn-danger" href="<?php echo $this->Html->url(array('controller' => 'clients', 'action' => 'edit', $item['Client']['id'] , __('Are you sure you want to delete  %s?', $item['Client']['id']))); ?>">
                                     <i class="halflings-icon white trash"></i> 
                                 </a>
                             </td>

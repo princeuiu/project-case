@@ -8,7 +8,8 @@ class InvoicesController extends AppController {
     public $uses = array('Invoice', 'Lawsuit', 'Client','Cost');
 
     public function generate($id = null) {
-        $this->check_access(array('manager','admin'));
+        //$this->check_access(array('manager','admin'));
+        $this->check_access(array('employee', 'manager','admin'));
 
         if (!empty($this->data)) {
             $printPDF = false;
