@@ -31,6 +31,16 @@
                         </div>
                     </div>
                     <div class="control-group">
+                        <label class="control-label" for="ClientBranch">Branch </label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('branch', array('class' => 'span6 typeahead', 'placeholder' => 'Branch name', 'error' => array(
+                                    'attributes' => array('escape' => false)
+                            )));
+                            ?>
+                        </div>
+                    </div>
+                    <div class="control-group">
                         <label class="control-label" for="ClientAddress">Address </label>
                         <div class="controls">
                             <?php

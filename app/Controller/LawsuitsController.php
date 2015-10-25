@@ -53,9 +53,22 @@ class LawsuitsController extends AppController {
             ),
         );
         $courts = $this->Court->generateTreeList($options,null,null," - ");
-        $clients = $this->Client->find('list', array(
-            'conditions' => array('Client.status' => 'active')
+        $clientsList = $this->Client->find('all', array(
+            'conditions' => array('Client.status' => 'active'),
+            'recursive' => -1,
+            'fields' => array('Client.id', 'Client.name', 'Client.branch')
         ));
+        $clients = array();
+        foreach($clientsList as $clientData){
+            if($clientData['Client']['branch'] != ''){
+                $clients[$clientData['Client']['id']] = $clientData['Client']['name'] . ' - ' . $clientData['Client']['branch'];
+            }
+            else{
+                $clients[$clientData['Client']['id']] = $clientData['Client']['name'];
+            }
+            
+        }
+//        print_r($clients); die;
 
         $this->set(compact('clients','courts','years'));
     }

@@ -64,7 +64,7 @@
                 echo '<div class="box span12" style="margin-left: 0px;"><div class="box-header"><h2><i class="halflings-icon white white tasks"></i><span class="break"></span>';
                 echo $this_task['Tasklist']['name'];
 //                echo '<a href="/tasks/details/' .$this_task['Task']['id']. '">' . $this_task['Task']['name'] . '</a>';
-                echo '</h2><div class="box-icon"><a href="/tasks/details/' .$this_task['Task']['id']. '"><i class="halflings-icon white eye-open"></i></a><a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>';
+                echo '</h2><div class="box-icon"><a href="#" title="Upload Office Copy" data-toggle="modal" data-target="#modalOfficeCopy" data-taskid = "' .$this_task['Task']['id']. '"><i class="halflings-icon white upload"></i></a><a href="/tasks/details/' .$this_task['Task']['id']. '"><i class="halflings-icon white eye-open"></i></a><a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>';
                 echo'</div></div><div class="box-content">';
                 echo 'Description : ' .$this_task['Task']['description'] . '</br>';
                 echo 'Dead Line : ' .$this_task['Task']['dead_line'] . '</br>';
@@ -81,6 +81,59 @@
             }
 
             ?>
+        </div>
+        
+        <!-- Modal -->
+        <div id="modalOfficeCopy" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="box span12">
+                            <div class="box-header" data-original-title>
+                                <h2><i class="halflings-icon white edit"></i><span class="break"></span><?php echo __('Upload Office copy.'); ?></h2>
+                            </div>
+                            <div class="box-content">
+                                <?php
+                                echo $this->Form->create('Client', array(
+                                    'action' => $this->action,
+                                    'class' => 'form-horizontal',
+                                    'type' => 'file',
+                                    'inputDefaults' => array(
+                                        'div' => false,
+                                        'label' => false
+                                    )
+                                ));
+                                ?>
+                                <fieldset>
+                                    <div class="control-group">
+                                        <label class="control-label" for="ClientName">Name </label>
+                                        <div class="controls">
+                                            <?php
+                                            echo $this->Form->input('name', array('class' => 'span6 typeahead', 'placeholder' => 'Client name', 'error' => array(
+                                                    'attributes' => array('escape' => false)
+                                            )));
+                                            ?>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                </form>   
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" id="save-client-on">Save changes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div><!--/span-->
 
