@@ -27,7 +27,7 @@
                         <div><?php echo $task['Task']['description']; ?></div>
                     </div>
                     <div class="time">
-                        <div class="date"><?php echo $this->Time->format($task['Task']['dead_line'], '%B %e, %Y'); ?></div>
+                        <div class="date"><?php echo $this->Time->format('jS F, Y',$task['Task']['dead_line']); ?></div>
                         <div><?php echo $task['Task']['datedifftxt']; ?></div>
                     </div>
                 </div>

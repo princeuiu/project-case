@@ -55,16 +55,16 @@
                         ?>
                     </div>
                 </div>
-                <div class="control-group">
+<!--                <div class="control-group">
                     <label class="control-label" for="CourtName">Name of the Court </label>
                     <div class="controls">
                         <?php
-                        echo $this->Form->input('court_name', array('class' => 'span6 typeahead', 'placeholder' => 'Name of the Court', 'error' => array(
-                            'attributes' => array('escape' => false)
-                        )));
+//                        echo $this->Form->input('court_name', array('class' => 'span6 typeahead', 'placeholder' => 'Name of the Court', 'error' => array(
+//                            'attributes' => array('escape' => false)
+//                        )));
                         ?>
                     </div>
-                </div>
+                </div>-->
                 <div class="control-group">
                     <label class="control-label" for="Description">Steps Taken </label>
                     <div class="controls">
