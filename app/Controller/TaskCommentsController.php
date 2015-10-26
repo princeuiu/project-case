@@ -89,6 +89,38 @@ class TaskCommentsController extends AppController {
         }
 
     }
+    
+    
+    public function add_office_file(){
+//        print_r($this->data); die;
+        $path = WWW_ROOT . 'uploads' . DS . 'doc' . DS;
+        $commentId = 0;
+        $lawsuitId = $this->data['TaskComments']['lawsuit_id'];
+        $taskId = $this->data['TaskComments']['task_id'];
+        $files = $this->data['TaskComments']['files'];
+        if ($files['error'] == 0){
+            $fileData = array(
+                'WantingDoc' => array(
+                    'task_id' => $taskId,
+                    'comment_id' => $commentId,
+                    'name' => 't' . $taskId . 'c' . $commentId . $files['name'],
+                    'path' => $path,
+                    'office_copy' => true
+                )
+            );
+            //print_r($fileData);
+            $this->WantingDoc->create();
+            if($this->WantingDoc->save($fileData)) {
+                if (move_uploaded_file($files['tmp_name'], ($path.'t' . $taskId . 'c' . $commentId . $files['name']))) {
+                    $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Office copy uploaded successfully.') . '</div>');
+                    return $this->redirect(array('controller' => 'lawsuits', 'action' => 'details', $lawsuitId));
+                } else {
+                    $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t upload Office copy now. Please try again later.') . '</div>');
+                    return $this->redirect(array('controller' => 'lawsuits', 'action' => 'details', $lawsuitId));
+                }
+            }
+        }
+    }
 
 
 }
