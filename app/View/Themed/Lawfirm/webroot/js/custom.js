@@ -2491,4 +2491,27 @@ $(document).ready(function(){
         
     });
     
+    $('.officeFileUploadBtn').click(function(){
+        var caseId = this.getAttribute("data-caseid");
+        var taskId = this.getAttribute("data-taskid");
+        //console.log(taskId);
+        $('#modalCaseId').val(caseId);
+        $('#modalTaskId').val(taskId);
+    });
+    
+    $('#submit-office-upload-file').click(function(){
+        $( "#addOfficeFile" ).submit();
+    });
+    
+//    $('#modalOfficeCopy').on('show.bs.modal', function (event) {
+//        var button = $(event.relatedTarget); // Button that triggered the modal
+//        console.log(button);
+//        //var taskId = button.data('taskid'); // Extract info from data-* attributes
+//        var taskId = 'hallo there';
+//        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+//        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+//        var modal = $(this);
+//        modal.find('#modalTaskId').val(taskId);
+//    });
+    
 });
