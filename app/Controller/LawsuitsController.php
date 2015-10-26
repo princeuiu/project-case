@@ -154,9 +154,10 @@ class LawsuitsController extends AppController {
             'conditions' => array('Task.lawsuit_id' => $id)
         ));
         $task_files = $this->WantingDoc->find('all', array('conditions'=>array('WantingDoc.task_id'=>$caseAllTask,'WantingDoc.done'=>1)));
-//        print_r($this_case); die;
+        $taskOfficeCopies = $this->WantingDoc->find('all', array('conditions'=>array('WantingDoc.task_id'=>$caseAllTask,'WantingDoc.office_copy'=>1)));
+//        print_r($taskOfficeCopy); die;
 //
-        $this->set(compact('histories', 'this_case', 'this_case_task','task_files'));
+        $this->set(compact('histories', 'this_case', 'this_case_task','task_files','taskOfficeCopies'));
 
 
         $this->render('detail');
