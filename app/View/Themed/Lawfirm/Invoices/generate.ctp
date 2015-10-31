@@ -11,8 +11,7 @@
         <div class="box-content">
             <div class="page-header">
                 <?php
-                    $invoiceName = $lawsuitInfo['Lawsuit']['number'] . '-0' . $lawsuitInfo['Lawsuit']['invoice_period'] . '-' . date('d-m-y');
-                    
+                $invoiceName = $lawsuitInfo['Lawsuit']['number'] . '-0' . $lawsuitInfo['Lawsuit']['invoice_period'] . '-' . date('d-m-y');
                 ?>
                 <h2>Invoice # <small><?php echo $invoiceName; ?></small></h2>
             </div>
@@ -23,9 +22,7 @@
                 <p><?php echo $lawsuitInfo['Client']['contact_person']; ?></p>
                 <p><?php echo $lawsuitInfo['Client']['phone']; ?></p>
             </div>
-            <div class="page-header">
-                <h3 style="text-align: center;">Description | amount</h3>
-            </div>
+
             <?php
             echo $this->Form->create('Invoice', array(
                 'action' => $this->action,
@@ -37,68 +34,114 @@
                 )
             ));
             ?>
-                <fieldset>
-                    <?php
-                        echo $this->Form->hidden('name', array('value' => $invoiceName));
-                        echo $this->Form->hidden('lawsuit_id', array('value' => $lawsuitInfo['Lawsuit']['id']));
-                        echo $this->Form->hidden('client_id', array('value' => $lawsuitInfo['Client']['id']));
-                        echo $this->Form->hidden('status', array('value' => 'unpaid'));
-                        echo $this->Form->hidden('lawsuit_invoice_period', array('value' => $lawsuitInfo['Lawsuit']['invoice_period']));
-                    ?>
-                    <div class="input_fields_wrap">
-                        <button class="btn btn-primary add_field_button" title="Add new row"><i class="halflings-icon white white plus-sign"></i></button>
-                        <div class="control-group">
-                            <label class="control-label">Description | Amount</label>
-                            <div class="controls">
-                                <textarea name="data[Invoice][description][]"></textarea>
-                                <div class="input-prepend input-append">
-                                    <span class="add-on">TK</span><input name="data[Invoice][amount][]" step="any" type="number"><span class="add-on">.00</span>
-                                </div>                            
-                            </div>
-                        </div>
-                    </div>
-            <div class="page-header">
-                <h3 style="text-align: center;">Deduction description | Deduction amount</h3>
-            </div>
-                    <div class="less_input_fields_wrap">
-                        <button class="btn btn-primary less_add_field_button" title="Add new row"><i class="halflings-icon white white plus-sign"></i></button>
-                        <div class="control-group">
-                            <label class="control-label">Description | Amount</label>
-                            <div class="controls">
-                                <textarea name="data[Invoice][deduction][]"></textarea>
-                                <div class="input-prepend input-append">
-                                    <span class="add-on">TK</span><input name="data[Invoice][less_amount][]" step="any" type="number"><span class="add-on">.00</span>
-                                </div>                            
-                            </div>
-                        </div>
-                    </div>
+            <fieldset>
+                <?php
+                echo $this->Form->hidden('name', array('value' => $invoiceName));
+                echo $this->Form->hidden('lawsuit_id', array('value' => $lawsuitInfo['Lawsuit']['id']));
+                echo $this->Form->hidden('client_id', array('value' => $lawsuitInfo['Client']['id']));
+                echo $this->Form->hidden('status', array('value' => 'unpaid'));
+                echo $this->Form->hidden('lawsuit_invoice_period', array('value' => $lawsuitInfo['Lawsuit']['invoice_period']));
+                ?>
+
+                <div class="page-header">
+                    <h3 style="text-align: center;">Fixed costs | Qty</h3>
+                </div>
+                <div class="fixed_input_fields_wrap">
+                    <button class="btn btn-primary fixed_add_field_button" title="Add new row"><i class="halflings-icon white white plus-sign"></i></button>
                     <div class="control-group">
-                        <label class="control-label" for="LawsuitSubject">Subject</label>
+                        <label class="control-label">Fixed costs | Qty</label>
                         <div class="controls">
                             <?php
-                            echo $this->Form->input('subject', array('class' => 'span6 typeahead', 'placeholder' => 'Subject', 'error' => array(
-                                    'attributes' => array('escape' => false)
-                            )));
+                            echo $this->Form->input('cost_id', array(
+                                'options' => $costList,
+                                'name' => 'data[Invoice][cost_id][]'
+                            ));
                             ?>
+                            <div class="input-prepend input-append">
+                                <input name="data[Invoice][cost_qty][]" step="any" type="number">
+                            </div>                            
                         </div>
                     </div>
+                </div>
+                
+                
+                <div class="page-header">
+                    <h3 style="text-align: center;">Variable costs | amount</h3>
+                </div>
+                <div class="variable_input_fields_wrap">
+                    <button class="btn btn-primary variable_add_field_button" title="Add new row"><i class="halflings-icon white white plus-sign"></i></button>
                     <div class="control-group">
-                        <label class="control-label" for="LawsuitNote">Note</label>
+                        <label class="control-label">Description | Amount</label>
                         <div class="controls">
-                            <?php
-                            echo $this->Form->input('note', array('class' => 'span6 typeahead', 'placeholder' => 'Note', 'error' => array(
-                                    'attributes' => array('escape' => false)
-                            )));
-                            ?>
-                            <?php //echo $this->Form->textarea('note', array('class'=>'cleditor')); ?>
+                            <textarea name="data[Invoice][v_cost][]"></textarea>
+                            <div class="input-prepend input-append">
+                                <span class="add-on">TK</span><input name="data[Invoice][v_amount][]" step="any" type="number"><span class="add-on">.00</span>
+                            </div>                            
                         </div>
                     </div>
-                    <div class="form-actions">
-                        <button type="submit" class="btn btn-primary" name="btnPrintPDF">Save and Print PDF</button>
-                        <button type="submit" class="btn btn-primary" name="btnSaveInv">Save changes</button>
-                        <button type="reset" class="btn">Cancel</button>
+                </div>
+
+                <div class="page-header">
+                    <h3 style="text-align: center;">Professional fees | amount</h3>
+                </div>
+                <div class="input_fields_wrap">
+                    <button class="btn btn-primary add_field_button" title="Add new row"><i class="halflings-icon white white plus-sign"></i></button>
+                    <div class="control-group">
+                        <label class="control-label">Description | Amount</label>
+                        <div class="controls">
+                            <textarea name="data[Invoice][description][]"></textarea>
+                            <div class="input-prepend input-append">
+                                <span class="add-on">TK</span><input name="data[Invoice][amount][]" step="any" type="number"><span class="add-on">.00</span>
+                            </div>                            
+                        </div>
                     </div>
-                </fieldset>
+                </div>
+                <div class="page-header">
+                    <h3 style="text-align: center;">Others</h3>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="LawsuitVat">VAT</label>
+                    <div class="controls">
+                        <div class="input-prepend input-append">
+                            <input name="data[Invoice][vat]" step="any" type="number"><span class="add-on">&percnt;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="LawsuitTax">Income Tax</label>
+                    <div class="controls">
+                        <div class="input-prepend input-append">
+                            <input name="data[Invoice][tax]" step="any" type="number"><span class="add-on">&percnt;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="LawsuitSubject">Subject</label>
+                    <div class="controls">
+                        <?php
+                        echo $this->Form->input('subject', array('class' => 'span6 typeahead', 'placeholder' => 'Subject', 'error' => array(
+                                'attributes' => array('escape' => false)
+                        )));
+                        ?>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="LawsuitNote">Note</label>
+                    <div class="controls">
+                        <?php
+                        echo $this->Form->input('note', array('class' => 'span6 typeahead', 'placeholder' => 'Note', 'error' => array(
+                                'attributes' => array('escape' => false)
+                        )));
+                        ?>
+                        <?php //echo $this->Form->textarea('note', array('class'=>'cleditor')); ?>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" name="btnPrintPDF">Save and Print PDF</button>
+                    <button type="submit" class="btn btn-primary" name="btnSaveInv">Save changes</button>
+                    <button type="reset" class="btn">Cancel</button>
+                </div>
+            </fieldset>
             <?php echo $this->Form->end(); ?>
         </div>
     </div><!--/span-->

@@ -12,6 +12,7 @@ class InvoicesController extends AppController {
         $this->check_access(array('employee', 'manager','admin'));
 
         if (!empty($this->data)) {
+//            print_r($this->data); die;
             $printPDF = false;
             if(isset($_POST['btnPrintPDF'])){
                 $printPDF = true;
@@ -21,13 +22,66 @@ class InvoicesController extends AppController {
             $lawsuitId = $invoiceData['Invoice']['lawsuit_id'];
             $invoicePeriod = $invoiceData['Invoice']['lawsuit_invoice_period'];
             //print_r($invoiceData); die;
+            $allCostIds = $this->data['Invoice']['cost_id'];
+            $allCostQtys = $this->data['Invoice']['cost_qty'];
+            $costsCount = count($allCostIds);
+            
+            $allCostsList = array();
+            for ($count = 0; $count < $costsCount; $count++) {
+                $allCostsList[$allCostIds[$count]] = $allCostQtys[$count];
+            }
+            
+            $costsInfo = $this->Cost->find('all', array(
+                    'conditions' => array('Cost.id' => $allCostIds),
+                    'recursive' => -1,
+                    'fields' => array('Cost.id', 'Cost.name', 'Cost.price'),
+                ));
+            
+            $allCostsData = array();
+            
+            $totalFixedCost = 0;
+            
+            foreach($costsInfo as $eachCost){
+                $qty = $allCostsList[$eachCost['Cost']['id']];
+                if($qty != 0){
+                    $allCostsData[] = array(
+                        'name' => $eachCost['Cost']['name'],
+                        'price' => $eachCost['Cost']['price'],
+                        'qty' => $qty
+                    );
+                }
+                $totalFixedCost += $eachCost['Cost']['price'] * $qty;
+            }
+//            print_r($allCostsData); die;
+            
+            
+            $allVCosts = $this->data['Invoice']['v_cost'];
+            $allVCostAmounts = $this->data['Invoice']['v_amount'];
             $allDesc = $this->data['Invoice']['description'];
             $allAmount = $this->data['Invoice']['amount'];
-            $allDeduc = $this->data['Invoice']['deduction'];
-            $allDeducAmount = $this->data['Invoice']['less_amount'];
-
+            
+            
+            
+            
+            $vCostsCount = count($allVCosts);
+            
+            $vCostsData = array();
+            for ($count = 0; $count < $vCostsCount; $count++) {
+                if($allVCosts[$count] != ''){
+                    $vCostsData[$count] = array(
+                        'vCost' => $allVCosts[$count],
+                        'amount' => $allVCostAmounts[$count]
+                    );
+                }
+            }
+//            print_r($vCostsData); die;
+            $totalVCostsAmount = 0;
+            foreach ($allVCostAmounts as $eachVcostAmount) {
+                $totalVCostsAmount += $eachVcostAmount;
+            }
+//            echo $totalVCostsAmount; die;
+            
             $descCount = count($allDesc);
-            $ddCount = count($allDeduc);
 
 //            if ($descCount != $amountCount) {
 //                $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t generate invoice now, Please try again later.') . '</div>');
@@ -41,33 +95,54 @@ class InvoicesController extends AppController {
                 );
             }
             
-            $dedDescData = array();
-            for ($count = 0; $count < $ddCount; $count++) {
-                $dedDescData[$count] = array(
-                    'deduction' => $allDeduc[$count],
-                    'amount' => $allDeducAmount[$count]
-                );
-            }
+//            print_r($descData); die;
 
             $totalAmount = 0;
+            $totalProFees = 0;
             foreach ($allAmount as $eachAmount) {
-                $totalAmount += $eachAmount;
+                $totalProFees += $eachAmount;
+            }
+//            echo $totalProFees; die;
+            
+            
+            
+//            echo $totalAmount; die;
+            $vatAmount = 0;
+            if(isset($invoiceData['Invoice']['vat']) && ($invoiceData['Invoice']['vat'] != '' || $invoiceData['Invoice']['vat'] != 0)){
+                $vatAmount = $totalProFees * $invoiceData['Invoice']['vat'] / 100;
+                $totalProFees += $vatAmount;
+            }
+            else{
+                $invoiceData['Invoice']['vat'] = 0;
             }
             
-            $totalDeduction = 0;
-            foreach ($allDeducAmount as $eachDedAmount) {
-                $totalDeduction += $eachDedAmount;
+            $totalAmount = $totalFixedCost + $totalVCostsAmount + $totalProFees;
+            
+            $taxAmount = 0;
+            if(isset($invoiceData['Invoice']['tax']) && ($invoiceData['Invoice']['tax'] != '' || $invoiceData['Invoice']['tax'] != 0)){
+                $taxAmount = $totalProFees * $invoiceData['Invoice']['tax'] / 100;
             }
+            else{
+                $invoiceData['Invoice']['tax'] = 0;
+            }
+            
             //$vatAmout = $totalAmount * $vat / 100;
-            $finalAmout = $totalAmount - $totalDeduction;
+            $finalAmout = $totalAmount - $vatAmount - $taxAmount;
 
+            $invoiceData['Invoice']['f_cost'] = serialize($allCostsData);
+            $invoiceData['Invoice']['f_amount'] = $totalFixedCost;
+            $invoiceData['Invoice']['v_cost'] = serialize($vCostsData);
+            $invoiceData['Invoice']['v_amount'] = $totalVCostsAmount;
             $invoiceData['Invoice']['description'] = serialize($descData);
-            $invoiceData['Invoice']['amount'] = $totalAmount;
-            $invoiceData['Invoice']['deduction'] = serialize($dedDescData);
-            $invoiceData['Invoice']['less_amount'] = $totalDeduction;
+            $invoiceData['Invoice']['amount'] = $totalProFees;
+            $invoiceData['Invoice']['total_amount'] = $totalAmount;
+            $invoiceData['Invoice']['vat_amount'] = $vatAmount;
+            $invoiceData['Invoice']['tax_amount'] = $taxAmount;
+            $invoiceData['Invoice']['total_deduction'] = $vatAmount + $taxAmount;
             $invoiceData['Invoice']['final_amount'] = $finalAmout;
-            $invoiceData['Invoice']['vat'] = 0;
-            //print_r($invoiceData); die;
+            unset($invoiceData['Invoice']['cost_id']);
+            unset($invoiceData['Invoice']['cost_qty']);
+//            print_r($invoiceData); die;
 
             if ($this->Invoice->save($invoiceData)) {
                 $this->Lawsuit->id = $lawsuitId;
@@ -99,8 +174,26 @@ class InvoicesController extends AppController {
             throw new NotFoundException(__('Invalid Case'));
         }
         $lawsuitInfo = $this->Lawsuit->read();
-        //print_r($lawsuitInfo); die;
-        $this->set(compact('lawsuitInfo'));
+        $costList = $this->Cost->find('list', array(
+            'conditions' => array('Cost.status' => 'active'),
+            'recursive' => -1
+        ));
+        $costListArr = $this->Cost->find('all', array(
+            'conditions' => array('Cost.status' => 'active'),
+            'recursive' => -1,
+            'fields' => array('Cost.id','Cost.name')
+        ));
+//        $costListing = array();
+//        foreach($costListArr as $eachCost){
+//            $costListing[] = array(
+//                'id' => $eachCost['Cost']['id'],
+//                'name' => $eachCost['Cost']['name']
+//            );
+//        }
+//        $costListTxt = json_encode($costListing);
+//        echo $costListTxt; die;
+//        print_r($costListArr); die;
+        $this->set(compact('lawsuitInfo','costList'));
     }
 
     public function detail($id = null) {
@@ -122,12 +215,17 @@ class InvoicesController extends AppController {
 //            );
 //        
         //print_r($invoiceData); die;
+        $fCosts = array(); $vCosts = array();
+        if(!empty($invoiceData['Invoice']['f_cost'])){
+            $fCosts = unserialize($invoiceData['Invoice']['f_cost']);
+        }
+        if(!empty($invoiceData['Invoice']['v_cost'])){
+            $vCosts = unserialize($invoiceData['Invoice']['v_cost']);
+        }
+//        print_r($fCosts); die;
         $descriptions = unserialize($invoiceData['Invoice']['description']);
-        //$amountInWord = $this->convert_number_to_words($invoiceData['Invoice']['amount']);
-        $dedDescriptions = unserialize($invoiceData['Invoice']['deduction']);
-        //$amountInWord = $this->convert_number_to_words($invoiceData['Invoice']['less_amount']);
         $finalAmountInWord = $this->convert_number_to_words($invoiceData['Invoice']['final_amount']);
-        $this->set(compact('invoiceData', 'descriptions', 'dedDescriptions','amountInWord', 'finalAmountInWord'));
+        $this->set(compact('invoiceData', 'descriptions', 'fCosts', 'vCosts', 'finalAmountInWord'));
     }
     
     public function paid($id = null){
