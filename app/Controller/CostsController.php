@@ -71,6 +71,25 @@ class CostsController extends AppController {
     }
     
     
+    public function ajax_getcostlists(){
+        
+        $costListArr = $this->Cost->find('all', array(
+            'conditions' => array('Cost.status' => 'active'),
+            'recursive' => -1,
+            'fields' => array('Cost.id','Cost.name')
+        ));
+        $costListing = array();
+        foreach($costListArr as $eachCost){
+            $costListing[] = array(
+                'id' => $eachCost['Cost']['id'],
+                'name' => $eachCost['Cost']['name']
+            );
+        }
+        Echo json_encode($costListing);
+        //print_r($lawsuitsList);
+        exit;
+    }
+    
     public function delete($id) {
         if($id == null){
             throw new BadRequestException();
