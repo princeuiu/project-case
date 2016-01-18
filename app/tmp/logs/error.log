@@ -27047,3 +27047,12 @@ Request URL: /admin
 Stack Trace:
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2016-01-18 12:42:44 Error: [MissingControllerException] Controller class ItemsController could not be found.
+Exception Attributes: array (
+  'class' => 'ItemsController',
+  'plugin' => NULL,
+)
+Request URL: /admin
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
