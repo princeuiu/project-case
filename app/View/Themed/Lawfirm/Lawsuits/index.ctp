@@ -41,10 +41,17 @@
                                 $number = $item["Lawsuit"]["number"];
                             }
                             else{
-                                $number = '<span style="color:red;">Not yet given</span>';
+                                $number = '<span style="color:red;"> - - - </span>';
                             }
                             ?>
-                            <?php echo $number ?>
+                            <?php
+                            if($item["Lawsuit"]["type"] == 'litigation'){
+                                echo $allCourts[$item["Court"]["parent_id"]] . ' - ' . $allCourts[$item["Court"]["id"]] . ' - ' . $number . ' of ' . $item["Lawsuit"]["year"];
+                            }
+                            else{
+                                echo 'Doc - ' . $item["Lawsuit"]["number"];
+                            }
+                            ?>
                         </td>
                         <td><?php echo $item['Client']['name']; ?></td>
                         <td><?php echo $item['Client']['contact_person']; ?></td>

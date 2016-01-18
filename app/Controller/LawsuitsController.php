@@ -33,6 +33,10 @@ class LawsuitsController extends AppController {
                 $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Case opened successfully.') . '</div>');
                 $Activity = ClassRegistry::init('Activity');
                 $Activity->logintry("lawsuit","new",$this->Lawsuit->id,Authsome::get("id"),0,'');
+                if($tempo['Lawsuit']['break_point'] == '0' && $tempo['Lawsuit']['open_close'] == '0'){
+                    $Activity->logintry("invoice","generate",0,Authsome::get("id"),$this->Lawsuit->id,'');
+                    return $this->redirect(array('controller' => 'invoices', 'action' => 'generate', $this->Lawsuit->id));
+                }
                 return $this->redirect(array('controller' => 'lawsuits', 'action' => 'edit', $this->Lawsuit->id));
             }
             else{
@@ -52,7 +56,24 @@ class LawsuitsController extends AppController {
                 'parent_id' => 0, 
             ),
         );
-        $courts = $this->Court->generateTreeList($options,null,null," - ");
+//        $courts = $this->Court->generateTreeList($options,null,null," - ");
+        $courtsArray = $this->Court->children(1, true, array('id', 'name'));
+        $courts = array();
+        $count = 0;
+        $selectedCourtId = 0;
+        foreach($courtsArray as $eachItem){
+            $courts[$eachItem['Court']['id']] = $eachItem['Court']['name'];
+            if($count == 0){
+                $selectedCourtId = $eachItem['Court']['id'];
+            }
+            $count++;
+        }
+        $categoriesArray = $this->Court->children($selectedCourtId, true, array('id', 'name'));
+        $categories = array();
+        foreach($categoriesArray as $eachItem){
+            $categories[$eachItem['Court']['id']] = $eachItem['Court']['name'];
+        }
+//        print_r($courts); die;
         $clientsList = $this->Client->find('all', array(
             'conditions' => array('Client.status' => 'active'),
             'recursive' => -1,
@@ -68,9 +89,11 @@ class LawsuitsController extends AppController {
             }
             
         }
+        $cNumber = $this->Lawsuit->find('count');
+        $cNumber++;
 //        print_r($clients); die;
 
-        $this->set(compact('clients','courts','years'));
+        $this->set(compact('clients','courts', 'categories','years','cNumber'));
     }
 
 
@@ -106,13 +129,31 @@ class LawsuitsController extends AppController {
                 'parent_id' => 0, 
             ),
         );
-        $courts = $this->Court->generateTreeList($options,null,null," - ");
+//        $courts = $this->Court->generateTreeList($options,null,null," - ");
+        
+        
+        $courtsArray = $this->Court->children(1, true, array('id', 'name'));
+        $courts = array();
+        $count = 0;
+        $selectedCourtId = 0;
+        foreach($courtsArray as $eachItem){
+            $courts[$eachItem['Court']['id']] = $eachItem['Court']['name'];
+            if($count == 0){
+                $selectedCourtId = $eachItem['Court']['id'];
+            }
+            $count++;
+        }
+        $categoriesArray = $this->Court->children($selectedCourtId, true, array('id', 'name'));
+        $categories = array();
+        foreach($categoriesArray as $eachItem){
+            $categories[$eachItem['Court']['id']] = $eachItem['Court']['name'];
+        }
 
         $clients = $this->Client->find('list', array(
             'conditions' => array('Client.status' => 'active')
         ));
         $case_id = $id;
-        $this->set(compact('clients','case_id','courts','years'));
+        $this->set(compact('clients','courts', 'categories','case_id','courts','years'));
 
 
         $this->render('add');
@@ -197,9 +238,14 @@ class LawsuitsController extends AppController {
         
         $items = $this->Paginator->paginate('Lawsuit');
         
-//        print_r($items); die;
+        $allCourts = $this->Court->find('list', array(
+            'conditions' => array('Court.status' => 'active'),
+            'fields' => array('Court.id', 'Court.name')
+        ));
+
+//        print_r($allCourts); die;
         $caseType = "all";
-        $this->set(compact('items', 'caseType', 'controller', 'action'));
+        $this->set(compact('items', 'caseType', 'allCourts', 'controller', 'action'));
 
 
         //$this->set("search",$search);
