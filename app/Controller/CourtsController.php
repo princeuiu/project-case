@@ -246,6 +246,23 @@ class CourtsController extends AppController {
             return;
         }
     }
+    
+    public function ajax_getcat(){
+        
+        $data = $_POST['data'];
+        $id = $data['court_id'];
+        $categoriesArray = $this->Court->children($id, true, array('id', 'name'));
+        $categories = array();
+        foreach($categoriesArray as $eachItem){
+            $categories[] = array(
+                'id' => $eachItem['Court']['id'],
+                'name' => $eachItem['Court']['name']
+            );
+        }
+        Echo json_encode($categories);
+        //print_r($listYear);
+        exit;
+    }
             
     
     

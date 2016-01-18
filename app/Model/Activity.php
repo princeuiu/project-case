@@ -44,6 +44,28 @@ class Activity extends AppModel {
 	}
         
         
+        public function has_activity($item = null){
+            if(is_array($item)){
+                $cond = array();
+                if(array_key_exists('item_type', $item)){
+                    $cond['item_type'] = $item['item_type'];
+                }
+                if(array_key_exists('event', $item)){
+                    $cond['event'] = $item['event'];
+                }
+                if(array_key_exists('item_id', $item)){
+                    $cond['item_id'] = $item['item_id'];
+                }
+                if(array_key_exists('reference_id', $item)){
+                    $cond['reference_id'] = $item['reference_id'];
+                }
+//                $activityId = $this->find();
+            }
+        }
+
+
+
+
 
 
         /**
