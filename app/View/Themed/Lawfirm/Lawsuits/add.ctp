@@ -147,10 +147,9 @@
                         <label class="control-label" for="LawsuitBreakPoint">Appearing for</label>
                         <div class="controls">
                             <?php
-                            echo $this->Form->input('appearing_for', array(
-                                'options' => array('party_01' => '1st Party', 'party_02' => '2nd Party'),
-                                'data-rel' => 'chosen'
-                            ));
+                            echo $this->Form->input('party_01', array('class' => 'span6 typeahead', 'placeholder' => 'Appearing for', 'error' => array(
+                                'attributes' => array('escape' => true)
+                            )));
                             ?>
                         </div>
                     </div>
@@ -180,7 +179,7 @@
                 </div>
 
                 <div class="control-group">
-                    <label class="control-label" for="LawsuitCreated">Created</label>
+                    <label class="control-label" for="LawsuitCreated">Received Date</label>
                     <div class="controls">
                         <input type="text" name="data[Lawsuit][created]" class="input-xlarge datepicker" id="LawsuitCreated" <?php
                         if (isset($this->data['Lawsuit']['created'])) {
@@ -260,7 +259,7 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                                </form>   
+                                </form>
 
                             </div>
                         </div>

@@ -40,8 +40,8 @@ class LawsuitsController extends AppController {
                 return;
             }
         }
-        
-        
+
+
         $years = array();
         $currentYear = intval(date('o'));
         for($i=1972;$i <= $currentYear; $i++){
@@ -199,7 +199,16 @@ class LawsuitsController extends AppController {
         
 //        print_r($items); die;
         $caseType = "all";
-        $this->set(compact('items', 'caseType', 'controller', 'action'));
+
+        $options = array(
+            'NOT' => array(
+                'parent_id' => 0,
+            ),
+        );
+
+        $courts = $this->Court->generateTreeList($options,null,null," - ");
+
+        $this->set(compact('items', 'caseType', 'controller', 'action','courts'));
 
 
         //$this->set("search",$search);

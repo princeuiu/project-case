@@ -55,7 +55,7 @@
                         </b>
                     </td>
                     <td><?php
-                        echo ($historyData['History']['reporting_date']);
+                        echo date("d-m-Y", strtotime($historyData['History']['reporting_date']));
                         ?>
                     </td>
                 </tr>

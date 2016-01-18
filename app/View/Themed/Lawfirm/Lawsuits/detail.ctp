@@ -67,9 +67,10 @@
                 echo '</h2><div class="box-icon"><a href="#" title="Upload Office Copy" class="officeFileUploadBtn" data-toggle="modal" data-target="#modalOfficeCopy" data-taskid = "' .$this_task['Task']['id']. '" data-caseid = "' .$this_case['Lawsuit']['id']. '"><i class="halflings-icon white upload"></i></a><a href="/tasks/details/' .$this_task['Task']['id']. '"><i class="halflings-icon white eye-open"></i></a><a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>';
                 echo'</div></div><div class="box-content">';
                 echo 'Description : ' .$this_task['Task']['description'] . '</br>';
-                echo 'Dead Line : ' .$this_task['Task']['dead_line'] . '</br>';
+                echo 'Dead Line : ' .date("d-m-Y", strtotime($this_task['Task']['dead_line'])) . '</br>';
                 echo 'Status : ' .$this_task['Task']['status'] . '</br>';
-                echo 'Created : ' .$this_task['Task']['created'] . '</br>';
+                echo 'Created : ' .date("d-m-Y", strtotime($this_task['Task']['created'])) . '</br>';
+             //echo date("d-m-Y", strtotime($item['Lawsuit']['created']));
                 echo 'Created By : ' .$this_task['Owner']['name'] . '</br>';
                 echo 'Assigned To : ' .$this_task['Assigned']['name'] . '</br>';
                 foreach($task_files as $task_file){
@@ -88,7 +89,7 @@
 
             ?>
         </div>
-        
+
         <!-- Modal -->
         <div id="modalOfficeCopy" class="modal fade" role="dialog">
             <div class="modal-dialog">
@@ -129,7 +130,7 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                                </form>   
+                                </form>
 
                             </div>
                         </div>

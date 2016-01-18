@@ -127,7 +127,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <!--                    <ul class="breadcrumb">
                         <li>
                             <i class="icon-home"></i>
-                            <a href="index.html">Home</a> 
+                            <a href="index.html">Home</a>
                             <i class="icon-angle-right"></i>
                         </li>
                         <li><a href="#">Dashboard</a></li>
@@ -138,7 +138,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                     <?php echo $this->fetch('content'); ?>
 
 
-                    
+
                 </div><!--/.fluid-container-->
 
                 <!-- end: Content -->

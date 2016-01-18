@@ -1,4 +1,4 @@
-<div class="row-fluid sortable">		
+<div class="row-fluid sortable">
     <div class="box span12">
         <div class="box-header" data-original-title>
             <h2><i class="halflings-icon white book"></i><span class="break"></span>Invoices</h2>
@@ -12,9 +12,9 @@
             <table class="table table-striped table-bordered bootstrap-datatable datatable">
                 <thead>
                     <?php echo $this->Html->tableHeaders(array('Ref. Name', 'Case Number', 'Client Name', 'Amount', 'Status' , 'Actions')); ?>
-                </thead>   
+                </thead>
                 <tbody>
-                    
+
                     <?php foreach ($items as $item): ?>
                         <tr>
                             <td><?php echo $item['Invoice']['name']; ?></td>
@@ -34,7 +34,7 @@
                             <td><span class="label <?php if($item['Invoice']['status']== 'paid'){ echo 'label-success'; } else{ echo 'label-warning';} ?>"><?php echo h($item['Invoice']['status']); ?></span></td>
                             <td class="center">
                                 <a class="btn btn-info" target="_blank" title="Export Pdf" href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'detail', $item['Invoice']['id'].'.pdf')); ?>">
-                                    <i class="halflings-icon white print"></i>  
+                                    <i class="halflings-icon white print"></i>
                                 </a>
                                 <?php if($item['Invoice']['status']== 'paid'): ?>
                                 <a class="btn btn-danger" title="Bill is paid">
@@ -49,9 +49,9 @@
 
                         </tr>
                     <?php endforeach; ?>
-                    
+
                 </tbody>
-            </table>            
+            </table>
         </div>
     </div><!--/span-->
 

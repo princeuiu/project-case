@@ -33,12 +33,23 @@
                 </thead>
                 <tbody>
 
+                <?php /*pr($items) ;
+                echo $number = $courts[$items['0']["Lawsuit"]["court_id"]];
+
+                echo $courts[$items['0']['Lawsuit']['client_id']];
+
+                */?>
+
+
+
                 <?php foreach ($items as $item): ?>
+                    <?php //pr($item) ;?>
+
                     <tr>
                         <td>
                             <?php
                             if(!empty($item["Lawsuit"]["number"])){
-                                $number = $item["Lawsuit"]["number"];
+                                $number = $item["Court"]["name"].' '.' '.'No.'.$item["Lawsuit"]["number"].' '.'of'.' '.$item["Lawsuit"]["year"];
                             }
                             else{
                                 $number = '<span style="color:red;">Not yet given</span>';
@@ -92,7 +103,7 @@
                             'tag' => 'li',
                             'currentClass' => 'active'
                         );
-                        echo $this->Paginator->numbers($options); 
+                        echo $this->Paginator->numbers($options);
                         echo $this->Paginator->next(__('Next → '), array('tag' => 'li'));
                     ?>
                 </ul>

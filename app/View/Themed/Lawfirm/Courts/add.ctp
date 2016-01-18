@@ -57,7 +57,7 @@
                         <button type="reset" class="btn">Cancel</button>
                     </div>
                 </fieldset>
-            </form>   
+            </form>
 
         </div>
     </div><!--/span-->

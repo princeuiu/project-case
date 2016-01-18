@@ -21,7 +21,9 @@
                         <td><?php echo $item['User']['email']; ?></td>
                         <td><?php echo $item['User']['role']; ?></td>
 <!--                        <td>--><?php //echo $item['User']['status']; ?><!--</td>-->
-                        <td><?php echo $item['User']['created']; ?></td>
+                        <td><?php echo date("d-m-Y", strtotime($item['User']['created'])); ?></td>
+                        //.date("d-m-Y", strtotime($this_task['Task']['created']))
+
                         <td><span class="label <?php if($item['User']['status']== 'active'){ echo 'label-success'; } else{ echo 'label-warning';} ?>"><?php echo ($item['User']['status']); ?></span></td>
                         <td class="center">
                             <a class="btn btn-success" href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'details', $item['User']['id'] )); ?>">
