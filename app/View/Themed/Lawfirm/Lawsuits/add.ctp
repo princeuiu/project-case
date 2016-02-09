@@ -1,3 +1,11 @@
+<!--<script>
+    $(document).ready(function(){
+        $('#LawsuitCreated').datepicker({
+            dateFormat: 'dd-mm-YY';
+        });
+    });
+</script>-->
+
 <div class="row-fluid sortable">
     <div class="box span12">
         <div class="box-header" data-original-title>
@@ -57,25 +65,28 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="control-group">
-                    <label class="control-label" for="LawsuitNumber">Number</label>
+                    <label class="control-label" for="LawsuitCaseNo">Case No</label>
                     <div class="controls">
                         <?php
-                        if(isset($cNumber)){
-                            echo $this->Form->input('number', array('class' => 'span6 typeahead', 'value' => $cNumber, 'placeholder' => 'Case number', 'error' => array(
-                                    'attributes' => array('escape' => true)
-                            )));
-                        }
-                        else{
-                            echo $this->Form->input('number', array('class' => 'span6 typeahead', 'placeholder' => 'Case number', 'error' => array(
-                                    'attributes' => array('escape' => true)
-                            )));
-                        }
-                        
+                        echo $this->Form->input('case_no', array('class' => 'span6 typeahead', 'placeholder' => 'Case No', 'error' => array(
+                            'attributes' => array('escape' => true)
+                        )));
                         ?>
                     </div>
                 </div>
+
+
                 <div id="litigationYearField">
+
+                    <div class="control-group">
+                        <label class="control-label" for="LawsuitYear"></label>
+                        <div class="controls">
+                            <span>of</span>
+                        </div>
+                    </div>
+
                     <div class="control-group">
                         <label class="control-label" for="LawsuitYear">Year</label>
                         <div class="controls">
@@ -87,17 +98,19 @@
                             ?>
                         </div>
                     </div>
-                    <div class="control-group">
+                    <!--<div class="control-group">
                         <label class="control-label" for="LawsuitFileNo">File No</label>
                         <div class="controls">
                             <?php
-                                echo $this->Form->input('file_no', array('class' => 'span6 typeahead', 'placeholder' => 'File No', 'error' => array(
+/*                                echo $this->Form->input('file_no', array('class' => 'span6 typeahead', 'placeholder' => 'File No', 'error' => array(
                                         'attributes' => array('escape' => true)
                                 )));
-                            ?>
+                            */?>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
+
+
                 <div class="control-group">
                     <label class="control-label" for="LawsuitCourtName">Name of the Court </label>
                     <div class="controls">
@@ -108,6 +121,37 @@
                         ?>
                     </div>
                 </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="LawsuitNumber">File No</label>
+                    <div class="controls">
+                        <?php
+                        if(isset($cNumber)){
+                            echo $this->Form->input('number', array('class' => 'span6 typeahead', 'value' => $cNumber, 'placeholder' => 'Case number', 'error' => array(
+                                'attributes' => array('escape' => true)
+                            )));
+                        }
+                        else{
+                            echo $this->Form->input('number', array('class' => 'span6 typeahead', 'placeholder' => 'Case number', 'error' => array(
+                                'attributes' => array('escape' => true)
+                            )));
+                        }
+
+                        ?>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="LawsuitCourtName">Shelf Entry No </label>
+                    <div class="controls">
+                        <?php
+                        echo $this->Form->input('shelf_no', array('class' => 'span6 typeahead', 'placeholder' => 'Shelf Entry No', 'error' => array(
+                            'attributes' => array('escape' => false)
+                        )));
+                        ?>
+                    </div>
+                </div>
+
                 <div class="control-group hidden-phone">
                     <label class="control-label" for="LawsuitNote">Note</label>
                     <div class="controls">
@@ -177,10 +221,9 @@
                         <label class="control-label" for="LawsuitBreakPoint">Appearing for</label>
                         <div class="controls">
                             <?php
-                            echo $this->Form->input('appearing_for', array(
-                                'options' => array('party_01' => '1st Party', 'party_02' => '2nd Party'),
-                                'data-rel' => 'chosen'
-                            ));
+                            echo $this->Form->input('appearing_for', array('class' => 'span6 typeahead', 'placeholder' => 'Appearing for', 'error' => array(
+                                'attributes' => array('escape' => true)
+                            )));
                             ?>
                         </div>
                     </div>
@@ -191,7 +234,7 @@
                     <div class="controls">
                         <?php
                         echo $this->Form->input('break_point', array(
-                            'options' => array('0' => 'At a time', '1' => 'Break in 2 periods', '2' => 'Break in 3 periods', 'no' => 'Cash Client'),
+                            'options' => array('0' => 'One time', '1' => 'Break in 2 periods', '2' => 'Break in 3 periods', 'no' => 'Cash Client'),
                             'data-rel' => 'chosen',
                             'class' => 'lawsuitBreakPoint'
                         ));
@@ -224,13 +267,13 @@
                 </div>
 
                 <div class="control-group">
-                    <label class="control-label" for="LawsuitCreated">Created</label>
+                    <label class="control-label" for="LawsuitCreated">Received Date</label>
                     <div class="controls">
-                        <input type="text" name="data[Lawsuit][created]" class="input-xlarge datepicker" id="LawsuitCreated" <?php
-                        if (isset($this->data['Lawsuit']['created'])) {
+                        <input type="text" name="data[Lawsuit][created]" class="input-xlarge datepicker" id="LawsuitCreated"
+                        <?php if (isset($this->data['Lawsuit']['created'])) {
                             echo 'value="' . $this->data['Lawsuit']['created'] . '"';
                         }
-                        ?>>
+                        ?>
                                <?php
                                //                            echo $this->Form->input('dead_line', array(
                                //                                'class' => 'input-xlarge datepicker',

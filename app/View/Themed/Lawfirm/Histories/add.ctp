@@ -1,7 +1,9 @@
+<?php //pr($lawsuits); die() ?>
+
 <div class="row-fluid sortable">
     <div class="box span12">
         <div class="box-header" data-original-title>
-            <h2><i class="halflings-icon white edit"></i><span class="break"></span><?php echo __('Add Case History'); ?></h2>
+            <h2><i class="halflings-icon white edit"></i><span class="break"></span><?php echo __('Add New Litigation'); ?></h2>
         </div>
         <div class="box-content">
             <?php
@@ -16,12 +18,24 @@
             ?>
             <fieldset>`
                 <div class="control-group">
-                    <label class="control-label" for="HistoryCourtId">Case type</label>
+                    <label class="control-label" for="LawsuitCourt">Select Court</label>
+                    <div class="controls">
+                        <?php
+                        echo $this->Form->input('court', array(
+                            'options' => $courts,
+                            'class' => 'lawsuitCourt'
+                        ));
+                        ?>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="LawsuitCourtId">Select Category</label>
                     <div class="controls">
                         <?php
                         echo $this->Form->input('court_id', array(
-                            'options' => $courts,
-                            'class' => 'historyCourtId'
+                            'options' => $categories,
+                            'class' => 'lawsuitCourtId'
                         ));
                         ?>
                     </div>
@@ -37,6 +51,9 @@
                         ?>
                     </div>
                 </div>
+
+
+
                 <div class="control-group">
                     <label class="control-label" for="CaseNumber">Case Number</label>
                     <div class="controls">
