@@ -32,7 +32,7 @@ class HistoriesController extends AppController {
 
                 $Activity = ClassRegistry::init('Activity');
                 $Activity->logintry("history","new",$historyId,$userId,$lawsuitId,'');
-                return $this->redirect(array('controller' => 'histories', 'action' => 'calender', $this->History->id));
+                return $this->redirect(array('controller' => 'histories', 'action' => 'index', $this->History->id));
             }
             else{
                 $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t save History now, Please try again later.') . '</div>');
@@ -49,15 +49,35 @@ class HistoriesController extends AppController {
                 'parent_id' => 0, 
             ),
         );
-        $courts = $this->Court->generateTreeList($options,null,null," - ");
+        /*$courts = $this->Court->generateTreeList($options,null,null," - ");*/
+
+        $courtsArray = $this->Court->children(1, true, array('id', 'name'));
+        $courts = array();
+        $count = 0;
+        $selectedCourtId = 0;
+        foreach($courtsArray as $eachItem){
+            $courts[$eachItem['Court']['id']] = $eachItem['Court']['name'];
+            if($count == 0){
+                $selectedCourtId = $eachItem['Court']['id'];
+            }
+            $count++;
+        }
+        $categoriesArray = $this->Court->children($selectedCourtId, true, array('id', 'name'));
+        $categories = array();
+        foreach($categoriesArray as $eachItem){
+            $categories[$eachItem['Court']['id']] = $eachItem['Court']['name'];
+        }
+
         $lawsuits = $this->Lawsuit->find('list', array(
-            'fields' => array('Lawsuit.id', 'Lawsuit.number'),
+            'fields' => array('Lawsuit.id', 'Lawsuit.number', 'Lawsuit.case_no'),
             'conditions' => array('Lawsuit.status'=>'active')
         ));
-//        pr($lawsuits);
+        //pr($lawsuits); die();
 
         $this->set(compact('lawsuits','courts','years'));
     }
+
+
     public function newhistory($id){
         $this->check_access(array('employee', 'manager','admin'));
 
@@ -219,11 +239,21 @@ class HistoriesController extends AppController {
         }
         else $search="";
 
-        $this->paginate["Client"]["order"]="Client.created DESC";
+        $this->paginate["History"]["created"]="History.created DESC";
 
         $cases = $this->paginate('Lawsuit', $options);
-//        pr($cases);die;
-        $this->set(compact('cases','search'));
+
+        $this->loadModel('Court');
+        $allCourts = $this->Court->find('list', array(
+            'conditions' => array('Court.status' => 'active'),
+            'fields' => array('Court.id', 'Court.name')
+        ));
+
+        //$history = $this->History->find('all',array('recurcive'=> 2));
+      // pr($cases);die;
+        $this->set(compact('cases','search','allCourts'));
+
+        //pr($allCourts); die();
 
 
         //$this->set("search",$search);

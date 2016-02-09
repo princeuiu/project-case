@@ -19,11 +19,11 @@
                 </ul>	
             </li>
             <li>
-                <a class="dropmenu" href="#"><i class="icon-hdd"></i><span class="hidden-tablet"> History </span><i class="icon-caret-down"></i></a>
+                <a class="dropmenu" href="#"><i class="icon-hdd"></i><span class="hidden-tablet"> Litigation Diary </span><i class="icon-caret-down"></i></a>
                 <ul>
-                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'histories', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new History</span></a></li>
-                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'histories', 'action' => 'calender')); ?>"><i class="icon-calendar"></i><span class="hidden-tablet"> View Calender</span></a></li>
-                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'histories', 'action' => 'index')); ?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> View all Files</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'histories', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Litigation Update</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'histories', 'action' => 'index')); ?>"><i class="icon-calendar"></i><span class="hidden-tablet"> View Litigation Diary</span></a></li>
+                    <!--<li><a class="submenu" href="<?php /*echo $this->Html->url(array('controller' => 'histories', 'action' => 'index')); */?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> View all Files</span></a></li>-->
                 </ul>
             </li>
             <li><a href="<?php echo $this->Html->url(array('controller' => 'invoices', 'action' => 'index')); ?>"><i class="icon-money"></i><span class="hidden-tablet"> Invoice List</span></a></li>

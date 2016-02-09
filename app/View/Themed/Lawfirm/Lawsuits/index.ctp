@@ -33,7 +33,7 @@
                 </thead>
                 <tbody>
 
-                <?php foreach ($items as $item): ?>
+                <?php foreach ($items as $item): //pr($item);?>
                     <tr>
                         <td>
                             <?php
@@ -46,7 +46,7 @@
                             ?>
                             <?php
                             if($item["Lawsuit"]["type"] == 'litigation'){
-                                echo $allCourts[$item["Court"]["parent_id"]] . ' - ' . $allCourts[$item["Court"]["id"]] . ' - ' . $number . ' of ' . $item["Lawsuit"]["year"];
+                                echo $allCourts[$item["Court"]["parent_id"]] . ' - ' .  $allCourts[$item["Court"]["id"]] . ' - ' . $item["Lawsuit"]["case_no"] . ' of ' . $item["Lawsuit"]["year"];
                             }
                             else{
                                 echo 'Doc - ' . $item["Lawsuit"]["number"];
