@@ -2503,8 +2503,40 @@ $(document).ready(function () {
         }
         );
     });
+    
+    
+    $('.lawsuitCourt').change(function () {
+        //var jqObj = $(this);
+//        console.log('ok');
+        var courtId = $('.lawsuitCourt').val();
+        $.post(BASE + 'ajax/courts/getcat',
+                {"data[court_id]": courtId},
+        function (e) {
+            if (e != false) {
+                console.log(e);
+                $(".lawsuitCourtId").html("");
+                var obj = $.parseJSON(e);
+                $(obj).each(function (i) { //populate child options 
+                    $(".lawsuitCourtId").append("<option value=\"" + obj[i].id + "\">" + obj[i].name + "</option>");
+                });
+            }
+            else {
+                //$('#myModal').modal('hide');
+            }
+        }
+        );
+    });
 
-
+ 
+    $('.lawsuitBreakPoint').change(function () {
+        var breakPoint = $('.lawsuitBreakPoint').val();
+        if(breakPoint == '0'){
+            $('#whenGenerateBill').show("slow");
+        }
+        else{
+            $('#whenGenerateBill').hide("slow");
+        }
+    });
 
 
 //    $('#HistoryLawsuitId').change(function(){

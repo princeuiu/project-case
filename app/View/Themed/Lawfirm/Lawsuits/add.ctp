@@ -1,7 +1,7 @@
 <div class="row-fluid sortable">
     <div class="box span12">
         <div class="box-header" data-original-title>
-            <h2><i class="halflings-icon white edit"></i><span class="break"></span><?php echo __('Form Open/Edit Case'); ?></h2>
+            <h2><i class="halflings-icon white edit"></i><span class="break"></span><?php echo __('Form Open/Edit File'); ?></h2>
             <!--            <div class="box-icon">
                             <a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
                             <a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
@@ -34,24 +34,44 @@
                 </div>
                 <div id="litigationCaseTypeField">
                     <div class="control-group">
-                        <label class="control-label" for="LawsuitCourtId">Case type</label>
+                        <label class="control-label" for="LawsuitCourt">Select Court</label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('court', array(
+                                'options' => $courts,
+                                'class' => 'lawsuitCourt'
+                            ));
+                            ?>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label" for="LawsuitCourtId">Select Category</label>
                         <div class="controls">
                             <?php
                             echo $this->Form->input('court_id', array(
-                                'options' => $courts,
-                                'data-rel' => 'chosen'
+                                'options' => $categories,
+                                'class' => 'lawsuitCourtId'
                             ));
                             ?>
                         </div>
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label" for="LawsuitNumber">Number / Name </label>
+                    <label class="control-label" for="LawsuitNumber">Number</label>
                     <div class="controls">
                         <?php
-                        echo $this->Form->input('number', array('class' => 'span6 typeahead', 'placeholder' => 'Case number', 'error' => array(
-                                'attributes' => array('escape' => true)
-                        )));
+                        if(isset($cNumber)){
+                            echo $this->Form->input('number', array('class' => 'span6 typeahead', 'value' => $cNumber, 'placeholder' => 'Case number', 'error' => array(
+                                    'attributes' => array('escape' => true)
+                            )));
+                        }
+                        else{
+                            echo $this->Form->input('number', array('class' => 'span6 typeahead', 'placeholder' => 'Case number', 'error' => array(
+                                    'attributes' => array('escape' => true)
+                            )));
+                        }
+                        
                         ?>
                     </div>
                 </div>
@@ -64,6 +84,16 @@
                                 'options' => $years,
                                 'data-rel' => 'chosen'
                             ));
+                            ?>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="LawsuitFileNo">File No</label>
+                        <div class="controls">
+                            <?php
+                                echo $this->Form->input('file_no', array('class' => 'span6 typeahead', 'placeholder' => 'File No', 'error' => array(
+                                        'attributes' => array('escape' => true)
+                                )));
                             ?>
                         </div>
                     </div>
@@ -162,9 +192,23 @@
                         <?php
                         echo $this->Form->input('break_point', array(
                             'options' => array('0' => 'At a time', '1' => 'Break in 2 periods', '2' => 'Break in 3 periods', 'no' => 'Cash Client'),
-                            'data-rel' => 'chosen'
+                            'data-rel' => 'chosen',
+                            'class' => 'lawsuitBreakPoint'
                         ));
                         ?>
+                    </div>
+                </div>
+                <div id="whenGenerateBill">
+                    <div class="control-group">
+                        <label class="control-label" for="LawsuitOpenClose">When generate the Invoice</label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('open_close', array(
+                                'options' => array(0 => 'Opening of the Case', 1 => 'Closing of the Case'),
+                                'data-rel' => 'chosen'
+                            ));
+                            ?>
+                        </div>
                     </div>
                 </div>
                 <div class="control-group">
@@ -276,3 +320,12 @@
     </div><!--/span-->
 
 </div><!--/row-->
+<?php if(isset($this->data['Lawsuit']['type']) && $this->data['Lawsuit']['type'] == 'litigation'): ?>
+<script type="text/javascript">
+    $(document).ready(function () {
+    $('#litigationExtraField').show();
+    $('#litigationCaseTypeField').show();
+    $('#litigationYearField').show();
+    });
+</script>
+<?php endif; ?>
