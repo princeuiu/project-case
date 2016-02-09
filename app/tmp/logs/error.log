@@ -27047,6 +27047,7 @@ Request URL: /admin
 Stack Trace:
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+<<<<<<< HEAD
 2016-01-18 15:31:10 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
 Exception Attributes: array (
   'class' => 'Mysql',
@@ -27078,30 +27079,73 @@ Stack Trace:
 #20 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #21 {main}
 2016-02-02 17:23:47 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
+2016-01-18 12:42:44 Error: [MissingControllerException] Controller class ItemsController could not be found.
+Exception Attributes: array (
+  'class' => 'ItemsController',
+  'plugin' => NULL,
+)
+Request URL: /admin
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-21 01:00:11 Error: [MissingControllerException] Controller class ItemsController could not be found.
+Exception Attributes: array (
+  'class' => 'ItemsController',
+  'plugin' => NULL,
+)
+Request URL: /admin
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-01-21 03:42:20 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-02 17:24:40 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-09 01:09:03 Error: [MissingControllerException] Controller class ItemsController could not be found.
+Exception Attributes: array (
+  'class' => 'ItemsController',
+  'plugin' => NULL,
+)
+Request URL: /admin
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-09 01:52:46 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-02 17:25:44 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-09 01:53:01 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-03 14:51:18 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'appearing_for' cannot be null
@@ -27120,12 +27164,18 @@ Stack Trace:
 #10 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
 2016-02-03 14:53:17 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-09 01:53:13 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-03 16:11:00 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'status' cannot be null
@@ -27254,38 +27304,83 @@ Stack Trace:
 #4 [internal function]: App::shutdown()
 #5 {main}
 2016-02-09 23:29:53 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-09 01:53:27 Error: [MissingControllerException] Controller class ThemeController could not be found.
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-09 01:55:20 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-09 01:55:37 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+<<<<<<< HEAD
 #0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-09 23:30:57 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-09 01:56:06 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-09 23:55:16 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-09 01:57:52 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-09 23:58:28 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-09 01:58:35 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+<<<<<<< HEAD
 #0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+=======
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 #1 {main}

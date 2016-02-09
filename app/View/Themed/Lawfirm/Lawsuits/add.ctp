@@ -363,3 +363,12 @@
     </div><!--/span-->
 
 </div><!--/row-->
+<?php if(isset($this->data['Lawsuit']['type']) && $this->data['Lawsuit']['type'] == 'litigation'): ?>
+<script type="text/javascript">
+    $(document).ready(function () {
+    $('#litigationExtraField').show();
+    $('#litigationCaseTypeField').show();
+    $('#litigationYearField').show();
+    });
+</script>
+<?php endif; ?>
