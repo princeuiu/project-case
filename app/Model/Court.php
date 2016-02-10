@@ -54,6 +54,13 @@ class Court extends AppModel {
             'dependent' => false,
             'conditions' => array('Lawsuit.status' => 'active'),
             'order' => 'Lawsuit.created DESC'
+        ),
+        'Tasklist' => array(
+            'className' => 'Tasklist',
+            'foreignKey' => 'court_id',
+            'dependent' => false,
+            'conditions' => array('Tasklist.status' => 'active'),
+            'order' => 'Tasklist.created DESC'
         )
     );
     
