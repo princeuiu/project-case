@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="index.html"><span>Law Firm V1.1</span></a>
+            <a class="brand" href="index.html"><span>Law Firm V 2.1</span></a>
 
             <!-- start: Header Menu -->
             <div class="nav-no-collapse header-nav">
