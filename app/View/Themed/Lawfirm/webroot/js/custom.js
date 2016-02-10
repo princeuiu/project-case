@@ -2459,6 +2459,28 @@ $(document).ready(function () {
         }
         );
     });
+    
+    $('.historyCourt').change(function () {
+        //var jqObj = $(this);
+//        console.log('ok');
+        var courtId = $('.historyCourt').val();
+        $.post(BASE + 'ajax/courts/getcat',
+                {"data[court_id]": courtId},
+        function (e) {
+            if (e != false) {
+                console.log(e);
+                $(".historyCourtId").html("");
+                var obj = $.parseJSON(e);
+                $(obj).each(function (i) { //populate child options 
+                    $(".historyCourtId").append("<option value=\"" + obj[i].id + "\">" + obj[i].name + "</option>");
+                });
+            }
+            else {
+                //$('#myModal').modal('hide');
+            }
+        }
+        );
+    });
 
     $('.historyCourtId').change(function () {
         //var jqObj = $(this);
@@ -2503,6 +2525,7 @@ $(document).ready(function () {
         }
         );
     });
+    
     
     
     $('.lawsuitCourt').change(function () {
