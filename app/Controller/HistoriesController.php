@@ -51,6 +51,7 @@ class HistoriesController extends AppController {
         );
         /*$courts = $this->Court->generateTreeList($options,null,null," - ");*/
 
+        
         $courtsArray = $this->Court->children(1, true, array('id', 'name'));
         $courts = array();
         $count = 0;
@@ -67,14 +68,14 @@ class HistoriesController extends AppController {
         foreach($categoriesArray as $eachItem){
             $categories[$eachItem['Court']['id']] = $eachItem['Court']['name'];
         }
-
+        
         $lawsuits = $this->Lawsuit->find('list', array(
             'fields' => array('Lawsuit.id', 'Lawsuit.number', 'Lawsuit.case_no'),
             'conditions' => array('Lawsuit.status'=>'active')
         ));
         //pr($lawsuits); die();
 
-        $this->set(compact('lawsuits','courts','years'));
+        $this->set(compact('lawsuits','courts', 'categories','years'));
     }
 
 
