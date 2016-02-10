@@ -21,6 +21,29 @@
             ?>
                 <fieldset>
                     <div class="control-group">
+                        <label class="control-label" for="TasklistCourt">Select Court</label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('court', array(
+                                'options' => $courts,
+                                'class' => 'lawsuitCourt'
+                            ));
+                            ?>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label" for="TasklistCourtId">Select Category</label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('court_id', array(
+                                'options' => $categories,
+                                'class' => 'lawsuitCourtId'
+                            ));
+                            ?>
+                        </div>
+                    </div>
+                    <div class="control-group">
                         <label class="control-label" for="TasklistName">Task Name </label>
                         <div class="controls">
                             <?php
@@ -31,7 +54,7 @@
                         </div>
                     </div>
                         <?php
-                            echo $this->Form->hidden('type', array('value' => 'landvetting'));
+                            echo $this->Form->hidden('type', array('value' => 'litigation'));
                         ?>
                     <div class="control-group">
                         <label class="control-label" for="TasklistStatus">Status</label>

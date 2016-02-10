@@ -37,7 +37,8 @@
             <li>
                 <a class="dropmenu" href="#"><i class="icon-list-alt"></i><span class="hidden-tablet"> Setup Tasks List </span><i class="icon-caret-down"></i></a>
                 <ul>
-                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'tasklists', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Item</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'tasklists', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add Doc Task</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'tasklists', 'action' => 'addlit')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add Litigatiopn Task</span></a></li>
                     <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'tasklists', 'action' => 'index')); ?>"><i class="icon-sitemap"></i><span class="hidden-tablet"> List All Items</span></a></li>
                 </ul>
             </li>
