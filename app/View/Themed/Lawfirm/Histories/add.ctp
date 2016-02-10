@@ -18,24 +18,24 @@
             ?>
             <fieldset>`
                 <div class="control-group">
-                    <label class="control-label" for="LawsuitCourt">Select Court</label>
+                    <label class="control-label" for="HistoryCourt">Select Court</label>
                     <div class="controls">
                         <?php
                         echo $this->Form->input('court', array(
                             'options' => $courts,
-                            'class' => 'lawsuitCourt'
+                            'class' => 'historyCourt'
                         ));
                         ?>
                     </div>
                 </div>
 
                 <div class="control-group">
-                    <label class="control-label" for="LawsuitCourtId">Select Category</label>
+                    <label class="control-label" for="HistoryCourtId">Select Category</label>
                     <div class="controls">
                         <?php
                         echo $this->Form->input('court_id', array(
                             'options' => $categories,
-                            'class' => 'lawsuitCourtId'
+                            'class' => 'historyCourtId'
                         ));
                         ?>
                     </div>
