@@ -30,17 +30,9 @@
                             ?>
                         </div>
                     </div>
-                    <div class="control-group">
-                        <label class="control-label" for="TasklistType">Case Type</label>
-                        <div class="controls">
-                            <?php
-                            echo $this->Form->input('type', array(
-                                'options' => array('landvetting' => 'Landvetting','litigation' => 'Litigation'),
-                                'data-rel' => 'chosen'
-                            ));
-                            ?>
-                        </div>
-                    </div>
+                        <?php
+                            echo $this->Form->hidden('type', array('value' => 'landvetting'));
+                        ?>
                     <div class="control-group">
                         <label class="control-label" for="TasklistStatus">Status</label>
                         <div class="controls">

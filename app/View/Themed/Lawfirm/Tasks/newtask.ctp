@@ -71,16 +71,16 @@
                         ?>
                     </div>
                 </div>
-                <div class="control-group">
+                <!--<div class="control-group">
                     <div class="controls">
                         <label class="checkbox inline">
                             <?php
-                            echo $this->Form->checkbox('wanting_doc', array('hiddenField' => false));
-                            ?>
+/*                            echo $this->Form->checkbox('wanting_doc', array('hiddenField' => false));
+                            */?>
                             Wanting Document
                         </label>
                     </div>
-                </div>
+                </div>-->
                 <div class="control-group">
                     <label class="control-label" for="TaskDeadLine">Dead Line</label>
                     <div class="controls">
@@ -93,16 +93,18 @@
                         ?>
                     </div>
                 </div>
-                <div class="control-group">
-                    <label class="control-label" for="TaskStatus">Status</label>
+                <div class="control-group" style="display: none">
+                    <!--<label class="control-label" for="TaskStatus">Status</label>
                     <div class="controls">
                         <?php
-                        echo $this->Form->select('status',
+/*                        echo $this->Form->select('status',
                             array('pending' => 'Pending','done' => 'Done'),
                             array('data-rel' => 'chosen')
                         );
-                        ?>
-                    </div>
+                        */?>
+                    </div>-->
+
+                    <?php echo $this->Form->input('status', array('value' => "Pending", 'type'=>'hidden')); ?>
                 </div>
                 <?php
                 echo $this->Form->input('files.', array('type' => 'file', 'multiple'));

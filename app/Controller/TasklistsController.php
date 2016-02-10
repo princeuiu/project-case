@@ -6,6 +6,8 @@ App::uses('AppController', 'Controller');
 class TasklistsController extends AppController {
 
     public $name = 'Tasklists';
+    
+    public $uses = array('Lawsuit', 'Task','Activity','Court','Tasklist');
 
     public function add(){
         $this->check_access(array('manager','admin'));
@@ -22,6 +24,43 @@ class TasklistsController extends AppController {
                 return;
             }
         }
+    }
+    
+    
+    public function addlit(){
+        $this->check_access(array('manager','admin'));
+
+        if(!empty($this->data)){
+            $data = $this->data;
+            unset($data['Tasklist']['court']);
+            if($this->Tasklist->save($data)){
+                $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Tasklist added successfully.') . '</div>');
+
+                return $this->redirect(array('controller' => 'tasklists', 'action' => 'index'));
+
+            }
+            else{
+                $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t save Tasklist now, Please try again later.') . '</div>');
+                return;
+            }
+        }
+        $courtsArray = $this->Court->children(1, true, array('id', 'name'));
+        $courts = array();
+        $count = 0;
+        $selectedCourtId = 0;
+        foreach($courtsArray as $eachItem){
+            $courts[$eachItem['Court']['id']] = $eachItem['Court']['name'];
+            if($count == 0){
+                $selectedCourtId = $eachItem['Court']['id'];
+            }
+            $count++;
+        }
+        $categoriesArray = $this->Court->children($selectedCourtId, true, array('id', 'name'));
+        $categories = array();
+        foreach($categoriesArray as $eachItem){
+            $categories[$eachItem['Court']['id']] = $eachItem['Court']['name'];
+        }
+        $this->set(compact('courts', 'categories'));
     }
     
     
@@ -69,6 +108,50 @@ class TasklistsController extends AppController {
         $this->render('add');
     }
     
+    
+    public function editlit($id) {
+        $this->check_access(array('employee', 'manager','admin'));
+
+        if($id == null){
+            throw new BadRequestException();
+        }
+        $this->Tasklist->id = $id;
+        if(!empty($this->data)){
+            if($this->Tasklist->save($this->data)){
+                $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Tasklist updated successfully.') . '</div>');
+                return $this->redirect(array('controller' => 'tasklists', 'action' => 'index'));
+            }
+            else{
+                $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t save Tasklist now, Please try again later.') . '</div>');
+                return $this->redirect(array('controller' => 'tasklists', 'action' => 'editlit', $this->Tasklist->id));
+            }
+        }
+
+        $this->data = $this->Tasklist->read();
+        //print_r($this->data); die;
+        
+        $courtsArray = $this->Court->children(1, true, array('id', 'name'));
+        $courts = array();
+        $count = 0;
+        $selectedCourtId = 0;
+        foreach($courtsArray as $eachItem){
+            $courts[$eachItem['Court']['id']] = $eachItem['Court']['name'];
+            if($count == 0){
+                $selectedCourtId = $eachItem['Court']['id'];
+            }
+            $count++;
+        }
+        $categoriesArray = $this->Court->children($selectedCourtId, true, array('id', 'name'));
+        $categories = array();
+        foreach($categoriesArray as $eachItem){
+            $categories[$eachItem['Court']['id']] = $eachItem['Court']['name'];
+        }
+        $this->set(compact('courts', 'categories'));
+
+        
+        $this->render('addlit');
+    }
+    
     public function index() {
         
         $this->check_access(array('employee', 'manager','admin'));
@@ -77,6 +160,7 @@ class TasklistsController extends AppController {
             'limit' => 10,
             'order' => 'Tasklist.created DESC'
         );
+        
         
         $items = $this->Paginator->paginate('Tasklist');
         //print_r($items); die;

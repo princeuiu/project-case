@@ -56,5 +56,14 @@ class Tasklist extends AppModel {
         )
     );
     
+    
+    public $belongsTo = array(
+        'Court' => array(
+            'className' => 'Court',
+            'foreignKey' => 'court_id'
+        )
+    );
+    
+    
 	
 }

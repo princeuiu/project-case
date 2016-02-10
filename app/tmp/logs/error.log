@@ -27047,6 +27047,39 @@ Request URL: /admin
 Stack Trace:
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+<<<<<<< HEAD
+2016-01-18 15:31:10 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /
+Stack Trace:
+#0 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('login_tokens')
+#5 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(3022): Model->getDataSource()
+#6 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('first', Array)
+#7 /home/mehadi/Documents/project-case/project-case/app/Model/User.php(104): Model->find('first', Array)
+#8 /home/mehadi/Documents/project-case/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(154): User->authsomeLogin('cookie', Array)
+#9 /home/mehadi/Documents/project-case/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(252): AuthsomeComponent->login('cookie', Array)
+#10 /home/mehadi/Documents/project-case/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(215): AuthsomeComponent->__useCookieToken()
+#11 /home/mehadi/Documents/project-case/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(69): AuthsomeComponent->__getActiveUser()
+#12 /home/mehadi/Documents/project-case/project-case/app/Plugin/Authsome/Controller/Component/AuthsomeComponent.php(291): AuthsomeComponent->get(NULL)
+#13 /home/mehadi/Documents/project-case/project-case/app/Controller/AppController.php(102): Authsome::get()
+#14 /home/mehadi/Documents/project-case/project-case/app/Controller/DashboardController.php(12): AppController->beforeFilter()
+#15 [internal function]: DashboardController->beforeFilter(Object(CakeEvent))
+#16 /home/mehadi/Documents/project-case/project-case/lib/Cake/Event/CakeEventManager.php(243): call_user_func(Array, Object(CakeEvent))
+#17 /home/mehadi/Documents/project-case/project-case/lib/Cake/Controller/Controller.php(676): CakeEventManager->dispatch(Object(CakeEvent))
+#18 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(189): Controller->startupProcess()
+#19 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(DashboardController), Object(CakeRequest))
+#20 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2016-02-02 17:23:47 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
 2016-01-18 12:42:44 Error: [MissingControllerException] Controller class ItemsController could not be found.
 Exception Attributes: array (
   'class' => 'ItemsController',
@@ -27066,12 +27099,18 @@ Stack Trace:
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-01-21 03:42:20 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-02 17:24:40 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-09 01:09:03 Error: [MissingControllerException] Controller class ItemsController could not be found.
@@ -27084,30 +27123,188 @@ Stack Trace:
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-09 01:52:46 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-02 17:25:44 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-09 01:53:01 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-03 14:51:18 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'appearing_for' cannot be null
+Request URL: /lawsuits/add
+Stack Trace:
+#0 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `db...', Array)
+#2 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `db...')
+#3 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Lawsuit), Array, Array)
+#4 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /home/mehadi/Documents/project-case/project-case/app/Controller/LawsuitsController.php(30): Model->save(Array)
+#6 [internal function]: LawsuitsController->add()
+#7 /home/mehadi/Documents/project-case/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(LawsuitsController), Array)
+#8 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(LawsuitsController), Object(CakeRequest))
+#10 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-02-03 14:53:17 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-09 01:53:13 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-03 16:11:00 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'status' cannot be null
+Request URL: /tasks/newtask
+Stack Trace:
+#0 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `db...', Array)
+#2 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `db...')
+#3 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Task), Array, Array)
+#4 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /home/mehadi/Documents/project-case/project-case/app/Controller/TasksController.php(96): Model->save(Array)
+#6 [internal function]: TasksController->newtask()
+#7 /home/mehadi/Documents/project-case/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#8 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#10 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-02-08 12:33:50 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'status' cannot be null
+Request URL: /tasks/newtask
+Stack Trace:
+#0 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `db...', Array)
+#2 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `db...')
+#3 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Task), Array, Array)
+#4 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /home/mehadi/Documents/project-case/project-case/app/Controller/TasksController.php(96): Model->save(Array)
+#6 [internal function]: TasksController->newtask()
+#7 /home/mehadi/Documents/project-case/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#8 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#10 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-02-08 12:56:48 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'status' cannot be null
+Request URL: /tasks/newtask
+Stack Trace:
+#0 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `db...', Array)
+#2 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `db...')
+#3 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Task), Array, Array)
+#4 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /home/mehadi/Documents/project-case/project-case/app/Controller/TasksController.php(96): Model->save(Array)
+#6 [internal function]: TasksController->newtask()
+#7 /home/mehadi/Documents/project-case/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#8 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#10 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-02-08 13:01:35 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'status' cannot be null
+Request URL: /tasks/newtask
+Stack Trace:
+#0 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `db...', Array)
+#2 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `db...')
+#3 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Task), Array, Array)
+#4 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /home/mehadi/Documents/project-case/project-case/app/Controller/TasksController.php(96): Model->save(Array)
+#6 [internal function]: TasksController->newtask()
+#7 /home/mehadi/Documents/project-case/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#8 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#10 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-02-08 13:04:58 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'status' cannot be null
+Request URL: /tasks/newtask
+Stack Trace:
+#0 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `db...', Array)
+#2 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `db...')
+#3 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Task), Array, Array)
+#4 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /home/mehadi/Documents/project-case/project-case/app/Controller/TasksController.php(96): Model->save(Array)
+#6 [internal function]: TasksController->newtask()
+#7 /home/mehadi/Documents/project-case/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#8 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#10 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-02-08 13:06:40 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'status' cannot be null
+Request URL: /tasks/newtask
+Stack Trace:
+#0 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `db...', Array)
+#2 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `db...')
+#3 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Task), Array, Array)
+#4 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /home/mehadi/Documents/project-case/project-case/app/Controller/TasksController.php(96): Model->save(Array)
+#6 [internal function]: TasksController->newtask()
+#7 /home/mehadi/Documents/project-case/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#8 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#10 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-02-08 13:10:10 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'status' cannot be null
+Request URL: /tasks/newtask
+Stack Trace:
+#0 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `db...', Array)
+#2 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `db...')
+#3 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Task), Array, Array)
+#4 /home/mehadi/Documents/project-case/project-case/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /home/mehadi/Documents/project-case/project-case/app/Controller/TasksController.php(96): Model->save(Array)
+#6 [internal function]: TasksController->newtask()
+#7 /home/mehadi/Documents/project-case/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#8 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /home/mehadi/Documents/project-case/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#10 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-02-09 22:53:38 Error: Fatal Error (4): syntax error, unexpected '/' in [/home/mehadi/Documents/project-case/project-case/app/Controller/HistoriesController.php, line 247]
+2016-02-09 22:53:38 Error: [FatalErrorException] syntax error, unexpected '/'
+Request URL: /histories/
+Stack Trace:
+#0 /home/mehadi/Documents/project-case/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/mehadi/Do...', 247)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/mehadi/Do...', 247, Array)
+#2 /home/mehadi/Documents/project-case/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/mehadi/Do...', 247, Array)
+#3 /home/mehadi/Documents/project-case/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-09 23:17:17 Error: Fatal Error (4): syntax error, unexpected ')', expecting ';' in [/home/mehadi/Documents/project-case/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 27]
+2016-02-09 23:17:17 Error: [InternalErrorException] Internal Server Error
+Request URL: /histories/
+Stack Trace:
+#0 /home/mehadi/Documents/project-case/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/home/mehadi/Do...', 27)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/home/mehadi/Do...', 27, Array)
+#2 /home/mehadi/Documents/project-case/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/home/mehadi/Do...', 27, Array)
+#3 /home/mehadi/Documents/project-case/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-09 23:29:53 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-09 01:53:27 Error: [MissingControllerException] Controller class ThemeController could not be found.
@@ -27129,38 +27326,192 @@ Stack Trace:
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-09 01:55:37 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-09 23:30:57 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-09 01:56:06 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-09 23:55:16 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-09 01:57:52 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-09 23:58:28 Error: [MissingControllerException] Controller class ThemeController could not be found.
+=======
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
 2016-02-09 01:58:35 Error: [MissingControllerException] Controller class ThemeController could not be found.
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 Exception Attributes: array (
   'class' => 'ThemeController',
   'plugin' => NULL,
 )
 Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
+<<<<<<< HEAD
+#0 /home/mehadi/Documents/project-case/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+=======
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+>>>>>>> 76ad8e763e0c34830e343dde75fb54372791da0e
 #1 {main}
+2016-02-10 02:11:07 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: YES)',
+  'enabled' => true,
+)
+Request URL: /login
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(260): Mysql->connect()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/ConnectionManager.php(105): DboSource->__construct(Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3617): ConnectionManager::getDataSource('default')
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1155): Model->setDataSource('default')
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3644): Model->setSource('users')
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(1387): Model->getDataSource()
+#6 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/Helper/FormHelper.php(215): Model->schema()
+#7 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/Helper/FormHelper.php(468): FormHelper->_introspectModel('User', 'fields')
+#8 /home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Users/login.ctp(16): FormHelper->create('User', Array)
+#9 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(961): include('/home/shovan/Ph...')
+#10 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/shovan/Ph...', Array)
+#11 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(473): View->_render('/home/shovan/Ph...')
+#12 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#13 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#14 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#15 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2016-02-10 02:12:56 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Lawsuit.case_no' in 'field list'
+Request URL: /histories/add
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Lawsuit...', Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Lawsuit...', Array, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Lawsuit...', false)
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Lawsuit), Array)
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('list', Array)
+#6 /home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php(74): Model->find('list', Array)
+#7 [internal function]: HistoriesController->add()
+#8 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(HistoriesController), Array)
+#9 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(HistoriesController), Object(CakeRequest))
+#11 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-02-10 05:12:48 Error: Fatal Error (1): Call to a member function children() on null in [/home/shovan/PhpstormProjects/project-case/app/Controller/TasklistsController.php, line 43]
+2016-02-10 05:12:48 Error: [InternalErrorException] Internal Server Error
+Request URL: /tasklists/addlit
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 43)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 43, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 43, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-10 05:18:46 Error: [MissingModelException] Tasklist
+Request URL: /tasklists
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/Controller/TasklistsController.php(162): PaginatorComponent->paginate('Tasklist')
+#1 [internal function]: TasklistsController->index()
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasklistsController), Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasklistsController), Object(CakeRequest))
+#5 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-02-10 05:18:54 Error: [MissingModelException] Tasklist
+Request URL: /tasklists?debug=2
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/Controller/TasklistsController.php(162): PaginatorComponent->paginate('Tasklist')
+#1 [internal function]: TasklistsController->index()
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasklistsController), Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasklistsController), Object(CakeRequest))
+#5 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-02-10 05:24:04 Error: [MissingModelException] Tasklist
+Request URL: /tasklists?debug=2
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/Controller/TasklistsController.php(162): PaginatorComponent->paginate('Tasklist')
+#1 [internal function]: TasklistsController->index()
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasklistsController), Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasklistsController), Object(CakeRequest))
+#5 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-02-10 05:25:57 Error: [MissingModelException] Tasklist
+Request URL: /tasklists
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/Controller/TasklistsController.php(163): PaginatorComponent->paginate('Tasklist')
+#1 [internal function]: TasklistsController->index()
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasklistsController), Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasklistsController), Object(CakeRequest))
+#5 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-02-10 05:26:19 Error: [MissingModelException] Tasklist
+Request URL: /tasklists?debug=2
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/Controller/TasklistsController.php(163): PaginatorComponent->paginate('Tasklist')
+#1 [internal function]: TasklistsController->index()
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasklistsController), Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasklistsController), Object(CakeRequest))
+#5 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2016-02-10 05:31:12 Error: Fatal Error (1): Call to a member function save() on null in [/home/shovan/PhpstormProjects/project-case/app/Controller/TasklistsController.php, line 34]
+2016-02-10 05:31:12 Error: [InternalErrorException] Internal Server Error
+Request URL: /tasklists/addlit
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 34)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 34, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 34, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-10 05:37:10 Error: Fatal Error (1): Call to a member function save() on null in [/home/shovan/PhpstormProjects/project-case/app/Controller/TasklistsController.php, line 35]
+2016-02-10 05:37:10 Error: [FatalErrorException] Call to a member function save() on null
+Request URL: /tasklists/addlit
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 35)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 35, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 35, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-10 05:41:52 Error: Fatal Error (1): Call to a member function save() on null in [/home/shovan/PhpstormProjects/project-case/app/Controller/TasklistsController.php, line 36]
+2016-02-10 05:41:52 Error: [FatalErrorException] Call to a member function save() on null
+Request URL: /tasklists/addlit
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/home/shovan/Ph...', 36)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/home/shovan/Ph...', 36, Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/home/shovan/Ph...', 36, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
