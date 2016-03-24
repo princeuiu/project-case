@@ -357,7 +357,8 @@ class TasksController extends AppController {
             ));
             $l2Parent = $this->Court->getParentNode($courtTypeId);
             $l1Parent = $this->Court->getParentNode($l2Parent['Court']['id']);
-            $caseNmeTxt = $l1Parent['Court']['name'].' - '.$l2Parent['Court']['name'].' - '.$courtTypeInfo['Court']['name'].' - ';
+//            $caseNmeTxt = $l1Parent['Court']['name'].' - '.$l2Parent['Court']['name'].' - '.$courtTypeInfo['Court']['name'].' - ';
+            $caseNmeTxt = $l2Parent['Court']['name'].' - '.$courtTypeInfo['Court']['name'].' - ';
         }
 
         //print_r($userTasks); die;

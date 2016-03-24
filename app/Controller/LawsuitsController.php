@@ -238,6 +238,8 @@ class LawsuitsController extends AppController {
         
         $items = $this->Paginator->paginate('Lawsuit');
         
+//        print_r($items); die;
+        
         $allCourts = $this->Court->find('list', array(
             'conditions' => array('Court.status' => 'active'),
             'fields' => array('Court.id', 'Court.name')

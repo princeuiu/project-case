@@ -19,7 +19,7 @@ $even_row_color = '#ddd';
     <head>
         <style type="text/css">
             body {
-                margin: 18pt 18pt 24pt 18pt;
+                margin: 130pt 18pt 18pt 18pt;
             }
 
             * {
@@ -128,7 +128,7 @@ $even_row_color = '#ddd';
                     ?>
                     <tr>
                         <td style="text-align: center;"><?php echo $count; ?></td>
-                        <td style="text-align: left;">VAT (<?php echo $invoiceData['Invoice']['vat']; ?>&percnt; as per General Order No. 07/Musak/2012)</td>
+                        <td style="text-align: left;">VAT (<?php echo $invoiceData['Invoice']['vat']; ?>% as per General Order No. 07/Musak/2012)</td>
                         <td style="text-align: center;"><?php echo $invoiceData['Invoice']['vat_amount']; ?></td>
                     </tr>
                     <?php
@@ -150,36 +150,36 @@ $even_row_color = '#ddd';
                     <?php
                     if (!empty($fCosts)):
                         ?>
+                        <?php
+                        foreach ($fCosts as $eachFCost):
+                            ?>
                         <tr>
                             <td style="text-align: right;"  colspan="2">
-                                <?php
-                                foreach ($fCosts as $eachFCost):
-                                    ?>
-                                    <?php echo $eachFCost['name']; ?> X <?php echo $eachFCost['qty']; ?><br/>
-                                    <?php
-                                endforeach;
-                                ?>
+                                <?php echo $eachFCost['name']; ?> X <?php echo $eachFCost['qty']; ?>
                             </td>
-                            <td style="text-align: center;"><?php echo $invoiceData['Invoice']['f_amount']; ?></td>
+                            <td style="text-align: center;"><?php echo (int)$eachFCost['qty'] * (int)$eachFCost['price']; ?></td>
                         </tr>
+                        <?php
+                        endforeach;
+                        ?>
                         <?php
                     endif;
                     ?>
                     <?php
                     if (!empty($vCosts)):
                         ?>
+                        <?php
+                        foreach ($vCosts as $eachVCost):
+                            ?>
                         <tr>
                             <td style="text-align: right;"  colspan="2">
-                                <?php
-                                foreach ($vCosts as $eachVCost):
-                                    ?>
-                                    <?php echo $eachVCost['vCost']; ?><br/>
-                                    <?php
-                                endforeach;
-                                ?>
+                                <?php echo $eachVCost['vCost']; ?>
                             </td>
-                            <td style="text-align: center;"><?php echo $invoiceData['Invoice']['v_amount']; ?></td>
+                            <td style="text-align: center;"><?php echo $eachVCost['amount']; ?></td>
                         </tr>
+                            <?php
+                        endforeach;
+                        ?>
                         <?php
                     endif;
                     ?>
@@ -202,7 +202,7 @@ $even_row_color = '#ddd';
                     if (!empty($invoiceData['Invoice']['vat']) && $invoiceData['Invoice']['vat'] != 0):
                         ?>
                         <tr>
-                            <td style="text-align: right;"  colspan="2">VAT (<?php echo $invoiceData['Invoice']['vat']; ?>&percnt; as per General Order No. 07/Musak/2012)</td>
+                            <td style="text-align: right;"  colspan="2">VAT (<?php echo $invoiceData['Invoice']['vat']; ?>% as per General Order No. 07/Musak/2012)</td>
                             <td style="text-align: center;"><?php echo $invoiceData['Invoice']['vat_amount']; ?></td>
                         </tr>
                         <?php
@@ -210,7 +210,7 @@ $even_row_color = '#ddd';
                     if (!empty($invoiceData['Invoice']['tax']) && $invoiceData['Invoice']['tax'] != 0):
                         ?>
                         <tr>
-                            <td style="text-align: right;"  colspan="2">Advance Income TAX <?php echo $invoiceData['Invoice']['tax']; ?>&percnt; on Professional fees</td>
+                            <td style="text-align: right;"  colspan="2">Advance Income TAX <?php echo $invoiceData['Invoice']['tax']; ?>% on Professional fees</td>
                             <td style="text-align: center;"><?php echo $invoiceData['Invoice']['tax_amount']; ?></td>
                         </tr>
                         <?php

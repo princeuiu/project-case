@@ -18,6 +18,7 @@ class InvoicesController extends AppController {
                 $printPDF = true;
             }
             $vat = 15;
+            $tax = 10;
             $invoiceData = $this->data;
             $lawsuitId = $invoiceData['Invoice']['lawsuit_id'];
             $invoicePeriod = $invoiceData['Invoice']['lawsuit_invoice_period'];
@@ -108,8 +109,9 @@ class InvoicesController extends AppController {
             
 //            echo $totalAmount; die;
             $vatAmount = 0;
-            if(isset($invoiceData['Invoice']['vat']) && ($invoiceData['Invoice']['vat'] != '' || $invoiceData['Invoice']['vat'] != 0)){
-                $vatAmount = $totalProFees * $invoiceData['Invoice']['vat'] / 100;
+            if(isset($invoiceData['Invoice']['vat']) && $invoiceData['Invoice']['vat'] == true){
+                $vatAmount = $totalProFees * $vat / 100;
+                $invoiceData['Invoice']['vat'] = $vat;
                 $totalProFees += $vatAmount;
             }
             else{
@@ -119,8 +121,9 @@ class InvoicesController extends AppController {
             $totalAmount = $totalFixedCost + $totalVCostsAmount + $totalProFees;
             
             $taxAmount = 0;
-            if(isset($invoiceData['Invoice']['tax']) && ($invoiceData['Invoice']['tax'] != '' || $invoiceData['Invoice']['tax'] != 0)){
-                $taxAmount = $totalProFees * $invoiceData['Invoice']['tax'] / 100;
+            if(isset($invoiceData['Invoice']['tax']) && $invoiceData['Invoice']['tax'] == true){
+                $taxAmount = $totalProFees * $tax / 100;
+                $invoiceData['Invoice']['tax'] = $tax;
             }
             else{
                 $invoiceData['Invoice']['tax'] = 0;

@@ -24,7 +24,7 @@
 
         <div class="desc">
             <h2>Task for Case :<br /></h2>
-            <h2><?php echo ($userTasks['Lawsuit']['type'] != 'landvetting')?$caseNmeTxt.$userTasks['Lawsuit']['number'].'<br />of '.$userTasks['Lawsuit']['year']:'Doc - '.$userTasks['Lawsuit']['number']; ?></h2>
+            <h2><a href="<?php echo $this->Html->url(array("controller" => "lawsuits", "action" => "details",$userTasks['Lawsuit']['id'])); ?>"><?php echo ($userTasks['Lawsuit']['type'] != 'landvetting')?$caseNmeTxt.$userTasks['Lawsuit']['number'].'<br />of '.$userTasks['Lawsuit']['year']:'Doc - '.$userTasks['Lawsuit']['number']; ?></a></h2>
             <div class="title"><?php echo 'Task Name : '.$userTasks['Tasklist']['name']; ?></div>
             <div><?php echo 'Description : '.$userTasks['Task']['description']; ?></div>
             <div>Attachments: </br>
