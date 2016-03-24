@@ -22897,3 +22897,602 @@ Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
 [main] - APP/webroot/index.php, line 118
 
+2016-03-15 00:51:15 Notice: Notice (8): Indirect modification of overloaded element of CakeRequest has no effect in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 236]
+Trace:
+HistoriesController::index() - APP/Controller/HistoriesController.php, line 236
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Indirect modification of overloaded property HistoriesController::$paginate has no effect in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 243]
+Trace:
+HistoriesController::index() - APP/Controller/HistoriesController.php, line 243
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined variable: options in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 245]
+Trace:
+HistoriesController::index() - APP/Controller/HistoriesController.php, line 245
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined index:  in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 25]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 25
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined index:  in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 25]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 25
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 27]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 27
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 28]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 28
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 29]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 29
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined index:  in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 25]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 25
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined index:  in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 25]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 25
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 27]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 27
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 28]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 28
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 29]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 29
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 27]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 27
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 28]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 28
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 29]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 29
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 27]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 27
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 28]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 28
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 29]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 29
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 27]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 27
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 28]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 28
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 29]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 29
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 27]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 27
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 28]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 28
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 29]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 29
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 27]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 27
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 28]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 28
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 29]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 29
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 27]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 27
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 28]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 28
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 29]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 29
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 27]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 27
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 28]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 28
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 29]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 29
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 27]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 27
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 28]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 28
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 29]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 29
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 27]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 27
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 28]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 28
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 29]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 29
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined index:  in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 25]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 25
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined index:  in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 25]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 25
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 27]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 27
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 28]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 28
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 00:51:16 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 29]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 29
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 01:05:34 Notice: Notice (8): Undefined variable: cases in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 20]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 20
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 01:24:27 Notice: Notice (8): Undefined variable: cases in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 20]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 20
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 01:25:39 Notice: Notice (8): Undefined variable: cases in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 20]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 20
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-15 01:44:10 Notice: Notice (8): Undefined variable: cases in [/home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Histories/index.ctp, line 20]
+Trace:
+include - APP/View/Themed/Lawfirm/Histories/index.ctp, line 20
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::render() - CORE/Cake/View/View.php, line 473
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-22 02:53:14 Notice: Notice (8): A non well formed numeric value encountered in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 282]
+Trace:
+date - [internal], line ??
+HistoriesController::index() - APP/Controller/HistoriesController.php, line 282
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-22 02:53:14 Notice: Notice (8): A non well formed numeric value encountered in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 282]
+Trace:
+date - [internal], line ??
+HistoriesController::index() - APP/Controller/HistoriesController.php, line 282
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-22 02:55:21 Notice: Notice (8): A non well formed numeric value encountered in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 280]
+Trace:
+date - [internal], line ??
+HistoriesController::index() - APP/Controller/HistoriesController.php, line 280
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-22 03:04:58 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 318]
+Trace:
+HistoriesController::index() - APP/Controller/HistoriesController.php, line 318
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-22 03:04:58 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 318]
+Trace:
+HistoriesController::index() - APP/Controller/HistoriesController.php, line 318
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-22 03:47:55 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 327]
+Trace:
+HistoriesController::index() - APP/Controller/HistoriesController.php, line 327
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-03-22 03:47:55 Notice: Notice (8): Undefined offset: 0 in [/home/shovan/PhpstormProjects/project-case/app/Controller/HistoriesController.php, line 327]
+Trace:
+HistoriesController::index() - APP/Controller/HistoriesController.php, line 327
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
