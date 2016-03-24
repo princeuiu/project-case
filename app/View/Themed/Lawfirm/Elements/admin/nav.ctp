@@ -21,8 +21,9 @@
             <li>
                 <a class="dropmenu" href="#"><i class="icon-hdd"></i><span class="hidden-tablet"> Litigation Diary </span><i class="icon-caret-down"></i></a>
                 <ul>
-                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'histories', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add new Litigation Update</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'histories', 'action' => 'add')); ?>"><i class="icon-plus-sign"></i><span class="hidden-tablet"> Add Litigation Update</span></a></li>
                     <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'histories', 'action' => 'index')); ?>"><i class="icon-calendar"></i><span class="hidden-tablet"> View Litigation Diary</span></a></li>
+                    <li><a class="submenu" href="<?php echo $this->Html->url(array('controller' => 'histories', 'action' => 'client_case_update')); ?>"><i class="icon-reorder"></i><span class="hidden-tablet"> View Litigation Update</span></a></li>
                     <!--<li><a class="submenu" href="<?php /*echo $this->Html->url(array('controller' => 'histories', 'action' => 'index')); */?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> View all Files</span></a></li>-->
                 </ul>
             </li>

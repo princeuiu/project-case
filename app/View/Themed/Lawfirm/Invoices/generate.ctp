@@ -66,7 +66,7 @@
                 
                 
                 <div class="page-header">
-                    <h3 style="text-align: center;">Variable costs | amount</h3>
+                    <h3 style="text-align: center;">Actual costs | amount</h3>
                 </div>
                 <div class="variable_input_fields_wrap">
                     <button class="btn btn-primary variable_add_field_button" title="Add new row"><i class="halflings-icon white white plus-sign"></i></button>
@@ -102,17 +102,19 @@
                 <div class="control-group">
                     <label class="control-label" for="LawsuitVat">VAT</label>
                     <div class="controls">
-                        <div class="input-prepend input-append">
+                            <div class="checker" id="uniform-inlineCheckbox1"><span class=""><input type="checkbox" name="data[Invoice][vat]" id="inlineCheckbox1" value="true"></span></div>
+<!--                        <div class="input-prepend input-append">
                             <input name="data[Invoice][vat]" step="any" type="number"><span class="add-on">&percnt;</span>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label" for="LawsuitTax">Income Tax</label>
                     <div class="controls">
-                        <div class="input-prepend input-append">
+                            <div class="checker" id="uniform-inlineCheckbox2"><span class=""><input type="checkbox" name="data[Invoice][tax]" id="inlineCheckbox2" value="true"></span></div>
+<!--                        <div class="input-prepend input-append">
                             <input name="data[Invoice][tax]" step="any" type="number"><span class="add-on">&percnt;</span>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
                 <div class="control-group">

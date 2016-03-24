@@ -2593,7 +2593,17 @@ $(document).ready(function () {
             $("#litigationExtraField").hide("slow");
         }
     });
-
+    
+    
+//    $('#btnSearchViaDate').click(function () {
+//        event.preventDefault();
+//        var controller = $('#dateFrom').data("controllername");
+//        var action = $('#dateFrom').data("actionname");
+//        var dateFrom = $('#dateFrom').val();
+//        var dateTo = $('#dateTo').val();
+//        //alert(searchColum+searchValue);
+//        window.location.href = BASE + controller + "/" + action + "/key:" + dateFrom + "/val:" + dateTo;
+//    });
 
     $('#btnSearchGo').click(function () {
         var controller = $('#searchValue').data("controllername");
