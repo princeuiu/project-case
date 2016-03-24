@@ -15,35 +15,6 @@
                     echo $this->Form->create('History', array(
                         'action' => $this->action,
                         'class' => 'form-inline',
-                        'id' => 'dateViaSearchForm',
-                        'type' => 'file',
-                        'inputDefaults' => array(
-                            'div' => false,
-                            'label' => false
-                        )
-                    ));
-                    ?>
-                    <div class="control-group">
-                        <label class="control-label" for="dateFrom">Date From</label>
-                        <div class="controls">
-                            <input type="text" name="dateFrom" class="input-small datepicker" id="dateFrom" data-controllername="<?php echo $controller ?>" data-actionname="<?php echo $action ?>" />
-
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="dateTo">Date To</label>
-                        <div class="controls">
-                            <input type="text" name="dateTo" class="input-small datepicker" id="dateTo" />
-                            <button type="submit" class="btn btn-primary" id="btnSearchViaDate">Go</button>
-                        </div>
-                    </div>
-                    <?php echo $this->Form->end(); ?>
-                </div>
-                <div class="span7">
-                    <?php
-                    echo $this->Form->create('History', array(
-                        'action' => $this->action,
-                        'class' => 'form-inline',
                         'id' => 'courtViaSearchForm',
                         'type' => 'file',
                         'inputDefaults' => array(
@@ -52,6 +23,18 @@
                         )
                     ));
                     ?>
+                    <div class="control-group">
+                        <label class="control-label" for="HistoryClient">Select Client</label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('court', array(
+                                'options' => $clients,
+                                'class' => 'historyClient',
+                                'name' => 'client'
+                            ));
+                            ?>
+                        </div>
+                    </div>
                     <div class="control-group">
                         <label class="control-label" for="HistoryCourt">Select Court</label>
                         <div class="controls">
@@ -66,7 +49,8 @@
                             ?>
                         </div>
                     </div>
-
+                </div>
+                <div class="span7">
                     <div class="control-group">
                         <label class="control-label" for="HistoryCourtId">Select Category</label>
                         <div class="controls">
@@ -91,10 +75,11 @@
                             ?>
                             <button type="submit" class="btn btn-primary" id="btnSearchViaCourt">Go</button>
                         </div>
+                        <?php echo $this->Form->end(); ?>
                     </div>
-                    <?php echo $this->Form->end(); ?>
                 </div>
             </div>
+        <?php if(!empty($historiesData)): ?>
             <table class="table table-striped table-bordered bootstrap-datatable">
                 <thead>
                     <?php echo $this->Html->tableHeaders(array('Case Number', 'Court Name', 'Appearing For', 'Steps Taken', 'Next Date', 'Purpose of Next Date')); ?>
@@ -139,6 +124,13 @@
                     ?>
                 </ul>
             </div>
+        <?php else: ?>
+            <div class="alert alert-block ">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                <h4 class="alert-heading">Oupss!!</h4>
+                <p>Nothing to display.</p>
+            </div>
+        <?php endif; ?>
         </div>
     </div><!--/span-->
 
