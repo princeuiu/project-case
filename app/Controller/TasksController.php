@@ -219,14 +219,29 @@ class TasksController extends AppController {
             'conditions' => array('Lawsuit.status' => 'active'),
             'fields' => array('Lawsuit.id', 'Lawsuit.number'),
         ));
+        $lawsuitType = $this->Lawsuit->find('first', array(
+            'conditions' => array('Lawsuit.id' => $id),
+            'fields' => array('Lawsuit.court_id','Lawsuit.type'),
+            'recursive' => -1
+        ));
         $users = $this->User->find('list', array(
             'conditions' => array('User.status' => 'active', 'User.role' => 'employee')
         ));
+        if($lawsuitType['Lawsuit']['type'] == 'litigation'){
+            $taskLists = $this->Tasklist->find('list', array(
+                'conditions' => array('Tasklist.status' => 'active', 'Tasklist.court_id' => $lawsuitType['Lawsuit']['court_id'], 'Tasklist.type' => $lawsuitType['Lawsuit']['type'])
+            ));
+        }
+        else{
+            $taskLists = $this->Tasklist->find('list', array(
+                'conditions' => array('Tasklist.status' => 'active', 'Tasklist.type' => $lawsuitType['Lawsuit']['type'])
+            ));
+        }
         //print_r($users); die;
-        $this->set(compact('lawsuits', 'users', 'followers'));
+        $this->set(compact('lawsuits', 'users', 'followers','taskLists'));
 
 
-        //$this->render('admin_add');
+        //$this->render('newtask');
     }
 
     public function index() {

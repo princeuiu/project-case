@@ -6,6 +6,7 @@ class NotifyHelper extends AppHelper {
     public $helpers = array('Html', 'Text', 'Time');
     private $countTasks = 0;
     private $allTasks = array();
+    private $tasklistName = array();
     private $userTaskList = array();
     private $userTaskCommentList = array();
     private $countNotifications = 0;
@@ -52,7 +53,7 @@ class NotifyHelper extends AppHelper {
                             }
                             
                         ?>">
-                            <span class="icon <?php if($notification['Activity']['event'] == 'new'){ echo 'blue';} elseif($notification['Activity']['event'] == 'update'){ echo 'yellow';}  elseif($notification['Activity']['event'] == 'generate'){ echo 'red';} ?>">
+                            <span class="icon <?php if($notification['Activity']['event'] == 'new'){ echo 'blue';} elseif($notification['Activity']['event'] == 'update'){ echo 'yellow';} elseif($notification['Activity']['event'] == 'done'){ echo 'green';}  elseif($notification['Activity']['event'] == 'generate'){ echo 'red';} ?>">
                                 <i class="<?php
                                             switch($notification['Activity']['item_type']){
                                                 case 'task':
@@ -75,7 +76,10 @@ class NotifyHelper extends AppHelper {
                                 <?php
                                     switch($notification['Activity']['item_type']){
                                         case 'task':
-                                            echo substr($this->userTaskList[$notification['Activity']['item_id']], 0, 20);
+                                            ?>
+                                <small><?php echo $notification['Activity']['event'] . ' '; ?></small>
+                                            <?php
+                                            echo substr($this->tasklistName[$this->userTaskList[$notification['Activity']['item_id']]], 0, 15);
                                             break;
                                         case 'taskcomment':
                                             echo substr($this->userTaskCommentList[$notification['Activity']['item_id']], 0, 20);
@@ -198,15 +202,19 @@ class NotifyHelper extends AppHelper {
             App::import("Model", "Lawsuit");
             App::import("Model", "TaskComment");
             App::import("Model", "User");
+            App::import("Model", "Tasklist");
             
             $history = new History();
             $invoice = new Invoice();
             $lawsuit = new Lawsuit();
             $taskComment = new TaskComment();
             $user = new User();
+            $tasklist = new Tasklist();
             
+            $tasklistName = $tasklist->find('list',array('conditions' => array('Tasklist.status' => 'active'),'fields'=>array('Tasklist.id','Tasklist.name')));
+            $this->tasklistName = $tasklistName;
             
-            $tasks = $task->find('list',array('conditions' => array('Task.assigned_to' => $this->userID),'fields'=>array('Task.id')));
+            $tasks = $task->find('list',array('conditions' => array('Task.assigned_to' => $this->userID),'fields'=>array('Task.id','Task.tasklist_id')));
             $this->userTaskList = $tasks;
             //$taskComments = $taskComment->find('list',array('conditions' => array('TaskComment.task_id' => $this->userID),'fields'=>array('id','task_id')));
             
@@ -294,12 +302,17 @@ class NotifyHelper extends AppHelper {
             App::import("Model", "Lawsuit");
             App::import("Model", "TaskComment");
             App::import("Model", "User");
+            App::import("Model", "Tasklist");
             
             $history = new History();
             $invoice = new Invoice();
             $lawsuit = new Lawsuit();
             $taskComment = new TaskComment();
             $user = new User();
+            $tasklist = new Tasklist();
+            
+            $tasklistName = $tasklist->find('list',array('conditions' => array('Tasklist.status' => 'active'),'fields'=>array('Tasklist.id','Tasklist.name')));
+            $this->tasklistName = $tasklistName;
             
             
 //            $tasks = $task->find('list',array('conditions' => array('Task.assigned_to' => $this->userID),'fields'=>array('Task.id')));
@@ -307,7 +320,7 @@ class NotifyHelper extends AppHelper {
                 'Task.assigned_to = "'.$this->userID.'"',
                 'Task.owner = "'.$this->userID.'"'
             );
-            $tasks = $task->find('list',array('conditions' => array('OR' => $taskQueryCond),'fields'=>array('Task.id')));
+            $tasks = $task->find('list',array('conditions' => array('OR' => $taskQueryCond),'fields'=>array('Task.id','Task.tasklist_id')));
             $this->userTaskList = $tasks;
             //$taskComments = $taskComment->find('list',array('conditions' => array('TaskComment.task_id' => $this->userID),'fields'=>array('id','task_id')));
             

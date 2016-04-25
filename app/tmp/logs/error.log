@@ -28516,3 +28516,178 @@ Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
 Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
 [main] - APP/webroot/index.php, line 118
 
+2016-04-23 01:22:39 Warning: Warning (2): Missing argument 1 for TasksController::newtask() in [/home/shovan/PhpstormProjects/project-case/app/Controller/TasksController.php, line 82]
+Trace:
+TasksController::newtask() - APP/Controller/TasksController.php, line 82
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-04-26 01:07:38 Error: [MissingControllerException] Controller class ItemsController could not be found.
+Exception Attributes: array (
+  'class' => 'ItemsController',
+  'plugin' => NULL,
+)
+Request URL: /admin
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-04-26 01:25:45 Error: [MissingViewException] View file "Tasklists/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tasklists/delete.ctp',
+)
+Request URL: /tasklists/delete/7
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasklistsController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-04-26 01:27:04 Warning: Warning (2): Missing argument 1 for TasklistsController::delete() in [/home/shovan/PhpstormProjects/project-case/app/Controller/TasklistsController.php, line 174]
+Trace:
+TasklistsController::delete() - APP/Controller/TasklistsController.php, line 174
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-04-26 01:27:04 Error: [BadRequestException] Bad Request
+Request URL: /tasklists/delete
+Stack Trace:
+#0 [internal function]: TasklistsController->delete()
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasklistsController), Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasklistsController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-04-26 01:27:19 Error: [MissingViewException] View file "Tasklists/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Tasklists/delete.ctp',
+)
+Request URL: /tasklists/delete/7?debug=2
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasklistsController), Object(CakeRequest))
+#4 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-04-26 02:14:55 Warning: Warning (2): DOMNode::cloneNode(): ID pdf already defined in [/home/shovan/PhpstormProjects/project-case/app/Vendor/dompdf/include/frame_decorator.cls.php, line 573]
+Trace:
+DOMNode::cloneNode() - [internal], line ??
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 573
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Table_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_frame_decorator.cls.php, line 140
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Table_Row_Group_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_row_group_frame_decorator.cls.php, line 57
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Page_Frame_Decorator::check_page_break() - APP/Vendor/dompdf/include/page_frame_decorator.cls.php, line 478
+Table_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/table_frame_reflower.cls.php, line 484
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Page_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/page_frame_reflower.cls.php, line 123
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+DOMPDF::render() - APP/Vendor/dompdf/include/dompdf.cls.php, line 949
+include - APP/View/Themed/Lawfirm/Layouts/pdf/admin.ctp, line 7
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::renderLayout() - CORE/Cake/View/View.php, line 546
+View::render() - CORE/Cake/View/View.php, line 481
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-04-26 02:24:24 Warning: Warning (2): Missing argument 1 for TasksController::newtask() in [/home/shovan/PhpstormProjects/project-case/app/Controller/TasksController.php, line 82]
+Trace:
+TasksController::newtask() - APP/Controller/TasksController.php, line 82
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - CORE/Cake/Controller/Controller.php, line 490
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 193
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-04-26 02:32:41 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Tasklist.name' in 'field list'
+Request URL: /tasks/owned
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Task`.`...', Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Task`.`...', Array, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Task`.`...', false)
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Task), Array)
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('list', Array)
+#6 /home/shovan/PhpstormProjects/project-case/app/View/Helper/NotifyHelper.php(209): Model->find('list', Array)
+#7 /home/shovan/PhpstormProjects/project-case/app/View/Helper/NotifyHelper.php(151): NotifyHelper->__count_all_notifications()
+#8 /home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Elements/admin/header.ctp(16): NotifyHelper->initialize()
+#9 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(961): include('/home/shovan/Ph...')
+#10 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/shovan/Ph...', Array)
+#11 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(1217): View->_render('/home/shovan/Ph...', Array)
+#12 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(418): View->_renderElement('/home/shovan/Ph...', Array, Array)
+#13 /home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Layouts/admin.ctp(106): View->element('admin/header')
+#14 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(961): include('/home/shovan/Ph...')
+#15 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/shovan/Ph...', Array)
+#16 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(546): View->_render('/home/shovan/Ph...')
+#17 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(481): View->renderLayout('', 'admin')
+#18 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render('all', NULL)
+#19 /home/shovan/PhpstormProjects/project-case/app/Controller/TasksController.php(340): Controller->render('all')
+#20 [internal function]: TasksController->owned()
+#21 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#22 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#23 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#24 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#25 {main}
+2016-04-26 02:32:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Tasklist.name' in 'field list'
+Request URL: /tasks/owned?debug=2
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Task`.`...', Array)
+#2 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Task`.`...', Array, Array)
+#3 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Task`.`...', false)
+#4 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Task), Array)
+#5 /home/shovan/PhpstormProjects/project-case/lib/Cake/Model/Model.php(2994): Model->_readDataSource('list', Array)
+#6 /home/shovan/PhpstormProjects/project-case/app/View/Helper/NotifyHelper.php(209): Model->find('list', Array)
+#7 /home/shovan/PhpstormProjects/project-case/app/View/Helper/NotifyHelper.php(151): NotifyHelper->__count_all_notifications()
+#8 /home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Elements/admin/header.ctp(16): NotifyHelper->initialize()
+#9 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(961): include('/home/shovan/Ph...')
+#10 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/shovan/Ph...', Array)
+#11 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(1217): View->_render('/home/shovan/Ph...', Array)
+#12 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(418): View->_renderElement('/home/shovan/Ph...', Array, Array)
+#13 /home/shovan/PhpstormProjects/project-case/app/View/Themed/Lawfirm/Layouts/admin.ctp(106): View->element('admin/header')
+#14 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(961): include('/home/shovan/Ph...')
+#15 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(923): View->_evaluate('/home/shovan/Ph...', Array)
+#16 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(546): View->_render('/home/shovan/Ph...')
+#17 /home/shovan/PhpstormProjects/project-case/lib/Cake/View/View.php(481): View->renderLayout('', 'admin')
+#18 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(960): View->render('all', NULL)
+#19 /home/shovan/PhpstormProjects/project-case/app/Controller/TasksController.php(340): Controller->render('all')
+#20 [internal function]: TasksController->owned()
+#21 /home/shovan/PhpstormProjects/project-case/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(TasksController), Array)
+#22 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#23 /home/shovan/PhpstormProjects/project-case/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(TasksController), Object(CakeRequest))
+#24 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#25 {main}
+2016-04-26 02:56:34 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-04-26 03:01:38 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
