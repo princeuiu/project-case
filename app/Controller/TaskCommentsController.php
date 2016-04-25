@@ -16,7 +16,16 @@ class TaskCommentsController extends AppController {
             throw new BadRequestException();
         }
         //print_r($this->data);die;
+        $commentData = array(
+            'TaskComment' => $this->data['TaskComment']
+        );
+        if(!isset($this->data['TaskComment']['body'])){
+            $commentData['TaskComment']['body'] = 'No comment';
+        }
+//        print_r($commentData);die;
         $taskId = $this->data['TaskComment']['task_id'];
+        $taskOwner = $this->data['TaskComments']['task_owner'];
+        $taskAssigned = $this->data['TaskComments']['task_assigned'];
         $userId = $this->data['TaskComment']['user_id'];
         $lawsuitType = $this->data['Lawsuit']['type'];
         $lawsuitId = $this->data['Lawsuit']['id'];
@@ -26,7 +35,7 @@ class TaskCommentsController extends AppController {
         else{
             $isTaskDone = false;
         }
-        if($this->TaskComment->save($this->data)){
+        if($this->TaskComment->save($commentData)){
             $Activity = ClassRegistry::init('Activity');
             $Activity->logintry("taskcomment","new",$this->TaskComment->id,$userId,$taskId,'');
             $path = WWW_ROOT . 'uploads' . DS . 'doc' . DS;
@@ -69,6 +78,8 @@ class TaskCommentsController extends AppController {
                 if($isTaskDone){
                     $this->Task->id =  $taskId;
                     $this->Task->saveField('status', 'done');
+                    $Activity = ClassRegistry::init('Activity');
+                    $Activity->logintry("task","done",$taskId,$taskOwner,$taskAssigned,'');
                     if($lawsuitType == 'landvetting'){
                         $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Task done. Please generate Invoice.') . '</div>');
                         return $this->redirect(array('controller' => 'invoices', 'action' => 'generate', $lawsuitId));

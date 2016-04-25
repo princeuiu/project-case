@@ -175,6 +175,26 @@ class TasklistsController extends AppController {
         if($id == null){
             throw new BadRequestException();
         }
+        $this->check_access(array('manager','admin'));
+        
+        $hasTask = $this->Task->find('count', array(
+            'conditions' => array('Task.tasklist_id' => $id)
+        ));
+        
+        if($hasTask < 1){
+            if($this->Tasklist->delete($id)){
+                $this->Session->setFlash('<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Tasklist item deleted successfully.') . '</div>');
+                return $this->redirect(array('controller' => 'tasklists', 'action' => 'index'));
+            }
+            else{
+                $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('Can\'t delete Tasklist item now, Please try again later.') . '</div>');
+                return $this->redirect(array('controller' => 'tasklists', 'action' => 'index'));
+            }
+        }
+        else{
+            $this->Session->setFlash('<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button>' . __('You can\'t delete a Tasklist item that have Task under it.') . '</div>');
+            return $this->redirect(array('controller' => 'tasklists', 'action' => 'index'));
+        }
     }
     
     function remove_image($name) {

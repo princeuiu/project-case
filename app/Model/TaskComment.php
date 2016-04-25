@@ -19,22 +19,22 @@ class TaskComment extends AppModel {
      */
     public $useTable = "task_comments";
 
-    public $validate = array(
-        'body' => array(
-            'notempty' => array(
-                'rule' => array('notempty'),
-                'message' => 'Can\'t be empty',
-                'allowEmpty' => false,
-                'required' => false,
-                'last' => false, // Stop validation after this rule
-                'on' => 'create', // Limit validation to 'create' or 'update' operations
-            ),
-            'between' => array(
-                'rule' => array('between', 1, 300),
-                'message' => 'between 1 to 300 letters'
-            )
-        )
-    );
+//    public $validate = array(
+//        'body' => array(
+//            'notempty' => array(
+//                'rule' => array('notempty'),
+//                'message' => 'Can\'t be empty',
+//                'allowEmpty' => false,
+//                'required' => false,
+//                'last' => false, // Stop validation after this rule
+//                'on' => 'create', // Limit validation to 'create' or 'update' operations
+//            ),
+//            'between' => array(
+//                'rule' => array('between', 1, 300),
+//                'message' => 'between 1 to 300 letters'
+//            )
+//        )
+//    );
 
 
     //The Associations below have been created with all possible keys, those that are not needed can be removed
