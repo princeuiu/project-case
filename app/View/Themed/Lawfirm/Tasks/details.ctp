@@ -63,6 +63,8 @@
             <fieldset>
                 <input name="data[TaskComment][user_id]" id="UserId" type="hidden" value="<?php echo Authsome::get("id") ?>" />
                 <input name="data[TaskComment][task_id]" id="TaskId" type="hidden" value="<?php echo $userTasks['Task']['id'] ?>" />
+                <input name="data[TaskComments][task_owner]" id="TaskOwner" type="hidden" value="<?php echo $userTasks['Task']['owner'] ?>" />
+                <input name="data[TaskComments][task_assigned]" id="TaskAssigned" type="hidden" value="<?php echo $userTasks['Task']['assigned_to'] ?>" />
                 <input name="data[Lawsuit][type]" id="LawsuitType" type="hidden" value="<?php echo $userTasks['Lawsuit']['type'] ?>" />
                 <input name="data[Lawsuit][id]" id="LawsuitType" type="hidden" value="<?php echo $userTasks['Lawsuit']['id'] ?>" />
                 <div class="form-group">
