@@ -28691,3 +28691,279 @@ Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
 Stack Trace:
 #0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2016-04-28 01:05:34 Warning: Warning (2): DOMNode::cloneNode(): ID pdf already defined in [/home/shovan/PhpstormProjects/project-case/app/Vendor/dompdf/include/frame_decorator.cls.php, line 573]
+Trace:
+DOMNode::cloneNode() - [internal], line ??
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 573
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Table_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_frame_decorator.cls.php, line 140
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Table_Row_Group_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_row_group_frame_decorator.cls.php, line 57
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Page_Frame_Decorator::check_page_break() - APP/Vendor/dompdf/include/page_frame_decorator.cls.php, line 478
+Table_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/table_frame_reflower.cls.php, line 484
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Page_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/page_frame_reflower.cls.php, line 123
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+DOMPDF::render() - APP/Vendor/dompdf/include/dompdf.cls.php, line 949
+include - APP/View/Themed/Lawfirm/Layouts/pdf/admin.ctp, line 7
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::renderLayout() - CORE/Cake/View/View.php, line 546
+View::render() - CORE/Cake/View/View.php, line 481
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-04-29 02:53:00 Error: [MissingControllerException] Controller class ItemsController could not be found.
+Exception Attributes: array (
+  'class' => 'ItemsController',
+  'plugin' => NULL,
+)
+Request URL: /admin
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-04-29 02:53:07 Error: [MissingControllerException] Controller class ItemsController could not be found.
+Exception Attributes: array (
+  'class' => 'ItemsController',
+  'plugin' => NULL,
+)
+Request URL: /admin
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-04-29 02:53:11 Error: [MissingControllerException] Controller class ItemsController could not be found.
+Exception Attributes: array (
+  'class' => 'ItemsController',
+  'plugin' => NULL,
+)
+Request URL: /admin
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-04-29 02:58:48 Warning: Warning (2): DOMNode::cloneNode(): ID pdf already defined in [/home/shovan/PhpstormProjects/project-case/app/Vendor/dompdf/include/frame_decorator.cls.php, line 573]
+Trace:
+DOMNode::cloneNode() - [internal], line ??
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 573
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Table_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_frame_decorator.cls.php, line 140
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Table_Row_Group_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_row_group_frame_decorator.cls.php, line 57
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Page_Frame_Decorator::check_page_break() - APP/Vendor/dompdf/include/page_frame_decorator.cls.php, line 478
+Table_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/table_frame_reflower.cls.php, line 484
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Page_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/page_frame_reflower.cls.php, line 123
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+DOMPDF::render() - APP/Vendor/dompdf/include/dompdf.cls.php, line 949
+include - APP/View/Themed/Lawfirm/Layouts/pdf/admin.ctp, line 7
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::renderLayout() - CORE/Cake/View/View.php, line 546
+View::render() - CORE/Cake/View/View.php, line 481
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-04-29 03:22:31 Error: [MissingControllerException] Controller class ThemeController could not be found.
+Exception Attributes: array (
+  'class' => 'ThemeController',
+  'plugin' => NULL,
+)
+Request URL: /theme/Lawfirm/js/dist/jquery-migrate.min.map
+Stack Trace:
+#0 /home/shovan/PhpstormProjects/project-case/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-04-29 03:38:05 Warning: Warning (2): DOMNode::cloneNode() [<a href='http://php.net/domnode.clonenode'>domnode.clonenode</a>]: ID pdf already defined in [/home/shovan/PhpstormProjects/project-case/app/Vendor/dompdf/include/frame_decorator.cls.php, line 573]
+Trace:
+DOMNode::cloneNode() - [internal], line ??
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 573
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Table_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_frame_decorator.cls.php, line 140
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Table_Row_Group_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_row_group_frame_decorator.cls.php, line 57
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Page_Frame_Decorator::check_page_break() - APP/Vendor/dompdf/include/page_frame_decorator.cls.php, line 478
+Table_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/table_frame_reflower.cls.php, line 484
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Page_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/page_frame_reflower.cls.php, line 123
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+DOMPDF::render() - APP/Vendor/dompdf/include/dompdf.cls.php, line 949
+include - APP/View/Themed/Lawfirm/Layouts/pdf/admin.ctp, line 7
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::renderLayout() - CORE/Cake/View/View.php, line 546
+View::render() - CORE/Cake/View/View.php, line 481
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-04-29 03:38:05 Warning: Warning (2): DOMNode::cloneNode() [<a href='http://php.net/domnode.clonenode'>domnode.clonenode</a>]: ID pdf already defined in [/home/shovan/PhpstormProjects/project-case/app/Vendor/dompdf/include/frame_decorator.cls.php, line 573]
+Trace:
+DOMNode::cloneNode() - [internal], line ??
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 573
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Table_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_frame_decorator.cls.php, line 140
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Table_Row_Group_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_row_group_frame_decorator.cls.php, line 57
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Page_Frame_Decorator::check_page_break() - APP/Vendor/dompdf/include/page_frame_decorator.cls.php, line 478
+Table_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/table_frame_reflower.cls.php, line 484
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Page_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/page_frame_reflower.cls.php, line 123
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+DOMPDF::render() - APP/Vendor/dompdf/include/dompdf.cls.php, line 949
+include - APP/View/Themed/Lawfirm/Layouts/pdf/admin.ctp, line 7
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::renderLayout() - CORE/Cake/View/View.php, line 546
+View::render() - CORE/Cake/View/View.php, line 481
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-04-29 03:39:14 Warning: Warning (2): DOMNode::cloneNode() [<a href='http://php.net/domnode.clonenode'>domnode.clonenode</a>]: ID pdf already defined in [/home/shovan/PhpstormProjects/project-case/app/Vendor/dompdf/include/frame_decorator.cls.php, line 573]
+Trace:
+DOMNode::cloneNode() - [internal], line ??
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 573
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Table_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_frame_decorator.cls.php, line 140
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Table_Row_Group_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_row_group_frame_decorator.cls.php, line 57
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Page_Frame_Decorator::check_page_break() - APP/Vendor/dompdf/include/page_frame_decorator.cls.php, line 478
+Table_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/table_frame_reflower.cls.php, line 484
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Page_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/page_frame_reflower.cls.php, line 123
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+DOMPDF::render() - APP/Vendor/dompdf/include/dompdf.cls.php, line 949
+include - APP/View/Themed/Lawfirm/Layouts/pdf/admin.ctp, line 7
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::renderLayout() - CORE/Cake/View/View.php, line 546
+View::render() - CORE/Cake/View/View.php, line 481
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-04-29 03:39:14 Warning: Warning (2): DOMNode::cloneNode() [<a href='http://php.net/domnode.clonenode'>domnode.clonenode</a>]: ID pdf already defined in [/home/shovan/PhpstormProjects/project-case/app/Vendor/dompdf/include/frame_decorator.cls.php, line 573]
+Trace:
+DOMNode::cloneNode() - [internal], line ??
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 573
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Table_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_frame_decorator.cls.php, line 140
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Table_Row_Group_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_row_group_frame_decorator.cls.php, line 57
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Page_Frame_Decorator::check_page_break() - APP/Vendor/dompdf/include/page_frame_decorator.cls.php, line 478
+Table_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/table_frame_reflower.cls.php, line 484
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Page_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/page_frame_reflower.cls.php, line 123
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+DOMPDF::render() - APP/Vendor/dompdf/include/dompdf.cls.php, line 949
+include - APP/View/Themed/Lawfirm/Layouts/pdf/admin.ctp, line 7
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::renderLayout() - CORE/Cake/View/View.php, line 546
+View::render() - CORE/Cake/View/View.php, line 481
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-04-29 03:39:46 Warning: Warning (2): DOMNode::cloneNode(): ID pdf already defined in [/home/shovan/PhpstormProjects/project-case/app/Vendor/dompdf/include/frame_decorator.cls.php, line 573]
+Trace:
+DOMNode::cloneNode() - [internal], line ??
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 573
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Table_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_frame_decorator.cls.php, line 140
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Table_Row_Group_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_row_group_frame_decorator.cls.php, line 57
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Page_Frame_Decorator::check_page_break() - APP/Vendor/dompdf/include/page_frame_decorator.cls.php, line 478
+Table_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/table_frame_reflower.cls.php, line 484
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Page_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/page_frame_reflower.cls.php, line 123
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+DOMPDF::render() - APP/Vendor/dompdf/include/dompdf.cls.php, line 949
+include - APP/View/Themed/Lawfirm/Layouts/pdf/admin.ctp, line 7
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::renderLayout() - CORE/Cake/View/View.php, line 546
+View::render() - CORE/Cake/View/View.php, line 481
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
+2016-04-29 03:39:46 Warning: Warning (2): DOMNode::cloneNode(): ID pdf already defined in [/home/shovan/PhpstormProjects/project-case/app/Vendor/dompdf/include/frame_decorator.cls.php, line 573]
+Trace:
+DOMNode::cloneNode() - [internal], line ??
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 573
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 605
+Table_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_frame_decorator.cls.php, line 140
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Table_Row_Group_Frame_Decorator::split() - APP/Vendor/dompdf/include/table_row_group_frame_decorator.cls.php, line 57
+Frame_Decorator::split() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 563
+Page_Frame_Decorator::check_page_break() - APP/Vendor/dompdf/include/page_frame_decorator.cls.php, line 478
+Table_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/table_frame_reflower.cls.php, line 484
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Block_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/block_frame_reflower.cls.php, line 750
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+Page_Frame_Reflower::reflow() - APP/Vendor/dompdf/include/page_frame_reflower.cls.php, line 123
+Frame_Decorator::reflow() - APP/Vendor/dompdf/include/frame_decorator.cls.php, line 711
+DOMPDF::render() - APP/Vendor/dompdf/include/dompdf.cls.php, line 949
+include - APP/View/Themed/Lawfirm/Layouts/pdf/admin.ctp, line 7
+View::_evaluate() - CORE/Cake/View/View.php, line 961
+View::_render() - CORE/Cake/View/View.php, line 923
+View::renderLayout() - CORE/Cake/View/View.php, line 546
+View::render() - CORE/Cake/View/View.php, line 481
+Controller::render() - CORE/Cake/Controller/Controller.php, line 960
+Dispatcher::_invoke() - CORE/Cake/Routing/Dispatcher.php, line 200
+Dispatcher::dispatch() - CORE/Cake/Routing/Dispatcher.php, line 167
+[main] - APP/webroot/index.php, line 118
+
