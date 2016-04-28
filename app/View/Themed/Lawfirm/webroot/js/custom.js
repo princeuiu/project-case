@@ -2403,6 +2403,7 @@ $(document).ready(function () {
     $('#litigationCaseTypeField').hide();
     $('#litigationYearField').hide();
     $('#notCorpClient').hide();
+    $("#payableToField").hide();
     $('#myModal').css('display', 'none');
     /****** btn case closed *****/
 
@@ -2591,6 +2592,20 @@ $(document).ready(function () {
             $("#litigationCaseTypeField").hide("slow");
             $("#litigationYearField").hide("slow");
             $("#litigationExtraField").hide("slow");
+        }
+    });
+    
+    
+    
+    
+    
+    $('#PaymentType').change(function () {
+        var itemValue = $('#PaymentType').val();
+        if (itemValue == 'cheque') {
+            $("#payableToField").show("slow");
+        }
+        else {
+            $("#payableToField").hide("slow");
         }
     });
     
