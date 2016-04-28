@@ -230,8 +230,16 @@ $even_row_color = '#ddd';
                 </tr>
             </table>
             <span>(Taka <?php echo $finalAmountInWord; ?>) Only</span><br /><br /><br />
-
-            <span>Please make cheque payable to "<b>Bhuiyan Islam &amp; Zaidi</b>"</span><br /><br /><br />
+            
+            
+            <?php
+                if($invoiceData['Invoice']['payment_type'] == 'cheque'):
+            ?>
+            <span>Please make cheque payable to "<b><?php echo $invoiceData['Invoice']['payable_to'] ?></b>"</span><br /><br /><br />
+            
+            <?php
+                endif;
+            ?>
 
             <?php
             if (!empty($invoiceData['Invoice']['note'])) {
