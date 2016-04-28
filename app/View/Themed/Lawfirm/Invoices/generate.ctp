@@ -118,6 +118,30 @@
                     </div>
                 </div>
                 <div class="control-group">
+                    <label class="control-label" for="PaymentType">Payment Type</label>
+                    <div class="controls">
+                        <?php
+                        echo $this->Form->input('payment_type', array(
+                            'options' => array('cash' => 'Cash', 'cheque' => 'Cheque'),
+                            'data-rel' => 'chosen',
+                            'id' => 'PaymentType'
+                        ));
+                        ?>
+                    </div>
+                </div>
+                <div id="payableToField">
+                    <div class="control-group">
+                        <label class="control-label" for="LawsuitPayableTo">Payable To</label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('payable_to', array('class' => 'span6 typeahead', 'placeholder' => 'Payable To', 'error' => array(
+                                    'attributes' => array('escape' => false)
+                            )));
+                            ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="control-group">
                     <label class="control-label" for="LawsuitSubject">Subject</label>
                     <div class="controls">
                         <?php
