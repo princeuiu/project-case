@@ -66,19 +66,18 @@
                     </div>
                 </div>
 
-                <div class="control-group">
-                    <label class="control-label" for="LawsuitCaseNo">Case No</label>
-                    <div class="controls">
-                        <?php
-                        echo $this->Form->input('case_no', array('class' => 'span6 typeahead', 'placeholder' => 'Case No', 'error' => array(
-                            'attributes' => array('escape' => true)
-                        )));
-                        ?>
-                    </div>
-                </div>
-
-
                 <div id="litigationYearField">
+                    
+                    <div class="control-group">
+                        <label class="control-label" for="LawsuitCaseNo">Case No</label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('case_no', array('class' => 'span6 typeahead', 'placeholder' => 'Case No', 'error' => array(
+                                'attributes' => array('escape' => true)
+                            )));
+                            ?>
+                        </div>
+                    </div>
 
                     <div class="control-group">
                         <label class="control-label" for="LawsuitYear"></label>
@@ -98,6 +97,28 @@
                             ?>
                         </div>
                     </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label" for="LawsuitCourtName">Name of the Court </label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('court_name', array('class' => 'span6 typeahead', 'placeholder' => 'Name of the Court', 'error' => array(
+                                'attributes' => array('escape' => false)
+                            )));
+                            ?>
+                        </div>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label class="control-label" for="LawsuitCourtName">Shelf Entry No </label>
+                        <div class="controls">
+                            <?php
+                            echo $this->Form->input('shelf_no', array('class' => 'span6 typeahead', 'placeholder' => 'Shelf Entry No', 'error' => array(
+                                'attributes' => array('escape' => false)
+                            )));
+                            ?>
+                        </div>
+                    </div>
                     <!--<div class="control-group">
                         <label class="control-label" for="LawsuitFileNo">File No</label>
                         <div class="controls">
@@ -111,19 +132,10 @@
                 </div>
 
 
-                <div class="control-group">
-                    <label class="control-label" for="LawsuitCourtName">Name of the Court </label>
-                    <div class="controls">
-                        <?php
-                        echo $this->Form->input('court_name', array('class' => 'span6 typeahead', 'placeholder' => 'Name of the Court', 'error' => array(
-                            'attributes' => array('escape' => false)
-                        )));
-                        ?>
-                    </div>
-                </div>
+                
 
                 <div class="control-group">
-                    <label class="control-label" for="LawsuitNumber">File No</label>
+                    <label class="control-label" for="LawsuitNumber">Ref. No</label>
                     <div class="controls">
                         <?php
                         if(isset($cNumber)){
@@ -137,17 +149,6 @@
                             )));
                         }
 
-                        ?>
-                    </div>
-                </div>
-
-                <div class="control-group">
-                    <label class="control-label" for="LawsuitCourtName">Shelf Entry No </label>
-                    <div class="controls">
-                        <?php
-                        echo $this->Form->input('shelf_no', array('class' => 'span6 typeahead', 'placeholder' => 'Shelf Entry No', 'error' => array(
-                            'attributes' => array('escape' => false)
-                        )));
                         ?>
                     </div>
                 </div>
