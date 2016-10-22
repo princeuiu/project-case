@@ -90,7 +90,7 @@ class AppController extends Controller {
             //echo $this->params['url'][Configure::read('Session.cookie')];
         }
 
-        $this->set('admins', $this->admins);
+        $this->set('admins', $this->admins);   
         $this->set('superadmins', $this->superadmins);
 
 
